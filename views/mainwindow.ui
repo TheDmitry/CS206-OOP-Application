@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1043</width>
-    <height>659</height>
+    <height>605</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,11 @@
      <verstretch>0</verstretch>
     </sizepolicy>
    </property>
-   <layout class="QGridLayout" name="gridLayout_2"/>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QTableView" name="tableView"/>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -35,29 +39,88 @@
     <property name="title">
      <string>File</string>
     </property>
+    <addaction name="actionFileOpen"/>
+    <addaction name="actionFileUpdate"/>
+    <addaction name="actionFileWrite"/>
+    <addaction name="actionFileClose"/>
    </widget>
    <widget class="QMenu" name="menuProgram">
     <property name="title">
      <string>Program</string>
     </property>
-    <addaction name="actionAuthor"/>
-    <addaction name="actionClose"/>
+    <addaction name="actionProgramAuthor"/>
+    <addaction name="actionProgramClose"/>
    </widget>
    <addaction name="menuProgram"/>
    <addaction name="menuFile"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionClose">
+  <action name="actionProgramClose">
    <property name="text">
     <string>Close</string>
    </property>
   </action>
-  <action name="actionAuthor">
+  <action name="actionProgramAuthor">
    <property name="text">
     <string>Author</string>
    </property>
   </action>
+  <action name="actionFileOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionFileUpdate">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Update</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionFileWrite">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Write</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionFileClose">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Close</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+  </action>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>actionProgramClose</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>521</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

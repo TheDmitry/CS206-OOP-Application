@@ -52,7 +52,7 @@ void DbFile::read() {
     OperatorResult result = parseOperator(line);
 
     if (!isSupported && result.op == OPS::DB) {
-      isSupported = result.args["value"] == SUPPORTED_VERSION;
+      isSupported = result.args["version"] == SUPPORTED_VERSION;
       continue;
     }
 
@@ -60,58 +60,99 @@ void DbFile::read() {
       throw invalid_argument("Unsupported db file");
 
     switch (result.op) {
-    case OPS::DB: {
-      throw invalid_argument(
-        "[db version=X] should appear only once in very first line of the file");
-    } break;
+      case OPS::DB:
+        {
+          throw invalid_argument(
+            "[db version=X] should appear only once in very first line of the file");
+        }
+        break;
 
-    case OPS::CLOSE: {
-      shouldEnd = true;
-    } break;
+      case OPS::CLOSE:
+        {
+          shouldEnd = true;
+        }
+        break;
 
-    case OPS::DATA: {
-      if (shouldData)
-        throw invalid_argument("Invalid db file format. Data-block already opened");
+      case OPS::DATA:
+        {
+          if (shouldData)
+            throw invalid_argument("Invalid db file format. Data-block already opened");
 
-      if (shouldInfo)
-        throw invalid_argument(
-          "Invalid db file format. It's not allowed to open data-block in info-block");
+          if (shouldInfo)
+            throw invalid_argument(
+              "Invalid db file format. It's not allowed to open data-block in info-block");
 
-      shouldData = true;
-    } break;
+          shouldData = true;
+        }
+        break;
 
-    case OPS::INFO: {
-      if (shouldInfo)
-        throw invalid_argument("Invalid db file format. Info-block already opened. It's not "
-                               "allowed to have two or more info-blocks in one file");
+      case OPS::INFO:
+        {
+          if (shouldInfo)
+            throw invalid_argument("Invalid db file format. Info-block already opened. It's not "
+                                   "allowed to have two or more info-blocks in one file");
 
-      if (shouldData)
-        throw invalid_argument("Invalid db file format. Info-block cannot be opened in Data-block");
+          if (shouldData)
+            throw invalid_argument(
+              "Invalid db file format. Info-block cannot be opened in Data-block");
 
-      shouldInfo = true;
-    } break;
+          shouldInfo = true;
+        }
+        break;
 
-    case OPS::END: {
-      if (!shouldData && !shouldInfo)
-        throw invalid_argument("Invalid db file format. No blocks were opened");
+      case OPS::END:
+        {
+          if (!shouldData && !shouldInfo)
+            throw invalid_argument("Invalid db file format. No blocks were opened");
 
-      if (shouldInfo)
-        shouldInfo = false;
-      if (shouldData)
-        shouldData = false;
-    } break;
+          if (shouldInfo)
+            shouldInfo = false;
+          if (shouldData)
+            shouldData = false;
+        }
+        break;
 
-    case OPS::TEXT: {
-      if (shouldData)
-        dataBuffer.push_back(line);
-      if (shouldInfo)
-        infoBuffer.push_back(line);
+      case OPS::SCHEME:
+        {
+          size_t schemeMaxSize = SUPPORTED_SCHEME_ARGS.size();
 
-    } break;
+          if (result.args.size() != schemeMaxSize)
+            throw invalid_argument(
+              "Invalid db file format. Invalid scheme: invalid amount of args");
 
-    default: {
-      throw invalid_argument("Invalid db file format. Unsupported operator");
-    }
+          currentScheme.clear();
+
+          for (auto &i : result.args) {
+            size_t index = stoi(i.second);
+
+            if (index >= schemeMaxSize)
+              throw invalid_argument("Invalid db file format. Invalid scheme: index out of bounds");
+
+            if (index < 0)
+              throw invalid_argument("Invalid db file format. Invalid scheme: negative index");
+
+            string key = i.first;
+            currentScheme[key] = index;
+          }
+
+          if (currentScheme.size() != SUPPORTED_SCHEME_ARGS.size())
+            throw invalid_argument("Invalid db file format. Invalid scheme: Duplicated keys");
+        }
+        break;
+
+      case OPS::TEXT:
+        {
+          if (shouldData)
+            dataBuffer.push_back(line);
+          if (shouldInfo)
+            infoBuffer.push_back(line);
+        }
+        break;
+
+      default:
+        {
+          throw invalid_argument("Invalid db file format. Unsupported operator");
+        }
     }
   }
 
@@ -130,14 +171,52 @@ void DbFile::update(list<VRHeadset> &headsets)
   dataBuffer.clear();
   dataBuffer.shrink_to_fit();
 
-  for (auto &i : headsets) {
-    string data = format("{};{};{};{};{};{}",
-                         i.getModelName(),
-                         i.getWidth(),
-                         i.getHeight(),
-                         i.getRefreshRate(),
-                         Vector3::vectorToString(i.getAngles()),
-                         Vector3::vectorToString(i.getPosition()));
+  for (auto &headset : headsets) {
+    std::vector<std::string> values;
+    for (const auto &key : SUPPORTED_SCHEME_ARGS) {
+      switch (currentScheme.at(key)) {
+        case 0:
+          {
+            values.push_back(headset.getModelName());
+          }
+          break;
+        case 1:
+          {
+            values.push_back(to_string(headset.getWidth()));
+          }
+          break;
+        case 2:
+          {
+            values.push_back(to_string(headset.getHeight()));
+          }
+          break;
+        case 3:
+          {
+            values.push_back(to_string(headset.getRefreshRate()));
+          }
+          break;
+        case 4:
+          {
+            values.push_back(Vector3::vectorToString(headset.getAngles()));
+          }
+          break;
+        case 5:
+          {
+            values.push_back(Vector3::vectorToString(headset.getPosition()));
+          }
+          break;
+        default:
+          {
+            throw invalid_argument("Unnable to write file. Invalid scheme");
+          }
+          break;
+      }
+    }
+
+    string data;
+    for (auto &i : values)
+      data += format("{};", i);
+
     dataBuffer.push_back(data);
   }
 }
@@ -165,8 +244,22 @@ void DbFile::write() {
       dataContent.append(format("\n{}", ib));
   }
 
-  string content = format("[db version=%s][info]{}\n[end]\n[data]{}\n[end]\n[close]",
-                          SUPPORTED_VERSION,
+  string dbVersion = format("[db version={}]", SUPPORTED_VERSION);
+
+  string schemeParts;
+  for (auto &i : currentScheme) {
+    size_t index = i.second;
+    string key = i.first;
+
+    string arg = format(" {}={}", key, index);
+
+    schemeParts += arg;
+  }
+  string scheme = format("[scheme{}]", schemeParts);
+
+  string content = format("{}\n{}\n[info]{}\n[end]\n[data]{}\n[end]\n[close]",
+                          dbVersion,
+                          scheme,
                           infoContent,
                           dataContent);
 
@@ -187,19 +280,16 @@ void DbFile::parse(list<VRHeadset> &headsets)
     }
 
     VRHeadset vr{
-      stoi(parts[1]),                      // width
-      stoi(parts[2]),                      // heightt
-      stof(parts[3]),                      // refreshRate
-      Vector3::vectorFromString(parts[4]), // v3(angles)
-      Vector3::vectorFromString(parts[5]), // v3(position)
-      parts[0]                             // modelName
+      stoi(parts[currentScheme["width"]]),                         // width
+      stoi(parts[currentScheme["height"]]),                        // height
+      stof(parts[currentScheme["refreshRate"]]),                   // refreshRate
+      Vector3::vectorFromString(parts[currentScheme["angles"]]),   // v3(angles)
+      Vector3::vectorFromString(parts[currentScheme["position"]]), // v3(position)
+      parts[currentScheme["modelName"]]                            // modelName
     };
 
     headsets.push_back(vr);
   }
-
-  VRHeadset empty{};
-  headsets.push_back(empty);
 }
 
 void DbFile::clear() {
@@ -213,6 +303,7 @@ void DbFile::clear() {
 
 void DbFile::reset() {
   currentPath = "";
+  currentScheme = defaultScheme;
   clear();
 }
 
@@ -267,13 +358,19 @@ DbFile::OperatorResult DbFile::parseOperator(string const &line)
     result.op = OPS::END;
   else if (tokens[0] == "db")
     result.op = OPS::DB;
+  else if (tokens[0] == "close")
+    result.op = OPS::CLOSE;
+  else if (tokens[0] == "scheme")
+    result.op = OPS::SCHEME;
+  else
+    throw invalid_argument("Invalid db file format. Invalid operator " + line);
 
   for (size_t i = 1; i < tokens.size(); ++i) {
     string arg = tokens[i];
 
     size_t eq_pos = arg.find('=');
 
-    if (eq_pos != std::string::npos) {
+    if (eq_pos != string::npos) {
       string key = arg.substr(0, eq_pos);
       string value = arg.substr(eq_pos + 1);
       result.args[key] = value;
@@ -282,3 +379,13 @@ DbFile::OperatorResult DbFile::parseOperator(string const &line)
 
   return result;
 }
+
+const vector<string> DbFile::SUPPORTED_SCHEME_ARGS
+  = {"modelName", "width", "height", "refreshRate", "angles", "position"};
+
+const std::map<std::string, int> DbFile::defaultScheme = {{"modelName", 0},
+                                                          {"width", 1},
+                                                          {"height", 2},
+                                                          {"refreshRate", 3},
+                                                          {"angles", 4},
+                                                          {"position", 5}};

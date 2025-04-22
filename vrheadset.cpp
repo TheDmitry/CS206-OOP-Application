@@ -3,27 +3,42 @@
 #include <string>
 #include <iostream>
 #include <format>
-#include <memory>
 
 using namespace std;
 
-VRHeadset::VRHeadset(int width, int height, float refreshRate, Vector3 angles,
-                     Vector3 position, string modelName)
-    : width{width}, height{height}, refreshRate{refreshRate}, angles{angles},
-      position{position}, modelName{modelName} {}
+VRHeadset::VRHeadset(
+  int width, int height, float refreshRate, Vector3 angles, Vector3 position, string modelName)
+  : width{width}
+  , height{height}
+  , refreshRate{refreshRate}
+  , angles{angles}
+  , position{position}
+  , modelName{modelName} {}
 
-
-VRHeadset::VRHeadset(int width, int height, float refreshRate, float angle_x,
-                     float angle_y, float angle_z, float x, float y, float z,
+VRHeadset::VRHeadset(int width,
+                     int height,
+                     float refreshRate,
+                     float angle_x,
+                     float angle_y,
+                     float angle_z,
+                     float x,
+                     float y,
+                     float z,
                      string modelName)
-    : width{width}, height{height}, refreshRate{refreshRate},
-      angles{angle_x, angle_y, angle_z}, position{x, y, z},
-      modelName{modelName} {}
+  : width{width}
+  , height{height}
+  , refreshRate{refreshRate}
+  , angles{angle_x, angle_y, angle_z}
+  , position{x, y, z}
+  , modelName{modelName} {}
 
 VRHeadset::VRHeadset()
-    : width{0}, height{0}, refreshRate{0},
-      angles{0, 0, 0}, position{0, 0, 0},
-      modelName{""} {}
+  : width{0}
+  , height{0}
+  , refreshRate{0}
+  , angles{0, 0, 0}
+  , position{0, 0, 0}
+  , modelName{""} {}
 
 int VRHeadset::getWidth() const { return width; };
 int VRHeadset::getHeight() const { return height; };

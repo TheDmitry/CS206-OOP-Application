@@ -1,9 +1,9 @@
+[db version=2]
+[scheme angles=4 height=2 modelName=0 position=5 refreshRate=3 width=1]
 [info]
 Структура данных:
     modelName;width;height;refreshRate;v3(angles);v3(position)
-
 [оператор] - для управления считыванием файла
-
 Операторы:
     data = начало блока с данными
     info = начало блока информации. В текущей реализации должны быть только сверху.

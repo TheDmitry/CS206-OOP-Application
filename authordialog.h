@@ -11,11 +11,11 @@ class AuthorDialog : public QDialog
 {
   Q_OBJECT
 
-  public:
+public:
   explicit AuthorDialog(QWidget *parent = nullptr);
   ~AuthorDialog();
 
-  private:
+private:
   Ui::AuthorDialog *ui;
 };
 

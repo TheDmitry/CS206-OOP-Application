@@ -11,7 +11,7 @@ enum HeadsetType {
 };
 
 class VRHeadset {
- public:
+public:
   VRHeadset(int width, int height, float refreshRate, Vector3 angles, Vector3 position, string modelName);
   VRHeadset(int width, int height, float refreshRate, float angle_x, float angle_y, float angle_z, float x, float y, float z, string modelName);
   VRHeadset();
@@ -41,10 +41,11 @@ class VRHeadset {
 
   bool operator==(VRHeadset const &vr) const;
   bool operator!=(VRHeadset const &vr) const;
-  protected:
-    int width, height;
-    float refreshRate;
-    bool connected;
-    Vector3 angles, position;
-    string modelName;
-  };
+
+protected:
+  int width, height;
+  float refreshRate;
+  bool connected;
+  Vector3 angles, position;
+  string modelName;
+};

@@ -13,7 +13,8 @@ main.cpp \
 mainwindow.cpp \
 vector3.cpp \
 vrheadset.cpp \
-dbfile.cpp
+dbfile.cpp \
+  vrheadsettablemodel.cpp
 
 
 HEADERS += \
@@ -21,7 +22,8 @@ HEADERS += \
 mainwindow.h \
 vector3.h \
 vrheadset.h \
-dbfile.h
+dbfile.h \
+  vrheadsettablemodel.h
 
 FORMS += \
   $$DIALOGS_DIRECTORY/authordialog.ui \
@@ -33,3 +35,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 TRANSLATIONS +=
+
+DISTFILES +=

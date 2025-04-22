@@ -8,9 +8,9 @@ Vector3::Vector3() : x{0}, y{0}, z{0} {}
 Vector3::Vector3(float x, float y, float z) : x{x}, y{y}, z{z} {}
 
 void Vector3::debug() {
-  #ifdef DEBUG
+#ifdef DEBUG
   cout << "[Vector3] x:" << x << " y:" << y << " z:" << z << endl;
-  #endif
+#endif
 }
 
 Vector3 Vector3::vectorFromString(const string stringified) {

@@ -48,12 +48,18 @@ private:
 
   static constexpr std::string SUPPORTED_VERSION = "2";
 
+  /* SCHEME */
+  static const std::vector<std::string> SUPPORTED_SCHEME_ARGS;
+  static const std::map<std::string, int> defaultScheme;
+  std::map<std::string, int> currentScheme = defaultScheme;
+
   enum class OPS {
     DB,
     INFO,
     DATA,
     END,
     CLOSE,
+    SCHEME,
     TEXT,
   };
 
