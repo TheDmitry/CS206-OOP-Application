@@ -2,7 +2,7 @@ QT += core gui widgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-CONFIG += c++23
+CONFIG += c++20
 
 FORMS_DIRECTORY += views
 DIALOGS_DIRECTORY += $$FORMS_DIRECTORY/dialogs
@@ -10,11 +10,18 @@ DIALOGS_DIRECTORY += $$FORMS_DIRECTORY/dialogs
 SOURCES += \
   authordialog.cpp \
 main.cpp \
-mainwindow.cpp
+mainwindow.cpp \
+vector3.cpp \
+vrheadset.cpp \
+dbfile.cpp
+
 
 HEADERS += \
   authordialog.h \
-mainwindow.h
+mainwindow.h \
+vector3.h \
+vrheadset.h \
+dbfile.h
 
 FORMS += \
   $$DIALOGS_DIRECTORY/authordialog.ui \
