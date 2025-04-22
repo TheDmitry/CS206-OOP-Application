@@ -166,61 +166,6 @@ void DbFile::read(const string &path)
   read();
 }
 
-void DbFile::update(list<VRHeadset> &headsets)
-{
-  dataBuffer.clear();
-  dataBuffer.shrink_to_fit();
-
-  for (auto &headset : headsets) {
-    std::vector<std::string> values;
-    for (const auto &key : SUPPORTED_SCHEME_ARGS) {
-      switch (currentScheme.at(key)) {
-        case 0:
-          {
-            values.push_back(headset.getModelName());
-          }
-          break;
-        case 1:
-          {
-            values.push_back(to_string(headset.getWidth()));
-          }
-          break;
-        case 2:
-          {
-            values.push_back(to_string(headset.getHeight()));
-          }
-          break;
-        case 3:
-          {
-            values.push_back(to_string(headset.getRefreshRate()));
-          }
-          break;
-        case 4:
-          {
-            values.push_back(Vector3::vectorToString(headset.getAngles()));
-          }
-          break;
-        case 5:
-          {
-            values.push_back(Vector3::vectorToString(headset.getPosition()));
-          }
-          break;
-        default:
-          {
-            throw invalid_argument("Unnable to write file. Invalid scheme");
-          }
-          break;
-      }
-    }
-
-    string data;
-    for (auto &i : values)
-      data += format("{};", i);
-
-    dataBuffer.push_back(data);
-  }
-}
-
 void DbFile::write() {
   if (!isFileExists())
     throw invalid_argument("It's ambitious to write to file without path to file");
@@ -266,30 +211,6 @@ void DbFile::write() {
   file << content;
   file.close();
   modified = filesystem::last_write_time(currentPath);
-}
-
-void DbFile::parse(list<VRHeadset> &headsets)
-{
-  for (auto &i : dataBuffer) {
-    stringstream sstream{i};
-    string part;
-    vector<string> parts;
-
-    while (getline(sstream, part, ';')) {
-      parts.push_back(part);
-    }
-
-    VRHeadset vr{
-      stoi(parts[currentScheme["width"]]),                         // width
-      stoi(parts[currentScheme["height"]]),                        // height
-      stof(parts[currentScheme["refreshRate"]]),                   // refreshRate
-      Vector3::vectorFromString(parts[currentScheme["angles"]]),   // v3(angles)
-      Vector3::vectorFromString(parts[currentScheme["position"]]), // v3(position)
-      parts[currentScheme["modelName"]]                            // modelName
-    };
-
-    headsets.push_back(vr);
-  }
 }
 
 void DbFile::clear() {
