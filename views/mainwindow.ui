@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1043</width>
-    <height>605</height>
+    <width>1042</width>
+    <height>618</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,8 +21,18 @@
     </sizepolicy>
    </property>
    <layout class="QGridLayout" name="gridLayout_2">
+    <item row="1" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout"/>
+    </item>
     <item row="0" column="0">
-     <widget class="QTableView" name="tableView"/>
+     <widget class="QTableView" name="tableView">
+      <property name="styleSheet">
+       <string notr="true">QTableView::item { text-align: center; }</string>
+      </property>
+      <property name="textElideMode">
+       <enum>Qt::TextElideMode::ElideRight</enum>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -31,7 +41,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1043</width>
+     <width>1042</width>
      <height>23</height>
     </rect>
    </property>

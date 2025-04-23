@@ -18,7 +18,7 @@ public:
   std::vector<std::string> &getDataBuffer();
   std::vector<std::string> &getInfoBuffer();
 
-  void setCurrentPath();
+  void setCurrentPath(const string path);
 
   void read();
   void read(const string &path);

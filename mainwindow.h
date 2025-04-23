@@ -3,11 +3,8 @@
 
 #include <QListWidget>
 #include <QMainWindow>
-#include <list>
 
 #include "authordialog.h"
-#include "dbfile.h"
-#include "vrheadset.h"
 #include "vrheadsettablemodel.h"
 
 QT_BEGIN_NAMESPACE
@@ -32,9 +29,11 @@ private slots:
 
   void on_actionFileWrite_triggered();
 
+  void on_actionFileUpdate_triggered();
+
+  void on_actionFileClose_triggered();
+
 private:
-  std::list<VRHeadset> headsets;
-  DbFile db;
   AuthorDialog *authorDialog;
   VRHeadsetTableModel *headsetTableModel;
 

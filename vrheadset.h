@@ -37,6 +37,11 @@ public:
   void setPosition(float x, float y, float z);
   void setPosition(Vector3 position);
 
+  void setWidth(int value);
+  void setHeight(int value);
+
+  void setModelName(string name);
+
   friend ostream &operator<<(ostream &os, VRHeadset const &vr);
 
   bool operator==(VRHeadset const &vr) const;

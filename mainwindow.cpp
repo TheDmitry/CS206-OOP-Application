@@ -2,28 +2,28 @@
 #include <QFileDialog>
 #include <QListWidget>
 #include <QWidget>
+#include <iostream>
 
 #include <authordialog.h>
 
 #include "authordialog.h"
-#include "dbfile.h"
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "vrheadsettablemodel.h"
 
 MainWindow::MainWindow(QWidget *parent)
   : QMainWindow(parent)
-  , headsets()
   , authorDialog(new AuthorDialog(this))
   , headsetTableModel(new VRHeadsetTableModel(this))
   , ui(new Ui::MainWindow)
 {
   ui->setupUi(this);
-  //ui->tableView->setModel(headsetTableModel);
+  ui->tableView->setModel(headsetTableModel);
 }
 
-MainWindow::~MainWindow()
-{
+MainWindow::~MainWindow() {
+  delete authorDialog;
+  delete headsetTableModel;
   delete ui;
 }
 
@@ -39,27 +39,25 @@ void MainWindow::on_actionFileOpen_triggered()
                                                  QDir::currentPath(),
                                                  "Db Files (.db);;All Files (.*)")
                       .toStdString();
-
   if (!fileName.empty()) {
-    db.read(fileName);
+    headsetTableModel->readFromFile(fileName);
+
     ui->actionFileOpen->setDisabled(true);
     ui->actionFileClose->setEnabled(true);
     ui->actionFileUpdate->setEnabled(true);
     ui->actionFileWrite->setEnabled(true);
-
-    list<VRHeadset> l;
-    db.parse(l);
-
-    for (auto &i : l) {
-      if (i.getModelName().empty())
-        continue;
-    }
   }
 }
 
 void MainWindow::on_actionFileWrite_triggered() {
-  db.write();
-  db.reset();
+  headsetTableModel->writeToFile();
+}
+
+void MainWindow::on_actionFileUpdate_triggered() {
+  headsetTableModel->readFromFile();
+}
+void MainWindow::on_actionFileClose_triggered() {
+  headsetTableModel->reset();
 
   ui->actionFileOpen->setEnabled(true);
   ui->actionFileClose->setDisabled(true);

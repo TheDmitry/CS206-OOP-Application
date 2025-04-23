@@ -2,9 +2,10 @@
 #define VRHEADSETTABLEMODEL_H
 
 #include <QAbstractTableModel>
-#include <list>
+#include <vector>
 
-#include <vrheadset.h>
+#include "dbfile.h"
+#include "vrheadset.h"
 
 class VRHeadsetTableModel : public QAbstractTableModel
 {
@@ -34,8 +35,24 @@ public:
 
   Qt::ItemFlags flags(const QModelIndex &index) const override;
 
+  void reset();
+  void clear();
+
+  void setFileName(string const fileName);
+
+  void readFromFile(string const fileName);
+  void readFromFile();
+
+  void writeToFile(string const fileName);
+  void writeToFile();
+
 private:
-  list<VRHeadset> headsets;
+  vector<VRHeadset> headsets;
+
+  // DbFile workflow
+  DbFile db;
+
+  int columnsNum;
 };
 
 #endif // VRHEADSETTABLEMODEL_H

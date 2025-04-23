@@ -68,7 +68,19 @@ void VRHeadset::setPosition(float x, float y, float z) {
 }
 void VRHeadset::setPosition(Vector3 position) { this->position = position; }
 
-ostream& operator<<(ostream &os, VRHeadset const &vr) {
+void VRHeadset::setWidth(int value) {
+  width = value;
+};
+
+void VRHeadset::setHeight(int value) {
+  height = value;
+};
+
+void VRHeadset::setModelName(string name) {
+  modelName = name;
+};
+
+ostream &operator<<(ostream &os, VRHeadset const &vr) {
   const auto& vga = vr.getAngles();
   const auto& vgp = vr.getPosition();
 

@@ -17,10 +17,14 @@ string DbFile::getCurrentPath() const { return currentPath; }
 vector<string> &DbFile::getDataBuffer() { return dataBuffer; }
 vector<string> &DbFile::getInfoBuffer() { return infoBuffer; }
 
+void DbFile::setCurrentPath(const string path) {
+  currentPath = path;
+}
+
 void DbFile::read() {
   // assume it's bug
   if (!isFileExists())
-    throw invalid_argument("It's ambitious to read non existent file");
+    throw invalid_argument("It's ambitious to read non existent file: " + currentPath);
 
   if (isFileEmpty())
     throw invalid_argument("File is empty");
@@ -220,11 +224,11 @@ void DbFile::clear() {
   infoBuffer.shrink_to_fit();
 
   modified = {};
+  currentScheme = defaultScheme;
 }
 
 void DbFile::reset() {
   currentPath = "";
-  currentScheme = defaultScheme;
   clear();
 }
 
