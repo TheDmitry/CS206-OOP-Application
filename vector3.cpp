@@ -58,6 +58,12 @@ string Vector3::vectorToString(const Vector3 vector) {
   return format("v3({},{},{})", vector.x, vector.y, vector.z);
 }
 
+ostream &operator<<(ostream &os, Vector3 const &vec) {
+  os << Vector3::vectorToString(vec);
+
+  return os;
+}
+
 Vector3 &Vector3::operator+=(Vector3 const &v) {
   x += v.x;
   y += v.y;

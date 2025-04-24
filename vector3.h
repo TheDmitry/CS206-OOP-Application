@@ -29,6 +29,8 @@ class Vector3 {
   // DONE: read v3(f,f,f) from *.db, get Vector3(f,f,f)
   static string vectorToString(const Vector3 vector);
   // DONE: write Vector3(f,f,f) to v3(f,f,f) string. Fairly easy to do.
+
+  friend ostream &operator<<(ostream &os, Vector3 const &vec);
 };
 
 Vector3 operator+(Vector3 const &v1, Vector3 const &v2);
