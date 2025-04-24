@@ -4,8 +4,8 @@
 #include <QListWidget>
 #include <QMainWindow>
 
-#include "authordialog.h"
-#include "vrheadsettablemodel.h"
+#include "controllers/authordialog.h"
+#include "models/vrheadsettablemodel.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {

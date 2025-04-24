@@ -1,16 +1,14 @@
-#include "dbfile.h"
+#include "external/dbfile.h"
+
 #include <filesystem>
 #include <format>
 #include <fstream>
-#include <list>
 #include <sstream>
 #include <stdexcept>
 #include <string>
 
 using namespace std;
 
-DbFile::DbFile(string path) : currentPath(path) {}
-DbFile::DbFile() : currentPath("") {}
 DbFile::~DbFile() { reset(); }
 
 string DbFile::getCurrentPath() const { return currentPath; }
@@ -68,14 +66,12 @@ void DbFile::read() {
         {
           throw invalid_argument(
             "[db version=X] should appear only once in very first line of the file");
-        }
-        break;
+      } break;
 
       case OPS::CLOSE:
         {
           shouldEnd = true;
-        }
-        break;
+      } break;
 
       case OPS::DATA:
         {
@@ -87,8 +83,7 @@ void DbFile::read() {
               "Invalid db file format. It's not allowed to open data-block in info-block");
 
           shouldData = true;
-        }
-        break;
+      } break;
 
       case OPS::INFO:
         {
@@ -101,8 +96,7 @@ void DbFile::read() {
               "Invalid db file format. Info-block cannot be opened in Data-block");
 
           shouldInfo = true;
-        }
-        break;
+      } break;
 
       case OPS::END:
         {
@@ -113,36 +107,50 @@ void DbFile::read() {
             shouldInfo = false;
           if (shouldData)
             shouldData = false;
-        }
-        break;
+      } break;
 
       case OPS::SCHEME:
         {
-          size_t schemeMaxSize = SUPPORTED_SCHEME_ARGS.size();
+        size_t schemeMaxSize = provider->getSupportedSchemeArgs().size();
 
-          if (result.args.size() != schemeMaxSize)
-            throw invalid_argument(
-              "Invalid db file format. Invalid scheme: invalid amount of args");
+        if (result.args.size() != schemeMaxSize)
+          throw invalid_argument("Invalid db file format. Invalid scheme: invalid amount of args");
 
-          currentScheme.clear();
+        currentScheme.clear();
 
-          for (auto &i : result.args) {
-            size_t index = stoi(i.second);
+        for (auto &i : result.args) {
+          size_t index = stoi(i.second);
 
-            if (index >= schemeMaxSize)
-              throw invalid_argument("Invalid db file format. Invalid scheme: index out of bounds");
+          if (index >= schemeMaxSize)
+            throw invalid_argument("Invalid db file format. Invalid scheme: index out of bounds");
 
-            if (index < 0)
-              throw invalid_argument("Invalid db file format. Invalid scheme: negative index");
+          if (index < 0)
+            throw invalid_argument("Invalid db file format. Invalid scheme: negative index");
 
-            string key = i.first;
-            currentScheme[key] = index;
-          }
-
-          if (currentScheme.size() != SUPPORTED_SCHEME_ARGS.size())
-            throw invalid_argument("Invalid db file format. Invalid scheme: Duplicated keys");
+          string key = i.first;
+          currentScheme[key] = index;
         }
-        break;
+
+        if (currentScheme.size() != provider->getSupportedSchemeArgs().size())
+          throw invalid_argument("Invalid db file format. Invalid scheme: Duplicated keys");
+      } break;
+
+      case OPS::PROVIDER: {
+        if (result.args.size() < 0 || result.args.size() > 2)
+          throw invalid_argument(
+            "Invalid db file format. Operator provider should have only 2 arguments");
+
+        string providerName = result.args["name"];
+        if (!DbFile::providers.contains(providerName))
+          throw invalid_argument("Invalid db file format. No such provider registred");
+
+        bool shouldOverwrite = !result.args.contains("noOverwrite");
+
+        provider = DbFile::providers[providerName];
+        if (shouldOverwrite)
+          currentScheme = provider->getScheme();
+
+      } break;
 
       case OPS::TEXT:
         {
@@ -150,8 +158,7 @@ void DbFile::read() {
             dataBuffer.push_back(line);
           if (shouldInfo)
             infoBuffer.push_back(line);
-        }
-        break;
+      } break;
 
       default:
         {
@@ -189,12 +196,12 @@ void DbFile::write() {
   }
 
   if (dataBuffer.size() > 0) {
-    for (auto ib : dataBuffer)
-      dataContent.append(format("\n{}", ib));
+    for (auto db : dataBuffer)
+      dataContent.append(format("\n{}", db));
   }
 
   string dbVersion = format("[db version={}]", SUPPORTED_VERSION);
-
+  string providerTag = format("[provider name={}", provider->getName());
   string schemeParts;
   for (auto &i : currentScheme) {
     size_t index = i.second;
@@ -206,8 +213,9 @@ void DbFile::write() {
   }
   string scheme = format("[scheme{}]", schemeParts);
 
-  string content = format("{}\n{}\n[info]{}\n[end]\n[data]{}\n[end]\n[close]",
+  string content = format("{}\n{}\n{}\n[info]{}\n[end]\n[data]{}\n[end]\n[close]",
                           dbVersion,
+                          providerTag,
                           scheme,
                           infoContent,
                           dataContent);
@@ -224,7 +232,8 @@ void DbFile::clear() {
   infoBuffer.shrink_to_fit();
 
   modified = {};
-  currentScheme = defaultScheme;
+  currentScheme = {};
+  provider = nullptr;
 }
 
 void DbFile::reset() {
@@ -287,6 +296,8 @@ DbFile::OperatorResult DbFile::parseOperator(string const &line)
     result.op = OPS::CLOSE;
   else if (tokens[0] == "scheme")
     result.op = OPS::SCHEME;
+  else if (tokens[0] == "provider")
+    result.op = OPS::PROVIDER;
   else
     throw invalid_argument("Invalid db file format. Invalid operator " + line);
 
@@ -305,12 +316,24 @@ DbFile::OperatorResult DbFile::parseOperator(string const &line)
   return result;
 }
 
-const vector<string> DbFile::SUPPORTED_SCHEME_ARGS
-  = {"modelName", "width", "height", "refreshRate", "angles", "position"};
+// Returns currentScheme
+map<string, size_t> const &DbFile::getScheme() const {
+  return currentScheme;
+};
 
-const std::map<std::string, int> DbFile::defaultScheme = {{"modelName", 0},
-                                                          {"width", 1},
-                                                          {"height", 2},
-                                                          {"refreshRate", 3},
-                                                          {"angles", 4},
-                                                          {"position", 5}};
+// Returns name of all fields inside currentScheme
+string const &DbFile::getSchemeField(size_t key) const {
+  for (auto const &i : currentScheme) {
+    if (i.second == key)
+      return i.first;
+  }
+
+  //static const std::string emptyStr;
+  //return emptyStr;
+  throw runtime_error("Out of bounds on getSchemeField(size_t) on index = " + to_string(key));
+}
+
+map<string, shared_ptr<AbstractProvider>> DbFile::providers = {};
+void DbFile::registerProvider(string const &name, shared_ptr<AbstractProvider> provider) {
+  DbFile::providers[name] = provider;
+}

@@ -4,8 +4,8 @@
 #include <QAbstractTableModel>
 #include <vector>
 
-#include "dbfile.h"
-#include "vrheadset.h"
+#include "external/dbfile.h"
+#include "items/abstractitem.h"
 
 class VRHeadsetTableModel : public QAbstractTableModel
 {
@@ -47,7 +47,7 @@ public:
   void writeToFile();
 
 private:
-  vector<VRHeadset> headsets;
+  vector<unique_ptr<AbstractItem>> headsets;
 
   // DbFile workflow
   DbFile db;

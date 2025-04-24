@@ -1,7 +1,10 @@
 #pragma once
 
-#include "vector3.h"
+#include "external/vector3.h"
+#include "items/abstractitem.h"
+#include <map>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -10,7 +13,7 @@ enum HeadsetType {
   Full
 };
 
-class VRHeadset {
+class VRHeadset : public AbstractItem {
 public:
   VRHeadset(int width, int height, float refreshRate, Vector3 angles, Vector3 position, string modelName);
   VRHeadset(int width, int height, float refreshRate, float angle_x, float angle_y, float angle_z, float x, float y, float z, string modelName);
@@ -45,9 +48,15 @@ public:
   friend ostream &operator<<(ostream &os, VRHeadset const &vr);
 
   bool operator==(VRHeadset const &vr) const;
-  bool operator!=(VRHeadset const &vr) const;
+  bool operator!=(VRHeadset const& vr) const;
 
-protected:
+
+  static const vector<string> providerSupportedSchemeArgs;
+  static const map<string, size_t> providerScheme;
+  static const string providerName;
+
+private:
+
   int width, height;
   float refreshRate;
   bool connected;

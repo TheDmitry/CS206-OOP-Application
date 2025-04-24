@@ -4,12 +4,12 @@
 #include <QWidget>
 #include <iostream>
 
-#include <authordialog.h>
+#include <controllers/authordialog.h>
 
 #include "authordialog.h"
 #include "mainwindow.h"
+#include "models/vrheadsettablemodel.h"
 #include "ui_mainwindow.h"
-#include "vrheadsettablemodel.h"
 
 MainWindow::MainWindow(QWidget *parent)
   : QMainWindow(parent)

@@ -4,30 +4,72 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++20
 
-FORMS_DIRECTORY += views
-DIALOGS_DIRECTORY += $$FORMS_DIRECTORY/dialogs
+FORM_DIR = views
+
+DIALOGS += \
+$$FORM_DIR/dialogs/authordialog.ui
+
+PROVIDER_DIR = providers
+ITEM_DIR = items
+MODEL_DIR = models
+CONTROLLER_DIR = controllers
+EXTERNAL_DIR = external
+
+PROVIDER_SOURCES = \
+$$PROVIDER_DIR/vrheadsetprovider.cpp
+
+PROVIDER_HEADERS = \
+$$PROVIDER_DIR/abstractprovider.h \
+$$PROVIDER_DIR/vrheadsetprovider.h
+
+ITEM_SOURCES += \
+$$ITEM_DIR/vrheadset.cpp
+
+ITEM_HEADERS += \
+$$ITEM_DIR/abstractitem.h \
+$$ITEM_DIR/vrheadset.h
+
+MODEL_SOURCES += \
+$$MODEL_DIR/vrheadsettablemodel.cpp
+
+MODEL_HEADERS += \
+$$MODEL_DIR/vrheadsettablemodel.h
+
+CONTROLLER_SOURCES += \
+$$CONTROLLER_DIR/authordialog.cpp \
+$$CONTROLLER_DIR/mainwindow.cpp
+
+CONTROLLER_HEADERS += \
+$$CONTROLLER_DIR/authordialog.h \
+$$CONTROLLER_DIR/mainwindow.h
+
+EXTERNAL_SOURCES += \
+$$EXTERNAL_DIR/vector3.cpp \
+$$EXTERNAL_DIR/dbfile.cpp
+
+EXTERNAL_HEADERS += \
+$$EXTERNAL_DIR/vector3.h \
+$$EXTERNAL_DIR/dbfile.h
+
 
 SOURCES += \
-  authordialog.cpp \
 main.cpp \
-mainwindow.cpp \
-vector3.cpp \
-vrheadset.cpp \
-dbfile.cpp \
-  vrheadsettablemodel.cpp
-
+$$ITEM_SOURCES \
+$$MODEL_SOURCES \
+$$CONTROLLER_SOURCES \
+$$EXTERNAL_SOURCES \
+$$PROVIDER_SOURCES
 
 HEADERS += \
-  authordialog.h \
-mainwindow.h \
-vector3.h \
-vrheadset.h \
-dbfile.h \
-  vrheadsettablemodel.h
+$$ITEM_HEADERS \
+$$MODEL_HEADERS \
+$$CONTROLLER_HEADERS \
+$$EXTERNAL_HEADERS \
+$$PROVIDER_HEADERS
 
 FORMS += \
-  $$DIALOGS_DIRECTORY/authordialog.ui \
-  $$FORMS_DIRECTORY/mainwindow.ui
+$$DIALOGS \
+$$FORM_DIR/mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

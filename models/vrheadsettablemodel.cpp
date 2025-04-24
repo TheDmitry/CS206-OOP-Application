@@ -1,29 +1,23 @@
-#include "vrheadsettablemodel.h"
-#include "vector3.h"
-#include <iostream>
-#include <variant>
+#include "models/vrheadsettablemodel.h"
+#include "external/vector3.h"
+#include "items/vrheadset.h"
 
 VRHeadsetTableModel::VRHeadsetTableModel(QObject *parent)
   : QAbstractTableModel(parent)
   , columnsNum(7) {}
 
 QVariant VRHeadsetTableModel::headerData(int section, Qt::Orientation orientation, int role) const {
-  if (orientation == Qt::Horizontal && role == Qt::DisplayRole) {
+  if (orientation == Qt::Horizontal && role == Qt::DisplayRole && !headsets.empty()) {
     switch (section) {
       case 0:
         return "Id";
       case 1:
-        return "Name";
       case 2:
-        return "Width";
       case 3:
-        return "Height";
       case 4:
-        return "Refresh Rate";
       case 5:
-        return "Angles";
       case 6:
-        return "Position";
+        return QString::fromStdString(db.getSchemeField(section - 1));
       default:
         throw "Something bad happened. Definetly bug";
     }
@@ -76,7 +70,7 @@ QVariant VRHeadsetTableModel::data(const QModelIndex &index, int role) const
 
   int row = index.row();
   int column = index.column();
-  auto &item = headsets[row];
+  auto &item = static_cast<VRHeadset const &>(*headsets[row]);
 
   string content;
   switch (column) {
@@ -119,7 +113,7 @@ bool VRHeadsetTableModel::setData(const QModelIndex &index, const QVariant &valu
   if (data(index, role) != value) {
     int row = index.row();
     int column = index.column();
-    auto &item = headsets[row];
+    auto &item = static_cast<VRHeadset &>(*headsets[row]);
 
     string content;
     switch (column) {
@@ -127,17 +121,8 @@ bool VRHeadsetTableModel::setData(const QModelIndex &index, const QVariant &valu
         return false; // Id is INDEX in container so non-editable
       }
       case 1: { // modelName
-        try {
-          string stdValue = value.toString().toStdString();
-          for (auto &i : headsets) {
-            if (i.getModelName() == stdValue)
-              return false; // modelName must be unique in whole container
-          }
-
-          item.setModelName(stdValue);
-        } catch (exception const &e) {
-          return false;
-        }
+        string stdValue = value.toString().toStdString();
+        item.setModelName(stdValue);
       } break;
       case 2: { // width
         try {
