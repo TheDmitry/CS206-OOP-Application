@@ -69,7 +69,7 @@ void MainWindow::on_actionFileClose_triggered() {
 
 void MainWindow::on_actionNew_Tab_triggered() {
   if (!workspaceInitialized) {
-    ui->label->setDisabled(true);
+    ui->label->setHidden(true);
     workspace->setLayout(ui->gridLayout_2);
     ui->gridLayout_2->addWidget(workspace);
     workspace->show();

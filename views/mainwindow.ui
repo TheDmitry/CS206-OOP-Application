@@ -73,7 +73,7 @@
        </font>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;h1 align=&quot;center&quot; style=&quot; margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:xx-large; font-weight:700;&quot;&gt;Welcome!&lt;/span&gt;&lt;/h1&gt;&lt;p align=&quot;center&quot;&gt;There's still one step to start using this program&lt;/p&gt;&lt;hr/&gt;&lt;p align=&quot;center&quot;&gt;Press &lt;span style=&quot; font-weight:700; color:#bebcb8;&quot;&gt;CTRL + T&lt;/span&gt; or go to &lt;span style=&quot; font-weight:700; color:#bebcb8;&quot;&gt;Tabs -&amp;gt; New Tab&lt;/span&gt; to create new workspace&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;h1 align=&quot;center&quot; style=&quot; margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:xx-large; font-weight:700;&quot;&gt;Welcome!&lt;/span&gt;&lt;/h1&gt;&lt;p align=&quot;center&quot;&gt;There's still one step to start using this program&lt;/p&gt;&lt;hr/&gt;&lt;p align=&quot;center&quot;&gt;Press &lt;span style=&quot; font-weight:700; text-decoration: underline; color:#beb99e;&quot;&gt;CTRL + T&lt;/span&gt; or go to &lt;span style=&quot; font-weight:700; text-decoration: underline; color:#beb99e;&quot;&gt;Tabs -&amp;gt; New Tab&lt;/span&gt; to create new workspace&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="textFormat">
        <enum>Qt::TextFormat::RichText</enum>
