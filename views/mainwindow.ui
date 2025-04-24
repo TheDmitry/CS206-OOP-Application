@@ -21,16 +21,62 @@
     </sizepolicy>
    </property>
    <layout class="QGridLayout" name="gridLayout_2">
-    <item row="1" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout"/>
-    </item>
     <item row="0" column="0">
-     <widget class="QTableView" name="tableView">
-      <property name="styleSheet">
-       <string notr="true">QTableView::item { text-align: center; }</string>
+     <widget class="QLabel" name="label">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
       </property>
-      <property name="textElideMode">
-       <enum>Qt::TextElideMode::ElideRight</enum>
+      <property name="palette">
+       <palette>
+        <active>
+         <colorrole role="Midlight">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>47</red>
+            <green>47</green>
+            <blue>72</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </active>
+        <inactive>
+         <colorrole role="Midlight">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>47</red>
+            <green>47</green>
+            <blue>72</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </inactive>
+        <disabled>
+         <colorrole role="Midlight">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>47</red>
+            <green>47</green>
+            <blue>72</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </disabled>
+       </palette>
+      </property>
+      <property name="font">
+       <font>
+        <family>Fira Code</family>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;h1 align=&quot;center&quot; style=&quot; margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:xx-large; font-weight:700;&quot;&gt;Welcome!&lt;/span&gt;&lt;/h1&gt;&lt;p align=&quot;center&quot;&gt;There's still one step to start using this program&lt;/p&gt;&lt;hr/&gt;&lt;p align=&quot;center&quot;&gt;Press &lt;span style=&quot; font-weight:700; color:#bebcb8;&quot;&gt;CTRL + T&lt;/span&gt; or go to &lt;span style=&quot; font-weight:700; color:#bebcb8;&quot;&gt;Tabs -&amp;gt; New Tab&lt;/span&gt; to create new workspace&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::TextFormat::RichText</enum>
       </property>
      </widget>
     </item>
@@ -61,8 +107,20 @@
     <addaction name="actionProgramAuthor"/>
     <addaction name="actionProgramClose"/>
    </widget>
+   <widget class="QMenu" name="menuTabs">
+    <property name="title">
+     <string>Tabs</string>
+    </property>
+    <property name="separatorsCollapsible">
+     <bool>false</bool>
+    </property>
+    <addaction name="actionNew_Tab"/>
+    <addaction name="actionClose_Tab"/>
+    <addaction name="actionClose_All_Tabs"/>
+   </widget>
    <addaction name="menuProgram"/>
    <addaction name="menuFile"/>
+   <addaction name="menuTabs"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionProgramClose">
@@ -111,6 +169,21 @@
    </property>
    <property name="visible">
     <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionNew_Tab">
+   <property name="text">
+    <string>New Tab</string>
+   </property>
+  </action>
+  <action name="actionClose_Tab">
+   <property name="text">
+    <string>Close Tab</string>
+   </property>
+  </action>
+  <action name="actionClose_All_Tabs">
+   <property name="text">
+    <string>Close All</string>
    </property>
   </action>
  </widget>

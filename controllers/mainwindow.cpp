@@ -7,6 +7,7 @@
 #include <controllers/authordialog.h>
 
 #include "authordialog.h"
+#include "controllers/workspace.h"
 #include "mainwindow.h"
 #include "models/vrheadsettablemodel.h"
 #include "ui_mainwindow.h"
@@ -15,15 +16,16 @@ MainWindow::MainWindow(QWidget *parent)
   : QMainWindow(parent)
   , authorDialog(new AuthorDialog(this))
   , headsetTableModel(new VRHeadsetTableModel(this))
-  , ui(new Ui::MainWindow)
-{
+  , workspace(new Workspace())
+  , workspaceInitialized(false)
+  , ui(new Ui::MainWindow) {
   ui->setupUi(this);
-  ui->tableView->setModel(headsetTableModel);
 }
 
 MainWindow::~MainWindow() {
   delete authorDialog;
   delete headsetTableModel;
+  delete workspace;
   delete ui;
 }
 
@@ -63,4 +65,17 @@ void MainWindow::on_actionFileClose_triggered() {
   ui->actionFileClose->setDisabled(true);
   ui->actionFileUpdate->setDisabled(true);
   ui->actionFileWrite->setDisabled(true);
+}
+
+void MainWindow::on_actionNew_Tab_triggered() {
+  if (!workspaceInitialized) {
+    ui->label->setDisabled(true);
+    workspace->setLayout(ui->gridLayout_2);
+    ui->gridLayout_2->addWidget(workspace);
+    workspace->show();
+
+    workspaceInitialized = true;
+  }
+
+  workspace->addTab();
 }

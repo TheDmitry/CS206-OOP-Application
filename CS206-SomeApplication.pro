@@ -37,11 +37,15 @@ $$MODEL_DIR/vrheadsettablemodel.h
 
 CONTROLLER_SOURCES += \
 $$CONTROLLER_DIR/authordialog.cpp \
-$$CONTROLLER_DIR/mainwindow.cpp
+$$CONTROLLER_DIR/mainwindow.cpp \
+$$CONTROLLER_DIR/vrheadsetview.cpp \
+$$CONTROLLER_DIR/workspace.cpp \
 
 CONTROLLER_HEADERS += \
 $$CONTROLLER_DIR/authordialog.h \
-$$CONTROLLER_DIR/mainwindow.h
+$$CONTROLLER_DIR/mainwindow.h \
+$$CONTROLLER_DIR/vrheadsetview.h \
+$$CONTROLLER_DIR/workspace.h \
 
 EXTERNAL_SOURCES += \
 $$EXTERNAL_DIR/vector3.cpp \
@@ -58,18 +62,20 @@ $$ITEM_SOURCES \
 $$MODEL_SOURCES \
 $$CONTROLLER_SOURCES \
 $$EXTERNAL_SOURCES \
-$$PROVIDER_SOURCES
+$$PROVIDER_SOURCES \
 
 HEADERS += \
 $$ITEM_HEADERS \
 $$MODEL_HEADERS \
 $$CONTROLLER_HEADERS \
 $$EXTERNAL_HEADERS \
-$$PROVIDER_HEADERS
+$$PROVIDER_HEADERS \
 
 FORMS += \
 $$DIALOGS \
-$$FORM_DIR/mainwindow.ui
+$$FORM_DIR/mainwindow.ui \
+  views/vrheadsetview.ui \
+  views/workspace.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

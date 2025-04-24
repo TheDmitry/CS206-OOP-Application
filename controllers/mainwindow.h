@@ -5,6 +5,7 @@
 #include <QMainWindow>
 
 #include "controllers/authordialog.h"
+#include "controllers/workspace.h"
 #include "models/vrheadsettablemodel.h"
 
 QT_BEGIN_NAMESPACE
@@ -33,9 +34,14 @@ private slots:
 
   void on_actionFileClose_triggered();
 
+  void on_actionNew_Tab_triggered();
+
 private:
   AuthorDialog *authorDialog;
   VRHeadsetTableModel *headsetTableModel;
+  Workspace *workspace;
+
+  bool workspaceInitialized;
 
   Ui::MainWindow *ui;
 };
