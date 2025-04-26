@@ -37,14 +37,16 @@ public:
 
   void reset();
   void clear();
-  // string const -> string const &
-  void setFileName(string const fileName);
 
-  void readFromFile(string const fileName);
+  void setFileName(string const &fileName);
+
+  void readFromFile(string const &fileName);
   void readFromFile();
 
-  void writeToFile(string const fileName);
+  void writeToFile(string const &fileName);
   void writeToFile();
+
+  void addEmptyRow();
 
 private:
   vector<unique_ptr<AbstractItem>> items;

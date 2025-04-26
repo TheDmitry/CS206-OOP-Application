@@ -133,11 +133,11 @@ void CustomTableModel::clear() {
   endResetModel();
 }
 
-void CustomTableModel::setFileName(const string fileName) {
+void CustomTableModel::setFileName(const string &fileName) {
   db.setCurrentPath(fileName);
 }
 
-void CustomTableModel::readFromFile(const string fileName) {
+void CustomTableModel::readFromFile(const string &fileName) {
   setFileName(fileName);
   readFromFile();
 }
@@ -153,7 +153,7 @@ void CustomTableModel::readFromFile() {
   endResetModel();
 }
 
-void CustomTableModel::writeToFile(const string fileName) {
+void CustomTableModel::writeToFile(const string &fileName) {
   setFileName(fileName);
   writeToFile();
 }
@@ -161,4 +161,11 @@ void CustomTableModel::writeToFile(const string fileName) {
 void CustomTableModel::writeToFile() {
   db.update(items);
   db.write();
+}
+
+void CustomTableModel::addEmptyRow() {
+  beginResetModel();
+  auto item = db.getProvider()->create();
+  items.push_back(std::move(item));
+  endResetModel();
 }

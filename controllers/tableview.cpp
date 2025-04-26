@@ -26,3 +26,7 @@ QTableView *TableView::getTable() {
 CustomTableModel *TableView::getTableModel() {
   return static_cast<CustomTableModel *>(getTable()->model());
 }
+
+void TableView::on_pushButton_new_clicked() {
+  getTableModel()->addEmptyRow();
+}

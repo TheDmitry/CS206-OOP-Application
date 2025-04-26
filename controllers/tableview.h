@@ -23,6 +23,8 @@ public:
 private slots:
   void on_pushButton_clear_clicked();
 
+  void on_pushButton_new_clicked();
+
 private:
   CustomTableModel *customTableModel;
   Ui::TableView *ui;
