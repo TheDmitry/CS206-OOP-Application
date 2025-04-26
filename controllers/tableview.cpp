@@ -1,28 +1,28 @@
-#include "vrheadsetview.h"
+#include "tableview.h"
 #include "models/customtablemodel.h"
-#include "ui_vrheadsetview.h"
+#include "ui_tableview.h"
 
-VRHeadsetView::VRHeadsetView(QWidget *parent)
+TableView::TableView(QWidget *parent)
   : QWidget(parent)
   , customTableModel{new CustomTableModel(this)}
-  , ui(new Ui::VRHeadsetView) {
+  , ui(new Ui::TableView) {
   ui->setupUi(this);
   ui->tableView->setModel(customTableModel);
 }
 
-VRHeadsetView::~VRHeadsetView() {
+TableView::~TableView() {
   delete customTableModel;
   delete ui;
 }
 
-void VRHeadsetView::on_pushButton_clear_clicked() {
+void TableView::on_pushButton_clear_clicked() {
   customTableModel->reset();
 }
 
-QTableView *VRHeadsetView::getTable() {
+QTableView *TableView::getTable() {
   return ui->tableView;
 }
 
-CustomTableModel *VRHeadsetView::getTableModel() {
+CustomTableModel *TableView::getTableModel() {
   return static_cast<CustomTableModel *>(getTable()->model());
 }

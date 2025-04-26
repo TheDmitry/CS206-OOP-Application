@@ -1,5 +1,5 @@
-#ifndef VRHEADSETVIEW_H
-#define VRHEADSETVIEW_H
+#ifndef TABLEVIEW_H
+#define TABLEVIEW_H
 
 #include <QTableView>
 #include <QWidget>
@@ -7,15 +7,15 @@
 #include "models/customtablemodel.h"
 
 namespace Ui {
-class VRHeadsetView;
+class TableView;
 }
 
-class VRHeadsetView : public QWidget {
+class TableView : public QWidget {
   Q_OBJECT
 
 public:
-  explicit VRHeadsetView(QWidget *parent = nullptr);
-  ~VRHeadsetView();
+  explicit TableView(QWidget *parent = nullptr);
+  ~TableView();
   QTableView *getTable();
 
   CustomTableModel *getTableModel();
@@ -25,7 +25,7 @@ private slots:
 
 private:
   CustomTableModel *customTableModel;
-  Ui::VRHeadsetView *ui;
+  Ui::TableView *ui;
 };
 
-#endif // VRHEADSETVIEW_H
+#endif // TABLEVIEW_H
