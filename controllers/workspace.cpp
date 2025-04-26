@@ -18,13 +18,20 @@ Workspace::~Workspace() {
 }
 
 void Workspace::addTab() {
-  auto *vrheadview = new VRHeadsetView;
-  VRHeadsetViews.push_back(vrheadview);
+  ui->tabWidget->addTab(new VRHeadsetView,
+                        QString::fromStdString("Tab " + std::to_string(ui->tabWidget->count())));
 
-  vrheadview->setLayout(ui->gridLayout);
-  ui->gridLayout->addWidget(vrheadview);
-
-  ui->tabWidget->addTab(vrheadview,
-                        QString::fromStdString("Tab " + std::to_string(VRHeadsetViews.size())));
-  vrheadview->show();
+  emit tabCreated(ui->tabWidget->count() - 1);
 }
+
+QTabWidget *Workspace::getTabWidget() {
+  return ui->tabWidget;
+};
+
+QTableView *Workspace::getCurrentTableView() {
+  return static_cast<VRHeadsetView *>(ui->tabWidget->currentWidget())->getTable();
+};
+
+CustomTableModel *Workspace::getCurrentModel() {
+  return static_cast<CustomTableModel *>(getCurrentTableView()->model());
+};

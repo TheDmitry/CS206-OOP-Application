@@ -117,6 +117,7 @@
     <addaction name="actionNew_Tab"/>
     <addaction name="actionClose_Tab"/>
     <addaction name="actionClose_All_Tabs"/>
+    <addaction name="separator"/>
    </widget>
    <addaction name="menuProgram"/>
    <addaction name="menuFile"/>

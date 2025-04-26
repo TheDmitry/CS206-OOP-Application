@@ -4,27 +4,44 @@
 #include <QWidget>
 #include <iostream>
 
+#include <QKeyCombination>
+#include <QKeySequence>
+#include <QShortcut>
+
 #include <controllers/authordialog.h>
 
 #include "authordialog.h"
 #include "controllers/workspace.h"
 #include "mainwindow.h"
-#include "models/vrheadsettablemodel.h"
+#include "models/customtablemodel.h"
 #include "ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
   : QMainWindow(parent)
   , authorDialog(new AuthorDialog(this))
-  , headsetTableModel(new VRHeadsetTableModel(this))
   , workspace(new Workspace())
   , workspaceInitialized(false)
   , ui(new Ui::MainWindow) {
   ui->setupUi(this);
+  workspace->setHidden(true);
+
+  shortcut["newTab"] = new QShortcut(QKeyCombination(Qt::CTRL, Qt::Key_T), this);
+  shortcut["newTab"]->setContext(Qt::ApplicationShortcut);
+  connect(shortcut["newTab"], &QShortcut::activated, this, &MainWindow::on_actionNew_Tab_triggered);
+
+  shortcut["closeTab"] = new QShortcut(QKeyCombination(Qt::CTRL, Qt::Key_D), this);
+  shortcut["closeTab"]->setContext(Qt::ApplicationShortcut);
+  connect(shortcut["closeTab"],
+          &QShortcut::activated,
+          this,
+          &MainWindow::on_actionClose_Tab_triggered);
 }
 
 MainWindow::~MainWindow() {
+  for (auto &i : shortcut)
+    delete i.second;
+
   delete authorDialog;
-  delete headsetTableModel;
   delete workspace;
   delete ui;
 }
@@ -42,9 +59,9 @@ void MainWindow::on_actionFileOpen_triggered()
                                                  "Db Files (.db);;All Files (.*)")
                       .toStdString();
   if (!fileName.empty()) {
-    headsetTableModel->readFromFile(fileName);
+    workspace->getCurrentModel()->readFromFile(fileName);
 
-    ui->actionFileOpen->setDisabled(true);
+    //ui->actionFileOpen->setDisabled(true);
     ui->actionFileClose->setEnabled(true);
     ui->actionFileUpdate->setEnabled(true);
     ui->actionFileWrite->setEnabled(true);
@@ -52,24 +69,24 @@ void MainWindow::on_actionFileOpen_triggered()
 }
 
 void MainWindow::on_actionFileWrite_triggered() {
-  headsetTableModel->writeToFile();
+  workspace->getCurrentModel()->writeToFile();
 }
 
 void MainWindow::on_actionFileUpdate_triggered() {
-  headsetTableModel->readFromFile();
+  workspace->getCurrentModel()->readFromFile();
 }
 void MainWindow::on_actionFileClose_triggered() {
-  headsetTableModel->reset();
-
+  workspace->getCurrentModel()->reset();
+  /*
   ui->actionFileOpen->setEnabled(true);
   ui->actionFileClose->setDisabled(true);
   ui->actionFileUpdate->setDisabled(true);
   ui->actionFileWrite->setDisabled(true);
+  */
 }
 
 void MainWindow::on_actionNew_Tab_triggered() {
   if (!workspaceInitialized) {
-    ui->label->setHidden(true);
     workspace->setLayout(ui->gridLayout_2);
     ui->gridLayout_2->addWidget(workspace);
     workspace->show();
@@ -77,5 +94,23 @@ void MainWindow::on_actionNew_Tab_triggered() {
     workspaceInitialized = true;
   }
 
+  ui->label->setHidden(true);
+  if (workspace->isHidden()) {
+    workspace->setHidden(false);
+  }
+
   workspace->addTab();
+}
+
+void MainWindow::on_actionClose_Tab_triggered() {
+  if (!workspaceInitialized)
+    return;
+
+  auto *tabWidget = workspace->getTabWidget();
+
+  tabWidget->removeTab(tabWidget->currentIndex());
+  if (tabWidget->count() == 0) {
+    workspace->setHidden(true);
+    ui->label->setHidden(false);
+  }
 }

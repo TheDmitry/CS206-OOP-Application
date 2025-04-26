@@ -3,10 +3,13 @@
 
 #include <QListWidget>
 #include <QMainWindow>
+#include <QShortcut>
+#include <map>
+#include <string>
 
 #include "controllers/authordialog.h"
 #include "controllers/workspace.h"
-#include "models/vrheadsettablemodel.h"
+#include "models/customtablemodel.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -23,7 +26,6 @@ public:
   ~MainWindow();
 
 private slots:
-
   void on_actionProgramAuthor_triggered();
 
   void on_actionFileOpen_triggered();
@@ -36,12 +38,14 @@ private slots:
 
   void on_actionNew_Tab_triggered();
 
+  void on_actionClose_Tab_triggered();
+
 private:
   AuthorDialog *authorDialog;
-  VRHeadsetTableModel *headsetTableModel;
   Workspace *workspace;
-
   bool workspaceInitialized;
+
+  std::map<std::string, QShortcut *> shortcut;
 
   Ui::MainWindow *ui;
 };

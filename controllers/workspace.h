@@ -1,9 +1,10 @@
 #ifndef WORKSPACE_H
 #define WORKSPACE_H
 
+#include <QTabWidget>
+#include <QTableView>
 #include <QWidget>
-#include "controllers/vrheadsetview.h"
-#include <vector>
+#include "models/customtablemodel.h"
 
 namespace Ui {
 class Workspace;
@@ -16,10 +17,18 @@ public:
   explicit Workspace(QWidget *parent = nullptr);
   ~Workspace();
 
+  QTabWidget *getTabWidget();
+  QTableView *getCurrentTableView();
+  CustomTableModel *getCurrentModel();
+
   void addTab();
 
+signals:
+  void tabChanged(int index);
+  void tabCreated(int index);
+  void tabClosed(int index);
+
 private:
-  vector<VRHeadsetView *> VRHeadsetViews;
   Ui::Workspace *ui;
 };
 

@@ -27,6 +27,13 @@ public:
   unique_ptr<AbstractItem> create() override;
 
 private:
+  /*
+   * width -> int 
+   * height -> int
+   * 
+   * 
+   */
+
   const map<string, function<string(VRHeadset const &)>> getters = {
     {"width", [](VRHeadset const &target) -> string { return to_string(target.getWidth()); }},
     {"height", [](VRHeadset const &target) -> string { return to_string(target.getHeight()); }},

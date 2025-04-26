@@ -6,8 +6,8 @@
 using namespace std;
 
 int main(int argc, char *argv[]) {
-  shared_ptr<AbstractProvider> vrProvider = make_shared<VRHeadsetProvider>();
-  DbFile::registerProvider(vrProvider->getName(), vrProvider);
+  unique_ptr<AbstractProvider> vrProvider = make_unique<VRHeadsetProvider>();
+  DbFile::registerProvider(vrProvider->getName(), std::move(vrProvider));
 
   QApplication a(argc, argv);
 

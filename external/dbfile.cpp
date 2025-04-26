@@ -200,8 +200,8 @@ void DbFile::write() {
       dataContent.append(format("\n{}", db));
   }
 
-  string dbVersion = format("[db version={}]", SUPPORTED_VERSION);
-  string providerTag = format("[provider name={}", provider->getName());
+  string dbVersion = format("[db version={}]\n", SUPPORTED_VERSION);
+  string providerTag = format("[provider name={}]\n", provider->getName());
   string schemeParts;
   for (auto &i : currentScheme) {
     size_t index = i.second;
@@ -211,9 +211,9 @@ void DbFile::write() {
 
     schemeParts += arg;
   }
-  string scheme = format("[scheme{}]", schemeParts);
+  string scheme = format("[scheme{}]\n", schemeParts);
 
-  string content = format("{}\n{}\n{}\n[info]{}\n[end]\n[data]{}\n[end]\n[close]",
+  string content = format("{}{}{}[info]{}\n[end]\n[data]{}\n[end]\n[close]",
                           dbVersion,
                           providerTag,
                           scheme,
@@ -333,7 +333,13 @@ string const &DbFile::getSchemeField(size_t key) const {
   throw runtime_error("Out of bounds on getSchemeField(size_t) on index = " + to_string(key));
 }
 
+shared_ptr<AbstractProvider> const &DbFile::getProvider() const {
+  return provider;
+};
+
+/* Static */
 map<string, shared_ptr<AbstractProvider>> DbFile::providers = {};
+
 void DbFile::registerProvider(string const &name, shared_ptr<AbstractProvider> provider) {
   DbFile::providers[name] = provider;
 }

@@ -57,5 +57,22 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton_clear</sender>
+   <signal>clicked()</signal>
+   <receiver>tableView</receiver>
+   <slot>reset()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>433</x>
+     <y>515</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>392</x>
+     <y>380</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

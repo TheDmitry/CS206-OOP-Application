@@ -30,10 +30,10 @@ $$ITEM_DIR/abstractitem.h \
 $$ITEM_DIR/vrheadset.h
 
 MODEL_SOURCES += \
-$$MODEL_DIR/vrheadsettablemodel.cpp
+$$MODEL_DIR/customtablemodel.cpp
 
 MODEL_HEADERS += \
-$$MODEL_DIR/vrheadsettablemodel.h
+$$MODEL_DIR/customtablemodel.h
 
 CONTROLLER_SOURCES += \
 $$CONTROLLER_DIR/authordialog.cpp \

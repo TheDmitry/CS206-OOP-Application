@@ -1,5 +1,5 @@
-#ifndef VRHEADSETTABLEMODEL_H
-#define VRHEADSETTABLEMODEL_H
+#ifndef CUSTOMTABLEMODEL_H
+#define CUSTOMTABLEMODEL_H
 
 #include <QAbstractTableModel>
 #include <vector>
@@ -7,12 +7,12 @@
 #include "external/dbfile.h"
 #include "items/abstractitem.h"
 
-class VRHeadsetTableModel : public QAbstractTableModel
-{
+class CustomTableModel : public QAbstractTableModel {
   Q_OBJECT
 
 public:
-  explicit VRHeadsetTableModel(QObject *parent = nullptr);
+  explicit CustomTableModel(QObject *parent = nullptr);
+  ~CustomTableModel();
 
   // Header:
   QVariant headerData(int section,
@@ -37,7 +37,7 @@ public:
 
   void reset();
   void clear();
-
+  // string const -> string const &
   void setFileName(string const fileName);
 
   void readFromFile(string const fileName);
@@ -47,12 +47,10 @@ public:
   void writeToFile();
 
 private:
-  vector<unique_ptr<AbstractItem>> headsets;
+  vector<unique_ptr<AbstractItem>> items;
 
   // DbFile workflow
   DbFile db;
-
-  int columnsNum;
 };
 
-#endif // VRHEADSETTABLEMODEL_H
+#endif // CUSTOMTABLEMODEL_H

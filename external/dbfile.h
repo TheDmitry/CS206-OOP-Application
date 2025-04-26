@@ -91,6 +91,9 @@ public:
   // Returns name of field inside currentScheme with index [key]
   string const &getSchemeField(size_t key) const;
 
+  // Allows to get access to current provider. Provider cannot be modified.
+  shared_ptr<AbstractProvider> const &getProvider() const;
+
   // Makes by name(X) association to appropriate provider for [provider name=X] operator
   static void registerProvider(string const &name, shared_ptr<AbstractProvider> provider);
   map<string, size_t> currentScheme;
