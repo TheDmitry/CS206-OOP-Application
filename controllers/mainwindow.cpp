@@ -2,17 +2,14 @@
 #include <QFileDialog>
 #include <QListWidget>
 #include <QWidget>
-#include <iostream>
 
 #include <QKeyCombination>
 #include <QKeySequence>
 #include <QShortcut>
 
-#include <controllers/authordialog.h>
-
-#include "authordialog.h"
+#include "controllers/authordialog.h"
+#include "controllers/mainwindow.h"
 #include "controllers/workspace.h"
-#include "mainwindow.h"
 #include "models/customtablemodel.h"
 #include "ui_mainwindow.h"
 

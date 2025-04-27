@@ -1,6 +1,9 @@
-#include "tableview.h"
+#include "controllers/tableview.h"
 #include "models/customtablemodel.h"
 #include "ui_tableview.h"
+
+#include <QHeaderView>
+#include <QSizePolicy>
 
 TableView::TableView(QWidget *parent)
   : QWidget(parent)
