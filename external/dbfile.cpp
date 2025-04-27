@@ -7,6 +7,8 @@
 #include <stdexcept>
 #include <string>
 
+#include "external/parseerror.h"
+
 using namespace std;
 
 DbFile::~DbFile() { reset(); }
@@ -22,10 +24,10 @@ void DbFile::setCurrentPath(const string path) {
 void DbFile::read() {
   // assume it's bug
   if (!isFileExists())
-    throw invalid_argument("It's ambitious to read non existent file: " + currentPath);
+    throw runtime_error("It's ambitious to read non existent file: " + currentPath);
 
   if (isFileEmpty())
-    throw invalid_argument("File is empty");
+    throw runtime_error("File is empty");
 
   if (!dataBuffer.empty())
     clear();
@@ -35,7 +37,7 @@ void DbFile::read() {
   ifstream file{currentPath};
 
   if (!file)
-    throw invalid_argument("Unnable to open file");
+    throw runtime_error("Unnable to open file");
 
   string line;
 
@@ -43,15 +45,23 @@ void DbFile::read() {
   bool shouldInfo = false;
   bool shouldEnd = false;
   bool isSupported = false;
-
+  int lineNumber = -1;
   while (getline(file, line)) {
     if (shouldEnd)
       break;
 
+    lineNumber++;
+
     if (line.empty())
       continue;
 
-    OperatorResult result = parseOperator(line);
+    // runtime_error -> ParseError
+    OperatorResult result;
+    try {
+      result = parseOperator(line);
+    } catch (runtime_error const &e) {
+      throw ParseError(e.what(), lineNumber, line);
+    }
 
     if (!isSupported && result.op == OPS::DB) {
       isSupported = result.args["version"] == SUPPORTED_VERSION;
@@ -59,13 +69,14 @@ void DbFile::read() {
     }
 
     if (!isSupported)
-      throw invalid_argument("Unsupported db file");
+      throw ParseError("Unsuppported db file", lineNumber, result.content);
 
     switch (result.op) {
       case OPS::DB:
         {
-          throw invalid_argument(
-            "[db version=X] should appear only once in very first line of the file");
+        throw ParseError("[db version=X] should appear only once in very first line of the file",
+                         lineNumber,
+                         result.content);
       } break;
 
       case OPS::CLOSE:
@@ -76,11 +87,15 @@ void DbFile::read() {
       case OPS::DATA:
         {
           if (shouldData)
-            throw invalid_argument("Invalid db file format. Data-block already opened");
+            throw ParseError("Invalid db file format. Data-block already opened",
+                             lineNumber,
+                             result.content);
 
           if (shouldInfo)
-            throw invalid_argument(
-              "Invalid db file format. It's not allowed to open data-block in info-block");
+            throw ParseError(
+              "Invalid db file format. It's not allowed to open data-block in info-block",
+              lineNumber,
+              result.content);
 
           shouldData = true;
       } break;
@@ -88,12 +103,15 @@ void DbFile::read() {
       case OPS::INFO:
         {
           if (shouldInfo)
-            throw invalid_argument("Invalid db file format. Info-block already opened. It's not "
-                                   "allowed to have two or more info-blocks in one file");
+            throw ParseError("Invalid db file format. Info-block already opened. "
+                             "It's not allowed to have two or more info-blocks in one file",
+                             lineNumber,
+                             result.content);
 
           if (shouldData)
-            throw invalid_argument(
-              "Invalid db file format. Info-block cannot be opened in Data-block");
+            throw ParseError("Invalid db file format. Info-block cannot be opened in Data-block",
+                             lineNumber,
+                             result.content);
 
           shouldInfo = true;
       } break;
@@ -101,7 +119,9 @@ void DbFile::read() {
       case OPS::END:
         {
           if (!shouldData && !shouldInfo)
-            throw invalid_argument("Invalid db file format. No blocks were opened");
+            throw ParseError("Invalid db file format. No blocks were opened",
+                             lineNumber,
+                             result.content);
 
           if (shouldInfo)
             shouldInfo = false;
@@ -114,7 +134,9 @@ void DbFile::read() {
         size_t schemeMaxSize = provider->getSupportedSchemeArgs().size();
 
         if (result.args.size() != schemeMaxSize)
-          throw invalid_argument("Invalid db file format. Invalid scheme: invalid amount of args");
+          throw ParseError("Invalid db file format. Invalid scheme: invalid amount of args",
+                           lineNumber,
+                           result.content);
 
         currentScheme.clear();
 
@@ -122,27 +144,36 @@ void DbFile::read() {
           size_t index = stoi(i.second);
 
           if (index >= schemeMaxSize)
-            throw invalid_argument("Invalid db file format. Invalid scheme: index out of bounds");
+            throw ParseError("Invalid db file format. Invalid scheme: index out of bounds",
+                             lineNumber,
+                             result.content);
 
           if (index < 0)
-            throw invalid_argument("Invalid db file format. Invalid scheme: negative index");
+            throw ParseError("Invalid db file format. Invalid scheme: negative index",
+                             lineNumber,
+                             result.content);
 
           string key = i.first;
           currentScheme[key] = index;
         }
 
         if (currentScheme.size() != provider->getSupportedSchemeArgs().size())
-          throw invalid_argument("Invalid db file format. Invalid scheme: Duplicated keys");
+          throw ParseError("Invalid db file format. Invalid scheme: Duplicated keys",
+                           lineNumber,
+                           result.content);
       } break;
 
       case OPS::PROVIDER: {
         if (result.args.size() < 0 || result.args.size() > 2)
-          throw invalid_argument(
-            "Invalid db file format. Operator provider should have only 2 arguments");
+          throw ParseError("Invalid db file format. Operator provider should have only 2 arguments",
+                           lineNumber,
+                           result.content);
 
         string providerName = result.args["name"];
         if (!DbFile::providers.contains(providerName))
-          throw invalid_argument("Invalid db file format. No such provider registred");
+          throw ParseError("Invalid db file format. No such provider registred",
+                           lineNumber,
+                           result.content);
 
         bool shouldOverwrite = !result.args.contains("noOverwrite");
 
@@ -162,7 +193,7 @@ void DbFile::read() {
 
       default:
         {
-          throw invalid_argument("Invalid db file format. Unsupported operator");
+        throw ParseError("Invalid db file format. Unsupported operator", lineNumber, result.content);
         }
     }
   }
@@ -179,12 +210,12 @@ void DbFile::read(const string &path)
 
 void DbFile::write() {
   if (!isFileExists())
-    throw invalid_argument("It's ambitious to write to file without path to file");
+    throw runtime_error("It's ambitious to write to file without path to file");
 
   ofstream file{currentPath};
 
   if (!file) {
-    throw invalid_argument("Unnable to open file!");
+    throw runtime_error("Unnable to open file!");
   }
 
   string infoContent;
@@ -263,10 +294,9 @@ DbFile::OperatorResult DbFile::parseOperator(string const &line)
 {
   OperatorResult result = {};
   result.op = OPS::TEXT;
-  result.content = "";
+  result.content = line;
 
   if (!line.starts_with('[') || !line.ends_with(']')) {
-    result.content = line;
     return result;
   }
 
@@ -299,7 +329,7 @@ DbFile::OperatorResult DbFile::parseOperator(string const &line)
   else if (tokens[0] == "provider")
     result.op = OPS::PROVIDER;
   else
-    throw invalid_argument("Invalid db file format. Invalid operator " + line);
+    throw runtime_error("Invalid db file format. Invalid operator");
 
   for (size_t i = 1; i < tokens.size(); ++i) {
     string arg = tokens[i];
