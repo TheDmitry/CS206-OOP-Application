@@ -5,9 +5,11 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 CONFIG += c++20
 
 FORM_DIR = views
+DIALOG_DIR = $$FORM_DIR/dialogs
 
 DIALOGS += \
-$$FORM_DIR/dialogs/authordialog.ui
+$$DIALOG_DIR/authordialog.ui \
+$$DIALOG_DIR/errordialog.ui
 
 PROVIDER_DIR = providers
 ITEM_DIR = items
@@ -37,26 +39,29 @@ $$MODEL_DIR/customtablemodel.h
 
 CONTROLLER_SOURCES += \
 $$CONTROLLER_DIR/authordialog.cpp \
+$$CONTROLLER_DIR/errordialog.cpp \
 $$CONTROLLER_DIR/mainwindow.cpp \
 $$CONTROLLER_DIR/tableview.cpp \
-$$CONTROLLER_DIR/workspace.cpp \
+$$CONTROLLER_DIR/workspace.cpp
 
 CONTROLLER_HEADERS += \
 $$CONTROLLER_DIR/authordialog.h \
+$$CONTROLLER_DIR/errordialog.h \
 $$CONTROLLER_DIR/mainwindow.h \
 $$CONTROLLER_DIR/tableview.h \
-$$CONTROLLER_DIR/workspace.h \
+$$CONTROLLER_DIR/workspace.h
 
 EXTERNAL_SOURCES += \
 $$EXTERNAL_DIR/vector3.cpp \
 $$EXTERNAL_DIR/dbfile.cpp \
 $$EXTERNAL_DIR/parseerror.cpp \
+$$EXTERNAL_DIR/dberror.cpp \
 
 EXTERNAL_HEADERS += \
 $$EXTERNAL_DIR/vector3.h \
 $$EXTERNAL_DIR/dbfile.h \
 $$EXTERNAL_DIR/parseerror.h \
-
+$$EXTERNAL_DIR/dberror.h \
 
 SOURCES += \
 main.cpp \

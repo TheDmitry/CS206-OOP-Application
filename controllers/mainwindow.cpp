@@ -13,9 +13,13 @@
 #include "models/customtablemodel.h"
 #include "ui_mainwindow.h"
 
+#include "external/dberror.h"
+#include "external/parseerror.h"
+
 MainWindow::MainWindow(QWidget *parent)
   : QMainWindow(parent)
   , authorDialog(new AuthorDialog(this))
+  , errorDialog(new ErrorDialog(this))
   , workspace(new Workspace())
   , workspaceInitialized(false)
   , ui(new Ui::MainWindow) {
@@ -39,12 +43,12 @@ MainWindow::~MainWindow() {
     delete i.second;
 
   delete authorDialog;
+  delete errorDialog;
   delete workspace;
   delete ui;
 }
 
-void MainWindow::on_actionProgramAuthor_triggered()
-{
+void MainWindow::on_actionProgramAuthor_triggered() {
   authorDialog->exec();
 }
 
@@ -56,7 +60,15 @@ void MainWindow::on_actionFileOpen_triggered()
                                                  "Db Files (.db);;All Files (.*)")
                       .toStdString();
   if (!fileName.empty()) {
-    workspace->getCurrentModel()->readFromFile(fileName);
+    try {
+      workspace->getCurrentModel()->readFromFile(fileName);
+    } catch (ParseError const &e) {
+      errorDialog->callWithParseError(e);
+      return;
+    } catch (DbError const &e) {
+      errorDialog->callWithDbError(e);
+      return;
+    }
 
     //ui->actionFileOpen->setDisabled(true);
     ui->actionFileClose->setEnabled(true);
@@ -66,14 +78,38 @@ void MainWindow::on_actionFileOpen_triggered()
 }
 
 void MainWindow::on_actionFileWrite_triggered() {
-  workspace->getCurrentModel()->writeToFile();
+  try {
+    workspace->getCurrentModel()->writeToFile();
+  } catch (ParseError const &e) {
+    errorDialog->callWithParseError(e);
+    return;
+  } catch (DbError const &e) {
+    errorDialog->callWithDbError(e);
+    return;
+  }
 }
 
 void MainWindow::on_actionFileUpdate_triggered() {
-  workspace->getCurrentModel()->readFromFile();
+  try {
+    workspace->getCurrentModel()->readFromFile();
+  } catch (ParseError const &e) {
+    errorDialog->callWithParseError(e);
+    return;
+  } catch (DbError const &e) {
+    errorDialog->callWithDbError(e);
+    return;
+  }
 }
 void MainWindow::on_actionFileClose_triggered() {
-  workspace->getCurrentModel()->reset();
+  try {
+    workspace->getCurrentModel()->reset();
+  } catch (ParseError const &e) {
+    errorDialog->callWithParseError(e);
+    return;
+  } catch (DbError const &e) {
+    errorDialog->callWithDbError(e);
+    return;
+  }
   /*
   ui->actionFileOpen->setEnabled(true);
   ui->actionFileClose->setDisabled(true);

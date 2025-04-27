@@ -128,5 +128,5 @@ private:
     map<string, string> args;
   };
 
-  OperatorResult parseOperator(const string &line);
+  OperatorResult parseOperator(const string &line, int lineNumber);
 };

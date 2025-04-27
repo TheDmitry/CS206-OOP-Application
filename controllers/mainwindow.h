@@ -8,8 +8,10 @@
 #include <string>
 
 #include "controllers/authordialog.h"
+#include "controllers/errordialog.h"
+
 #include "controllers/workspace.h"
-#include "models/customtablemodel.h"
+#include "external/parseerror.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -42,6 +44,7 @@ private slots:
 
 private:
   AuthorDialog *authorDialog;
+  ErrorDialog *errorDialog;
   Workspace *workspace;
   bool workspaceInitialized;
 
