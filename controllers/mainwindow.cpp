@@ -95,7 +95,7 @@ void MainWindow::on_actionFileOpen_triggered()
   string fileName = QFileDialog::getOpenFileName(this,
                                                  "Read file",
                                                  QDir::currentPath(),
-                                                 "Db Files (.db);All Files (.*)")
+                                                 "Db Files (.db);;All Files (.*)")
                       .toStdString();
   if (!fileName.empty()) {
     try {
