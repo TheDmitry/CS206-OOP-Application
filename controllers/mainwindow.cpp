@@ -22,6 +22,7 @@ MainWindow::MainWindow(QWidget *parent)
   , errorDialog(new ErrorDialog(this))
   , workspace(new Workspace())
   , workspaceInitialized(false)
+  , shortcut{}
   , ui(new Ui::MainWindow) {
   ui->setupUi(this);
   workspace->setHidden(true);
@@ -41,6 +42,7 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::initShortcuts() {
+  shortcut["newTab"] = new QShortcut(QKeyCombination(Qt::CTRL, Qt::Key_W), this);
   shortcut["newTab"]->setContext(Qt::ApplicationShortcut);
   connect(shortcut["newTab"], &QShortcut::activated, this, &MainWindow::on_actionNew_Tab_triggered);
 
