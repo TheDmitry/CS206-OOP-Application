@@ -26,24 +26,8 @@ MainWindow::MainWindow(QWidget *parent)
   ui->setupUi(this);
   workspace->setHidden(true);
 
-  shortcut["newTab"] = new QShortcut(QKeyCombination(Qt::CTRL, Qt::Key_W), this);
-  shortcut["newTab"]->setContext(Qt::ApplicationShortcut);
-  connect(shortcut["newTab"], &QShortcut::activated, this, &MainWindow::on_actionNew_Tab_triggered);
-
-  shortcut["closeTab"] = new QShortcut(QKeyCombination(Qt::CTRL, Qt::Key_D), this);
-  shortcut["closeTab"]->setContext(Qt::ApplicationShortcut);
-  connect(shortcut["closeTab"],
-          &QShortcut::activated,
-          this,
-          &MainWindow::on_actionClose_Tab_triggered);
-
-  connect(workspace, &Workspace::tabChanged, this, &MainWindow::checkFileTabs);
-  connect(workspace, &Workspace::tabCreated, this, &MainWindow::checkWorkspaceTabs);
-
-  connect(workspace, &Workspace::tabClosed, this, [this]() {
-    checkFileTabs();
-    checkWorkspaceTabs();
-  });
+  connectTabSignals();
+  initShortcuts();
 }
 
 MainWindow::~MainWindow() {
@@ -54,6 +38,27 @@ MainWindow::~MainWindow() {
   delete errorDialog;
   delete workspace;
   delete ui;
+}
+
+void MainWindow::initShortcuts() {
+  shortcut["newTab"]->setContext(Qt::ApplicationShortcut);
+  connect(shortcut["newTab"], &QShortcut::activated, this, &MainWindow::on_actionNew_Tab_triggered);
+
+  shortcut["closeTab"] = new QShortcut(QKeyCombination(Qt::CTRL, Qt::Key_D), this);
+  shortcut["closeTab"]->setContext(Qt::ApplicationShortcut);
+  connect(shortcut["closeTab"],
+          &QShortcut::activated,
+          this,
+          &MainWindow::on_actionClose_Tab_triggered);
+}
+
+void MainWindow::connectTabSignals() {
+  connect(workspace, &Workspace::tabChanged, this, &MainWindow::checkFileTabs);
+  connect(workspace, &Workspace::tabCreated, this, &MainWindow::checkWorkspaceTabs);
+  connect(workspace, &Workspace::tabClosed, this, [this]() {
+    checkFileTabs();
+    checkWorkspaceTabs();
+  });
 }
 
 void MainWindow::checkFileTabs() {
@@ -88,7 +93,7 @@ void MainWindow::on_actionFileOpen_triggered()
   string fileName = QFileDialog::getOpenFileName(this,
                                                  "Read file",
                                                  QDir::currentPath(),
-                                                 "Db Files (.db);;All Files (.*)")
+                                                 "Db Files (.db);All Files (.*)")
                       .toStdString();
   if (!fileName.empty()) {
     try {

@@ -27,8 +27,6 @@ public:
   MainWindow(QWidget *parent = nullptr);
   ~MainWindow();
 
-  void checkFileTabs();
-  void checkWorkspaceTabs();
 
 private slots:
   void on_actionProgramAuthor_triggered();
@@ -54,5 +52,11 @@ private:
   std::map<std::string, QShortcut *> shortcut;
 
   Ui::MainWindow *ui;
+
+  void checkFileTabs();
+  void checkWorkspaceTabs();
+
+  void initShortcuts();
+  void connectTabSignals();
 };
 #endif // MAINWINDOW_H
