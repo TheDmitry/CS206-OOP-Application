@@ -49,11 +49,13 @@ $$CONTROLLER_DIR/workspace.h \
 
 EXTERNAL_SOURCES += \
 $$EXTERNAL_DIR/vector3.cpp \
-$$EXTERNAL_DIR/dbfile.cpp
+$$EXTERNAL_DIR/dbfile.cpp \
+$$EXTERNAL_DIR/parseerror.cpp \
 
 EXTERNAL_HEADERS += \
 $$EXTERNAL_DIR/vector3.h \
-$$EXTERNAL_DIR/dbfile.h
+$$EXTERNAL_DIR/dbfile.h \
+$$EXTERNAL_DIR/parseerror.h \
 
 
 SOURCES += \
