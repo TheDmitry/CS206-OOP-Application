@@ -27,6 +27,9 @@ public:
   MainWindow(QWidget *parent = nullptr);
   ~MainWindow();
 
+  void checkFileTabs();
+  void checkWorkspaceTabs();
+
 private slots:
   void on_actionProgramAuthor_triggered();
 

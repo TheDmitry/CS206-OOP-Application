@@ -163,6 +163,10 @@ void CustomTableModel::writeToFile() {
   db.write();
 }
 
+bool CustomTableModel::isEmpty() {
+  return (items.empty() || db.isDataEmpty());
+}
+
 void CustomTableModel::addEmptyRow() {
   beginResetModel();
   auto item = db.getProvider()->create();

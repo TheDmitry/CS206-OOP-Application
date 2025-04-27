@@ -48,6 +48,8 @@ public:
 
   void addEmptyRow();
 
+  bool isEmpty();
+
 private:
   vector<unique_ptr<AbstractItem>> items;
 

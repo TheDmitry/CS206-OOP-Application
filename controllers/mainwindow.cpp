@@ -26,7 +26,7 @@ MainWindow::MainWindow(QWidget *parent)
   ui->setupUi(this);
   workspace->setHidden(true);
 
-  shortcut["newTab"] = new QShortcut(QKeyCombination(Qt::CTRL, Qt::Key_T), this);
+  shortcut["newTab"] = new QShortcut(QKeyCombination(Qt::CTRL, Qt::Key_W), this);
   shortcut["newTab"]->setContext(Qt::ApplicationShortcut);
   connect(shortcut["newTab"], &QShortcut::activated, this, &MainWindow::on_actionNew_Tab_triggered);
 
@@ -36,6 +36,14 @@ MainWindow::MainWindow(QWidget *parent)
           &QShortcut::activated,
           this,
           &MainWindow::on_actionClose_Tab_triggered);
+
+  connect(workspace, &Workspace::tabChanged, this, &MainWindow::checkFileTabs);
+  connect(workspace, &Workspace::tabCreated, this, &MainWindow::checkWorkspaceTabs);
+
+  connect(workspace, &Workspace::tabClosed, this, [this]() {
+    checkFileTabs();
+    checkWorkspaceTabs();
+  });
 }
 
 MainWindow::~MainWindow() {
@@ -46,6 +54,29 @@ MainWindow::~MainWindow() {
   delete errorDialog;
   delete workspace;
   delete ui;
+}
+
+void MainWindow::checkFileTabs() {
+  bool hasData = false;
+
+  if (workspaceInitialized && workspace->getTabWidget()->count() > 0)
+    hasData = !workspace->getCurrentModel()->isEmpty();
+
+  cout << "Call -> checkFileTabs() -> hasData(" << hasData << ")" << endl;
+
+  ui->actionFileOpen->setEnabled(!hasData);
+  ui->actionFileClose->setEnabled(hasData);
+  ui->actionFileUpdate->setEnabled(hasData);
+  ui->actionFileWrite->setEnabled(hasData);
+}
+
+void MainWindow::checkWorkspaceTabs() {
+  bool hasTabs = workspaceInitialized && workspace->getTabWidget()->count() > 0;
+
+  cout << "Call -> checkWorkspaceTabs() -> hasTabs(" << hasTabs << ")" << endl;
+
+  ui->actionClose_Tab->setEnabled(hasTabs);
+  ui->actionClose_All_Tabs->setEnabled(hasTabs);
 }
 
 void MainWindow::on_actionProgramAuthor_triggered() {
@@ -70,10 +101,7 @@ void MainWindow::on_actionFileOpen_triggered()
       return;
     }
 
-    //ui->actionFileOpen->setDisabled(true);
-    ui->actionFileClose->setEnabled(true);
-    ui->actionFileUpdate->setEnabled(true);
-    ui->actionFileWrite->setEnabled(true);
+    checkFileTabs();
   }
 }
 
@@ -110,12 +138,8 @@ void MainWindow::on_actionFileClose_triggered() {
     errorDialog->callWithDbError(e);
     return;
   }
-  /*
-  ui->actionFileOpen->setEnabled(true);
-  ui->actionFileClose->setDisabled(true);
-  ui->actionFileUpdate->setDisabled(true);
-  ui->actionFileWrite->setDisabled(true);
-  */
+
+  checkFileTabs();
 }
 
 void MainWindow::on_actionNew_Tab_triggered() {
@@ -141,9 +165,10 @@ void MainWindow::on_actionClose_Tab_triggered() {
 
   auto *tabWidget = workspace->getTabWidget();
 
-  tabWidget->removeTab(tabWidget->currentIndex());
-  if (tabWidget->count() == 0) {
-    workspace->setHidden(true);
+  if ((tabWidget->count() - 1) <= 0) {
     ui->label->setHidden(false);
+    workspace->setHidden(true);
   }
+
+  tabWidget->removeTab(tabWidget->currentIndex());
 }

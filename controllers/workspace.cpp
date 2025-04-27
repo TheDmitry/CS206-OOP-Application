@@ -35,3 +35,7 @@ QTableView *Workspace::getCurrentTableView() {
 CustomTableModel *Workspace::getCurrentModel() {
   return static_cast<CustomTableModel *>(getCurrentTableView()->model());
 };
+
+void Workspace::on_tabWidget_currentChanged(int index) {
+  emit tabChanged(index);
+}

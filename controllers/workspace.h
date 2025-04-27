@@ -28,6 +28,9 @@ signals:
   void tabCreated(int index);
   void tabClosed(int index);
 
+private slots:
+  void on_tabWidget_currentChanged(int index);
+
 private:
   Ui::Workspace *ui;
 };
