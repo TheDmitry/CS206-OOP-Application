@@ -1,32 +1,30 @@
 #pragma once
+
 #include <filesystem>
 #include <format>
-#include <iostream>
 #include <map>
 #include <string>
 #include <vector>
 
 #include "providers/abstractprovider.h"
 
-using namespace std;
-
 class DbFile {
 public:
-  DbFile(string const &path)
+  DbFile(std::string const &path)
     : currentPath(path) {}
   DbFile()
     : currentPath("") {}
 
   ~DbFile();
 
-  string getCurrentPath() const;
-  vector<string> &getDataBuffer();
-  vector<string> &getInfoBuffer();
+  std::string getCurrentPath() const;
+  std::vector<std::string> &getDataBuffer();
+  std::vector<std::string> &getInfoBuffer();
 
-  void setCurrentPath(const string path);
+  void setCurrentPath(const std::string path);
 
   void read();
-  void read(const string &path);
+  void read(const std::string &path);
 
   void write();
 
@@ -45,14 +43,14 @@ public:
   template<typename T>
   void parse(T &items) {
     for (auto &i : dataBuffer) {
-      stringstream sstream{i};
-      string part;
-      vector<string> t_parts;
+      std::stringstream sstream{i};
+      std::string part;
+      std::vector<std::string> t_parts;
       while (getline(sstream, part, ';')) {
         t_parts.push_back(part);
       }
 
-      const vector<string> parts{t_parts};
+      const std::vector<std::string> parts{t_parts};
       auto item = provider->create();
 
       for (const auto &it : provider->getSupportedSchemeArgs()) {
@@ -72,12 +70,12 @@ public:
     dataBuffer.shrink_to_fit();
 
     for (auto &item : items) {
-      vector<string> values;
+      std::vector<std::string> values;
       for (auto &i : provider->getSupportedSchemeArgs()) {
         values.push_back(provider->get(item, i));
       }
 
-      string data;
+      std::string data;
       for (auto &i : values)
         data += format("{};", i);
 
@@ -86,30 +84,30 @@ public:
   }
 
   // Returns currentScheme
-  map<string, size_t> const &getScheme() const;
+  std::map<std::string, size_t> const &getScheme() const;
 
   // Returns name of field inside currentScheme with index [key]
-  string const &getSchemeField(size_t key) const;
+  std::string const &getSchemeField(size_t key) const;
 
   // Allows to get access to current provider. Provider cannot be modified.
-  shared_ptr<AbstractProvider> const &getProvider() const;
+  std::shared_ptr<AbstractProvider> const &getProvider() const;
 
   // Makes by name(X) association to appropriate provider for [provider name=X] operator
-  static void registerProvider(string const &name, shared_ptr<AbstractProvider> provider);
-  map<string, size_t> currentScheme;
+  static void registerProvider(std::string const &name, std::shared_ptr<AbstractProvider> provider);
+  std::map<std::string, size_t> currentScheme;
 
 private:
-  string currentPath;
-  filesystem::file_time_type modified;
+  std::string currentPath;
+  std::filesystem::file_time_type modified;
 
-  vector<string> dataBuffer;
-  vector<string> infoBuffer;
+  std::vector<std::string> dataBuffer;
+  std::vector<std::string> infoBuffer;
 
-  static constexpr string SUPPORTED_VERSION = "2";
-  static map<string, shared_ptr<AbstractProvider>> providers;
+  static constexpr std::string SUPPORTED_VERSION = "2";
+  static std::map<std::string, std::shared_ptr<AbstractProvider>> providers;
 
   /* Provider/Scheme */
-  shared_ptr<AbstractProvider> provider = nullptr;
+  std::shared_ptr<AbstractProvider> provider = nullptr;
 
   enum class OPS {
     DB,
@@ -124,9 +122,9 @@ private:
 
   struct OperatorResult {
     OPS op;
-    string content;
-    map<string, string> args;
+    std::string content;
+    std::map<std::string, std::string> args;
   };
 
-  OperatorResult parseOperator(const string &line, int lineNumber);
+  OperatorResult parseOperator(const std::string &line, int lineNumber);
 };

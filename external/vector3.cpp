@@ -1,7 +1,7 @@
-#include "vector3.h"
 #include <cmath>
 #include <format>
-#include <stdexcept>
+
+#include "vector3.h"
 
 using namespace std;
 

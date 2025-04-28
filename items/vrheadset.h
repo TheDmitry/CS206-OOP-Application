@@ -6,8 +6,6 @@
 #include <string>
 #include <vector>
 
-using namespace std;
-
 enum HeadsetType {
   Portable,
   Full
@@ -15,8 +13,22 @@ enum HeadsetType {
 
 class VRHeadset : public AbstractItem {
 public:
-  VRHeadset(int width, int height, float refreshRate, Vector3 angles, Vector3 position, string modelName);
-  VRHeadset(int width, int height, float refreshRate, float angle_x, float angle_y, float angle_z, float x, float y, float z, string modelName);
+  VRHeadset(int width,
+            int height,
+            float refreshRate,
+            Vector3 angles,
+            Vector3 position,
+            std::string modelName);
+  VRHeadset(int width,
+            int height,
+            float refreshRate,
+            float angle_x,
+            float angle_y,
+            float angle_z,
+            float x,
+            float y,
+            float z,
+            std::string modelName);
   VRHeadset();
   ~VRHeadset() = default;
 
@@ -25,7 +37,7 @@ public:
   float getRefreshRate() const;
   Vector3 getAngles() const;
   Vector3 getPosition() const;
-  string getModelName() const;
+  std::string getModelName() const;
   bool isConnected() const;
   HeadsetType getType() const;
 
@@ -43,17 +55,16 @@ public:
   void setWidth(int value);
   void setHeight(int value);
 
-  void setModelName(string name);
+  void setModelName(std::string name);
 
-  friend ostream &operator<<(ostream &os, VRHeadset const &vr);
+  friend std::ostream &operator<<(std::ostream &os, VRHeadset const &vr);
 
   bool operator==(VRHeadset const &vr) const;
   bool operator!=(VRHeadset const& vr) const;
 
-
-  static const vector<string> providerSupportedSchemeArgs;
-  static const map<string, size_t> providerScheme;
-  static const string providerName;
+  static const std::vector<std::string> providerSupportedSchemeArgs;
+  static const std::map<std::string, size_t> providerScheme;
+  static const std::string providerName;
 
 private:
 
@@ -61,5 +72,5 @@ private:
   float refreshRate;
   bool connected;
   Vector3 angles, position;
-  string modelName;
+  std::string modelName;
 };

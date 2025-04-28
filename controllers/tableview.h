@@ -4,10 +4,11 @@
 #include <QShortcut>
 #include <QTableView>
 #include <QWidget>
-#include <map>
 
 #include "models/customsortfilterproxymodel.h"
 #include "models/customtablemodel.h"
+
+#include "delegates/highlightdelegate.h"
 
 namespace Ui {
 class TableView;
@@ -38,6 +39,8 @@ private:
   CustomTableModel *model;
   CustomSortFilterProxyModel *proxyModel;
   std::map<std::string, QShortcut *> shortcut;
+
+  HighlightColumnDelegate *highlightDelegate;
 
   void initShortcuts();
   void connectSignals();

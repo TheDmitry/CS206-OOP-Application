@@ -1,8 +1,8 @@
-#include "items/vrheadset.h"
-#include "external/vector3.h"
 #include <format>
 #include <iostream>
-#include <string>
+
+#include "external/vector3.h"
+#include "vrheadset.h"
 
 using namespace std;
 

@@ -1,9 +1,5 @@
 #include "workspace.h"
-#include <QString>
 #include "ui_workspace.h"
-#include <string>
-
-#include "controllers/tableview.h"
 
 using namespace std;
 
@@ -19,7 +15,7 @@ Workspace::~Workspace() {
 
 void Workspace::addTab() {
   ui->tabWidget->addTab(new TableView,
-                        QString::fromStdString("Tab " + std::to_string(ui->tabWidget->count())));
+                        QString::fromStdString("Tab " + to_string(ui->tabWidget->count())));
 
   emit tabCreated(ui->tabWidget->count() - 1);
 }

@@ -1,26 +1,15 @@
-#include <QDialog>
 #include <QFileDialog>
-#include <QListWidget>
-#include <QWidget>
 
-#include <QKeyCombination>
-#include <QKeySequence>
-#include <QShortcut>
-
-#include "controllers/authordialog.h"
-#include "controllers/mainwindow.h"
-#include "controllers/workspace.h"
-#include "models/customtablemodel.h"
+#include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-#include "external/dberror.h"
-#include "external/parseerror.h"
+using namespace std;
 
 MainWindow::MainWindow(QWidget *parent)
   : QMainWindow(parent)
   , authorDialog(new AuthorDialog(this))
   , errorDialog(new ErrorDialog(this))
-  , workspace(new Workspace())
+  , workspace(new Workspace(this))
   , workspaceInitialized(false)
   , shortcut{}
   , ui(new Ui::MainWindow) {

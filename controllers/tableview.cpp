@@ -1,29 +1,23 @@
-#include "controllers/tableview.h"
-#include "models/customtablemodel.h"
+#include "tableview.h"
 #include "ui_tableview.h"
 
-#include <QHeaderView>
-#include <QItemSelectionModel>
-#include <QModelIndex>
-#include <QSizePolicy>
-#include <QTableView>
-
-#include "models/customsortfilterproxymodel.h"
+using namespace std;
 
 TableView::TableView(QWidget *parent)
   : QWidget(parent)
   , model(new CustomTableModel(this))
   , proxyModel(new CustomSortFilterProxyModel(this))
   , shortcut{}
+  , highlightDelegate(new HighlightColumnDelegate(this))
   , ui(new Ui::TableView) {
   ui->setupUi(this);
-  ui->searchLine->setHidden(true);
 
   proxyModel->setSourceModel(model);
   proxyModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
   proxyModel->setFilterKeyColumn(0);
   proxyModel->setSortCaseSensitivity(Qt::CaseInsensitive);
 
+  ui->tableView->setItemDelegate(highlightDelegate);
   ui->tableView->setModel(proxyModel);
 
   connectSignals();
@@ -35,6 +29,7 @@ TableView::~TableView() {
   for (auto &i : shortcut)
     delete i.second;
 
+  delete highlightDelegate;
   delete proxyModel;
   delete model;
   delete ui;
@@ -47,11 +42,9 @@ void TableView::connectSignals() {
           [this](QModelIndex const &current) {
             int column = current.column();
 
-            if (current.column() < 0) {
-              ui->searchLine->setHidden(true);
+            if (current.column() < 0)
               column = 0;
-            } else
-              ui->searchLine->setHidden(false);
+
             proxyModel->setFilterKeyColumn(column);
           });
 }
@@ -111,5 +104,7 @@ void TableView::on_searchLine_textChanged(const QString &arg1) {
   if (model->isEmpty())
     return;
 
+  highlightDelegate->setHighlightColumn(proxyModel->filterKeyColumn());
+  ui->tableView->viewport()->update();
   proxyModel->setFilterRegularExpression(arg1);
 }

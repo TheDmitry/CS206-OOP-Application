@@ -1,6 +1,6 @@
-#include "vrheadsetprovider.h"
 #include <cstdlib>
-#include <memory>
+
+#include "vrheadsetprovider.h"
 
 using namespace std;
 
@@ -49,7 +49,7 @@ void VRHeadsetProvider::set(shared_ptr<AbstractItem> &target,
 }
 
 int VRHeadsetProvider::compare(shared_ptr<AbstractItem> const &a,
-                               shared_ptr<AbstractItem> const &b,
+                               const shared_ptr<AbstractItem> &b,
                                string const &fieldName) const {
   string aValue = get(a, fieldName);
   string bValue = get(b, fieldName);

@@ -15,6 +15,7 @@ PROVIDER_DIR = providers
 ITEM_DIR = items
 MODEL_DIR = models
 CONTROLLER_DIR = controllers
+DELEGATE_DIR = delegates
 EXTERNAL_DIR = external
 
 
@@ -63,6 +64,14 @@ $$CONTROLLER_DIR/tableview.h \ # TableView
 $$CONTROLLER_DIR/workspace.h # Workspace
 
 
+# Delegates
+DELEGATE_SOURCES = \
+$$DELEGATE_DIR/highlightdelegate.cpp \ # HighlightColumnDelegate
+
+DELEGATE_HEADERS = \
+$$DELEGATE_DIR/highlightdelegate.h \ # HighlightColumnDelegate
+
+
 # Externals (Might be some utility, throwables, special types, external libs)
 EXTERNAL_SOURCES += \
 $$EXTERNAL_DIR/vector3.cpp \ # Vector3
@@ -82,6 +91,7 @@ main.cpp \
 $$ITEM_SOURCES \
 $$MODEL_SOURCES \
 $$CONTROLLER_SOURCES \
+$$DELEGATE_SOURCES \
 $$EXTERNAL_SOURCES \
 $$PROVIDER_SOURCES \
 
@@ -89,6 +99,7 @@ HEADERS += \
 $$ITEM_HEADERS \
 $$MODEL_HEADERS \
 $$CONTROLLER_HEADERS \
+$$DELEGATE_HEADERS \
 $$EXTERNAL_HEADERS \
 $$PROVIDER_HEADERS \
 

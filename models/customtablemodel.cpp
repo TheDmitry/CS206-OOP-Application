@@ -1,5 +1,7 @@
 #include "models/customtablemodel.h"
 
+using namespace std;
+
 CustomTableModel::CustomTableModel(QObject *parent)
   : QAbstractTableModel(parent)
   , items{} {}
@@ -67,7 +69,7 @@ QVariant CustomTableModel::data(const QModelIndex &index, int role) const {
 
   try {
     content = db.getProvider()->get(items[row], db.getSchemeField(column));
-  } catch (std::exception const &e) {
+  } catch (exception const &e) {
     content = "";
   }
 
@@ -93,7 +95,7 @@ bool CustomTableModel::setData(const QModelIndex &index, const QVariant &value, 
     try {
       string stdValue = value.toString().toStdString();
       db.getProvider()->set(items[row], db.getSchemeField(column), stdValue);
-    } catch (std::exception const &e) {
+    } catch (exception const &e) {
       return false;
     }
 
@@ -177,7 +179,7 @@ void CustomTableModel::removeRow(size_t row) {
 
 shared_ptr<AbstractItem> &CustomTableModel::getItem(size_t row) {
   if (items.size() < row)
-    throw runtime_error("Out of bounds on getItem(size_t) -> " + std::to_string(row));
+    throw runtime_error("Out of bounds on getItem(size_t) -> " + to_string(row));
 
   return items[row];
 }

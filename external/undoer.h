@@ -1,10 +1,8 @@
 #pragma once
 
 #include <algorithm>
-#include <iostream>
 #include <list>
 
-// TODO: allow only unique_ptrs ?
 template<typename T>
 class Undoer {
 public:

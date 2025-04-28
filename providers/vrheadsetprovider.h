@@ -12,50 +12,58 @@
 #include <string>
 #include <vector>
 
-using namespace std;
-
 class VRHeadsetProvider : public AbstractProvider {
 public:
   VRHeadsetProvider();
-  const string getName() override;
-  const vector<string> getSupportedSchemeArgs() override;
-  const map<string, size_t> getScheme() override;
+  const std::string getName() override;
+  const std::vector<std::string> getSupportedSchemeArgs() override;
+  const std::map<std::string, size_t> getScheme() override;
 
-  string get(shared_ptr<AbstractItem> const &target, string const &fieldName) const override;
-  void set(shared_ptr<AbstractItem> &target, string const &fieldName, string const &value) override;
+  std::string get(std::shared_ptr<AbstractItem> const &target,
+                  std::string const &fieldName) const override;
+  void set(std::shared_ptr<AbstractItem> &target,
+           std::string const &fieldName,
+           std::string const &value) override;
 
   // returns -1 if less, 0 if equals, 1 if greater
-  int compare(shared_ptr<AbstractItem> const &a,
-              shared_ptr<AbstractItem> const &b,
-              string const &fieldName) const override;
+  int compare(std::shared_ptr<AbstractItem> const &a,
+              std::shared_ptr<AbstractItem> const &b,
+              std::string const &fieldName) const override;
 
-  shared_ptr<AbstractItem> create() override;
+  std::shared_ptr<AbstractItem> create() override;
 
 private:
-  const map<string, function<string(VRHeadset const &)>> getters = {
-    {"width", [](VRHeadset const &target) -> string { return to_string(target.getWidth()); }},
-    {"height", [](VRHeadset const &target) -> string { return to_string(target.getHeight()); }},
+  const std::map<std::string, std::function<std::string(VRHeadset const &)>> getters = {
+    {"width",
+     [](VRHeadset const &target) -> std::string { return std::to_string(target.getWidth()); }},
+    {"height",
+     [](VRHeadset const &target) -> std::string { return std::to_string(target.getHeight()); }},
     {"refreshRate",
-     [](VRHeadset const &target) -> string { return to_string(target.getRefreshRate()); }},
+     [](VRHeadset const &target) -> std::string { return std::to_string(target.getRefreshRate()); }},
     {"angles",
-     [](VRHeadset const &target) -> string { return Vector3::vectorToString(target.getAngles()); }},
+     [](VRHeadset const &target) -> std::string {
+       return Vector3::vectorToString(target.getAngles());
+     }},
     {"position",
-     [](VRHeadset const &target) -> string {
+     [](VRHeadset const &target) -> std::string {
        return Vector3::vectorToString(target.getPosition());
      }},
-    {"modelName", [](VRHeadset const &target) -> string { return target.getModelName(); }},
+    {"modelName", [](VRHeadset const &target) -> std::string { return target.getModelName(); }},
   };
 
-  const map<string, function<void(VRHeadset &, const string &)>> setters = {
-    {"width", [](VRHeadset &target, const string &val) { target.setWidth(stoi(val)); }},
-    {"height", [](VRHeadset &target, const string &val) { target.setHeight(stoi(val)); }},
-    {"refreshRate", [](VRHeadset &target, const string &val) { target.setRefreshRate(stof(val)); }},
+  const std::map<std::string, std::function<void(VRHeadset &, const std::string &)>> setters = {
+    {"width", [](VRHeadset &target, const std::string &val) { target.setWidth(stoi(val)); }},
+    {"height", [](VRHeadset &target, const std::string &val) { target.setHeight(stoi(val)); }},
+    {"refreshRate",
+     [](VRHeadset &target, const std::string &val) { target.setRefreshRate(stof(val)); }},
     {"angles",
-     [](VRHeadset &target, const string &val) { target.setAngles(Vector3::vectorFromString(val)); }},
+     [](VRHeadset &target, const std::string &val) {
+       target.setAngles(Vector3::vectorFromString(val));
+     }},
     {"position",
-     [](VRHeadset &target, const string &val) {
+     [](VRHeadset &target, const std::string &val) {
        target.setPosition(Vector3::vectorFromString(val));
      }},
-    {"modelName", [](VRHeadset &target, const string &val) { target.setModelName(val); }},
+    {"modelName", [](VRHeadset &target, const std::string &val) { target.setModelName(val); }},
   };
 };

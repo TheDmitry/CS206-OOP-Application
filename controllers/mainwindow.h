@@ -1,17 +1,12 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QListWidget>
 #include <QMainWindow>
-#include <QShortcut>
-#include <map>
-#include <string>
 
 #include "controllers/authordialog.h"
 #include "controllers/errordialog.h"
 
 #include "controllers/workspace.h"
-#include "external/parseerror.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {

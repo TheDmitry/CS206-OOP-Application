@@ -1,6 +1,8 @@
 #include "customsortfilterproxymodel.h"
 #include "models/customtablemodel.h"
 
+using namespace std;
+
 CustomSortFilterProxyModel::CustomSortFilterProxyModel(QObject *parent)
   : QSortFilterProxyModel{parent} {}
 

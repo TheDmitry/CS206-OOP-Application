@@ -10,7 +10,7 @@ public:
 
   // QSortFilterProxyModel interface
 protected:
-  bool lessThan(const QModelIndex &left, const QModelIndex &right) const;
+  bool lessThan(QModelIndex const &left, QModelIndex const &right) const;
 };
 
 #endif // CUSTOMSORTFILTERPROXYMODEL_H
