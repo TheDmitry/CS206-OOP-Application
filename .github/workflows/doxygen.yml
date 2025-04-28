@@ -26,7 +26,9 @@ jobs:
         git config --global user.email "actions@github.com"
         git checkout --orphan docs
         git rm -rf .
-        mv docs/* ./
+        mv docs/html/* ./
         git add .
         git commit -m "Update Doxygen documentation"
         git push origin docs --force
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
