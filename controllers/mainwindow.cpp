@@ -42,6 +42,8 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::initShortcuts() {
+  cout << "Shortcuts for MainWindow initialized!" << endl;
+
   shortcut["newTab"] = new QShortcut(QKeyCombination(Qt::CTRL, Qt::Key_W), this);
   shortcut["newTab"]->setContext(Qt::ApplicationShortcut);
   connect(shortcut["newTab"], &QShortcut::activated, this, &MainWindow::on_actionNew_Tab_triggered);
@@ -177,5 +179,7 @@ void MainWindow::on_actionClose_Tab_triggered() {
     workspace->setHidden(true);
   }
 
+  auto *t = tabWidget->widget(tabWidget->currentIndex());
   tabWidget->removeTab(tabWidget->currentIndex());
+  delete t;
 }

@@ -9,7 +9,6 @@
 #include <functional>
 #include <map>
 #include <memory>
-#include <stdexcept>
 #include <string>
 #include <vector>
 
@@ -22,18 +21,11 @@ public:
   const vector<string> getSupportedSchemeArgs() override;
   const map<string, size_t> getScheme() override;
 
-  string get(unique_ptr<AbstractItem> const &target, string const &fieldName) override;
-  void set(unique_ptr<AbstractItem> &target, string const &fieldName, string const &value) override;
-  unique_ptr<AbstractItem> create() override;
+  string get(shared_ptr<AbstractItem> const &target, string const &fieldName) override;
+  void set(shared_ptr<AbstractItem> &target, string const &fieldName, string const &value) override;
+  shared_ptr<AbstractItem> create() override;
 
 private:
-  /*
-   * width -> int 
-   * height -> int
-   * 
-   * 
-   */
-
   const map<string, function<string(VRHeadset const &)>> getters = {
     {"width", [](VRHeadset const &target) -> string { return to_string(target.getWidth()); }},
     {"height", [](VRHeadset const &target) -> string { return to_string(target.getHeight()); }},

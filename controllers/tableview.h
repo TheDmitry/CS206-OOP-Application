@@ -1,8 +1,11 @@
 #ifndef TABLEVIEW_H
 #define TABLEVIEW_H
 
+#include <QShortcut>
+#include <QSortFilterProxyModel>
 #include <QTableView>
 #include <QWidget>
+#include <map>
 
 #include "models/customtablemodel.h"
 
@@ -25,8 +28,16 @@ private slots:
 
   void on_pushButton_new_clicked();
 
+  void on_pushButton_remove_clicked();
+
+  void on_pushButton_undo_clicked();
+
 private:
-  CustomTableModel *customTableModel;
+  CustomTableModel *model;
+  std::map<std::string, QShortcut *> shortcut;
+
+  void initShortcuts();
+
   Ui::TableView *ui;
 };
 

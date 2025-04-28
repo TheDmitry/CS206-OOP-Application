@@ -20,7 +20,7 @@ const map<string, size_t> VRHeadsetProvider::getScheme() {
           {"position", 5}};
 };
 
-string VRHeadsetProvider::get(unique_ptr<AbstractItem> const &target, string const &fieldName) {
+string VRHeadsetProvider::get(shared_ptr<AbstractItem> const &target, string const &fieldName) {
   auto i = getters.find(fieldName);
 
   if (i == getters.end()) {
@@ -32,7 +32,7 @@ string VRHeadsetProvider::get(unique_ptr<AbstractItem> const &target, string con
   return field;
 }
 
-void VRHeadsetProvider::set(unique_ptr<AbstractItem> &target,
+void VRHeadsetProvider::set(shared_ptr<AbstractItem> &target,
                             string const &fieldName,
                             string const &value) {
   auto i = setters.find(fieldName);
@@ -44,6 +44,6 @@ void VRHeadsetProvider::set(unique_ptr<AbstractItem> &target,
   i->second(static_cast<VRHeadset &>(*target), value);
 }
 
-unique_ptr<AbstractItem> VRHeadsetProvider::create() {
+shared_ptr<AbstractItem> VRHeadsetProvider::create() {
   return make_unique<VRHeadset>();
 }

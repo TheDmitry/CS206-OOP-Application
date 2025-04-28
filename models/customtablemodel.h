@@ -5,10 +5,16 @@
 #include <vector>
 
 #include "external/dbfile.h"
+#include "external/undoer.h"
 #include "items/abstractitem.h"
+
+#define UNDO_SIZE 50;
+
+using namespace std;
 
 class CustomTableModel : public QAbstractTableModel {
   Q_OBJECT
+  using Container = vector<shared_ptr<AbstractItem>>;
 
 public:
   explicit CustomTableModel(QObject *parent = nullptr);
@@ -47,11 +53,16 @@ public:
   void writeToFile();
 
   void addEmptyRow();
+  void removeRow(size_t index);
 
   bool isEmpty();
 
+  /* Undo: no redo */
+  void rewind();
+
 private:
-  vector<unique_ptr<AbstractItem>> items;
+  Container items;
+  Undoer<Container> undoer;
 
   // DbFile workflow
   DbFile db;

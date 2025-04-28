@@ -12,10 +12,7 @@ CustomTableModel::~CustomTableModel() {
 
 QVariant CustomTableModel::headerData(int section, Qt::Orientation orientation, int role) const {
   if (orientation == Qt::Horizontal && role == Qt::DisplayRole && !items.empty()) {
-    if (section == 0)
-      return "Id";
-
-    return QString::fromStdString(db.getSchemeField(section - 1));
+    return QString::fromStdString(db.getSchemeField(section));
   }
 
   if (orientation == Qt::Vertical && role == Qt::DisplayRole) {
@@ -51,7 +48,7 @@ int CustomTableModel::columnCount(const QModelIndex &parent) const {
   if (items.empty())
     return 0;
 
-  return db.getScheme().size() + 1; // +1 due to "Id"
+  return db.getScheme().size();
 }
 
 QVariant CustomTableModel::data(const QModelIndex &index, int role) const {
@@ -67,17 +64,13 @@ QVariant CustomTableModel::data(const QModelIndex &index, int role) const {
 
   string content;
 
-  if (column == 0) {
-    content = to_string(row + 1);
-  } else {
-    try {
-      content = db.getProvider()->get(items[row], db.getSchemeField(column - 1));
-    } catch (std::exception const &e) {
-      content = "";
-    }
+  try {
+    content = db.getProvider()->get(items[row], db.getSchemeField(column));
+  } catch (std::exception const &e) {
+    content = "";
   }
 
-  if (role == Qt::DisplayRole || role == Qt::EditRole)
+  if (role == Qt::DisplayRole || role == Qt::EditRole || role == Qt::ToolTipRole)
     return QString::fromStdString(content);
 
   return QString("Undefined");
@@ -163,13 +156,32 @@ void CustomTableModel::writeToFile() {
   db.write();
 }
 
-bool CustomTableModel::isEmpty() {
-  return (items.empty() || db.isDataEmpty());
-}
-
 void CustomTableModel::addEmptyRow() {
   beginResetModel();
   auto item = db.getProvider()->create();
   items.push_back(std::move(item));
+  endResetModel();
+}
+
+void CustomTableModel::removeRow(size_t index) {
+  if ((items.size() - 1) < index)
+    return;
+
+  beginResetModel();
+  undoer.remember(items);
+  items.erase(items.begin() + index);
+  endResetModel();
+}
+
+bool CustomTableModel::isEmpty() {
+  return (items.empty() || db.isDataEmpty());
+}
+
+void CustomTableModel::rewind() {
+  if (undoer.isEmpty())
+    return;
+  beginResetModel();
+  items.clear();
+  items = undoer.rewind();
   endResetModel();
 }

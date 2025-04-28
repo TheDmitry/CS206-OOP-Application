@@ -17,51 +17,62 @@ MODEL_DIR = models
 CONTROLLER_DIR = controllers
 EXTERNAL_DIR = external
 
+
+# Providers (Adapters)
 PROVIDER_SOURCES = \
-$$PROVIDER_DIR/vrheadsetprovider.cpp
+$$PROVIDER_DIR/vrheadsetprovider.cpp # VRHeadsetProvider
 
 PROVIDER_HEADERS = \
-$$PROVIDER_DIR/abstractprovider.h \
-$$PROVIDER_DIR/vrheadsetprovider.h
+$$PROVIDER_DIR/abstractprovider.h \ # AbstractProvider
+$$PROVIDER_DIR/vrheadsetprovider.h # VRHeadsetProvider
 
+
+# Items
 ITEM_SOURCES += \
-$$ITEM_DIR/vrheadset.cpp
+$$ITEM_DIR/vrheadset.cpp # VRHeadset
 
 ITEM_HEADERS += \
-$$ITEM_DIR/abstractitem.h \
-$$ITEM_DIR/vrheadset.h
+$$ITEM_DIR/abstractitem.h \ # AbstractItem
+$$ITEM_DIR/vrheadset.h # VRHeadset
 
+
+# Models
 MODEL_SOURCES += \
-$$MODEL_DIR/customtablemodel.cpp
+$$MODEL_DIR/customtablemodel.cpp # QTableView
 
 MODEL_HEADERS += \
-$$MODEL_DIR/customtablemodel.h
+$$MODEL_DIR/customtablemodel.h # QTableView
 
+
+# Controllers
 CONTROLLER_SOURCES += \
-$$CONTROLLER_DIR/authordialog.cpp \
-$$CONTROLLER_DIR/errordialog.cpp \
-$$CONTROLLER_DIR/mainwindow.cpp \
-$$CONTROLLER_DIR/tableview.cpp \
-$$CONTROLLER_DIR/workspace.cpp
+$$CONTROLLER_DIR/authordialog.cpp \ # AuthorDialog
+$$CONTROLLER_DIR/errordialog.cpp \ # ErrorDialog
+$$CONTROLLER_DIR/mainwindow.cpp \ # MainWindow
+$$CONTROLLER_DIR/tableview.cpp \ # TableView
+$$CONTROLLER_DIR/workspace.cpp \ # Workspace
 
 CONTROLLER_HEADERS += \
-$$CONTROLLER_DIR/authordialog.h \
-$$CONTROLLER_DIR/errordialog.h \
-$$CONTROLLER_DIR/mainwindow.h \
-$$CONTROLLER_DIR/tableview.h \
-$$CONTROLLER_DIR/workspace.h
+$$CONTROLLER_DIR/authordialog.h \ # AuthorDialog
+$$CONTROLLER_DIR/errordialog.h \ # ErrorDialog
+$$CONTROLLER_DIR/mainwindow.h \ # MainWindow
+$$CONTROLLER_DIR/tableview.h \ # TableView
+$$CONTROLLER_DIR/workspace.h # Workspace
 
+
+# Externals (Might be some utility, throwables, special types, external libs)
 EXTERNAL_SOURCES += \
-$$EXTERNAL_DIR/vector3.cpp \
-$$EXTERNAL_DIR/dbfile.cpp \
-$$EXTERNAL_DIR/parseerror.cpp \
-$$EXTERNAL_DIR/dberror.cpp \
+$$EXTERNAL_DIR/vector3.cpp \ # Vector3
+$$EXTERNAL_DIR/dbfile.cpp \ # DbFile -> parser
+$$EXTERNAL_DIR/parseerror.cpp \ # ParseError -> throwable
+$$EXTERNAL_DIR/dberror.cpp \ # DbError -> throwable
 
 EXTERNAL_HEADERS += \
-$$EXTERNAL_DIR/vector3.h \
-$$EXTERNAL_DIR/dbfile.h \
-$$EXTERNAL_DIR/parseerror.h \
-$$EXTERNAL_DIR/dberror.h \
+$$EXTERNAL_DIR/vector3.h \ # Vector3
+$$EXTERNAL_DIR/dbfile.h \ # DbFile
+$$EXTERNAL_DIR/parseerror.h \ # ParseError -> throwable
+$$EXTERNAL_DIR/dberror.h \ # DbError -> throwable
+$$EXTERNAL_DIR/undoer.h \ # Undoer
 
 SOURCES += \
 main.cpp \

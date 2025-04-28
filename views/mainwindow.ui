@@ -109,7 +109,7 @@
    </widget>
    <widget class="QMenu" name="menuWorkspace">
     <property name="title">
-     <string>Tabs</string>
+     <string>Workspace</string>
     </property>
     <property name="separatorsCollapsible">
      <bool>false</bool>
