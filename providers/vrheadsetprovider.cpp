@@ -63,7 +63,7 @@ int VRHeadsetProvider::compare(shared_ptr<AbstractItem> const &a,
   // refreshRate -> float comparison
   // width, height -> int comparison
 
-  if (fieldName == "position" && fieldName == "angles") {
+  if (fieldName == "position" || fieldName == "angles") {
     Vector3 aVec = Vector3::vectorFromString(aValue);
     Vector3 bVec = Vector3::vectorFromString(bValue);
 
@@ -79,7 +79,7 @@ int VRHeadsetProvider::compare(shared_ptr<AbstractItem> const &a,
 
     if (aF > bF)
       retValue = 1;
-    else if (aF > bF)
+    else if (aF < bF)
       retValue = -1;
   } else {
     int aI = stoi(aValue);
@@ -87,7 +87,7 @@ int VRHeadsetProvider::compare(shared_ptr<AbstractItem> const &a,
 
     if (aI > bI)
       retValue = 1;
-    else if (aI > bI)
+    else if (aI < bI)
       retValue = -1;
   }
 

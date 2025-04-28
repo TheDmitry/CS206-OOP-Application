@@ -38,10 +38,13 @@ $$ITEM_DIR/vrheadset.h # VRHeadset
 
 # Models
 MODEL_SOURCES += \
-$$MODEL_DIR/customtablemodel.cpp # QTableView
+$$MODEL_DIR/customtablemodel.cpp \ # CustomTableModel
+$$MODEL_DIR/customsortfilterproxymodel.cpp \ # CustomSortFilterProxyModel
 
 MODEL_HEADERS += \
-$$MODEL_DIR/customtablemodel.h # QTableView
+$$MODEL_DIR/customtablemodel.h \ # CustomTableModel
+$$MODEL_DIR/customsortfilterproxymodel.h \ # CustomSortFilterProxyModel
+
 
 
 # Controllers

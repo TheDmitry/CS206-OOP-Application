@@ -62,6 +62,7 @@ QVariant CustomTableModel::data(const QModelIndex &index, int role) const {
 
   int row = index.row();
   int column = index.column();
+  QVariant t;
 
   string content;
 
@@ -71,7 +72,8 @@ QVariant CustomTableModel::data(const QModelIndex &index, int role) const {
     content = "";
   }
 
-  if (role == Qt::DisplayRole || role == Qt::EditRole || role == Qt::ToolTipRole)
+  if (role == Qt::DisplayRole || role == Qt::EditRole || role == Qt::ToolTipRole
+      || role == Qt::UserRole)
     return QString::fromStdString(content);
 
   return QString("Undefined");
@@ -164,14 +166,21 @@ void CustomTableModel::addEmptyRow() {
   endResetModel();
 }
 
-void CustomTableModel::removeRow(size_t index) {
-  if ((items.size() - 1) < index)
+void CustomTableModel::removeRow(size_t row) {
+  if ((items.size() - 1) < row)
     return;
 
   beginResetModel();
   undoer.remember(items);
-  items.erase(items.begin() + index);
+  items.erase(items.begin() + row);
   endResetModel();
+}
+
+shared_ptr<AbstractItem> &CustomTableModel::getItem(size_t row) {
+  if (items.size() < row)
+    throw runtime_error("Out of bounds on getItem(size_t) -> " + std::to_string(row));
+
+  return items[row];
 }
 
 bool CustomTableModel::isEmpty() {
@@ -188,6 +197,6 @@ void CustomTableModel::rewind() {
   endResetModel();
 }
 
-void CustomTableModel::tdebug() {
-  std::cout << "[CustomTableModel]P: " << this << " -> " << items.size() << endl;
+DbFile const &CustomTableModel::getDb() const {
+  return db;
 }

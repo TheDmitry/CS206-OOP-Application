@@ -4,13 +4,14 @@
 
 #include <QHeaderView>
 #include <QSizePolicy>
-#include <QSortFilterProxyModel>
 #include <QTableView>
+
+#include "models/customsortfilterproxymodel.h"
 
 TableView::TableView(QWidget *parent)
   : QWidget(parent)
   , model(new CustomTableModel(this))
-  , proxyModel(new QSortFilterProxyModel(this))
+  , proxyModel(new CustomSortFilterProxyModel(this))
   , shortcut{}
   , ui(new Ui::TableView) {
   ui->setupUi(this);

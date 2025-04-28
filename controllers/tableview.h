@@ -2,11 +2,11 @@
 #define TABLEVIEW_H
 
 #include <QShortcut>
-#include <QSortFilterProxyModel>
 #include <QTableView>
 #include <QWidget>
 #include <map>
 
+#include "models/customsortfilterproxymodel.h"
 #include "models/customtablemodel.h"
 
 namespace Ui {
@@ -36,7 +36,7 @@ private slots:
 
 private:
   CustomTableModel *model;
-  QSortFilterProxyModel *proxyModel;
+  CustomSortFilterProxyModel *proxyModel;
   std::map<std::string, QShortcut *> shortcut;
 
   void initShortcuts();

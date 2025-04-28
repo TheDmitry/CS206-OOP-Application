@@ -14,7 +14,8 @@ using namespace std;
 
 class CustomTableModel : public QAbstractTableModel {
   Q_OBJECT
-  using Container = vector<shared_ptr<AbstractItem>>;
+  using ItemType = shared_ptr<AbstractItem>;
+  using Container = vector<ItemType>;
 
 public:
   explicit CustomTableModel(QObject *parent = nullptr);
@@ -53,14 +54,15 @@ public:
   void writeToFile();
 
   void addEmptyRow();
-  void removeRow(size_t index);
+  void removeRow(size_t row);
+  ItemType &getItem(size_t row);
 
   bool isEmpty();
 
   /* Undo: no redo */
   void rewind();
 
-  void tdebug();
+  DbFile const &getDb() const;
 
 private:
   Container items;
