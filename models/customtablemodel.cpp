@@ -62,7 +62,6 @@ QVariant CustomTableModel::data(const QModelIndex &index, int role) const {
 
   int row = index.row();
   int column = index.column();
-  QVariant t;
 
   string content;
 
@@ -93,7 +92,7 @@ bool CustomTableModel::setData(const QModelIndex &index, const QVariant &value, 
       return false;
     try {
       string stdValue = value.toString().toStdString();
-      db.getProvider()->set(items[row], db.getSchemeField(column - 1), stdValue);
+      db.getProvider()->set(items[row], db.getSchemeField(column), stdValue);
     } catch (std::exception const &e) {
       return false;
     }
@@ -184,7 +183,6 @@ shared_ptr<AbstractItem> &CustomTableModel::getItem(size_t row) {
 }
 
 bool CustomTableModel::isEmpty() {
-  cout << items.size() << endl;
   return items.empty();
 }
 
