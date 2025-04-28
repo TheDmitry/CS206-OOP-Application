@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QTranslator>
 
 #include "controllers/authordialog.h"
 #include "controllers/errordialog.h"
@@ -38,6 +39,8 @@ private slots:
 
   void on_actionClose_Tab_triggered();
 
+  void switchLanguage(QAction *action);
+
 private:
   AuthorDialog *authorDialog;
   ErrorDialog *errorDialog;
@@ -48,10 +51,18 @@ private:
 
   Ui::MainWindow *ui;
 
+  QTranslator appTranslator;
+  QTranslator qtTranslator;
+
+  QActionGroup *languageActionGroup;
+  QString qmPath;
+
   void checkFileTabs();
   void checkWorkspaceTabs();
 
   void connectSignals();
   void initShortcuts();
+
+  void createLanguageMenu();
 };
 #endif // MAINWINDOW_H

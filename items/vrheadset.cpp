@@ -84,11 +84,11 @@ ostream &operator<<(ostream &os, VRHeadset const &vr) {
   const auto& vga = vr.getAngles();
   const auto& vgp = vr.getPosition();
 
-  os << format("Спецификация модели {}:", vr.getModelName()) << endl;
-  os << format("\tУглы вращения: x: {}, y: {}, z: {}", vga.x, vga.y, vga.z) << endl;
-  os << format("\tПоложение в пространстве: x: {}, y: {}, z: {}", vgp.x, vgp.y, vgp.z) << endl;
-  os << format("\tПодключение: {}", vr.isConnected()) << endl;
-  os << format("\tЧастота обновления экрана: {} Гц", vr.getRefreshRate()) << endl;
+  os << format("Specification of {}:", vr.getModelName()) << endl;
+  os << format("\tAngles: x: {}, y: {}, z: {}", vga.x, vga.y, vga.z) << endl;
+  os << format("\tPosition: x: {}, y: {}, z: {}", vgp.x, vgp.y, vgp.z) << endl;
+  os << format("\tConnection: {}", vr.isConnected()) << endl;
+  os << format("\tRefresh Rate: {} Hz", vr.getRefreshRate()) << endl;
 
   return os;
 }

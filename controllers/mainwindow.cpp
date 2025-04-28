@@ -1,4 +1,7 @@
+#include <QActionGroup>
 #include <QFileDialog>
+#include <QLibraryInfo>
+#include <QMessageBox>
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
@@ -12,12 +15,18 @@ MainWindow::MainWindow(QWidget *parent)
   , workspace(new Workspace(this))
   , workspaceInitialized(false)
   , shortcut{}
-  , ui(new Ui::MainWindow) {
+  , ui(new Ui::MainWindow)
+  , languageActionGroup(nullptr) {
   ui->setupUi(this);
   workspace->setHidden(true);
 
   connectSignals();
   initShortcuts();
+
+  qApp->installTranslator(&appTranslator);
+  qApp->installTranslator(&qtTranslator);
+  qmPath = qApp->applicationDirPath() + "/translations";
+  createLanguageMenu();
 }
 
 MainWindow::~MainWindow() {
@@ -28,6 +37,78 @@ MainWindow::~MainWindow() {
   delete errorDialog;
   delete workspace;
   delete ui;
+}
+
+void MainWindow::createLanguageMenu() {
+  languageActionGroup = new QActionGroup(this);
+
+  connect(languageActionGroup, &QActionGroup::triggered, this, &MainWindow::switchLanguage);
+
+  QDir dir(qmPath);
+
+  QStringList fileNames = dir.entryList(QStringList("project_*.qm"));
+
+  for (int i = 0; i < fileNames.size(); i++) {
+    QString locale = fileNames[i];
+    locale.remove(0, locale.indexOf('_') + 1);
+    locale.truncate(locale.lastIndexOf('.'));
+
+    QTranslator translator;
+    if (!translator.load(fileNames[i], qmPath)) {
+      QMessageBox::critical(this,
+                            tr("Application"),
+                            tr("The translation file could not be loaded!"),
+                            QMessageBox::Ok);
+      return;
+    }
+
+    QString language = translator.translate("MainWindow", "English");
+    QAction *action = new QAction(tr("&%1 %2").arg(QString::number(i + 1), language), this);
+
+    action->setCheckable(true);
+    action->setData(locale);
+
+    ui->menuLanguage->addAction(action);
+    languageActionGroup->addAction(action);
+
+    if (language == "English")
+      action->setChecked(true);
+  }
+}
+
+void MainWindow::switchLanguage(QAction *action) {
+  QString locale = action->data().toString();
+
+  if (!appTranslator.load("project_" + locale, qmPath)) {
+    QMessageBox::critical(this,
+                          tr("Application"),
+                          tr("The translation file could not be loaded!"),
+                          QMessageBox::Ok);
+    return;
+  }
+
+  locale.chop(3);
+#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
+  if (!qtTranslator.load("qt_" + locale + ".qm",
+                         QLibraryInfo::path(QLibraryInfo::TranslationsPath))) {
+    QMessageBox::critical(this,
+                          tr("Application"),
+                          tr("The translation file could not be loaded!"),
+                          QMessageBox::Ok);
+    return;
+  }
+#else
+  if (!qtTranslator.load("qt_" + locale + ".qm",
+                         QLibraryInfo::location(QLibraryInfo::TranslationsPath))) {
+    QMessageBox::critical(this,
+                          tr("Application"),
+                          tr("The translation file could not be loaded!"),
+                          QMessageBox::Ok);
+    return;
+  }
+#endif
+
+  ui->retranslateUi(this);
 }
 
 void MainWindow::connectSignals() {
@@ -78,7 +159,7 @@ void MainWindow::on_actionProgramAuthor_triggered() {
 void MainWindow::on_actionFileOpen_triggered()
 {
   string fileName = QFileDialog::getOpenFileName(this,
-                                                 "Read file",
+                                                 tr("Read file"),
                                                  QDir::currentPath(),
                                                  "Db Files (.db);;All Files (.*)")
                       .toStdString();

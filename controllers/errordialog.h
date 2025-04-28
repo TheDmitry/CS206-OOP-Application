@@ -20,8 +20,10 @@ public:
   void callWithParseError(ParseError const &error);
 
 private:
-  void call(std::string const &message);
   Ui::ErrorDialog *ui;
+
+  void call(std::string const &message);
+  void changeEvent(QEvent *e) override;
 };
 
 #endif // ERRORDIALOG_H

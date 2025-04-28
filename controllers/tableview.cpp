@@ -108,3 +108,10 @@ void TableView::on_searchLine_textChanged(const QString &arg1) {
   ui->tableView->viewport()->update();
   proxyModel->setFilterRegularExpression(arg1);
 }
+
+void TableView::changeEvent(QEvent *e) {
+  if (e->type() == QEvent::LanguageChange)
+    ui->retranslateUi(this);
+
+  QWidget::changeEvent(e);
+}

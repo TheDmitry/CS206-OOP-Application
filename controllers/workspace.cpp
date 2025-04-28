@@ -39,3 +39,10 @@ CustomTableModel *Workspace::getCurrentModel() {
 void Workspace::on_tabWidget_currentChanged(int index) {
   emit tabChanged(index);
 }
+
+void Workspace::changeEvent(QEvent *e) {
+  if (e->type() == QEvent::LanguageChange)
+    ui->retranslateUi(this);
+
+  QWidget::changeEvent(e);
+}

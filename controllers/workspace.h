@@ -37,6 +37,8 @@ private slots:
 
 private:
   Ui::Workspace *ui;
+
+  void changeEvent(QEvent *e) override;
 };
 
 #endif // WORKSPACE_H

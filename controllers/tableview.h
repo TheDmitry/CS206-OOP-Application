@@ -42,10 +42,11 @@ private:
 
   HighlightColumnDelegate *highlightDelegate;
 
+  Ui::TableView *ui;
+
   void initShortcuts();
   void connectSignals();
-
-  Ui::TableView *ui;
+  void changeEvent(QEvent *e) override;
 };
 
 #endif // TABLEVIEW_H

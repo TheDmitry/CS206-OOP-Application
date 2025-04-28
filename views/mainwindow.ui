@@ -119,9 +119,15 @@
     <addaction name="actionClose_All_Tabs"/>
     <addaction name="separator"/>
    </widget>
+   <widget class="QMenu" name="menuLanguage">
+    <property name="title">
+     <string>Language</string>
+    </property>
+   </widget>
    <addaction name="menuProgram"/>
    <addaction name="menuFile"/>
    <addaction name="menuWorkspace"/>
+   <addaction name="menuLanguage"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionProgramClose">

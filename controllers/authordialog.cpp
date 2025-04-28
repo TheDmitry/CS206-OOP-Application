@@ -12,3 +12,10 @@ AuthorDialog::~AuthorDialog()
 {
   delete ui;
 }
+
+void AuthorDialog::changeEvent(QEvent *e) {
+  if (e->type() == QEvent::LanguageChange)
+    ui->retranslateUi(this);
+
+  QWidget::changeEvent(e);
+}

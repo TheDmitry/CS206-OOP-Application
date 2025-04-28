@@ -44,7 +44,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Программа выполнена в рамках курсовой работы</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The program is made as part of term paper&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -76,10 +76,10 @@ hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Fira Code'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;НИУ МГСУ &lt;/span&gt;&lt;a href=&quot;https://mgsu.ru&quot;&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline; color:#beb99e;&quot;&gt;[https://mgsu.ru]&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Институт Цифровых технологий моделирования в строительстве&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Кафедра Информационных систем, технологий и автоматизации в строительстве&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Дисциплина Объектно-ориентированное программирование&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;NRU MGSU &lt;/span&gt;&lt;a href=&quot;https://mgsu.ru&quot;&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline; color:#beb99e;&quot;&gt;[https://mgsu.ru]&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;tw-target-text&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Hack';&quot;&gt;I&lt;/span&gt;&lt;span style=&quot; font-family:'Hack';&quot;&gt;nst. of Digital Technologies and Modeling in Construction&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Dept. of Information Systems, Technology and Automation in Construction&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Object Oriented Programming&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="textFormat">
       <enum>Qt::TextFormat::MarkdownText</enum>
@@ -104,7 +104,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </font>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ИЦТМС 2-6, 2025 год&lt;/p&gt;&lt;p&gt;Студент: Жаров Дмитрий Вячеславович &lt;a href=&quot;https://github.com/thedmitry&quot;&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline; color:#beb99e;&quot;&gt;[https://github.com/thedmitry]&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Руководитель проекта: Борис Садовский....&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;IDTMC 2-6, 2025 year&lt;/p&gt;&lt;p&gt;by: Zharov Dmitry Vyacheslavovich &lt;a href=&quot;https://github.com/thedmitry&quot;&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline; color:#beb99e;&quot;&gt;[https://github.com/thedmitry]&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="textFormat">
       <enum>Qt::TextFormat::RichText</enum>

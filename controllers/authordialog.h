@@ -17,6 +17,8 @@ public:
 
 private:
   Ui::AuthorDialog *ui;
+
+  void changeEvent(QEvent *e) override;
 };
 
 #endif // AUTHORDIALOG_H

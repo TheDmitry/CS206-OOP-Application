@@ -15,14 +15,23 @@ ErrorDialog::~ErrorDialog() {
 }
 
 void ErrorDialog::callWithParseError(ParseError const &error) {
-  call("It looks like error happened while parsing file!\n" + std::string(error.what()));
+  call(tr("It looks like error happened while parsing file!").toStdString() + "\n"
+       + std::string(error.what()));
 }
 
 void ErrorDialog::callWithDbError(DbError const &error) {
-  call("It looks like error happened while trying to open file!\n" + std::string(error.what()));
+  call(tr("It looks like error happened while trying to open file!").toStdString() + "\n"
+       + std::string(error.what()));
 }
 
 void ErrorDialog::call(std::string const &message) {
   ui->label->setText(QString::fromStdString(message));
   show();
+}
+
+void ErrorDialog::changeEvent(QEvent *e) {
+  if (e->type() == QEvent::LanguageChange)
+    ui->retranslateUi(this);
+
+  QWidget::changeEvent(e);
 }

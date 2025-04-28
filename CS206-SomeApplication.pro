@@ -1,8 +1,10 @@
-QT += core gui widgets
+QT += core gui widgets linguist
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++20
+CONFIG += lrelease
+CONFIG += embed_translations
 
 FORM_DIR = views
 DIALOG_DIR = $$FORM_DIR/dialogs
@@ -114,6 +116,7 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-TRANSLATIONS +=
+TRANSLATIONS += translations/project_ru_RU.ts
+TRANSLATIONS += translations/project_en_US.ts
 
 DISTFILES +=
