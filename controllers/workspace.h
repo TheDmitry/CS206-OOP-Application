@@ -4,6 +4,7 @@
 #include <QTabWidget>
 #include <QTableView>
 #include <QWidget>
+#include "controllers/tableview.h"
 #include "models/customtablemodel.h"
 
 namespace Ui {
@@ -18,6 +19,8 @@ public:
   ~Workspace();
 
   QTabWidget *getTabWidget();
+
+  TableView *getCurrentWidget();
   QTableView *getCurrentTableView();
   CustomTableModel *getCurrentModel();
 

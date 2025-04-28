@@ -60,6 +60,8 @@ public:
   /* Undo: no redo */
   void rewind();
 
+  void tdebug();
+
 private:
   Container items;
   Undoer<Container> undoer;

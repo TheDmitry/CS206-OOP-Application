@@ -28,12 +28,16 @@ QTabWidget *Workspace::getTabWidget() {
   return ui->tabWidget;
 };
 
+TableView *Workspace::getCurrentWidget() {
+  return static_cast<TableView *>(getTabWidget()->currentWidget());
+}
+
 QTableView *Workspace::getCurrentTableView() {
-  return static_cast<TableView *>(ui->tabWidget->currentWidget())->getTable();
+  return getCurrentWidget()->getTable();
 };
 
 CustomTableModel *Workspace::getCurrentModel() {
-  return static_cast<CustomTableModel *>(getCurrentTableView()->model());
+  return static_cast<CustomTableModel *>(getCurrentWidget()->getTableModel());
 };
 
 void Workspace::on_tabWidget_currentChanged(int index) {

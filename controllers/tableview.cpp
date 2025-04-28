@@ -10,12 +10,16 @@
 TableView::TableView(QWidget *parent)
   : QWidget(parent)
   , model(new CustomTableModel(this))
+  , proxyModel(new QSortFilterProxyModel(this))
   , shortcut{}
   , ui(new Ui::TableView) {
   ui->setupUi(this);
 
-  ui->tableView->setModel(model);
-  ui->tableView->setSortingEnabled(true);
+  proxyModel->setSourceModel(model);
+  proxyModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
+  proxyModel->setSortCaseSensitivity(Qt::CaseInsensitive);
+
+  ui->tableView->setModel(proxyModel);
 
   initShortcuts();
 }
@@ -62,10 +66,20 @@ void TableView::on_pushButton_new_clicked() {
 
 void TableView::on_pushButton_remove_clicked() {
   auto selected = ui->tableView->selectionModel()->selectedIndexes();
+  if (selected.isEmpty())
+    return;
 
-  model->removeRow(selected.first().row());
+  QModelIndex proxyIndex = selected.first();
+  QModelIndex sourceIndex = proxyModel->mapToSource(proxyIndex);
+
+  model->removeRow(sourceIndex.row());
 }
 
 void TableView::on_pushButton_undo_clicked() {
   model->rewind();
+}
+
+void TableView::on_lineEdit_textChanged(const QString &arg1) {
+  proxyModel->setFilterFixedString(arg1);
+  cout << arg1.toStdString() << endl;
 }

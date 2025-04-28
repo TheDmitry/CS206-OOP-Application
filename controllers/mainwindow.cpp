@@ -70,7 +70,6 @@ void MainWindow::checkFileTabs() {
 
   if (workspaceInitialized && workspace->getTabWidget()->count() > 0)
     hasData = !workspace->getCurrentModel()->isEmpty();
-
   cout << "Call -> checkFileTabs() -> hasData(" << hasData << ")" << endl;
 
   ui->actionFileOpen->setEnabled(!hasData);

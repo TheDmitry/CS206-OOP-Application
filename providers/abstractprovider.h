@@ -20,6 +20,7 @@ public:
   virtual string get(shared_ptr<AbstractItem> const &target, string const &fieldName) = 0;
   virtual void set(shared_ptr<AbstractItem> &target, string const &fieldName, string const &value)
     = 0;
+
   virtual shared_ptr<AbstractItem> create() = 0;
 
 protected:

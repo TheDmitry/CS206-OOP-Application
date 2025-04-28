@@ -23,6 +23,7 @@ public:
 
   string get(shared_ptr<AbstractItem> const &target, string const &fieldName) override;
   void set(shared_ptr<AbstractItem> &target, string const &fieldName, string const &value) override;
+
   shared_ptr<AbstractItem> create() override;
 
 private:

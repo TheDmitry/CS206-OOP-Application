@@ -1,7 +1,8 @@
 #include "models/customtablemodel.h"
 
 CustomTableModel::CustomTableModel(QObject *parent)
-  : QAbstractTableModel(parent) {}
+  : QAbstractTableModel(parent)
+  , items{} {}
 
 CustomTableModel::~CustomTableModel() {
   items.clear();
@@ -111,8 +112,8 @@ Qt::ItemFlags CustomTableModel::flags(const QModelIndex &index) const {
 void CustomTableModel::reset() {
   beginResetModel();
 
-  db.reset();
   items.clear();
+  db.reset();
 
   endResetModel();
 }
@@ -120,8 +121,8 @@ void CustomTableModel::reset() {
 void CustomTableModel::clear() {
   beginResetModel();
 
-  db.clear();
   items.clear();
+  db.clear();
 
   endResetModel();
 }
@@ -174,7 +175,8 @@ void CustomTableModel::removeRow(size_t index) {
 }
 
 bool CustomTableModel::isEmpty() {
-  return (items.empty() || db.isDataEmpty());
+  cout << items.size() << endl;
+  return items.empty();
 }
 
 void CustomTableModel::rewind() {
@@ -184,4 +186,8 @@ void CustomTableModel::rewind() {
   items.clear();
   items = undoer.rewind();
   endResetModel();
+}
+
+void CustomTableModel::tdebug() {
+  std::cout << "[CustomTableModel]P: " << this << " -> " << items.size() << endl;
 }

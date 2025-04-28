@@ -32,8 +32,11 @@ private slots:
 
   void on_pushButton_undo_clicked();
 
+  void on_lineEdit_textChanged(const QString &arg1);
+
 private:
   CustomTableModel *model;
+  QSortFilterProxyModel *proxyModel;
   std::map<std::string, QShortcut *> shortcut;
 
   void initShortcuts();
