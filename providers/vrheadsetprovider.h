@@ -21,8 +21,13 @@ public:
   const vector<string> getSupportedSchemeArgs() override;
   const map<string, size_t> getScheme() override;
 
-  string get(shared_ptr<AbstractItem> const &target, string const &fieldName) override;
+  string get(shared_ptr<AbstractItem> const &target, string const &fieldName) const override;
   void set(shared_ptr<AbstractItem> &target, string const &fieldName, string const &value) override;
+
+  // returns -1 if less, 0 if equals, 1 if greater
+  int compare(shared_ptr<AbstractItem> const &a,
+              shared_ptr<AbstractItem> const &b,
+              string const &fieldName) const override;
 
   shared_ptr<AbstractItem> create() override;
 

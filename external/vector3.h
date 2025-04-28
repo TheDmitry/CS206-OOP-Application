@@ -22,7 +22,17 @@ class Vector3 {
   Vector3 &operator/=(const float n);
   Vector3 &operator*=(const float n);
 
+  // Equality
+  bool operator>(Vector3 const &vec) const;
+  bool operator<(Vector3 const &vec) const;
+  bool operator>=(Vector3 const &vec) const;
+  bool operator<=(Vector3 const &vec) const;
+  bool operator==(Vector3 const &vec) const;
+
   Vector3 operator-() const;
+
+  double distance(Vector3 const &vec) const;
+  double length() const;
 
   static Vector3 vectorFromString(string const &stringified);
   // DONE: read v3(f,f,f) from *.db, get Vector3(f,f,f)

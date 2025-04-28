@@ -1,4 +1,5 @@
 #include "vector3.h"
+#include <cmath>
 #include <format>
 #include <stdexcept>
 
@@ -120,6 +121,34 @@ Vector3 &Vector3::operator*=(const float n) {
   y *= n;
   z *= n;
   return *this;
+}
+
+bool Vector3::operator>(Vector3 const &vec) const {
+  return length() > vec.length();
+}
+
+bool Vector3::operator<(Vector3 const &vec) const {
+  return length() < vec.length();
+}
+
+bool Vector3::operator>=(Vector3 const &vec) const {
+  return length() >= vec.length();
+}
+
+bool Vector3::operator<=(Vector3 const &vec) const {
+  return length() <= vec.length();
+}
+
+bool Vector3::operator==(Vector3 const &vec) const {
+  return x == vec.x && y == vec.y && z == vec.z;
+}
+
+double Vector3::distance(Vector3 const &vec) const {
+  return sqrt(pow(x - vec.x, 2) + pow(y - vec.y, 2) + pow(z - vec.z, 2));
+}
+
+double Vector3::length() const {
+  return sqrt(pow(x, 2) + pow(y, 2) + pow(z, 2));
 }
 
 Vector3 Vector3::operator-() const { return Vector3(-x, -y, -z); }
