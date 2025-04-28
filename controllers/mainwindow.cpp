@@ -27,7 +27,7 @@ MainWindow::MainWindow(QWidget *parent)
   ui->setupUi(this);
   workspace->setHidden(true);
 
-  connectTabSignals();
+  connectSignals();
   initShortcuts();
 }
 
@@ -41,9 +41,16 @@ MainWindow::~MainWindow() {
   delete ui;
 }
 
-void MainWindow::initShortcuts() {
-  cout << "Shortcuts for MainWindow initialized!" << endl;
+void MainWindow::connectSignals() {
+  connect(workspace, &Workspace::tabChanged, this, &MainWindow::checkFileTabs);
+  connect(workspace, &Workspace::tabCreated, this, &MainWindow::checkWorkspaceTabs);
+  connect(workspace, &Workspace::tabClosed, this, [this]() {
+    checkFileTabs();
+    checkWorkspaceTabs();
+  });
+}
 
+void MainWindow::initShortcuts() {
   shortcut["newTab"] = new QShortcut(QKeyCombination(Qt::CTRL, Qt::Key_W), this);
   shortcut["newTab"]->setContext(Qt::ApplicationShortcut);
   connect(shortcut["newTab"], &QShortcut::activated, this, &MainWindow::on_actionNew_Tab_triggered);
@@ -56,21 +63,11 @@ void MainWindow::initShortcuts() {
           &MainWindow::on_actionClose_Tab_triggered);
 }
 
-void MainWindow::connectTabSignals() {
-  connect(workspace, &Workspace::tabChanged, this, &MainWindow::checkFileTabs);
-  connect(workspace, &Workspace::tabCreated, this, &MainWindow::checkWorkspaceTabs);
-  connect(workspace, &Workspace::tabClosed, this, [this]() {
-    checkFileTabs();
-    checkWorkspaceTabs();
-  });
-}
-
 void MainWindow::checkFileTabs() {
   bool hasData = false;
 
   if (workspaceInitialized && workspace->getTabWidget()->count() > 0)
     hasData = !workspace->getCurrentModel()->isEmpty();
-  cout << "Call -> checkFileTabs() -> hasData(" << hasData << ")" << endl;
 
   ui->actionFileOpen->setEnabled(!hasData);
   ui->actionFileClose->setEnabled(hasData);
@@ -80,8 +77,6 @@ void MainWindow::checkFileTabs() {
 
 void MainWindow::checkWorkspaceTabs() {
   bool hasTabs = workspaceInitialized && workspace->getTabWidget()->count() > 0;
-
-  cout << "Call -> checkWorkspaceTabs() -> hasTabs(" << hasTabs << ")" << endl;
 
   ui->actionClose_Tab->setEnabled(hasTabs);
   ui->actionClose_All_Tabs->setEnabled(hasTabs);

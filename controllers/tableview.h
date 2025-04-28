@@ -32,7 +32,7 @@ private slots:
 
   void on_pushButton_undo_clicked();
 
-  void on_lineEdit_textChanged(const QString &arg1);
+  void on_searchLine_textChanged(const QString &arg1);
 
 private:
   CustomTableModel *model;
@@ -40,6 +40,7 @@ private:
   std::map<std::string, QShortcut *> shortcut;
 
   void initShortcuts();
+  void connectSignals();
 
   Ui::TableView *ui;
 };

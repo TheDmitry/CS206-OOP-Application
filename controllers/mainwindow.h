@@ -56,7 +56,7 @@ private:
   void checkFileTabs();
   void checkWorkspaceTabs();
 
+  void connectSignals();
   void initShortcuts();
-  void connectTabSignals();
 };
 #endif // MAINWINDOW_H
