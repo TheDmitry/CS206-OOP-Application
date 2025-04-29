@@ -59,10 +59,13 @@ private:
 
   void checkFileTabs();
   void checkWorkspaceTabs();
+  void createLanguageMenu();
 
   void connectSignals();
   void initShortcuts();
+  void initTranslations();
 
-  void createLanguageMenu();
+  void readSettings();
+  void writeSettings();
 };
 #endif // MAINWINDOW_H

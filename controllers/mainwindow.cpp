@@ -22,11 +22,7 @@ MainWindow::MainWindow(QWidget *parent)
 
   connectSignals();
   initShortcuts();
-
-  qApp->installTranslator(&appTranslator);
-  qApp->installTranslator(&qtTranslator);
-  qmPath = qApp->applicationDirPath() + "/translations";
-  createLanguageMenu();
+  initTranslations();
 }
 
 MainWindow::~MainWindow() {
@@ -37,6 +33,13 @@ MainWindow::~MainWindow() {
   delete errorDialog;
   delete workspace;
   delete ui;
+}
+
+void MainWindow::initTranslations() {
+  qApp->installTranslator(&appTranslator);
+  qApp->installTranslator(&qtTranslator);
+  qmPath = qApp->applicationDirPath() + "/translations";
+  createLanguageMenu();
 }
 
 void MainWindow::createLanguageMenu() {
