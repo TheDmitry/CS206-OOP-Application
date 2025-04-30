@@ -82,18 +82,14 @@ void Workspace::addTab() {
 }
 
 void Workspace::closeTab() {
-  if ((getTabWidget()->count() - 1) <= 0) {
-    getTabWidget()->clear();
-    return;
-  }
-
   getTabWidget()->removeTab(getTabWidget()->currentIndex());
 
   emit tabClosed();
 }
 
 void Workspace::closeAllTabs() {
-  getTabWidget()->clear();
+  while (getTabWidget()->count() > 0)
+    getTabWidget()->removeTab(0);
 
   emit tabClosed();
 }
