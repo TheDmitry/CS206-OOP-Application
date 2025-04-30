@@ -78,6 +78,9 @@ private slots:
    */
   void on_actionNew_Tab_triggered();
 
+  /*!
+   * \brief File -> Print
+   */
   void on_actionFilePrint_triggered();
 
 private:

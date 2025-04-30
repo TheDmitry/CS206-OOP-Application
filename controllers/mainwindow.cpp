@@ -330,9 +330,6 @@ void MainWindow::on_actionClose_All_Tabs_triggered() {
 }
 
 void MainWindow::on_actionFilePrint_triggered() {
-  on_actionFileWrite_triggered();
-  on_actionFileUpdate_triggered();
-
   QPrinter printer;
 
   QPrintDialog *dialog = new QPrintDialog(&printer, this);
