@@ -16,6 +16,9 @@ class MainWindow;
 }
 QT_END_NAMESPACE
 
+/*!
+ * \brief The MainWindow class
+ */
 class MainWindow : public QMainWindow
 {
   Q_OBJECT
@@ -24,20 +27,40 @@ public:
   MainWindow(QWidget *parent = nullptr);
   ~MainWindow();
 
-
 private slots:
+  /*!
+   * \brief Program -> Author
+   */
   void on_actionProgramAuthor_triggered();
 
+  /*!
+   * \brief File -> Open
+   */
   void on_actionFileOpen_triggered();
 
+  /*!
+   * \brief File -> Write
+   */
   void on_actionFileWrite_triggered();
 
+  /*!
+   * \brief File -> Update
+   */
   void on_actionFileUpdate_triggered();
 
+  /*!
+   * \brief File -> Close
+   */
   void on_actionFileClose_triggered();
 
+  /*!
+   * \brief Workspace -> New tab
+   */
   void on_actionNew_Tab_triggered();
 
+  /*!
+   * \brief Workspace -> Close Tab
+   */
   void on_actionClose_Tab_triggered();
 
   /*!
@@ -48,82 +71,113 @@ private slots:
   void switchLanguage(QAction *action);
 
 private:
+  /*!
+   * \brief Dialog which is shown whenever user clicks Program -> Author
+   */
   AuthorDialog *authorDialog;
+
+  /*!
+   * \brief Dialog which is shown whenever any handled error happens in application
+   */
   ErrorDialog *errorDialog;
+
+  /*!
+   * \brief Workspace is main part of this program. It's used to manipulate, read and write any data
+   */
   Workspace *workspace;
+
+  /*!
+   * \brief Represents current state of workspace 
+   */
   bool workspaceInitialized;
+
+  /*!
+   * \brief Settings related to stuff in MainWindow
+   */
   QSettings settings;
 
+  /*!
+   * \brief shortcutName -> QShortcut association which is used in initShortcuts()
+   */
   std::map<std::string, QShortcut *> shortcut;
 
+  /*!
+   * \brief Qt related UI pointer
+   */
   Ui::MainWindow *ui;
 
+  /*!
+   * \brief Related to translation
+   */
   QTranslator appTranslator;
+
+  /*!
+   * \brief Related to translation
+   */
   QTranslator qtTranslator;
 
+  /*!
+   * \brief ActionGroup which stores any checkable object for language switching
+   */
   QActionGroup *languageActionGroup;
+
+  /*!
+   * \brief Path to translation directory, which is cwd/translations by default
+   */
   QString qmPath;
 
   /*!
-   * \brief checkFileTabs
-   * Redraw available file options depending on state of workspace 
+   * \brief Redraw available file options depending on state of workspace 
    */
-  void checkFileTabs(); // Redraw available file options
+  void checkFileTabs();
 
   /*!
-   * \brief checkWorkspaceTabs
-   * Redraw available tab options depending on state of workspace 
+   * \brief Redraw available tab options depending on state of workspace 
    */
-  void checkWorkspaceTabs(); // Redraw available tab options
+  void checkWorkspaceTabs();
 
   /*!
-   * \brief createLanguageMenu
-   * Create language menu depending on state of ./translation directory
+   * \brief Create language menu depending on state of ./translation directory
    */
-  void createLanguageMenu(); // Language menu, currently for en_US and ru_RU
+  void createLanguageMenu();
 
   /*!
-   * \brief getLanguage
-   * \return QString with name of currently selected language
+   * \brief Can be used to get currently selected language
+   * \return QString
    */
-  QString getLanguage(); // Returns current language or en_US if none is set
+  QString getLanguage();
 
   /*!
-   * \brief connectSignals
-   * Initialize and connect signals related to checkFileTabs() and checkWorspaceTabs()
+   * \brief Initialize and connect signals related to checkFileTabs() and checkWorkspaceTabs()
    */
   void connectSignals();
 
   /*!
-   * \brief initShortcuts
-   * Initialize and connect application-based shortcuts
+   * \brief Initialize and connect application-based shortcuts
    */
   void initShortcuts();
 
   /*!
-   * \brief initTranslations
-   * Setup translations depending on state of ./translation directory 
+   * \brief Setup translations depending on state of ./translation directory 
    */
-  void initTranslations(); // Translations: ru_RU and en_US
+  void initTranslations();
 
   /*!
-   * \brief initWorkspace
-   * Initialize workspace UI
-   * Should be called when you need to setup workspace for the first time
+   * \brief Initialize workspace UI
    * 
+   * Important: Should be called when you need to setup workspace for the first time
    */
   void initWorkspace();
 
   /*!
-   * \brief readSettings
-   * Load all settings and change whatever is needed depending on them
+   * \brief Load all settings and change whatever is needed depending on them
    */
   void readSettings();
 
   /*!
-   * \brief writeSettings
-   * Write all setting-dependent stuff
-   * Should be called in destructor of MainWindow
+   * \brief Write all setting-dependent stuff
+   * 
+   * Important: Should be called in destructor of MainWindow
    */
   void writeSettings();
 };
