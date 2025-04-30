@@ -70,6 +70,8 @@ private slots:
    */
   void switchLanguage(QAction *action);
 
+  void on_actionClose_All_Tabs_triggered();
+
 private:
   /*!
    * \brief Dialog which is shown whenever user clicks Program -> Author

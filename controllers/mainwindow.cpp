@@ -286,11 +286,22 @@ void MainWindow::on_actionClose_Tab_triggered() {
   auto *tabWidget = workspace->getTabWidget();
 
   if ((tabWidget->count() - 1) <= 0) {
+    tabWidget->clear();
     ui->label->setHidden(false);
     workspace->setHidden(true);
+    return;
   }
 
   auto *t = tabWidget->widget(tabWidget->currentIndex());
   tabWidget->removeTab(tabWidget->currentIndex());
   delete t;
+}
+
+void MainWindow::on_actionClose_All_Tabs_triggered() {
+  if (!workspaceInitialized)
+    return;
+
+  workspace->getTabWidget()->clear();
+  ui->label->setHidden(false);
+  workspace->setHidden(true);
 }
