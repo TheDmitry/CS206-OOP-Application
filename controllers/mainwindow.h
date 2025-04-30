@@ -40,6 +40,11 @@ private slots:
 
   void on_actionClose_Tab_triggered();
 
+  /*!
+   * \brief switchLanguage
+   * \param QAction* action
+   * Slot, fired when changing of current language is performed
+   */
   void switchLanguage(QAction *action);
 
 private:
@@ -59,16 +64,67 @@ private:
   QActionGroup *languageActionGroup;
   QString qmPath;
 
-  void checkFileTabs();
-  void checkWorkspaceTabs();
-  void createLanguageMenu();
-  QString getLanguage();
+  /*!
+   * \brief checkFileTabs
+   * Redraw available file options depending on state of workspace 
+   */
+  void checkFileTabs(); // Redraw available file options
 
+  /*!
+   * \brief checkWorkspaceTabs
+   * Redraw available tab options depending on state of workspace 
+   */
+  void checkWorkspaceTabs(); // Redraw available tab options
+
+  /*!
+   * \brief createLanguageMenu
+   * Create language menu depending on state of ./translation directory
+   */
+  void createLanguageMenu(); // Language menu, currently for en_US and ru_RU
+
+  /*!
+   * \brief getLanguage
+   * \return QString with name of currently selected language
+   */
+  QString getLanguage(); // Returns current language or en_US if none is set
+
+  /*!
+   * \brief connectSignals
+   * Initialize and connect signals related to checkFileTabs() and checkWorspaceTabs()
+   */
   void connectSignals();
-  void initShortcuts();
-  void initTranslations();
 
+  /*!
+   * \brief initShortcuts
+   * Initialize and connect application-based shortcuts
+   */
+  void initShortcuts();
+
+  /*!
+   * \brief initTranslations
+   * Setup translations depending on state of ./translation directory 
+   */
+  void initTranslations(); // Translations: ru_RU and en_US
+
+  /*!
+   * \brief initWorkspace
+   * Initialize workspace UI
+   * Should be called when you need to setup workspace for the first time
+   * 
+   */
+  void initWorkspace();
+
+  /*!
+   * \brief readSettings
+   * Load all settings and change whatever is needed depending on them
+   */
   void readSettings();
+
+  /*!
+   * \brief writeSettings
+   * Write all setting-dependent stuff
+   * Should be called in destructor of MainWindow
+   */
   void writeSettings();
 };
 #endif // MAINWINDOW_H
