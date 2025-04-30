@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QSettings>
 #include <QTranslator>
 
 #include "controllers/authordialog.h"
@@ -46,6 +47,7 @@ private:
   ErrorDialog *errorDialog;
   Workspace *workspace;
   bool workspaceInitialized;
+  QSettings settings;
 
   std::map<std::string, QShortcut *> shortcut;
 
@@ -60,6 +62,7 @@ private:
   void checkFileTabs();
   void checkWorkspaceTabs();
   void createLanguageMenu();
+  QString getLanguage();
 
   void connectSignals();
   void initShortcuts();

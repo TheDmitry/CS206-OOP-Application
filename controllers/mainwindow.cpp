@@ -13,7 +13,8 @@ MainWindow::MainWindow(QWidget *parent)
   , authorDialog(new AuthorDialog(this))
   , errorDialog(new ErrorDialog(this))
   , workspace(new Workspace(this))
-  , workspaceInitialized(false)
+  , workspaceInitialized{false}
+  , settings{"TermPaperMGSU", "OOP-Term-Paper-Application"}
   , shortcut{}
   , ui(new Ui::MainWindow)
   , languageActionGroup(nullptr) {
@@ -23,9 +24,13 @@ MainWindow::MainWindow(QWidget *parent)
   connectSignals();
   initShortcuts();
   initTranslations();
+
+  readSettings();
 }
 
 MainWindow::~MainWindow() {
+  writeSettings();
+
   for (auto &i : shortcut)
     delete i.second;
 
@@ -33,6 +38,31 @@ MainWindow::~MainWindow() {
   delete errorDialog;
   delete workspace;
   delete ui;
+}
+
+void MainWindow::readSettings() {
+  settings.beginGroup("Main");
+
+  QString language = settings.value("language", "en_US").toString();
+  for (auto &i : languageActionGroup->actions()) {
+    QString actionLanguage = i->data().toString();
+
+    if (language != actionLanguage) {
+      i->setChecked(false);
+      continue;
+    }
+
+    i->setChecked(true);
+    switchLanguage(i);
+  }
+
+  settings.endGroup();
+}
+
+void MainWindow::writeSettings() {
+  settings.beginGroup("Main");
+  settings.setValue("language", getLanguage());
+  settings.endGroup();
 }
 
 void MainWindow::initTranslations() {
@@ -112,6 +142,15 @@ void MainWindow::switchLanguage(QAction *action) {
 #endif
 
   ui->retranslateUi(this);
+}
+
+QString MainWindow::getLanguage() {
+  for (auto &i : languageActionGroup->actions()) {
+    if (i->isChecked())
+      return i->data().toString();
+  }
+
+  return "en_US"; // default - English!
 }
 
 void MainWindow::connectSignals() {
