@@ -181,6 +181,20 @@ void MainWindow::initShortcuts() {
           &QShortcut::activated,
           this,
           &MainWindow::on_actionClose_Tab_triggered);
+
+  shortcut["openFile"] = new QShortcut(QKeyCombination(Qt::ALT, Qt::Key_F), this);
+  shortcut["openFile"]->setContext(Qt::ApplicationShortcut);
+  connect(shortcut["openFile"],
+          &QShortcut::activated,
+          this,
+          &MainWindow::on_actionFileOpen_triggered);
+
+  shortcut["closeFile"] = new QShortcut(QKeyCombination(Qt::ALT, Qt::Key_D), this);
+  shortcut["closeFile"]->setContext(Qt::ApplicationShortcut);
+  connect(shortcut["closeFile"],
+          &QShortcut::activated,
+          this,
+          &MainWindow::on_actionFileClose_triggered);
 }
 
 void MainWindow::checkFileTabs() {
@@ -213,7 +227,7 @@ void MainWindow::on_actionFileOpen_triggered() {
                                                  "Db Files (.db);;All Files (.*)")
                       .toStdString();
   if (!fileName.empty()) {
-    if (workspace->getTabWidget()->count() == 0)
+    if (!workspaceInitialized || workspace->getTabWidget()->count() == 0)
       on_actionNew_Tab_triggered();
 
     try {
@@ -231,6 +245,10 @@ void MainWindow::on_actionFileOpen_triggered() {
 }
 
 void MainWindow::on_actionFileWrite_triggered() {
+  if (!workspaceInitialized || workspace->getTabWidget()->count() == 0
+      || workspace->getCurrentModel()->isEmpty())
+    return;
+
   try {
     workspace->getCurrentModel()->writeToFile();
   } catch (ParseError const &e) {
@@ -243,6 +261,10 @@ void MainWindow::on_actionFileWrite_triggered() {
 }
 
 void MainWindow::on_actionFileUpdate_triggered() {
+  if (!workspaceInitialized || workspace->getTabWidget()->count() == 0
+      || workspace->getCurrentModel()->isEmpty())
+    return;
+
   try {
     workspace->getCurrentModel()->readFromFile();
   } catch (ParseError const &e) {
@@ -254,6 +276,10 @@ void MainWindow::on_actionFileUpdate_triggered() {
   }
 }
 void MainWindow::on_actionFileClose_triggered() {
+  if (!workspaceInitialized || workspace->getTabWidget()->count() == 0
+      || workspace->getCurrentModel()->isEmpty())
+    return;
+
   try {
     workspace->getCurrentModel()->reset();
   } catch (ParseError const &e) {
