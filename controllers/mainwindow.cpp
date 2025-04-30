@@ -40,6 +40,14 @@ MainWindow::~MainWindow() {
   delete ui;
 }
 
+void MainWindow::initWorkspace() {
+  workspace->setLayout(ui->gridLayout_2);
+  ui->gridLayout_2->addWidget(workspace);
+  workspace->show();
+
+  workspaceInitialized = true;
+}
+
 void MainWindow::readSettings() {
   settings.beginGroup("Main");
 
@@ -198,14 +206,16 @@ void MainWindow::on_actionProgramAuthor_triggered() {
   authorDialog->exec();
 }
 
-void MainWindow::on_actionFileOpen_triggered()
-{
+void MainWindow::on_actionFileOpen_triggered() {
   string fileName = QFileDialog::getOpenFileName(this,
                                                  tr("Read file"),
                                                  QDir::currentPath(),
                                                  "Db Files (.db);;All Files (.*)")
                       .toStdString();
   if (!fileName.empty()) {
+    if (!workspaceInitialized || workspace->getTabWidget()->count() == 0)
+      on_actionNew_Tab_triggered();
+
     try {
       workspace->getCurrentModel()->readFromFile(fileName);
     } catch (ParseError const &e) {
@@ -258,13 +268,8 @@ void MainWindow::on_actionFileClose_triggered() {
 }
 
 void MainWindow::on_actionNew_Tab_triggered() {
-  if (!workspaceInitialized) {
-    workspace->setLayout(ui->gridLayout_2);
-    ui->gridLayout_2->addWidget(workspace);
-    workspace->show();
-
-    workspaceInitialized = true;
-  }
+  if (!workspaceInitialized)
+    initWorkspace();
 
   ui->label->setHidden(true);
   if (workspace->isHidden()) {
