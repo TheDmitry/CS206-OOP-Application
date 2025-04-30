@@ -2,6 +2,8 @@
 #include <QFileDialog>
 #include <QLibraryInfo>
 #include <QMessageBox>
+#include <QPrintDialog>
+#include <QPrinter>
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
@@ -207,6 +209,7 @@ void MainWindow::checkFileTabs() {
   ui->actionFileClose->setEnabled(hasData);
   ui->actionFileUpdate->setEnabled(hasData);
   ui->actionFileWrite->setEnabled(hasData);
+  ui->actionFilePrint->setEnabled(hasData);
 }
 
 void MainWindow::checkWorkspaceTabs() {
@@ -324,4 +327,16 @@ void MainWindow::on_actionClose_All_Tabs_triggered() {
   workspace->closeAllTabs();
   ui->label->setHidden(false);
   workspace->setHidden(true);
+}
+
+void MainWindow::on_actionFilePrint_triggered() {
+  on_actionFileWrite_triggered();
+  on_actionFileUpdate_triggered();
+
+  QPrinter printer;
+
+  QPrintDialog *dialog = new QPrintDialog(&printer, this);
+  if (dialog->exec() == QDialog::Accepted) {
+    workspace->getCurrentTableView()->render(&printer);
+  }
 }

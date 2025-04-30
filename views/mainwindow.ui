@@ -99,6 +99,7 @@
     <addaction name="actionFileUpdate"/>
     <addaction name="actionFileWrite"/>
     <addaction name="actionFileClose"/>
+    <addaction name="actionFilePrint"/>
    </widget>
    <widget class="QMenu" name="menuProgram">
     <property name="title">
@@ -197,6 +198,14 @@
    </property>
    <property name="text">
     <string>Close All</string>
+   </property>
+  </action>
+  <action name="actionFilePrint">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Print</string>
    </property>
   </action>
  </widget>

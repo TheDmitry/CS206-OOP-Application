@@ -85,89 +85,94 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>File</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="105"/>
+        <location filename="../views/mainwindow.ui" line="106"/>
         <source>Program</source>
         <translation>Program</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="112"/>
+        <location filename="../views/mainwindow.ui" line="113"/>
         <source>Workspace</source>
         <translation>Workspace</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="124"/>
+        <location filename="../views/mainwindow.ui" line="125"/>
         <source>Language</source>
         <translation>Language</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="135"/>
-        <location filename="../views/mainwindow.ui" line="175"/>
+        <location filename="../views/mainwindow.ui" line="136"/>
+        <location filename="../views/mainwindow.ui" line="176"/>
         <source>Close</source>
         <translation>Close</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="140"/>
+        <location filename="../views/mainwindow.ui" line="141"/>
         <source>Author</source>
         <translation>Author</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="145"/>
+        <location filename="../views/mainwindow.ui" line="146"/>
         <source>Open</source>
         <translation>Open</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="153"/>
+        <location filename="../views/mainwindow.ui" line="154"/>
         <source>Update</source>
         <translation>Update</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="164"/>
+        <location filename="../views/mainwindow.ui" line="165"/>
         <source>Write</source>
         <translation>Write</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="183"/>
+        <location filename="../views/mainwindow.ui" line="184"/>
         <source>New Tab</source>
         <translation>New Tab</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="191"/>
+        <location filename="../views/mainwindow.ui" line="192"/>
         <source>Close Tab</source>
         <translation>Close Tab</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="199"/>
+        <location filename="../views/mainwindow.ui" line="200"/>
         <source>Close All</source>
         <translation>Close All</translation>
     </message>
     <message>
-        <location filename="../controllers/mainwindow.cpp" line="100"/>
-        <location filename="../controllers/mainwindow.cpp" line="125"/>
-        <location filename="../controllers/mainwindow.cpp" line="136"/>
-        <location filename="../controllers/mainwindow.cpp" line="145"/>
+        <location filename="../views/mainwindow.ui" line="208"/>
+        <source>Print</source>
+        <translation>Print</translation>
+    </message>
+    <message>
+        <location filename="../controllers/mainwindow.cpp" line="102"/>
+        <location filename="../controllers/mainwindow.cpp" line="127"/>
+        <location filename="../controllers/mainwindow.cpp" line="138"/>
+        <location filename="../controllers/mainwindow.cpp" line="147"/>
         <source>Application</source>
         <translation>Application</translation>
     </message>
     <message>
-        <location filename="../controllers/mainwindow.cpp" line="106"/>
+        <location filename="../controllers/mainwindow.cpp" line="108"/>
         <source>English</source>
         <translation>English</translation>
     </message>
     <message>
-        <location filename="../controllers/mainwindow.cpp" line="107"/>
+        <location filename="../controllers/mainwindow.cpp" line="109"/>
         <source>&amp;%1 %2</source>
         <translation>&amp;%1 %2</translation>
     </message>
     <message>
-        <location filename="../controllers/mainwindow.cpp" line="101"/>
-        <location filename="../controllers/mainwindow.cpp" line="126"/>
-        <location filename="../controllers/mainwindow.cpp" line="137"/>
-        <location filename="../controllers/mainwindow.cpp" line="146"/>
+        <location filename="../controllers/mainwindow.cpp" line="103"/>
+        <location filename="../controllers/mainwindow.cpp" line="128"/>
+        <location filename="../controllers/mainwindow.cpp" line="139"/>
+        <location filename="../controllers/mainwindow.cpp" line="148"/>
         <source>The translation file could not be loaded!</source>
         <translation>The translation file could not be loaded!</translation>
     </message>
     <message>
-        <location filename="../controllers/mainwindow.cpp" line="211"/>
+        <location filename="../controllers/mainwindow.cpp" line="228"/>
         <source>Read file</source>
         <translation>Read file</translation>
     </message>

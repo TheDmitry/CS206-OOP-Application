@@ -85,89 +85,94 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>Файл</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="105"/>
+        <location filename="../views/mainwindow.ui" line="106"/>
         <source>Program</source>
         <translation>Программа</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="112"/>
+        <location filename="../views/mainwindow.ui" line="113"/>
         <source>Workspace</source>
         <translation>Рабочее пространство</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="124"/>
+        <location filename="../views/mainwindow.ui" line="125"/>
         <source>Language</source>
         <translation>Язык</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="135"/>
-        <location filename="../views/mainwindow.ui" line="175"/>
+        <location filename="../views/mainwindow.ui" line="136"/>
+        <location filename="../views/mainwindow.ui" line="176"/>
         <source>Close</source>
         <translation>Закрыть</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="140"/>
+        <location filename="../views/mainwindow.ui" line="141"/>
         <source>Author</source>
         <translation>Автор</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="145"/>
+        <location filename="../views/mainwindow.ui" line="146"/>
         <source>Open</source>
         <translation>Открыть</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="153"/>
+        <location filename="../views/mainwindow.ui" line="154"/>
         <source>Update</source>
         <translation>Обновить</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="164"/>
+        <location filename="../views/mainwindow.ui" line="165"/>
         <source>Write</source>
         <translation>Записать</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="183"/>
+        <location filename="../views/mainwindow.ui" line="184"/>
         <source>New Tab</source>
         <translation>Новая вкладка</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="191"/>
+        <location filename="../views/mainwindow.ui" line="192"/>
         <source>Close Tab</source>
         <translation>Закрыть вкладку</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="199"/>
+        <location filename="../views/mainwindow.ui" line="200"/>
         <source>Close All</source>
         <translation>Закрыть все</translation>
     </message>
     <message>
-        <location filename="../controllers/mainwindow.cpp" line="100"/>
-        <location filename="../controllers/mainwindow.cpp" line="125"/>
-        <location filename="../controllers/mainwindow.cpp" line="136"/>
-        <location filename="../controllers/mainwindow.cpp" line="145"/>
+        <location filename="../views/mainwindow.ui" line="208"/>
+        <source>Print</source>
+        <translation>Печать</translation>
+    </message>
+    <message>
+        <location filename="../controllers/mainwindow.cpp" line="102"/>
+        <location filename="../controllers/mainwindow.cpp" line="127"/>
+        <location filename="../controllers/mainwindow.cpp" line="138"/>
+        <location filename="../controllers/mainwindow.cpp" line="147"/>
         <source>Application</source>
         <translation>Приложение</translation>
     </message>
     <message>
-        <location filename="../controllers/mainwindow.cpp" line="106"/>
+        <location filename="../controllers/mainwindow.cpp" line="108"/>
         <source>English</source>
         <translation>Русский</translation>
     </message>
     <message>
-        <location filename="../controllers/mainwindow.cpp" line="107"/>
+        <location filename="../controllers/mainwindow.cpp" line="109"/>
         <source>&amp;%1 %2</source>
         <translation>&amp;%1 %2</translation>
     </message>
     <message>
-        <location filename="../controllers/mainwindow.cpp" line="101"/>
-        <location filename="../controllers/mainwindow.cpp" line="126"/>
-        <location filename="../controllers/mainwindow.cpp" line="137"/>
-        <location filename="../controllers/mainwindow.cpp" line="146"/>
+        <location filename="../controllers/mainwindow.cpp" line="103"/>
+        <location filename="../controllers/mainwindow.cpp" line="128"/>
+        <location filename="../controllers/mainwindow.cpp" line="139"/>
+        <location filename="../controllers/mainwindow.cpp" line="148"/>
         <source>The translation file could not be loaded!</source>
         <translation>Невозможно загрузить файл перевода!</translation>
     </message>
     <message>
-        <location filename="../controllers/mainwindow.cpp" line="211"/>
+        <location filename="../controllers/mainwindow.cpp" line="228"/>
         <source>Read file</source>
         <translation>Прочитать файл</translation>
     </message>
