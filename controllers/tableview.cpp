@@ -21,7 +21,6 @@ TableView::TableView(QWidget *parent)
   ui->tableView->setModel(proxyModel);
 
   connectSignals();
-
   initShortcuts();
 }
 
@@ -48,7 +47,6 @@ void TableView::connectSignals() {
             proxyModel->setFilterKeyColumn(column);
           });
 }
-
 void TableView::initShortcuts() {
   shortcut["clear"] = new QShortcut(QKeyCombination(Qt::ALT, Qt::Key_R), this);
   shortcut["clear"]->setContext(Qt::WindowShortcut);

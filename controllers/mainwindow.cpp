@@ -213,7 +213,7 @@ void MainWindow::on_actionFileOpen_triggered() {
                                                  "Db Files (.db);;All Files (.*)")
                       .toStdString();
   if (!fileName.empty()) {
-    if (!workspaceInitialized || workspace->getTabWidget()->count() == 0)
+    if (workspace->getTabWidget()->count() == 0)
       on_actionNew_Tab_triggered();
 
     try {
@@ -283,25 +283,19 @@ void MainWindow::on_actionClose_Tab_triggered() {
   if (!workspaceInitialized)
     return;
 
-  auto *tabWidget = workspace->getTabWidget();
-
-  if ((tabWidget->count() - 1) <= 0) {
-    tabWidget->clear();
+  if ((workspace->getTabWidget()->count() - 1) <= 0) {
     ui->label->setHidden(false);
     workspace->setHidden(true);
-    return;
   }
 
-  auto *t = tabWidget->widget(tabWidget->currentIndex());
-  tabWidget->removeTab(tabWidget->currentIndex());
-  delete t;
+  workspace->closeTab();
 }
 
 void MainWindow::on_actionClose_All_Tabs_triggered() {
   if (!workspaceInitialized)
     return;
 
-  workspace->getTabWidget()->clear();
+  workspace->closeAllTabs();
   ui->label->setHidden(false);
   workspace->setHidden(true);
 }

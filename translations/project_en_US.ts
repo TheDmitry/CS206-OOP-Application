@@ -141,33 +141,33 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>Close All</translation>
     </message>
     <message>
-        <location filename="../controllers/mainwindow.cpp" line="59"/>
-        <location filename="../controllers/mainwindow.cpp" line="84"/>
-        <location filename="../controllers/mainwindow.cpp" line="95"/>
-        <location filename="../controllers/mainwindow.cpp" line="104"/>
+        <location filename="../controllers/mainwindow.cpp" line="100"/>
+        <location filename="../controllers/mainwindow.cpp" line="125"/>
+        <location filename="../controllers/mainwindow.cpp" line="136"/>
+        <location filename="../controllers/mainwindow.cpp" line="145"/>
         <source>Application</source>
         <translation>Application</translation>
     </message>
     <message>
-        <location filename="../controllers/mainwindow.cpp" line="65"/>
+        <location filename="../controllers/mainwindow.cpp" line="106"/>
         <source>English</source>
         <translation>English</translation>
     </message>
     <message>
-        <location filename="../controllers/mainwindow.cpp" line="66"/>
+        <location filename="../controllers/mainwindow.cpp" line="107"/>
         <source>&amp;%1 %2</source>
         <translation>&amp;%1 %2</translation>
     </message>
     <message>
-        <location filename="../controllers/mainwindow.cpp" line="60"/>
-        <location filename="../controllers/mainwindow.cpp" line="85"/>
-        <location filename="../controllers/mainwindow.cpp" line="96"/>
-        <location filename="../controllers/mainwindow.cpp" line="105"/>
+        <location filename="../controllers/mainwindow.cpp" line="101"/>
+        <location filename="../controllers/mainwindow.cpp" line="126"/>
+        <location filename="../controllers/mainwindow.cpp" line="137"/>
+        <location filename="../controllers/mainwindow.cpp" line="146"/>
         <source>The translation file could not be loaded!</source>
         <translation>The translation file could not be loaded!</translation>
     </message>
     <message>
-        <location filename="../controllers/mainwindow.cpp" line="162"/>
+        <location filename="../controllers/mainwindow.cpp" line="211"/>
         <source>Read file</source>
         <translation>Read file</translation>
     </message>
@@ -206,6 +206,31 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <location filename="../views/workspace.ui" line="20"/>
         <source>Form</source>
         <translation>Form</translation>
+    </message>
+    <message>
+        <location filename="../controllers/workspace.cpp" line="10"/>
+        <source>Workspace menu</source>
+        <translation>Workspace menu</translation>
+    </message>
+    <message>
+        <location filename="../controllers/workspace.cpp" line="30"/>
+        <source>Open File</source>
+        <translation>Open File</translation>
+    </message>
+    <message>
+        <location filename="../controllers/workspace.cpp" line="35"/>
+        <source>Close Tab</source>
+        <translation>Close Tab</translation>
+    </message>
+    <message>
+        <location filename="../controllers/workspace.cpp" line="38"/>
+        <source>Close File</source>
+        <translation>Close File</translation>
+    </message>
+    <message>
+        <location filename="../controllers/workspace.cpp" line="43"/>
+        <source>Write to File</source>
+        <translation>Write to File</translation>
     </message>
 </context>
 </TS>

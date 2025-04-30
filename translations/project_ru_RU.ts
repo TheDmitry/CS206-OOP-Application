@@ -141,33 +141,33 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>Закрыть все</translation>
     </message>
     <message>
-        <location filename="../controllers/mainwindow.cpp" line="59"/>
-        <location filename="../controllers/mainwindow.cpp" line="84"/>
-        <location filename="../controllers/mainwindow.cpp" line="95"/>
-        <location filename="../controllers/mainwindow.cpp" line="104"/>
+        <location filename="../controllers/mainwindow.cpp" line="100"/>
+        <location filename="../controllers/mainwindow.cpp" line="125"/>
+        <location filename="../controllers/mainwindow.cpp" line="136"/>
+        <location filename="../controllers/mainwindow.cpp" line="145"/>
         <source>Application</source>
         <translation>Приложение</translation>
     </message>
     <message>
-        <location filename="../controllers/mainwindow.cpp" line="65"/>
+        <location filename="../controllers/mainwindow.cpp" line="106"/>
         <source>English</source>
         <translation>Русский</translation>
     </message>
     <message>
-        <location filename="../controllers/mainwindow.cpp" line="66"/>
+        <location filename="../controllers/mainwindow.cpp" line="107"/>
         <source>&amp;%1 %2</source>
         <translation>&amp;%1 %2</translation>
     </message>
     <message>
-        <location filename="../controllers/mainwindow.cpp" line="60"/>
-        <location filename="../controllers/mainwindow.cpp" line="85"/>
-        <location filename="../controllers/mainwindow.cpp" line="96"/>
-        <location filename="../controllers/mainwindow.cpp" line="105"/>
+        <location filename="../controllers/mainwindow.cpp" line="101"/>
+        <location filename="../controllers/mainwindow.cpp" line="126"/>
+        <location filename="../controllers/mainwindow.cpp" line="137"/>
+        <location filename="../controllers/mainwindow.cpp" line="146"/>
         <source>The translation file could not be loaded!</source>
         <translation>Невозможно загрузить файл перевода!</translation>
     </message>
     <message>
-        <location filename="../controllers/mainwindow.cpp" line="162"/>
+        <location filename="../controllers/mainwindow.cpp" line="211"/>
         <source>Read file</source>
         <translation>Прочитать файл</translation>
     </message>
@@ -206,6 +206,31 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <location filename="../views/workspace.ui" line="20"/>
         <source>Form</source>
         <translation></translation>
+    </message>
+    <message>
+        <location filename="../controllers/workspace.cpp" line="10"/>
+        <source>Workspace menu</source>
+        <translation>Меню рабочего пространства</translation>
+    </message>
+    <message>
+        <location filename="../controllers/workspace.cpp" line="30"/>
+        <source>Open File</source>
+        <translation>Открыть файл</translation>
+    </message>
+    <message>
+        <location filename="../controllers/workspace.cpp" line="35"/>
+        <source>Close Tab</source>
+        <translation>Закрыть вкладку</translation>
+    </message>
+    <message>
+        <location filename="../controllers/workspace.cpp" line="38"/>
+        <source>Close File</source>
+        <translation>Закрыть файл</translation>
+    </message>
+    <message>
+        <location filename="../controllers/workspace.cpp" line="43"/>
+        <source>Write to File</source>
+        <translation>Записать в файл</translation>
     </message>
 </context>
 </TS>

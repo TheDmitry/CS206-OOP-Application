@@ -27,11 +27,8 @@ public:
   MainWindow(QWidget *parent = nullptr);
   ~MainWindow();
 
-private slots:
-  /*!
-   * \brief Program -> Author
-   */
-  void on_actionProgramAuthor_triggered();
+public slots:
+  // These slots are opened cuz they are used in tableview context actions
 
   /*!
    * \brief File -> Open
@@ -54,14 +51,15 @@ private slots:
   void on_actionFileClose_triggered();
 
   /*!
-   * \brief Workspace -> New tab
-   */
-  void on_actionNew_Tab_triggered();
-
-  /*!
    * \brief Workspace -> Close Tab
    */
   void on_actionClose_Tab_triggered();
+
+private slots:
+  /*!
+   * \brief Program -> Author
+   */
+  void on_actionProgramAuthor_triggered();
 
   /*!
    * \brief switchLanguage
@@ -70,7 +68,15 @@ private slots:
    */
   void switchLanguage(QAction *action);
 
+  /*!
+   * \brief Workspace -> Close all
+   */
   void on_actionClose_All_Tabs_triggered();
+
+  /*!
+   * \brief Workspace -> New tab
+   */
+  void on_actionNew_Tab_triggered();
 
 private:
   /*!

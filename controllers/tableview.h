@@ -1,6 +1,8 @@
 #ifndef TABLEVIEW_H
 #define TABLEVIEW_H
 
+#include <QAction>
+#include <QMenu>
 #include <QShortcut>
 #include <QTableView>
 #include <QWidget>
@@ -46,6 +48,7 @@ private:
 
   void initShortcuts();
   void connectSignals();
+
   void changeEvent(QEvent *e) override;
 };
 
