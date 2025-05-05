@@ -40,6 +40,10 @@ VRHeadset::VRHeadset()
   , position{0, 0, 0}
   , modelName{""} {}
 
+std::shared_ptr<AbstractItem> VRHeadset::clone() const {
+  return make_shared<VRHeadset>(*this);
+}
+
 int VRHeadset::getWidth() const { return width; };
 int VRHeadset::getHeight() const { return height; };
 float VRHeadset::getRefreshRate() const { return refreshRate; }

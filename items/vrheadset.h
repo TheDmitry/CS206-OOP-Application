@@ -3,6 +3,7 @@
 #include "external/vector3.h"
 #include "items/abstractitem.h"
 #include <map>
+#include <memory>
 #include <string>
 #include <vector>
 
@@ -31,6 +32,8 @@ public:
             std::string modelName);
   VRHeadset();
   ~VRHeadset() = default;
+
+  std::shared_ptr<AbstractItem> clone() const;
 
   int getWidth() const;
   int getHeight() const;

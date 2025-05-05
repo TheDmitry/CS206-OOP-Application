@@ -88,16 +88,11 @@ bool CustomTableModel::setData(const QModelIndex &index, const QVariant &value, 
     int row = index.row();
     int column = index.column();
 
-    string content;
-
-    if (column == 0)
+    if (!undoer.remember(items, [&value, row, column, this]() {
+          string stdValue = value.toString().toStdString();
+          db.getProvider()->set(items[row], db.getSchemeField(column), stdValue);
+        }))
       return false;
-    try {
-      string stdValue = value.toString().toStdString();
-      db.getProvider()->set(items[row], db.getSchemeField(column), stdValue);
-    } catch (exception const &e) {
-      return false;
-    }
 
     emit dataChanged(index, index, {role});
     return true;
@@ -163,7 +158,7 @@ void CustomTableModel::writeToFile() {
 void CustomTableModel::addEmptyRow() {
   beginResetModel();
   auto item = db.getProvider()->create();
-  items.push_back(std::move(item));
+  undoer.remember(items, [item, this]() { items.push_back(std::move(item)); });
   endResetModel();
 }
 
@@ -173,7 +168,9 @@ void CustomTableModel::removeRow(size_t row) {
 
   beginResetModel();
   undoer.remember(items);
-  items.erase(items.begin() + row);
+
+  undoer.remember(items, [row, this]() { items.erase(items.begin() + row); });
+
   endResetModel();
 }
 
