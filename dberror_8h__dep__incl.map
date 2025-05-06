@@ -1,0 +1,20 @@
+<map id="external/dberror.h" name="external/dberror.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="266,5,405,31"/>
+<area shape="rect" id="Node000002" href="$errordialog_8cpp.html" title=" " alt="" coords="17,152,211,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="253,29,193,47,166,61,141,80,129,97,122,117,117,152,112,151,117,115,125,95,137,77,163,57,191,42,251,24"/>
+<area shape="rect" id="Node000003" href="$errordialog_8h.html" title=" " alt="" coords="151,79,330,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="311,41,258,81,255,76,308,37"/>
+<area shape="rect" id="Node000008" href="$dberror_8cpp.html" title=" " alt="" coords="355,79,508,104"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="363,37,417,76,414,81,360,41"/>
+<area shape="rect" id="Node000009" href="$dbfile_8cpp.html" title=" " alt="" coords="532,79,675,104"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="393,32,561,76,559,81,391,37"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="210,113,136,154,133,149,207,108"/>
+<area shape="rect" id="Node000004" href="$mainwindow_8h.html" title=" " alt="" coords="235,152,425,177"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="267,110,317,150,314,154,264,115"/>
+<area shape="rect" id="Node000005" href="$mainwindow_8cpp.html" title=" " alt="" coords="5,225,209,251"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="282,184,144,228,143,223,281,179"/>
+<area shape="rect" id="Node000006" href="$workspace_8cpp.html" title=" " alt="" coords="234,225,426,251"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="333,191,333,225,327,225,327,191"/>
+<area shape="rect" id="Node000007" href="$main_8cpp.html" title=" " alt="" coords="450,225,533,251"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="369,180,466,223,464,228,367,185"/>
+</map>

@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['info_0',['INFO',['../classDbFile.html#aa9e9add6d3f9f62220b633d6f8b858bfa551b723eafd6a31d444fcb2f5920fbd3',1,'DbFile']]],
+  ['infobuffer_1',['infoBuffer',['../classDbFile.html#ab7fb89179ad09e3438a463cc265c6d5e',1,'DbFile']]],
+  ['initcontextactions_2',['initContextActions',['../classWorkspace.html#a959230e0f19877b18efd3675fbade004',1,'Workspace']]],
+  ['initcontextmenu_3',['initContextMenu',['../classWorkspace.html#accd9d0d598043d1d21d632967389a094',1,'Workspace']]],
+  ['initshortcuts_4',['initshortcuts',['../classMainWindow.html#ad94656db58495e2195132555b7642592',1,'MainWindow::initShortcuts()'],['../classTableView.html#ad20d6a0eabe7db88b2933c41ee229113',1,'TableView::initShortcuts()']]],
+  ['inittranslations_5',['initTranslations',['../classMainWindow.html#a9943da8fb67ac6936583ebe9dfbb9e31',1,'MainWindow']]],
+  ['initworkspace_6',['initWorkspace',['../classMainWindow.html#a466cae70574d6a755a6f6cfa5bb2a298',1,'MainWindow']]],
+  ['isbuffersempty_7',['isBuffersEmpty',['../classDbFile.html#a8d74d9fcf44f77075d6815fa5dbcb8ed',1,'DbFile']]],
+  ['isconnected_8',['isConnected',['../classVRHeadset.html#a96ce808a531ddbc5511464f5ab2dc892',1,'VRHeadset']]],
+  ['isdataempty_9',['isDataEmpty',['../classDbFile.html#a1bdc7dbdae3e4888d404df8389d2b3b5',1,'DbFile']]],
+  ['isempty_10',['isempty',['../classUndoer.html#a579322e8fa3995c0ec59ee62f4eaf102',1,'Undoer::isEmpty()'],['../classCustomTableModel.html#af9f87b446cdd876b4aefe1d27298f3dd',1,'CustomTableModel::isEmpty()']]],
+  ['isfileempty_11',['isFileEmpty',['../classDbFile.html#a9c4ce6fdfa4bcb54f118e718e6e662f7',1,'DbFile']]],
+  ['isfileexists_12',['isFileExists',['../classDbFile.html#a7688986d286cefed45e206481227e8fa',1,'DbFile']]],
+  ['isfilemodified_13',['isFileModified',['../classDbFile.html#ab8913793f7adce99bac9cb023451ca5e',1,'DbFile']]],
+  ['isinfoempty_14',['isInfoEmpty',['../classDbFile.html#afe0f0c2196ceff9b04377c7254564012',1,'DbFile']]],
+  ['items_15',['items',['../classCustomTableModel.html#a75418637de5efe23bc75878ae783e865',1,'CustomTableModel']]],
+  ['itemsequal_16',['itemsEqual',['../classUndoer.html#a138472323aa9bbbb4553b368ae8ca72d',1,'Undoer']]],
+  ['itemtype_17',['itemtype',['../classUndoer.html#ab8dd0748973c13af781b23e430fe2115',1,'Undoer::ItemType'],['../classCustomTableModel.html#a7aa9c96b5d23de9adb0ecba96f9abbeb',1,'CustomTableModel::ItemType']]]
+];

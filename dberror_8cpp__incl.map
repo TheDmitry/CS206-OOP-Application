@@ -1,0 +1,11 @@
+<map id="external/dberror.cpp" name="external/dberror.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="25,5,178,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,72,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,33,60,70,56,66,89,29"/>
+<area shape="rect" id="Node000003" href="$dberror_8h.html" title=" " alt="" coords="96,79,235,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="114,29,148,67,144,70,110,33"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="73,152,159,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="159,106,134,142,130,139,155,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="184,152,243,177"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="175,103,200,139,196,142,171,106"/>
+</map>

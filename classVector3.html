@@ -1,0 +1,674 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CS-206-OOP-Application: Класс Vector3</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">CS-206-OOP-Application
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classVector3.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="classVector3-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс Vector3</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="vector3_8h_source.html">vector3.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a0f49191f7e001e7f7ae1cb49522118b4" id="r_a0f49191f7e001e7f7ae1cb49522118b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#a0f49191f7e001e7f7ae1cb49522118b4">Vector3</a> ()</td></tr>
+<tr class="separator:a0f49191f7e001e7f7ae1cb49522118b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb741d68180650fc160bbf84fa66e1b8" id="r_aeb741d68180650fc160bbf84fa66e1b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#aeb741d68180650fc160bbf84fa66e1b8">Vector3</a> (const float <a class="el" href="classVector3.html#a7e2d3237b29a2f29d7b3d8b2934e35f2">x</a>, const float <a class="el" href="classVector3.html#a86eb35a9fa2d5a49e7fad66a35fa9c13">y</a>, const float <a class="el" href="classVector3.html#aa8c9461eb24bd2c364258078811a3e9d">z</a>)</td></tr>
+<tr class="separator:aeb741d68180650fc160bbf84fa66e1b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62c2e67b5290cf672663a9c764795174" id="r_a62c2e67b5290cf672663a9c764795174"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#a62c2e67b5290cf672663a9c764795174">debug</a> ()</td></tr>
+<tr class="separator:a62c2e67b5290cf672663a9c764795174"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2a4ae234192c68be3909d140a2a5832" id="r_ab2a4ae234192c68be3909d140a2a5832"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#ab2a4ae234192c68be3909d140a2a5832">operator+=</a> (<a class="el" href="classVector3.html">Vector3</a> const &amp;vec)</td></tr>
+<tr class="separator:ab2a4ae234192c68be3909d140a2a5832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2f170eab90766c7ff8672096b95e4ca" id="r_ac2f170eab90766c7ff8672096b95e4ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#ac2f170eab90766c7ff8672096b95e4ca">operator-=</a> (<a class="el" href="classVector3.html">Vector3</a> const &amp;vec)</td></tr>
+<tr class="separator:ac2f170eab90766c7ff8672096b95e4ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace31a36e41b429772907890dfd45dd6d" id="r_ace31a36e41b429772907890dfd45dd6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#ace31a36e41b429772907890dfd45dd6d">operator/=</a> (<a class="el" href="classVector3.html">Vector3</a> const &amp;vec)</td></tr>
+<tr class="separator:ace31a36e41b429772907890dfd45dd6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd408d78751c1c1f789b9adaf3b35425" id="r_acd408d78751c1c1f789b9adaf3b35425"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#acd408d78751c1c1f789b9adaf3b35425">operator*=</a> (<a class="el" href="classVector3.html">Vector3</a> const &amp;vec)</td></tr>
+<tr class="separator:acd408d78751c1c1f789b9adaf3b35425"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a208ebfe690a7d99e5650afecdb867819" id="r_a208ebfe690a7d99e5650afecdb867819"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#a208ebfe690a7d99e5650afecdb867819">operator+=</a> (const float n)</td></tr>
+<tr class="separator:a208ebfe690a7d99e5650afecdb867819"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79ba073407bf4cf72f8eea4b10c61be3" id="r_a79ba073407bf4cf72f8eea4b10c61be3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#a79ba073407bf4cf72f8eea4b10c61be3">operator-=</a> (const float n)</td></tr>
+<tr class="separator:a79ba073407bf4cf72f8eea4b10c61be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa10b1e24f92ab37c643a30bb60317b3d" id="r_aa10b1e24f92ab37c643a30bb60317b3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#aa10b1e24f92ab37c643a30bb60317b3d">operator/=</a> (const float n)</td></tr>
+<tr class="separator:aa10b1e24f92ab37c643a30bb60317b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48fb9694dee966d5030dfe25307ec94c" id="r_a48fb9694dee966d5030dfe25307ec94c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#a48fb9694dee966d5030dfe25307ec94c">operator*=</a> (const float n)</td></tr>
+<tr class="separator:a48fb9694dee966d5030dfe25307ec94c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f8b198926e3565c2faca4548c094e4f" id="r_a4f8b198926e3565c2faca4548c094e4f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#a4f8b198926e3565c2faca4548c094e4f">operator&gt;</a> (<a class="el" href="classVector3.html">Vector3</a> const &amp;vec) const</td></tr>
+<tr class="separator:a4f8b198926e3565c2faca4548c094e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3078f06eda1e843c4172ffb7ead9580" id="r_aa3078f06eda1e843c4172ffb7ead9580"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#aa3078f06eda1e843c4172ffb7ead9580">operator&lt;</a> (<a class="el" href="classVector3.html">Vector3</a> const &amp;vec) const</td></tr>
+<tr class="separator:aa3078f06eda1e843c4172ffb7ead9580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c6f2a2e087533ee691ae389de1d78fa" id="r_a3c6f2a2e087533ee691ae389de1d78fa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#a3c6f2a2e087533ee691ae389de1d78fa">operator&gt;=</a> (<a class="el" href="classVector3.html">Vector3</a> const &amp;vec) const</td></tr>
+<tr class="separator:a3c6f2a2e087533ee691ae389de1d78fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada97103582493c445caff2ce0c8a8235" id="r_ada97103582493c445caff2ce0c8a8235"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#ada97103582493c445caff2ce0c8a8235">operator&lt;=</a> (<a class="el" href="classVector3.html">Vector3</a> const &amp;vec) const</td></tr>
+<tr class="separator:ada97103582493c445caff2ce0c8a8235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab365bdad86cc8f47cccbcde6bbe013cb" id="r_ab365bdad86cc8f47cccbcde6bbe013cb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#ab365bdad86cc8f47cccbcde6bbe013cb">operator==</a> (<a class="el" href="classVector3.html">Vector3</a> const &amp;vec) const</td></tr>
+<tr class="separator:ab365bdad86cc8f47cccbcde6bbe013cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf941de6e1724901c46d5e9e1448358f" id="r_abf941de6e1724901c46d5e9e1448358f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#abf941de6e1724901c46d5e9e1448358f">operator-</a> () const</td></tr>
+<tr class="separator:abf941de6e1724901c46d5e9e1448358f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6fe243dbce04e7d085652cd46e3d03e" id="r_ad6fe243dbce04e7d085652cd46e3d03e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#ad6fe243dbce04e7d085652cd46e3d03e">distance</a> (<a class="el" href="classVector3.html">Vector3</a> const &amp;vec) const</td></tr>
+<tr class="separator:ad6fe243dbce04e7d085652cd46e3d03e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6b95177965a9e6f60fc2411209606b6" id="r_ac6b95177965a9e6f60fc2411209606b6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#ac6b95177965a9e6f60fc2411209606b6">length</a> () const</td></tr>
+<tr class="separator:ac6b95177965a9e6f60fc2411209606b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:afac260711cdf0637d1e64ceb2638264b" id="r_afac260711cdf0637d1e64ceb2638264b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classVector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#afac260711cdf0637d1e64ceb2638264b">vectorFromString</a> (std::string const &amp;stringified)</td></tr>
+<tr class="separator:afac260711cdf0637d1e64ceb2638264b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42c1faa706991376a67ca4f7f008577e" id="r_a42c1faa706991376a67ca4f7f008577e"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#a42c1faa706991376a67ca4f7f008577e">vectorToString</a> (<a class="el" href="classVector3.html">Vector3</a> const &amp;vec)</td></tr>
+<tr class="separator:a42c1faa706991376a67ca4f7f008577e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a7e2d3237b29a2f29d7b3d8b2934e35f2" id="r_a7e2d3237b29a2f29d7b3d8b2934e35f2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#a7e2d3237b29a2f29d7b3d8b2934e35f2">x</a></td></tr>
+<tr class="separator:a7e2d3237b29a2f29d7b3d8b2934e35f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86eb35a9fa2d5a49e7fad66a35fa9c13" id="r_a86eb35a9fa2d5a49e7fad66a35fa9c13"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#a86eb35a9fa2d5a49e7fad66a35fa9c13">y</a></td></tr>
+<tr class="separator:a86eb35a9fa2d5a49e7fad66a35fa9c13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8c9461eb24bd2c364258078811a3e9d" id="r_aa8c9461eb24bd2c364258078811a3e9d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#aa8c9461eb24bd2c364258078811a3e9d">z</a></td></tr>
+<tr class="separator:aa8c9461eb24bd2c364258078811a3e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:a9def0086393ae1e187110d31260b3cba" id="r_a9def0086393ae1e187110d31260b3cba"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#a9def0086393ae1e187110d31260b3cba">operator&lt;&lt;</a> (std::ostream &amp;os, <a class="el" href="classVector3.html">Vector3</a> const &amp;vec)</td></tr>
+<tr class="separator:a9def0086393ae1e187110d31260b3cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a0f49191f7e001e7f7ae1cb49522118b4" name="a0f49191f7e001e7f7ae1cb49522118b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f49191f7e001e7f7ae1cb49522118b4">&#9670;&#160;</a></span>Vector3() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3::Vector3 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb741d68180650fc160bbf84fa66e1b8" name="aeb741d68180650fc160bbf84fa66e1b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb741d68180650fc160bbf84fa66e1b8">&#9670;&#160;</a></span>Vector3() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3::Vector3 </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>z</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a62c2e67b5290cf672663a9c764795174" name="a62c2e67b5290cf672663a9c764795174"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62c2e67b5290cf672663a9c764795174">&#9670;&#160;</a></span>debug()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Vector3::debug </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6fe243dbce04e7d085652cd46e3d03e" name="ad6fe243dbce04e7d085652cd46e3d03e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6fe243dbce04e7d085652cd46e3d03e">&#9670;&#160;</a></span>distance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Vector3::distance </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a> const &amp;&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6b95177965a9e6f60fc2411209606b6" name="ac6b95177965a9e6f60fc2411209606b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6b95177965a9e6f60fc2411209606b6">&#9670;&#160;</a></span>length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Vector3::length </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a48fb9694dee966d5030dfe25307ec94c" name="a48fb9694dee966d5030dfe25307ec94c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48fb9694dee966d5030dfe25307ec94c">&#9670;&#160;</a></span>operator*=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector3.html">Vector3</a> &amp; Vector3::operator*= </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd408d78751c1c1f789b9adaf3b35425" name="acd408d78751c1c1f789b9adaf3b35425"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd408d78751c1c1f789b9adaf3b35425">&#9670;&#160;</a></span>operator*=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector3.html">Vector3</a> &amp; Vector3::operator*= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a> const &amp;&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a208ebfe690a7d99e5650afecdb867819" name="a208ebfe690a7d99e5650afecdb867819"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a208ebfe690a7d99e5650afecdb867819">&#9670;&#160;</a></span>operator+=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector3.html">Vector3</a> &amp; Vector3::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2a4ae234192c68be3909d140a2a5832" name="ab2a4ae234192c68be3909d140a2a5832"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2a4ae234192c68be3909d140a2a5832">&#9670;&#160;</a></span>operator+=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector3.html">Vector3</a> &amp; Vector3::operator+= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a> const &amp;&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf941de6e1724901c46d5e9e1448358f" name="abf941de6e1724901c46d5e9e1448358f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf941de6e1724901c46d5e9e1448358f">&#9670;&#160;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector3.html">Vector3</a> Vector3::operator- </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a79ba073407bf4cf72f8eea4b10c61be3" name="a79ba073407bf4cf72f8eea4b10c61be3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79ba073407bf4cf72f8eea4b10c61be3">&#9670;&#160;</a></span>operator-=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector3.html">Vector3</a> &amp; Vector3::operator-= </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2f170eab90766c7ff8672096b95e4ca" name="ac2f170eab90766c7ff8672096b95e4ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2f170eab90766c7ff8672096b95e4ca">&#9670;&#160;</a></span>operator-=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector3.html">Vector3</a> &amp; Vector3::operator-= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a> const &amp;&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa10b1e24f92ab37c643a30bb60317b3d" name="aa10b1e24f92ab37c643a30bb60317b3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa10b1e24f92ab37c643a30bb60317b3d">&#9670;&#160;</a></span>operator/=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector3.html">Vector3</a> &amp; Vector3::operator/= </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace31a36e41b429772907890dfd45dd6d" name="ace31a36e41b429772907890dfd45dd6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace31a36e41b429772907890dfd45dd6d">&#9670;&#160;</a></span>operator/=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector3.html">Vector3</a> &amp; Vector3::operator/= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a> const &amp;&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3078f06eda1e843c4172ffb7ead9580" name="aa3078f06eda1e843c4172ffb7ead9580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3078f06eda1e843c4172ffb7ead9580">&#9670;&#160;</a></span>operator&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Vector3::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a> const &amp;&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada97103582493c445caff2ce0c8a8235" name="ada97103582493c445caff2ce0c8a8235"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada97103582493c445caff2ce0c8a8235">&#9670;&#160;</a></span>operator&lt;=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Vector3::operator&lt;= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a> const &amp;&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab365bdad86cc8f47cccbcde6bbe013cb" name="ab365bdad86cc8f47cccbcde6bbe013cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab365bdad86cc8f47cccbcde6bbe013cb">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Vector3::operator== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a> const &amp;&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f8b198926e3565c2faca4548c094e4f" name="a4f8b198926e3565c2faca4548c094e4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f8b198926e3565c2faca4548c094e4f">&#9670;&#160;</a></span>operator&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Vector3::operator&gt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a> const &amp;&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c6f2a2e087533ee691ae389de1d78fa" name="a3c6f2a2e087533ee691ae389de1d78fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c6f2a2e087533ee691ae389de1d78fa">&#9670;&#160;</a></span>operator&gt;=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Vector3::operator&gt;= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a> const &amp;&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afac260711cdf0637d1e64ceb2638264b" name="afac260711cdf0637d1e64ceb2638264b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afac260711cdf0637d1e64ceb2638264b">&#9670;&#160;</a></span>vectorFromString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector3.html">Vector3</a> Vector3::vectorFromString </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>stringified</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42c1faa706991376a67ca4f7f008577e" name="a42c1faa706991376a67ca4f7f008577e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42c1faa706991376a67ca4f7f008577e">&#9670;&#160;</a></span>vectorToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Vector3::vectorToString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a> const &amp;&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="a9def0086393ae1e187110d31260b3cba" name="a9def0086393ae1e187110d31260b3cba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9def0086393ae1e187110d31260b3cba">&#9670;&#160;</a></span>operator&lt;&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a> const &amp;&#160;</td>
+          <td class="paramname"><em>vec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a7e2d3237b29a2f29d7b3d8b2934e35f2" name="a7e2d3237b29a2f29d7b3d8b2934e35f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e2d3237b29a2f29d7b3d8b2934e35f2">&#9670;&#160;</a></span>x</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Vector3::x</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86eb35a9fa2d5a49e7fad66a35fa9c13" name="a86eb35a9fa2d5a49e7fad66a35fa9c13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86eb35a9fa2d5a49e7fad66a35fa9c13">&#9670;&#160;</a></span>y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Vector3::y</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8c9461eb24bd2c364258078811a3e9d" name="aa8c9461eb24bd2c364258078811a3e9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8c9461eb24bd2c364258078811a3e9d">&#9670;&#160;</a></span>z</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Vector3::z</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>external/<a class="el" href="vector3_8h_source.html">vector3.h</a></li>
+<li>external/<a class="el" href="vector3_8cpp.html">vector3.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classVector3.html">Vector3</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

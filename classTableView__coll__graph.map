@@ -1,0 +1,21 @@
+<map id="TableView" name="TableView">
+<area shape="rect" id="Node000001" title=" " alt="" coords="648,129,736,155"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="335,55,414,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="428,68,521,80,573,91,625,105,672,127,669,132,623,110,572,96,520,85,428,74"/>
+<area shape="rect" id="Node000003" href="$classCustomTableModel.html" title=" " alt="" coords="301,104,448,129"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="462,121,648,136,648,141,461,126"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="9,5,169,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="149,32,174,39,212,49,248,65,260,78,272,89,302,102,300,107,269,94,257,81,245,70,210,54,173,45,148,37"/>
+<area shape="rect" id="Node000005" href="$classUndoer.html" title=" " alt="" coords="8,55,171,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="177,80,302,101,301,107,176,85"/>
+<area shape="rect" id="Node000006" href="$classDbFile.html" title=" " alt="" coords="58,104,121,129"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="134,114,301,114,301,119,134,119"/>
+<area shape="rect" id="Node000007" href="$classCustomSortFilterProxyModel.html" title=" " alt="" coords="271,153,479,179"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="492,168,558,166,624,159,654,152,655,157,624,165,558,171,493,173"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="5,153,173,179"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="187,163,270,163,270,169,187,169"/>
+<area shape="rect" id="Node000009" href="$classHighlightColumnDelegate.html" title=" " alt="" coords="279,203,470,228"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="484,215,554,207,623,189,652,172,676,153,679,157,656,177,625,194,555,212,484,220"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="8,203,171,228"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="185,213,279,213,279,218,185,218"/>
+</map>
