@@ -1,5 +1,4 @@
-#ifndef ERRORDIALOG_H
-#define ERRORDIALOG_H
+#pragma once
 
 #include <QDialog>
 #include "external/dberror.h"
@@ -25,5 +24,3 @@ private:
   void call(std::string const &message);
   void changeEvent(QEvent *e) override;
 };
-
-#endif // ERRORDIALOG_H

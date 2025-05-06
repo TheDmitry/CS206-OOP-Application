@@ -54,14 +54,6 @@ int VRHeadsetProvider::compare(shared_ptr<AbstractItem> const &a,
   string aValue = get(a, fieldName);
   string bValue = get(b, fieldName);
   int retValue = 0;
-  // 1 -> >
-  // -1 - <
-  // 0 - ==
-
-  // position, angles -> Vector3 comparison
-  // modelName -> string comparison
-  // refreshRate -> float comparison
-  // width, height -> int comparison
 
   if (fieldName == "position" || fieldName == "angles") {
     Vector3 aVec = Vector3::vectorFromString(aValue);
@@ -95,5 +87,5 @@ int VRHeadsetProvider::compare(shared_ptr<AbstractItem> const &a,
 }
 
 shared_ptr<AbstractItem> VRHeadsetProvider::create() {
-  return make_unique<VRHeadset>();
+  return make_shared<VRHeadset>();
 }

@@ -1,0 +1,18 @@
+[db version=2]
+[provider name=ConstructionCraneProvider]
+[scheme modelName=0 serial=1 weight=2 height=3 angles=4 position=5]
+[info]
+[оператор] - для управления считыванием файла
+Операторы:
+    data = начало блока с данными
+    info = начало блока информации. В текущей реализации должны быть только сверху.
+    end = конец блока
+    close = завершение чтения/записи в файл.
+    db version=X = файл ДБ версии Х
+    provider name=X [noOverwrite=1] = Использовать провайдер X
+    scheme ... = Схема, отличная от дефолтной схемы провайдера
+[end]
+[data]
+crane;VA-crane;12.0;1.2;v3(23,100,43);v3(2432,15021,0);
+[end]
+[close]

@@ -1,5 +1,4 @@
-#ifndef WORKSPACE_H
-#define WORKSPACE_H
+#pragma once
 
 #include <QMenu>
 #include <QTabWidget>
@@ -52,5 +51,3 @@ private:
 
   void changeEvent(QEvent *e) override;
 };
-
-#endif // WORKSPACE_H

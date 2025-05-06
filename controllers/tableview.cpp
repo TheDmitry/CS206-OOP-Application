@@ -113,3 +113,5 @@ void TableView::changeEvent(QEvent *e) {
 
   QWidget::changeEvent(e);
 }
+
+void TableView::on_pushButton_graph_clicked() {}

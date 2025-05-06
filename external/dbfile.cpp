@@ -3,6 +3,7 @@
 #include "dbfile.h"
 #include "external/dberror.h"
 #include "external/parseerror.h"
+#include "qdebug.h"
 
 using namespace std;
 
@@ -348,5 +349,6 @@ shared_ptr<AbstractProvider> const &DbFile::getProvider() const {
 map<string, shared_ptr<AbstractProvider>> DbFile::providers = {};
 
 void DbFile::registerProvider(string const &name, shared_ptr<AbstractProvider> provider) {
+  qDebug() << "Provider\t" << name << "\tregistered";
   DbFile::providers[name] = provider;
 }

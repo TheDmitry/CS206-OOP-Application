@@ -1,4 +1,4 @@
-QT += core gui widgets printsupport
+QT += core gui printsupport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -23,21 +23,24 @@ EXTERNAL_DIR = external
 
 # Providers (Adapters)
 PROVIDER_SOURCES = \
-$$PROVIDER_DIR/vrheadsetprovider.cpp # VRHeadsetProvider
+$$PROVIDER_DIR/vrheadsetprovider.cpp \ # VRHeadsetProvider
+$$PROVIDER_DIR/constructioncraneprovider.cpp \ # ConstructionCraneProvider
 
 PROVIDER_HEADERS = \
 $$PROVIDER_DIR/abstractprovider.h \ # AbstractProvider
-$$PROVIDER_DIR/vrheadsetprovider.h # VRHeadsetProvider
+$$PROVIDER_DIR/vrheadsetprovider.h \ # VRHeadsetProvider
+$$PROVIDER_DIR/constructioncraneprovider.h \ # ConstructionCraneProvider
 
 
 # Items
 ITEM_SOURCES += \
-$$ITEM_DIR/vrheadset.cpp # VRHeadset
+$$ITEM_DIR/vrheadset.cpp \ # VRHeadset
+$$ITEM_DIR/constructioncrane.cpp \ # ConstructionCrane
 
 ITEM_HEADERS += \
 $$ITEM_DIR/abstractitem.h \ # AbstractItem
-$$ITEM_DIR/vrheadset.h # VRHeadset
-
+$$ITEM_DIR/vrheadset.h \ # VRHeadset
+$$ITEM_DIR/constructioncrane.h \ # ConstructionCrane
 
 # Models
 MODEL_SOURCES += \

@@ -1,5 +1,4 @@
-#ifndef AUTHORDIALOG_H
-#define AUTHORDIALOG_H
+#pragma once
 
 #include <QDialog>
 
@@ -20,5 +19,3 @@ private:
 
   void changeEvent(QEvent *e) override;
 };
-
-#endif // AUTHORDIALOG_H

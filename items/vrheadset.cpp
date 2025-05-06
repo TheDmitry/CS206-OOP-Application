@@ -84,29 +84,43 @@ void VRHeadset::setModelName(string name) {
   modelName = name;
 };
 
-ostream &operator<<(ostream &os, VRHeadset const &vr) {
-  const auto& vga = vr.getAngles();
-  const auto& vgp = vr.getPosition();
+std::string VRHeadset::print() const {
+  auto out = ostringstream{};
+  print(out);
+  return out.str();
+}
 
-  os << format("Specification of {}:", vr.getModelName()) << endl;
+void VRHeadset::print(std::ostream &os) const {
+  const auto &vga = getAngles();
+  const auto &vgp = getPosition();
+
+  os << format("Specification of {}:", getModelName()) << endl;
   os << format("\tAngles: x: {}, y: {}, z: {}", vga.x, vga.y, vga.z) << endl;
   os << format("\tPosition: x: {}, y: {}, z: {}", vgp.x, vgp.y, vgp.z) << endl;
-  os << format("\tConnection: {}", vr.isConnected()) << endl;
-  os << format("\tRefresh Rate: {} Hz", vr.getRefreshRate()) << endl;
+  os << format("\tConnection: {}", isConnected()) << endl;
+  os << format("\tRefresh Rate: {} Hz", getRefreshRate()) << endl;
+}
+
+ostream &operator<<(ostream &os, VRHeadset const &vr) {
+  vr.print(os);
 
   return os;
 }
 
 bool VRHeadset::operator==(VRHeadset const &vr) const {
-  return this->getModelName() == vr.getModelName() &&
-         this->getRefreshRate() == vr.getRefreshRate() &&
-         this->getWidth() == vr.getWidth() &&
-         this->getHeight() == vr.getHeight();
+  return getModelName() == vr.getModelName() && getRefreshRate() == vr.getRefreshRate()
+         && getWidth() == vr.getWidth() && getHeight() == vr.getHeight();
 }
 
 bool VRHeadset::operator!=(VRHeadset const &vr) const {
-  return this->getModelName() != vr.getModelName() ||
-         this->getRefreshRate() != vr.getRefreshRate() ||
-         this->getWidth() != vr.getWidth() ||
-         this->getHeight() != vr.getHeight();
+  return !(*this == vr);
+}
+
+bool VRHeadset::operator==(shared_ptr<AbstractItem> const &item) const {
+  auto const &vr = dynamic_pointer_cast<VRHeadset>(item);
+  return vr && *this == *vr;
+}
+
+bool VRHeadset::operator!=(shared_ptr<AbstractItem> const &item) const {
+  return !(*this == item);
 }

@@ -33,7 +33,7 @@ public:
   VRHeadset();
   ~VRHeadset() = default;
 
-  std::shared_ptr<AbstractItem> clone() const;
+  std::shared_ptr<AbstractItem> clone() const override;
 
   int getWidth() const;
   int getHeight() const;
@@ -60,17 +60,18 @@ public:
 
   void setModelName(std::string name);
 
-  friend std::ostream &operator<<(std::ostream &os, VRHeadset const &vr);
+  std::string print() const override;
+  void print(std::ostream &os) const override;
+
+  friend std::ostream &operator<<(std::ostream &os, std::shared_ptr<AbstractItem> const &item);
+
+  bool operator==(std::shared_ptr<AbstractItem> const &item) const override;
+  bool operator!=(std::shared_ptr<AbstractItem> const &item) const override;
 
   bool operator==(VRHeadset const &vr) const;
-  bool operator!=(VRHeadset const& vr) const;
-
-  static const std::vector<std::string> providerSupportedSchemeArgs;
-  static const std::map<std::string, size_t> providerScheme;
-  static const std::string providerName;
+  bool operator!=(VRHeadset const &vr) const;
 
 private:
-
   int width, height;
   float refreshRate;
   bool connected;

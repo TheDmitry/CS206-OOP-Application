@@ -227,7 +227,7 @@ void MainWindow::on_actionFileOpen_triggered() {
   string fileName = QFileDialog::getOpenFileName(this,
                                                  tr("Read file"),
                                                  QDir::currentPath(),
-                                                 "Db Files (.db);;All Files (.*)")
+                                                 "Db Files (*.db)")
                       .toStdString();
   if (!fileName.empty()) {
     if (!workspaceInitialized || workspace->getTabWidget()->count() == 0)

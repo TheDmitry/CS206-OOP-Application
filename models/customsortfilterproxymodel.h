@@ -1,5 +1,4 @@
-#ifndef CUSTOMSORTFILTERPROXYMODEL_H
-#define CUSTOMSORTFILTERPROXYMODEL_H
+#pragma once
 
 #include <QSortFilterProxyModel>
 
@@ -12,5 +11,3 @@ public:
 protected:
   bool lessThan(QModelIndex const &left, QModelIndex const &right) const;
 };
-
-#endif // CUSTOMSORTFILTERPROXYMODEL_H

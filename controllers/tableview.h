@@ -1,5 +1,4 @@
-#ifndef TABLEVIEW_H
-#define TABLEVIEW_H
+#pragma once
 
 #include <QAction>
 #include <QMenu>
@@ -37,6 +36,8 @@ private slots:
 
   void on_searchLine_textChanged(const QString &arg1);
 
+  void on_pushButton_graph_clicked();
+
 private:
   CustomTableModel *model;
   CustomSortFilterProxyModel *proxyModel;
@@ -51,5 +52,3 @@ private:
 
   void changeEvent(QEvent *e) override;
 };
-
-#endif // TABLEVIEW_H

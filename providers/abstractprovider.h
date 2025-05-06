@@ -30,6 +30,4 @@ public:
     = 0;
 
   virtual std::shared_ptr<AbstractItem> create() = 0;
-
-protected:
 };
