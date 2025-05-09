@@ -2,6 +2,8 @@
 
 #include "external/dberror.h"
 
+#include <QObject>
+
 using namespace std;
 
 DbError::DbError(string const &message, string const &fileName) noexcept
@@ -10,6 +12,9 @@ DbError::DbError(string const &message, string const &fileName) noexcept
   , fileName(fileName) {};
 
 char const *DbError::what() const noexcept {
-  static const string message = format("DbError in {} -> {}", fileName, throwMessage);
+  static const string message = format("DbError {} {} -> {}",
+                                       QObject::tr("in").toStdString(),
+                                       fileName,
+                                       throwMessage);
   return message.c_str();
 }

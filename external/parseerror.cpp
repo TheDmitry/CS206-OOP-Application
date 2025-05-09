@@ -1,4 +1,5 @@
 #include "parseerror.h"
+#include <QObject>
 #include <format>
 
 using namespace std;
@@ -10,7 +11,8 @@ ParseError::ParseError(string const &message, int lineNum, string const &line) n
   , line(line) {};
 
 char const *ParseError::what() const noexcept {
-  static const string message = format("ParseError on line {}: \"{}\" -> {}",
+  static const string message = format("ParseError {} {}: \"{}\" -> {}",
+                                       QObject::tr("on line").toStdString(),
                                        to_string(lineNum),
                                        line,
                                        throwMessage);
