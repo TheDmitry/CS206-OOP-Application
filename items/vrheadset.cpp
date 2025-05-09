@@ -94,11 +94,14 @@ void VRHeadset::print(std::ostream &os) const {
   const auto &vga = getAngles();
   const auto &vgp = getPosition();
 
-  os << format("Specification of {}:", getModelName()) << endl;
-  os << format("\tAngles: x: {}, y: {}, z: {}", vga.x, vga.y, vga.z) << endl;
-  os << format("\tPosition: x: {}, y: {}, z: {}", vgp.x, vgp.y, vgp.z) << endl;
-  os << format("\tConnection: {}", isConnected()) << endl;
-  os << format("\tRefresh Rate: {} Hz", getRefreshRate()) << endl;
+  os << QObject::tr("Specification of").toStdString() << format(" {}:", getModelName()) << endl;
+  os << "\t" << QObject::tr("Angles").toStdString()
+     << format(": x: {}, y: {}, z: {}", vga.x, vga.y, vga.z) << endl;
+  os << "\t" << QObject::tr("Position").toStdString()
+     << format(": x: {}, y: {}, z: {}", vgp.x, vgp.y, vgp.z) << endl;
+  os << "\t" << QObject::tr("Connection").toStdString() << format(": {}", isConnected()) << endl;
+  os << "\t" << QObject::tr("Refresh Rate").toStdString() << format(": {} Hz", getRefreshRate())
+     << endl;
 }
 
 ostream &operator<<(ostream &os, VRHeadset const &vr) {

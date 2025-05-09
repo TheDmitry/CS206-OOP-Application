@@ -1,5 +1,7 @@
 #include "constructioncrane.h"
 
+#include <QObject>
+
 using namespace std;
 
 ConstructionCrane::ConstructionCrane(
@@ -48,12 +50,14 @@ void ConstructionCrane::print(std::ostream &os) const {
   const auto &vga = getAngles();
   const auto &vgp = getPosition();
 
-  os << format("Specification of {}:", getModelName()) << endl;
-  os << format("\tAngles: x: {}, y: {}, z: {}", vga.x, vga.y, vga.z) << endl;
-  os << format("\tPosition: x: {}, y: {}, z: {}", vgp.x, vgp.y, vgp.z) << endl;
-  os << format("\tHeight: {}", getHeight()) << endl;
-  os << format("\tWeight: {} Hz", getWeight()) << endl;
-  os << format("\tSerial: {} Hz", getSerial()) << endl;
+  os << QObject::tr("Specification of").toStdString() << format(" {}:", getModelName()) << endl;
+  os << "\t" << QObject::tr("Angles").toStdString()
+     << format(": x: {}, y: {}, z: {}", vga.x, vga.y, vga.z) << endl;
+  os << "\t" << QObject::tr("Position").toStdString()
+     << format(": x: {}, y: {}, z: {}", vgp.x, vgp.y, vgp.z) << endl;
+  os << "\t" << QObject::tr("Height").toStdString() << format(": {}", getHeight()) << endl;
+  os << "\t" << QObject::tr("Weight").toStdString() << format(": {} Hz", getWeight()) << endl;
+  os << "\t" << QObject::tr("Serial").toStdString() << format(": {} Hz", getSerial()) << endl;
 }
 
 bool ConstructionCrane::operator==(ConstructionCrane const &vr) const {
