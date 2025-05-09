@@ -5,6 +5,8 @@
 #include "external/parseerror.h"
 #include "qdebug.h"
 
+#include <QObject>
+
 using namespace std;
 
 DbFile::~DbFile() { reset(); }
@@ -20,10 +22,11 @@ void DbFile::setCurrentPath(const string path) {
 void DbFile::read() {
   // assume it's bug
   if (!isFileExists())
-    throw DbError("Error #1. It's ambitious to read non existent file", currentPath);
+    throw DbError(QObject::tr("Error #1. It's ambitious to read non existent file").toStdString(),
+                  currentPath);
 
   if (isFileEmpty())
-    throw DbError("Error #2. File is empty", currentPath);
+    throw DbError(QObject::tr("Error #2. File is empty").toStdString(), currentPath);
 
   if (!dataBuffer.empty())
     clear();
@@ -33,7 +36,7 @@ void DbFile::read() {
   ifstream file{currentPath};
 
   if (!file)
-    throw DbError("Error #3. Unable to open file", currentPath);
+    throw DbError(QObject::tr("Error #3. Unable to open file").toStdString(), currentPath);
 
   string line;
 
@@ -59,13 +62,17 @@ void DbFile::read() {
     }
 
     if (!isSupported)
-      throw ParseError("Error #2. Unsuppported db file", lineNumber, result.content);
+      throw ParseError(QObject::tr("Error #2. Unsuppported db file").toStdString(),
+                       lineNumber,
+                       result.content);
 
     switch (result.op) {
       case OPS::DB:
         {
         throw ParseError(
-          "Error #3. [db version=X] should appear only once in very first line of the file",
+          QObject::tr(
+            "Error #3. [db version=X] should appear only once in very first line of the file")
+            .toStdString(),
           lineNumber,
           result.content);
       } break;
@@ -78,10 +85,14 @@ void DbFile::read() {
       case OPS::DATA:
         {
           if (shouldData)
-            throw ParseError("Error #4. Data-block already opened", lineNumber, result.content);
+            throw ParseError(QObject::tr("Error #4. Data-block already opened").toStdString(),
+                             lineNumber,
+                             result.content);
 
           if (shouldInfo)
-            throw ParseError("Error #5. It's not allowed to open data-block in info-block",
+            throw ParseError(QObject::tr(
+                               "Error #5. It's not allowed to open data-block in info-block")
+                               .toStdString(),
                              lineNumber,
                              result.content);
 
@@ -91,13 +102,16 @@ void DbFile::read() {
       case OPS::INFO:
         {
           if (shouldInfo)
-            throw ParseError("Error #6. Info-block already opened. "
-                             "It's not allowed to have two or more info-blocks in one file",
+            throw ParseError(QObject::tr(
+                               "Error #6. Info-block already opened. "
+                               "It's not allowed to have two or more info-blocks in one file")
+                               .toStdString(),
                              lineNumber,
                              result.content);
 
           if (shouldData)
-            throw ParseError("Error #7. Info-block cannot be opened inside Data-block",
+            throw ParseError(QObject::tr("Error #7. Info-block cannot be opened inside Data-block")
+                               .toStdString(),
                              lineNumber,
                              result.content);
 
@@ -107,7 +121,9 @@ void DbFile::read() {
       case OPS::END:
         {
           if (!shouldData && !shouldInfo)
-            throw ParseError("Error #8. No blocks were opened", lineNumber, result.content);
+            throw ParseError(QObject::tr("Error #8. No blocks were opened").toStdString(),
+                             lineNumber,
+                             result.content);
 
           if (shouldInfo)
             shouldInfo = false;
@@ -120,7 +136,8 @@ void DbFile::read() {
         size_t schemeMaxSize = provider->getSupportedSchemeArgs().size();
 
         if (result.args.size() != schemeMaxSize)
-          throw ParseError("Error #9. Invalid scheme: invalid amount of args",
+          throw ParseError(QObject::tr("Error #9. Invalid scheme: invalid amount of args")
+                             .toStdString(),
                            lineNumber,
                            result.content);
 
@@ -130,12 +147,13 @@ void DbFile::read() {
           size_t index = stoi(i.second);
 
           if (index >= schemeMaxSize)
-            throw ParseError("Error #10. Invalid scheme: index out of bounds",
+            throw ParseError(QObject::tr("Error #10. Invalid scheme: index out of bounds")
+                               .toStdString(),
                              lineNumber,
                              result.content);
 
           if (index < 0)
-            throw ParseError("Error #11. Invalid scheme: negative index",
+            throw ParseError(QObject::tr("Error #11. Invalid scheme: negative index").toStdString(),
                              lineNumber,
                              result.content);
 
@@ -144,18 +162,23 @@ void DbFile::read() {
         }
 
         if (currentScheme.size() != provider->getSupportedSchemeArgs().size())
-          throw ParseError("Error #12. Invalid scheme: Duplicated keys", lineNumber, result.content);
+          throw ParseError(QObject::tr("Error #12. Invalid scheme: Duplicated keys").toStdString(),
+                           lineNumber,
+                           result.content);
       } break;
 
       case OPS::PROVIDER: {
         if (result.args.size() < 0 || result.args.size() > 2)
-          throw ParseError("Error #13. Operator provider should have only 2 arguments",
+          throw ParseError(QObject::tr("Error #13. Operator provider should have only 2 arguments")
+                             .toStdString(),
                            lineNumber,
                            result.content);
 
         string providerName = result.args["name"];
         if (!DbFile::providers.contains(providerName))
-          throw ParseError("Error #14. No such provider registred", lineNumber, result.content);
+          throw ParseError(QObject::tr("Error #14. No such provider registred").toStdString(),
+                           lineNumber,
+                           result.content);
 
         bool shouldOverwrite = !result.args.contains("noOverwrite");
 
@@ -175,7 +198,9 @@ void DbFile::read() {
 
       default:
         {
-        throw ParseError("Error #15. Unsupported operator", lineNumber, result.content);
+        throw ParseError(QObject::tr("Error #15. Unsupported operator").toStdString(),
+                         lineNumber,
+                         result.content);
         }
     }
   }
@@ -192,12 +217,13 @@ void DbFile::read(const string &path)
 
 void DbFile::write() {
   if (!isFileExists())
-    throw DbError("Error #4. It's ambitious to write to non existent file", currentPath);
+    throw DbError(QObject::tr("Error #4. It's ambitious to write to non existent file").toStdString(),
+                  currentPath);
 
   ofstream file{currentPath};
 
   if (!file)
-    throw DbError("Error #3. Unable to open file", currentPath);
+    throw DbError(QObject::tr("Error #3. Unable to open file").toStdString(), currentPath);
 
   string infoContent;
   string dataContent;
@@ -309,7 +335,9 @@ DbFile::OperatorResult DbFile::parseOperator(string const &line, int lineNumber)
   else if (tokens[0] == "provider")
     result.op = OPS::PROVIDER;
   else
-    throw ParseError("Error #1. Invalid operator provided", lineNumber, line);
+    throw ParseError(QObject::tr("Error #1. Invalid operator provided").toStdString(),
+                     lineNumber,
+                     line);
 
   for (size_t i = 1; i < tokens.size(); ++i) {
     string arg = tokens[i];
