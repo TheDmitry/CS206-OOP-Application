@@ -3,6 +3,7 @@
 #include "items/abstractitem.h"
 #include <map>
 #include <memory>
+#include <span>
 #include <string>
 #include <vector>
 
@@ -11,9 +12,11 @@ public:
   virtual ~AbstractProvider() = default;
   AbstractProvider() = default;
 
-  virtual const std::string getName() = 0;
-  virtual const std::vector<std::string> getSupportedSchemeArgs() = 0;
-  virtual const std::map<std::string, size_t> getScheme() = 0;
+  virtual const std::string getName() const = 0;
+  virtual const std::string getItemName() const = 0;
+  virtual const std::string getTrItemName() const = 0;
+  virtual const std::vector<std::string> getSupportedSchemeArgs() const = 0;
+  virtual const std::map<std::string, size_t> getScheme() const = 0;
 
   virtual std::string get(std::shared_ptr<AbstractItem> const &target,
                           std::string const &fieldName) const
@@ -30,4 +33,8 @@ public:
     = 0;
 
   virtual std::shared_ptr<AbstractItem> create() = 0;
+
+  virtual bool isChartSupported() const = 0;
+  virtual const std::string getChartHeaderField() const = 0;
+  virtual const std::vector<std::string> getChartFields() const = 0;
 };

@@ -1,20 +1,29 @@
 #include <cstdlib>
 
+#include <QObject>
 #include "vrheadsetprovider.h"
 
 using namespace std;
 
 VRHeadsetProvider::VRHeadsetProvider() {}
 
-const string VRHeadsetProvider::getName() {
+const string VRHeadsetProvider::getName() const {
   return "VRHeadsetProvider";
 };
 
-const vector<string> VRHeadsetProvider::getSupportedSchemeArgs() {
+const std::string VRHeadsetProvider::getItemName() const {
+  return "VRHeadset";
+}
+
+const std::string VRHeadsetProvider::getTrItemName() const {
+  return QObject::tr("VR Headset").toStdString();
+}
+
+const vector<string> VRHeadsetProvider::getSupportedSchemeArgs() const {
   return {"modelName", "width", "height", "refreshRate", "angles", "position"};
 };
 
-const map<string, size_t> VRHeadsetProvider::getScheme() {
+const map<string, size_t> VRHeadsetProvider::getScheme() const {
   return {{"modelName", 0},
           {"width", 1},
           {"height", 2},
@@ -88,4 +97,16 @@ int VRHeadsetProvider::compare(shared_ptr<AbstractItem> const &a,
 
 shared_ptr<AbstractItem> VRHeadsetProvider::create() {
   return make_shared<VRHeadset>();
+}
+
+bool VRHeadsetProvider::isChartSupported() const {
+  return true;
+}
+
+const string VRHeadsetProvider::getChartHeaderField() const {
+  return "modelName";
+}
+
+const vector<string> VRHeadsetProvider::getChartFields() const {
+  return {"width", "height", "refreshRate"};
 }

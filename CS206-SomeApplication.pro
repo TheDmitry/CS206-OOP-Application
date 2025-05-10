@@ -1,4 +1,9 @@
-QT += core gui printsupport
+QT += \
+core \
+gui \
+printsupport \
+charts \
+
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -60,13 +65,15 @@ $$CONTROLLER_DIR/errordialog.cpp \ # ErrorDialog
 $$CONTROLLER_DIR/mainwindow.cpp \ # MainWindow
 $$CONTROLLER_DIR/tableview.cpp \ # TableView
 $$CONTROLLER_DIR/workspace.cpp \ # Workspace
+$$CONTROLLER_DIR/simpchart.cpp \ # SimpChar
 
 CONTROLLER_HEADERS += \
 $$CONTROLLER_DIR/authordialog.h \ # AuthorDialog
 $$CONTROLLER_DIR/errordialog.h \ # ErrorDialog
 $$CONTROLLER_DIR/mainwindow.h \ # MainWindow
 $$CONTROLLER_DIR/tableview.h \ # TableView
-$$CONTROLLER_DIR/workspace.h # Workspace
+$$CONTROLLER_DIR/workspace.h \ # Workspace
+$$CONTROLLER_DIR/simpchart.h \ # SimpChar
 
 
 # Delegates
@@ -111,6 +118,7 @@ $$PROVIDER_HEADERS \
 FORMS += \
 $$DIALOGS \
 $$FORM_DIR/mainwindow.ui \
+  views/simpchart.ui \
   views/tableview.ui \
   views/workspace.ui
 

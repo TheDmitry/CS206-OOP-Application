@@ -43,7 +43,6 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::initWorkspace() {
-  workspace->setLayout(ui->gridLayout_2);
   ui->gridLayout_2->addWidget(workspace);
   workspace->show();
 

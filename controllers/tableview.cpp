@@ -1,4 +1,5 @@
 #include "tableview.h"
+#include "controllers/simpchart.h"
 #include "ui_tableview.h"
 
 using namespace std;
@@ -19,6 +20,8 @@ TableView::TableView(QWidget *parent)
 
   ui->tableView->setItemDelegate(highlightDelegate);
   ui->tableView->setModel(proxyModel);
+
+  ui->widget->setHidden(true);
 
   connectSignals();
   initShortcuts();
@@ -46,6 +49,14 @@ void TableView::connectSignals() {
 
             proxyModel->setFilterKeyColumn(column);
           });
+
+  connect(model, &CustomTableModel::fileLoaded, this, [this]() {
+    ui->widget->setHidden(false);
+    ui->pushButton_graph->setEnabled(model->getDb().getProvider()->isChartSupported());
+  });
+
+  connect(model, &CustomTableModel::dbClear, this, [this]() { ui->widget->setHidden(true); });
+  connect(model, &CustomTableModel::dbReset, this, [this]() { ui->widget->setHidden(true); });
 }
 void TableView::initShortcuts() {
   shortcut["clear"] = new QShortcut(QKeyCombination(Qt::ALT, Qt::Key_R), this);
@@ -114,4 +125,11 @@ void TableView::changeEvent(QEvent *e) {
   QWidget::changeEvent(e);
 }
 
-void TableView::on_pushButton_graph_clicked() {}
+void TableView::on_pushButton_graph_clicked() {
+  auto const &provider = model->getDb().getProvider();
+  string title = provider->getTrItemName() + " " + tr("chart").toStdString();
+
+  SimpChart *chart = new SimpChart(provider, model->getItems(), title);
+
+  chart->show();
+}

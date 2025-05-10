@@ -178,6 +178,181 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </message>
 </context>
 <context>
+    <name>QObject</name>
+    <message>
+        <location filename="../external/dberror.cpp" line="16"/>
+        <source>in</source>
+        <translation>в</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="25"/>
+        <source>Error #1. It&apos;s ambitious to read non existent file</source>
+        <translation>Ошибка №1. Слишком амбициозно читать не существующий файл</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="29"/>
+        <source>Error #2. File is empty</source>
+        <translation>Ошибка №2. Файл пуст</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="39"/>
+        <location filename="../external/dbfile.cpp" line="226"/>
+        <source>Error #3. Unable to open file</source>
+        <translation>Ошибка №3. Невозможно открыть файл</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="65"/>
+        <source>Error #2. Unsuppported db file</source>
+        <translation>Ошибка №2. Неподдерживаемый формат файла</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="73"/>
+        <source>Error #3. [db version=X] should appear only once in very first line of the file</source>
+        <translation>Ошибка №3. [db version=X] должен быть только1 и быть в начале файла</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="88"/>
+        <source>Error #4. Data-block already opened</source>
+        <translation>Ошибка №4. Дата-блок уже открыт</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="93"/>
+        <source>Error #5. It&apos;s not allowed to open data-block in info-block</source>
+        <translation>Ошибка №5. Нельзя иметь более одного дата-блока</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="105"/>
+        <source>Error #6. Info-block already opened. It&apos;s not allowed to have two or more info-blocks in one file</source>
+        <translation>Ошибка №6. Инфо-блок уже открыт. Нельзя иметь более двух инфо-блоков в одной файле</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="113"/>
+        <source>Error #7. Info-block cannot be opened inside Data-block</source>
+        <translation>Ошибка №7. Инфо-блок не может быть открыт внутри дата-блока</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="124"/>
+        <source>Error #8. No blocks were opened</source>
+        <translation>Ошибка №8. Блоки не были открыты</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="139"/>
+        <source>Error #9. Invalid scheme: invalid amount of args</source>
+        <translation>Ошибка №9. Неверная схема: неверное количество аргументов</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="150"/>
+        <source>Error #10. Invalid scheme: index out of bounds</source>
+        <translation>Ошибка №10. Неверная схема: индекс вышел за пределы</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="156"/>
+        <source>Error #11. Invalid scheme: negative index</source>
+        <translation>Ошибка №11. Неверная схема: отрицательный индекс</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="165"/>
+        <source>Error #12. Invalid scheme: Duplicated keys</source>
+        <translation>Ошибка №12. Неверная схема: Повторяющиеся ключи</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="172"/>
+        <source>Error #13. Operator provider should have only 2 arguments</source>
+        <translation>Ошибка №13. Оператор provider не может иметь больше 2 аргументов</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="179"/>
+        <source>Error #14. No such provider registred</source>
+        <translation>Ошибка №14. Нет такого провайдера</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="201"/>
+        <source>Error #15. Unsupported operator</source>
+        <translation>Ошибка №15. Неподдерживаемый оператор</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="220"/>
+        <source>Error #4. It&apos;s ambitious to write to non existent file</source>
+        <translation>Ошибка №4. Слишком амбициозно записывать в не существующий файл</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="338"/>
+        <source>Error #1. Invalid operator provided</source>
+        <translation>Ошибка №1. Неверный оператор</translation>
+    </message>
+    <message>
+        <location filename="../external/parseerror.cpp" line="15"/>
+        <source>on line</source>
+        <translation>на строке</translation>
+    </message>
+    <message>
+        <location filename="../items/constructioncrane.cpp" line="53"/>
+        <location filename="../items/vrheadset.cpp" line="97"/>
+        <source>Specification of</source>
+        <translation>Спецификация для</translation>
+    </message>
+    <message>
+        <location filename="../items/constructioncrane.cpp" line="54"/>
+        <location filename="../items/vrheadset.cpp" line="98"/>
+        <source>Angles</source>
+        <translation>Углы</translation>
+    </message>
+    <message>
+        <location filename="../items/constructioncrane.cpp" line="56"/>
+        <location filename="../items/vrheadset.cpp" line="100"/>
+        <source>Position</source>
+        <translation>Позиция</translation>
+    </message>
+    <message>
+        <location filename="../items/constructioncrane.cpp" line="58"/>
+        <source>Height</source>
+        <translation>Высота</translation>
+    </message>
+    <message>
+        <location filename="../items/constructioncrane.cpp" line="59"/>
+        <source>Weight</source>
+        <translation>Вес</translation>
+    </message>
+    <message>
+        <location filename="../items/constructioncrane.cpp" line="60"/>
+        <source>Serial</source>
+        <translation>Серийный номер</translation>
+    </message>
+    <message>
+        <location filename="../items/vrheadset.cpp" line="102"/>
+        <source>Connection</source>
+        <translation>Подключение</translation>
+    </message>
+    <message>
+        <location filename="../items/vrheadset.cpp" line="103"/>
+        <source>Refresh Rate</source>
+        <translation>Частота обновления</translation>
+    </message>
+    <message>
+        <location filename="../providers/constructioncraneprovider.cpp" line="17"/>
+        <source>Construction Crane</source>
+        <translation>Строительный кран</translation>
+    </message>
+    <message>
+        <location filename="../providers/vrheadsetprovider.cpp" line="19"/>
+        <source>VR Headset</source>
+        <translation>VR шлем</translation>
+    </message>
+</context>
+<context>
+    <name>SimpChart</name>
+    <message>
+        <location filename="../views/simpchart.ui" line="14"/>
+        <source>Form</source>
+        <translation>Форма</translation>
+    </message>
+    <message>
+        <location filename="../controllers/simpchart.h" line="20"/>
+        <source>Simple Chart</source>
+        <translation>Простой график</translation>
+    </message>
+</context>
+<context>
     <name>TableView</name>
     <message>
         <location filename="../views/tableview.ui" line="20"/>
@@ -185,24 +360,34 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation></translation>
     </message>
     <message>
-        <location filename="../views/tableview.ui" line="41"/>
+        <location filename="../views/tableview.ui" line="88"/>
         <source>Clear</source>
         <translation>Очистить</translation>
     </message>
     <message>
-        <location filename="../views/tableview.ui" line="52"/>
+        <location filename="../views/tableview.ui" line="39"/>
         <source>Remove</source>
         <translation>Удалить</translation>
     </message>
     <message>
-        <location filename="../views/tableview.ui" line="62"/>
+        <location filename="../views/tableview.ui" line="52"/>
         <source>New</source>
         <translation>Новая строка</translation>
     </message>
     <message>
-        <location filename="../views/tableview.ui" line="76"/>
+        <location filename="../views/tableview.ui" line="69"/>
         <source>Undo</source>
         <translation>Отменить</translation>
+    </message>
+    <message>
+        <location filename="../views/tableview.ui" line="98"/>
+        <source>Graph</source>
+        <translation>График</translation>
+    </message>
+    <message>
+        <location filename="../controllers/tableview.cpp" line="124"/>
+        <source>chart</source>
+        <translation>график</translation>
     </message>
 </context>
 <context>

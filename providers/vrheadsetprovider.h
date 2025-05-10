@@ -15,9 +15,11 @@
 class VRHeadsetProvider : public AbstractProvider {
 public:
   VRHeadsetProvider();
-  const std::string getName() override;
-  const std::vector<std::string> getSupportedSchemeArgs() override;
-  const std::map<std::string, size_t> getScheme() override;
+  const std::string getName() const override;
+  const std::string getItemName() const override;
+  const std::string getTrItemName() const override;
+  const std::vector<std::string> getSupportedSchemeArgs() const override;
+  const std::map<std::string, size_t> getScheme() const override;
 
   std::string get(std::shared_ptr<AbstractItem> const &target,
                   std::string const &fieldName) const override;
@@ -31,6 +33,10 @@ public:
               std::string const &fieldName) const override;
 
   std::shared_ptr<AbstractItem> create() override;
+
+  bool isChartSupported() const override;
+  const std::string getChartHeaderField() const override;
+  const std::vector<std::string> getChartFields() const override;
 
 private:
   const std::map<std::string, std::function<std::string(VRHeadset const &)>> getters = {

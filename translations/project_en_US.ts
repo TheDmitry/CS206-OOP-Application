@@ -178,6 +178,181 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </message>
 </context>
 <context>
+    <name>QObject</name>
+    <message>
+        <location filename="../external/dberror.cpp" line="16"/>
+        <source>in</source>
+        <translation>in</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="25"/>
+        <source>Error #1. It&apos;s ambitious to read non existent file</source>
+        <translation>Error #1. It&apos;s ambitious to read non existent file</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="29"/>
+        <source>Error #2. File is empty</source>
+        <translation>Error #2. File is empty</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="39"/>
+        <location filename="../external/dbfile.cpp" line="226"/>
+        <source>Error #3. Unable to open file</source>
+        <translation>Error #3. Unable to open file</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="65"/>
+        <source>Error #2. Unsuppported db file</source>
+        <translation>Error #2. Unsuppported db file</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="73"/>
+        <source>Error #3. [db version=X] should appear only once in very first line of the file</source>
+        <translation>Error #3. [db version=X] should appear only once in very first line of the file</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="88"/>
+        <source>Error #4. Data-block already opened</source>
+        <translation>Error #4. Data-block already opened</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="93"/>
+        <source>Error #5. It&apos;s not allowed to open data-block in info-block</source>
+        <translation>Error #5. It&apos;s not allowed to open data-block in info-block</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="105"/>
+        <source>Error #6. Info-block already opened. It&apos;s not allowed to have two or more info-blocks in one file</source>
+        <translation>Error #6. Info-block already opened. It&apos;s not allowed to have two or more info-blocks in one file</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="113"/>
+        <source>Error #7. Info-block cannot be opened inside Data-block</source>
+        <translation>Error #7. Info-block cannot be opened inside Data-block</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="124"/>
+        <source>Error #8. No blocks were opened</source>
+        <translation>Error #8. No blocks were opened</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="139"/>
+        <source>Error #9. Invalid scheme: invalid amount of args</source>
+        <translation>Error #9. Invalid scheme: invalid amount of args</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="150"/>
+        <source>Error #10. Invalid scheme: index out of bounds</source>
+        <translation>Error #10. Invalid scheme: index out of bounds</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="156"/>
+        <source>Error #11. Invalid scheme: negative index</source>
+        <translation>Error #11. Invalid scheme: negative index</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="165"/>
+        <source>Error #12. Invalid scheme: Duplicated keys</source>
+        <translation>Error #12. Invalid scheme: Duplicated keys</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="172"/>
+        <source>Error #13. Operator provider should have only 2 arguments</source>
+        <translation>Error #13. Operator provider should have only 2 arguments</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="179"/>
+        <source>Error #14. No such provider registred</source>
+        <translation>Error #14. No such provider registred</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="201"/>
+        <source>Error #15. Unsupported operator</source>
+        <translation>Error #15. Unsupported operator</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="220"/>
+        <source>Error #4. It&apos;s ambitious to write to non existent file</source>
+        <translation>Error #4. It&apos;s ambitious to write to non existent file</translation>
+    </message>
+    <message>
+        <location filename="../external/dbfile.cpp" line="338"/>
+        <source>Error #1. Invalid operator provided</source>
+        <translation>Error #1. Invalid operator provided</translation>
+    </message>
+    <message>
+        <location filename="../external/parseerror.cpp" line="15"/>
+        <source>on line</source>
+        <translation>on line</translation>
+    </message>
+    <message>
+        <location filename="../items/constructioncrane.cpp" line="53"/>
+        <location filename="../items/vrheadset.cpp" line="97"/>
+        <source>Specification of</source>
+        <translation>Specification of</translation>
+    </message>
+    <message>
+        <location filename="../items/constructioncrane.cpp" line="54"/>
+        <location filename="../items/vrheadset.cpp" line="98"/>
+        <source>Angles</source>
+        <translation>Angles</translation>
+    </message>
+    <message>
+        <location filename="../items/constructioncrane.cpp" line="56"/>
+        <location filename="../items/vrheadset.cpp" line="100"/>
+        <source>Position</source>
+        <translation>Position</translation>
+    </message>
+    <message>
+        <location filename="../items/constructioncrane.cpp" line="58"/>
+        <source>Height</source>
+        <translation>Height</translation>
+    </message>
+    <message>
+        <location filename="../items/constructioncrane.cpp" line="59"/>
+        <source>Weight</source>
+        <translation>Weight</translation>
+    </message>
+    <message>
+        <location filename="../items/constructioncrane.cpp" line="60"/>
+        <source>Serial</source>
+        <translation>Serial</translation>
+    </message>
+    <message>
+        <location filename="../items/vrheadset.cpp" line="102"/>
+        <source>Connection</source>
+        <translation>Connection</translation>
+    </message>
+    <message>
+        <location filename="../items/vrheadset.cpp" line="103"/>
+        <source>Refresh Rate</source>
+        <translation>Refresh Rate</translation>
+    </message>
+    <message>
+        <location filename="../providers/constructioncraneprovider.cpp" line="17"/>
+        <source>Construction Crane</source>
+        <translation>Construction Crane</translation>
+    </message>
+    <message>
+        <location filename="../providers/vrheadsetprovider.cpp" line="19"/>
+        <source>VR Headset</source>
+        <translation>VR Headset</translation>
+    </message>
+</context>
+<context>
+    <name>SimpChart</name>
+    <message>
+        <location filename="../views/simpchart.ui" line="14"/>
+        <source>Form</source>
+        <translation>Form</translation>
+    </message>
+    <message>
+        <location filename="../controllers/simpchart.h" line="20"/>
+        <source>Simple Chart</source>
+        <translation>Simple Chart</translation>
+    </message>
+</context>
+<context>
     <name>TableView</name>
     <message>
         <location filename="../views/tableview.ui" line="20"/>
@@ -185,24 +360,34 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>Form</translation>
     </message>
     <message>
-        <location filename="../views/tableview.ui" line="41"/>
+        <location filename="../views/tableview.ui" line="88"/>
         <source>Clear</source>
         <translation>Clear</translation>
     </message>
     <message>
-        <location filename="../views/tableview.ui" line="52"/>
+        <location filename="../views/tableview.ui" line="39"/>
         <source>Remove</source>
         <translation>Remove</translation>
     </message>
     <message>
-        <location filename="../views/tableview.ui" line="62"/>
+        <location filename="../views/tableview.ui" line="52"/>
         <source>New</source>
         <translation>New</translation>
     </message>
     <message>
-        <location filename="../views/tableview.ui" line="76"/>
+        <location filename="../views/tableview.ui" line="69"/>
         <source>Undo</source>
         <translation>Undo</translation>
+    </message>
+    <message>
+        <location filename="../views/tableview.ui" line="98"/>
+        <source>Graph</source>
+        <translation>Graph</translation>
+    </message>
+    <message>
+        <location filename="../controllers/tableview.cpp" line="124"/>
+        <source>chart</source>
+        <translation>chart</translation>
     </message>
 </context>
 <context>

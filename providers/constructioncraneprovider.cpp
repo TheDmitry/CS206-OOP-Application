@@ -1,17 +1,26 @@
 #include "constructioncraneprovider.h"
+#include <QObject>
 
 using namespace std;
 
 ConstructionCraneProvider::ConstructionCraneProvider() {}
 
-const std::string ConstructionCraneProvider::getName() {
+const std::string ConstructionCraneProvider::getName() const {
   return "ConstructionCraneProvider";
 }
 
-const std::vector<std::string> ConstructionCraneProvider::getSupportedSchemeArgs() {
+const std::string ConstructionCraneProvider::getItemName() const {
+  return "ConstructionCrane";
+}
+
+const std::string ConstructionCraneProvider::getTrItemName() const {
+  return QObject::tr("Construction Crane").toStdString();
+}
+
+const std::vector<std::string> ConstructionCraneProvider::getSupportedSchemeArgs() const {
   return {"modelName", "serial", "weight", "height", "angles", "position"};
 }
-const std::map<std::string, size_t> ConstructionCraneProvider::getScheme() {
+const std::map<std::string, size_t> ConstructionCraneProvider::getScheme() const {
   return {{"modelName", 0},
           {"serial", 1},
           {"weight", 2},
@@ -76,4 +85,17 @@ int ConstructionCraneProvider::compare(std::shared_ptr<AbstractItem> const &a,
 
 std::shared_ptr<AbstractItem> ConstructionCraneProvider::create() {
   return make_shared<ConstructionCrane>();
+}
+
+// Should be optimized by RVO?
+bool ConstructionCraneProvider::isChartSupported() const {
+  return true;
+}
+
+const std::string ConstructionCraneProvider::getChartHeaderField() const {
+  return "modelName";
+}
+
+const vector<string> ConstructionCraneProvider::getChartFields() const {
+  return {"weight", "height"};
 }

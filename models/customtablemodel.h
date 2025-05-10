@@ -11,10 +11,11 @@
 
 class CustomTableModel : public QAbstractTableModel {
   Q_OBJECT
-  using ItemType = std::shared_ptr<AbstractItem>;
-  using Container = std::vector<ItemType>;
 
 public:
+  using ItemType = std::shared_ptr<AbstractItem>;
+  using ContainerType = std::vector<ItemType>;
+
   explicit CustomTableModel(QObject *parent = nullptr);
   ~CustomTableModel();
 
@@ -53,7 +54,7 @@ public:
   void addEmptyRow();
   void removeRow(size_t row);
   ItemType &getItem(size_t row);
-
+  ContainerType &getItems();
   bool isEmpty();
 
   /* Undo: no redo */
@@ -61,9 +62,14 @@ public:
 
   DbFile const &getDb() const;
 
+signals:
+  void fileLoaded(std::string const &fileName);
+  void dbClear();
+  void dbReset();
+
 private:
-  Container items;
-  Undoer<Container> undoer;
+  ContainerType items;
+  Undoer<ContainerType> undoer;
 
   // DbFile workflow
   DbFile db;

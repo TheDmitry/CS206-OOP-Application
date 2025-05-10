@@ -27,7 +27,7 @@ QVariant CustomTableModel::headerData(int section, Qt::Orientation orientation, 
 
 bool CustomTableModel::setHeaderData(int section,
                                      Qt::Orientation orientation,
-                                     const QVariant &value,
+                                     QVariant const &value,
                                      int role) {
   if (value != headerData(section, orientation, role)) {
     // FIXME: Implement me!
@@ -37,14 +37,14 @@ bool CustomTableModel::setHeaderData(int section,
   return false;
 }
 
-int CustomTableModel::rowCount(const QModelIndex &parent) const {
+int CustomTableModel::rowCount(QModelIndex const &parent) const {
   if (parent.isValid())
     return 0;
 
   return items.size();
 }
 
-int CustomTableModel::columnCount(const QModelIndex &parent) const {
+int CustomTableModel::columnCount(QModelIndex const &parent) const {
   if (parent.isValid())
     return 0;
 
@@ -54,7 +54,7 @@ int CustomTableModel::columnCount(const QModelIndex &parent) const {
   return db.getScheme().size();
 }
 
-QVariant CustomTableModel::data(const QModelIndex &index, int role) const {
+QVariant CustomTableModel::data(QModelIndex const &index, int role) const {
   if (role == Qt::TextAlignmentRole) {
     return Qt::AlignCenter;
   }
@@ -80,7 +80,7 @@ QVariant CustomTableModel::data(const QModelIndex &index, int role) const {
   return QString("Undefined");
 }
 
-bool CustomTableModel::setData(const QModelIndex &index, const QVariant &value, int role) {
+bool CustomTableModel::setData(QModelIndex const &index, QVariant const &value, int role) {
   if (!index.isValid())
     return false;
 
@@ -100,7 +100,7 @@ bool CustomTableModel::setData(const QModelIndex &index, const QVariant &value, 
   return false;
 }
 
-Qt::ItemFlags CustomTableModel::flags(const QModelIndex &index) const {
+Qt::ItemFlags CustomTableModel::flags(QModelIndex const &index) const {
   if (!index.isValid())
     return Qt::NoItemFlags;
 
@@ -114,6 +114,8 @@ void CustomTableModel::reset() {
   db.reset();
 
   endResetModel();
+
+  emit dbReset();
 }
 
 void CustomTableModel::clear() {
@@ -123,13 +125,14 @@ void CustomTableModel::clear() {
   db.clear();
 
   endResetModel();
+  emit dbClear();
 }
 
-void CustomTableModel::setFileName(const string &fileName) {
+void CustomTableModel::setFileName(string const &fileName) {
   db.setCurrentPath(fileName);
 }
 
-void CustomTableModel::readFromFile(const string &fileName) {
+void CustomTableModel::readFromFile(string const &fileName) {
   setFileName(fileName);
   readFromFile();
 }
@@ -143,9 +146,11 @@ void CustomTableModel::readFromFile() {
   db.parse(items);
 
   endResetModel();
+
+  emit fileLoaded(db.getCurrentPath());
 }
 
-void CustomTableModel::writeToFile(const string &fileName) {
+void CustomTableModel::writeToFile(string const &fileName) {
   setFileName(fileName);
   writeToFile();
 }
@@ -174,11 +179,15 @@ void CustomTableModel::removeRow(size_t row) {
   endResetModel();
 }
 
-shared_ptr<AbstractItem> &CustomTableModel::getItem(size_t row) {
+CustomTableModel::ItemType &CustomTableModel::getItem(size_t row) {
   if (items.size() < row)
     throw runtime_error("Out of bounds on getItem(size_t) -> " + to_string(row));
 
   return items[row];
+}
+
+CustomTableModel::ContainerType &CustomTableModel::getItems() {
+  return items;
 }
 
 bool CustomTableModel::isEmpty() {
