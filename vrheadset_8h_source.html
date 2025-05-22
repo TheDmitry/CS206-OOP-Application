@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CS-206-OOP-Application: Исходный файл items/vrheadset.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">CS-206-OOP-Application
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('vrheadset_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">vrheadset.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="vrheadset_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="vector3_8h.html">external/vector3.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="abstractitem_8h.html">items/abstractitem.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="vrheadset_8h.html#ad9f4cdaa8bd50e58900e85467335c200">   10</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="vrheadset_8h.html#ad9f4cdaa8bd50e58900e85467335c200">HeadsetType</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="vrheadset_8h.html#ad9f4cdaa8bd50e58900e85467335c200a101963797ecc6ee5ddbd313e2dc48836">   11</a></span>  <a class="code hl_enumvalue" href="vrheadset_8h.html#ad9f4cdaa8bd50e58900e85467335c200a101963797ecc6ee5ddbd313e2dc48836">Portable</a>,</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  <a class="code hl_enumvalue" href="vrheadset_8h.html#ad9f4cdaa8bd50e58900e85467335c200a8b7c5cd8bd8eb51ee6d3fd0eac584679">Full</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="vrheadset_8h.html#ad9f4cdaa8bd50e58900e85467335c200a8b7c5cd8bd8eb51ee6d3fd0eac584679">   13</a></span>};</div>
+</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classVRHeadset.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="classVRHeadset.html">VRHeadset</a> : <span class="keyword">public</span> <a class="code hl_class" href="classAbstractItem.html">AbstractItem</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classVRHeadset.html#aff4386bf05727a8aebbc6b59b5ed4e4b">   17</a></span>  <a class="code hl_function" href="classVRHeadset.html#aff4386bf05727a8aebbc6b59b5ed4e4b">VRHeadset</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="classVRHeadset.html#aca1b5c4012be3686335693abdf195306">width</a>,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            <span class="keywordtype">int</span> <a class="code hl_variable" href="classVRHeadset.html#ad1fc57b765dc8295bd64dcdfcb4bf896">height</a>,</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <span class="keywordtype">float</span> <a class="code hl_variable" href="classVRHeadset.html#aea76f52a4a70a156455e56ea0ded19e0">refreshRate</a>,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            <a class="code hl_class" href="classVector3.html">Vector3</a> <a class="code hl_variable" href="classVRHeadset.html#aeb95c5ac95b64691de09016d76c98839">angles</a>,</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <a class="code hl_class" href="classVector3.html">Vector3</a> <a class="code hl_variable" href="classVRHeadset.html#ae9ae381f6bd0ac4a7814dd623b20a6f5">position</a>,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            std::string <a class="code hl_variable" href="classVRHeadset.html#affce5dfe05df664456ec311c8e03bc10">modelName</a>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classVRHeadset.html#afa6b2202cf07214f756b18cc396ea47d">   23</a></span>  <a class="code hl_function" href="classVRHeadset.html#afa6b2202cf07214f756b18cc396ea47d">VRHeadset</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="classVRHeadset.html#aca1b5c4012be3686335693abdf195306">width</a>,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keywordtype">int</span> <a class="code hl_variable" href="classVRHeadset.html#ad1fc57b765dc8295bd64dcdfcb4bf896">height</a>,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <span class="keywordtype">float</span> <a class="code hl_variable" href="classVRHeadset.html#aea76f52a4a70a156455e56ea0ded19e0">refreshRate</a>,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <span class="keywordtype">float</span> angle_x,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <span class="keywordtype">float</span> angle_y,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="keywordtype">float</span> angle_z,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <span class="keywordtype">float</span> x,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <span class="keywordtype">float</span> y,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="keywordtype">float</span> z,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            std::string <a class="code hl_variable" href="classVRHeadset.html#affce5dfe05df664456ec311c8e03bc10">modelName</a>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <a class="code hl_function" href="classVRHeadset.html#acb5339cf0c88260024180a9172d0fdd0">VRHeadset</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classVRHeadset.html#a14ff99ad9a891ae44c5b50e2e8709e7f">   34</a></span>  <a class="code hl_function" href="classVRHeadset.html#a14ff99ad9a891ae44c5b50e2e8709e7f">~VRHeadset</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  std::shared_ptr&lt;AbstractItem&gt; <a class="code hl_function" href="classVRHeadset.html#abc975d501ae28ab9752de78bb589d0f4">clone</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classVRHeadset.html#aa36bcc831f36a8ed060ad524ec806c0e">getWidth</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classVRHeadset.html#a2ab56e86d04013c7cfc32c6a3559dd3f">getHeight</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keywordtype">float</span> <a class="code hl_function" href="classVRHeadset.html#a0ecc81bf3c90605f81e261e3152ba514">getRefreshRate</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <a class="code hl_class" href="classVector3.html">Vector3</a> <a class="code hl_function" href="classVRHeadset.html#a7e3837fc87a56fdbf9215728b458ca12">getAngles</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <a class="code hl_class" href="classVector3.html">Vector3</a> <a class="code hl_function" href="classVRHeadset.html#a2945c1c63c1874186097bec93dc26fc4">getPosition</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  std::string <a class="code hl_function" href="classVRHeadset.html#a78561dfe61248c650d04a6b70d9e075e">getModelName</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classVRHeadset.html#a96ce808a531ddbc5511464f5ab2dc892">isConnected</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <a class="code hl_enumeration" href="vrheadset_8h.html#ad9f4cdaa8bd50e58900e85467335c200">HeadsetType</a> <a class="code hl_function" href="classVRHeadset.html#aad8a791ca0422addd9480a8cd19f6f51">getType</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classVRHeadset.html#a984a15e5deec99046b99d0d78edff519">setRefreshRate</a>(<span class="keywordtype">float</span> refR);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classVRHeadset.html#af4ba52fcede5c554be266129216b62b8">connect</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classVRHeadset.html#a100bb3091a915ff197a241f00eb2e9b7">disconnect</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classVRHeadset.html#a0115384643935ea1ee4b82877c4c2844">setAngles</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classVRHeadset.html#a0115384643935ea1ee4b82877c4c2844">setAngles</a>(<a class="code hl_class" href="classVector3.html">Vector3</a> <a class="code hl_variable" href="classVRHeadset.html#aeb95c5ac95b64691de09016d76c98839">angles</a>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classVRHeadset.html#a5b9e8102d15bb2e0ef7cd306fd5bab58">setPosition</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classVRHeadset.html#a5b9e8102d15bb2e0ef7cd306fd5bab58">setPosition</a>(<a class="code hl_class" href="classVector3.html">Vector3</a> <a class="code hl_variable" href="classVRHeadset.html#ae9ae381f6bd0ac4a7814dd623b20a6f5">position</a>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classVRHeadset.html#a22e75156139bcf8e681175410deb8c16">setWidth</a>(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classVRHeadset.html#af8b2552c2020c0bad8b09e4d7511a971">setHeight</a>(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classVRHeadset.html#abadf17650637454fbc762129d95d0267">setModelName</a>(std::string name);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  std::string <a class="code hl_function" href="classVRHeadset.html#a1fcb8067660baedb5b2c0513b1a7762d">print</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classVRHeadset.html#a1fcb8067660baedb5b2c0513b1a7762d">print</a>(std::ostream &amp;os) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classVRHeadset.html#acbf3f6935942d4ee6ee328226f93ae74">   66</a></span>  <span class="keyword">friend</span> std::ostream &amp;<a class="code hl_friend" href="classVRHeadset.html#acbf3f6935942d4ee6ee328226f93ae74">operator&lt;&lt;</a>(std::ostream &amp;os, std::shared_ptr&lt;AbstractItem&gt; <span class="keyword">const</span> &amp;item);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classVRHeadset.html#a60aeecd93f1354a01425ab276e5ca4f8">   68</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classVRHeadset.html#a60aeecd93f1354a01425ab276e5ca4f8">operator==</a>(std::shared_ptr&lt;AbstractItem&gt; <span class="keyword">const</span> &amp;item) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classVRHeadset.html#abc131088fa03e2de728e22979deb7f03">   69</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classVRHeadset.html#abc131088fa03e2de728e22979deb7f03">operator!=</a>(std::shared_ptr&lt;AbstractItem&gt; <span class="keyword">const</span> &amp;item) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classVRHeadset.html#a60aeecd93f1354a01425ab276e5ca4f8">operator==</a>(<a class="code hl_class" href="classVRHeadset.html">VRHeadset</a> <span class="keyword">const</span> &amp;vr) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classVRHeadset.html#abc131088fa03e2de728e22979deb7f03">operator!=</a>(<a class="code hl_class" href="classVRHeadset.html">VRHeadset</a> <span class="keyword">const</span> &amp;vr) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classVRHeadset.html#ad1fc57b765dc8295bd64dcdfcb4bf896">   75</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="classVRHeadset.html#aca1b5c4012be3686335693abdf195306">width</a>, <a class="code hl_variable" href="classVRHeadset.html#ad1fc57b765dc8295bd64dcdfcb4bf896">height</a>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classVRHeadset.html#aea76f52a4a70a156455e56ea0ded19e0">   76</a></span>  <span class="keywordtype">float</span> <a class="code hl_variable" href="classVRHeadset.html#aea76f52a4a70a156455e56ea0ded19e0">refreshRate</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classVRHeadset.html#abb6b4869e05b11359f76e829582dfbe3">   77</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="classVRHeadset.html#abb6b4869e05b11359f76e829582dfbe3">connected</a>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classVRHeadset.html#aeb95c5ac95b64691de09016d76c98839">   78</a></span>  <a class="code hl_class" href="classVector3.html">Vector3</a> <a class="code hl_variable" href="classVRHeadset.html#aeb95c5ac95b64691de09016d76c98839">angles</a>, <a class="code hl_variable" href="classVRHeadset.html#ae9ae381f6bd0ac4a7814dd623b20a6f5">position</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classVRHeadset.html#affce5dfe05df664456ec311c8e03bc10">   79</a></span>  std::string <a class="code hl_variable" href="classVRHeadset.html#affce5dfe05df664456ec311c8e03bc10">modelName</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>};</div>
+</div>
+<div class="ttc" id="aabstractitem_8h_html"><div class="ttname"><a href="abstractitem_8h.html">abstractitem.h</a></div></div>
+<div class="ttc" id="aclassAbstractItem_html"><div class="ttname"><a href="classAbstractItem.html">AbstractItem</a></div><div class="ttdef"><b>Definition</b> abstractitem.h:6</div></div>
+<div class="ttc" id="aclassVRHeadset_html"><div class="ttname"><a href="classVRHeadset.html">VRHeadset</a></div><div class="ttdef"><b>Definition</b> vrheadset.h:15</div></div>
+<div class="ttc" id="aclassVRHeadset_html_a0115384643935ea1ee4b82877c4c2844"><div class="ttname"><a href="classVRHeadset.html#a0115384643935ea1ee4b82877c4c2844">VRHeadset::setAngles</a></div><div class="ttdeci">void setAngles(float x, float y, float z)</div><div class="ttdef"><b>Definition</b> vrheadset.cpp:61</div></div>
+<div class="ttc" id="aclassVRHeadset_html_a0ecc81bf3c90605f81e261e3152ba514"><div class="ttname"><a href="classVRHeadset.html#a0ecc81bf3c90605f81e261e3152ba514">VRHeadset::getRefreshRate</a></div><div class="ttdeci">float getRefreshRate() const</div><div class="ttdef"><b>Definition</b> vrheadset.cpp:49</div></div>
+<div class="ttc" id="aclassVRHeadset_html_a100bb3091a915ff197a241f00eb2e9b7"><div class="ttname"><a href="classVRHeadset.html#a100bb3091a915ff197a241f00eb2e9b7">VRHeadset::disconnect</a></div><div class="ttdeci">void disconnect()</div><div class="ttdef"><b>Definition</b> vrheadset.cpp:59</div></div>
+<div class="ttc" id="aclassVRHeadset_html_a14ff99ad9a891ae44c5b50e2e8709e7f"><div class="ttname"><a href="classVRHeadset.html#a14ff99ad9a891ae44c5b50e2e8709e7f">VRHeadset::~VRHeadset</a></div><div class="ttdeci">~VRHeadset()=default</div></div>
+<div class="ttc" id="aclassVRHeadset_html_a1fcb8067660baedb5b2c0513b1a7762d"><div class="ttname"><a href="classVRHeadset.html#a1fcb8067660baedb5b2c0513b1a7762d">VRHeadset::print</a></div><div class="ttdeci">std::string print() const override</div><div class="ttdef"><b>Definition</b> vrheadset.cpp:87</div></div>
+<div class="ttc" id="aclassVRHeadset_html_a22e75156139bcf8e681175410deb8c16"><div class="ttname"><a href="classVRHeadset.html#a22e75156139bcf8e681175410deb8c16">VRHeadset::setWidth</a></div><div class="ttdeci">void setWidth(int value)</div><div class="ttdef"><b>Definition</b> vrheadset.cpp:75</div></div>
+<div class="ttc" id="aclassVRHeadset_html_a2945c1c63c1874186097bec93dc26fc4"><div class="ttname"><a href="classVRHeadset.html#a2945c1c63c1874186097bec93dc26fc4">VRHeadset::getPosition</a></div><div class="ttdeci">Vector3 getPosition() const</div><div class="ttdef"><b>Definition</b> vrheadset.cpp:52</div></div>
+<div class="ttc" id="aclassVRHeadset_html_a2ab56e86d04013c7cfc32c6a3559dd3f"><div class="ttname"><a href="classVRHeadset.html#a2ab56e86d04013c7cfc32c6a3559dd3f">VRHeadset::getHeight</a></div><div class="ttdeci">int getHeight() const</div><div class="ttdef"><b>Definition</b> vrheadset.cpp:48</div></div>
+<div class="ttc" id="aclassVRHeadset_html_a5b9e8102d15bb2e0ef7cd306fd5bab58"><div class="ttname"><a href="classVRHeadset.html#a5b9e8102d15bb2e0ef7cd306fd5bab58">VRHeadset::setPosition</a></div><div class="ttdeci">void setPosition(float x, float y, float z)</div><div class="ttdef"><b>Definition</b> vrheadset.cpp:68</div></div>
+<div class="ttc" id="aclassVRHeadset_html_a60aeecd93f1354a01425ab276e5ca4f8"><div class="ttname"><a href="classVRHeadset.html#a60aeecd93f1354a01425ab276e5ca4f8">VRHeadset::operator==</a></div><div class="ttdeci">bool operator==(std::shared_ptr&lt; AbstractItem &gt; const &amp;item) const override</div></div>
+<div class="ttc" id="aclassVRHeadset_html_a78561dfe61248c650d04a6b70d9e075e"><div class="ttname"><a href="classVRHeadset.html#a78561dfe61248c650d04a6b70d9e075e">VRHeadset::getModelName</a></div><div class="ttdeci">std::string getModelName() const</div><div class="ttdef"><b>Definition</b> vrheadset.cpp:50</div></div>
+<div class="ttc" id="aclassVRHeadset_html_a7e3837fc87a56fdbf9215728b458ca12"><div class="ttname"><a href="classVRHeadset.html#a7e3837fc87a56fdbf9215728b458ca12">VRHeadset::getAngles</a></div><div class="ttdeci">Vector3 getAngles() const</div><div class="ttdef"><b>Definition</b> vrheadset.cpp:51</div></div>
+<div class="ttc" id="aclassVRHeadset_html_a96ce808a531ddbc5511464f5ab2dc892"><div class="ttname"><a href="classVRHeadset.html#a96ce808a531ddbc5511464f5ab2dc892">VRHeadset::isConnected</a></div><div class="ttdeci">bool isConnected() const</div><div class="ttdef"><b>Definition</b> vrheadset.cpp:53</div></div>
+<div class="ttc" id="aclassVRHeadset_html_a984a15e5deec99046b99d0d78edff519"><div class="ttname"><a href="classVRHeadset.html#a984a15e5deec99046b99d0d78edff519">VRHeadset::setRefreshRate</a></div><div class="ttdeci">void setRefreshRate(float refR)</div><div class="ttdef"><b>Definition</b> vrheadset.cpp:56</div></div>
+<div class="ttc" id="aclassVRHeadset_html_aa36bcc831f36a8ed060ad524ec806c0e"><div class="ttname"><a href="classVRHeadset.html#aa36bcc831f36a8ed060ad524ec806c0e">VRHeadset::getWidth</a></div><div class="ttdeci">int getWidth() const</div><div class="ttdef"><b>Definition</b> vrheadset.cpp:47</div></div>
+<div class="ttc" id="aclassVRHeadset_html_aad8a791ca0422addd9480a8cd19f6f51"><div class="ttname"><a href="classVRHeadset.html#aad8a791ca0422addd9480a8cd19f6f51">VRHeadset::getType</a></div><div class="ttdeci">HeadsetType getType() const</div><div class="ttdef"><b>Definition</b> vrheadset.cpp:54</div></div>
+<div class="ttc" id="aclassVRHeadset_html_abadf17650637454fbc762129d95d0267"><div class="ttname"><a href="classVRHeadset.html#abadf17650637454fbc762129d95d0267">VRHeadset::setModelName</a></div><div class="ttdeci">void setModelName(std::string name)</div><div class="ttdef"><b>Definition</b> vrheadset.cpp:83</div></div>
+<div class="ttc" id="aclassVRHeadset_html_abb6b4869e05b11359f76e829582dfbe3"><div class="ttname"><a href="classVRHeadset.html#abb6b4869e05b11359f76e829582dfbe3">VRHeadset::connected</a></div><div class="ttdeci">bool connected</div><div class="ttdef"><b>Definition</b> vrheadset.h:77</div></div>
+<div class="ttc" id="aclassVRHeadset_html_abc131088fa03e2de728e22979deb7f03"><div class="ttname"><a href="classVRHeadset.html#abc131088fa03e2de728e22979deb7f03">VRHeadset::operator!=</a></div><div class="ttdeci">bool operator!=(std::shared_ptr&lt; AbstractItem &gt; const &amp;item) const override</div></div>
+<div class="ttc" id="aclassVRHeadset_html_abc975d501ae28ab9752de78bb589d0f4"><div class="ttname"><a href="classVRHeadset.html#abc975d501ae28ab9752de78bb589d0f4">VRHeadset::clone</a></div><div class="ttdeci">std::shared_ptr&lt; AbstractItem &gt; clone() const override</div><div class="ttdef"><b>Definition</b> vrheadset.cpp:43</div></div>
+<div class="ttc" id="aclassVRHeadset_html_aca1b5c4012be3686335693abdf195306"><div class="ttname"><a href="classVRHeadset.html#aca1b5c4012be3686335693abdf195306">VRHeadset::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition</b> vrheadset.h:75</div></div>
+<div class="ttc" id="aclassVRHeadset_html_acb5339cf0c88260024180a9172d0fdd0"><div class="ttname"><a href="classVRHeadset.html#acb5339cf0c88260024180a9172d0fdd0">VRHeadset::VRHeadset</a></div><div class="ttdeci">VRHeadset()</div><div class="ttdef"><b>Definition</b> vrheadset.cpp:35</div></div>
+<div class="ttc" id="aclassVRHeadset_html_acbf3f6935942d4ee6ee328226f93ae74"><div class="ttname"><a href="classVRHeadset.html#acbf3f6935942d4ee6ee328226f93ae74">VRHeadset::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, std::shared_ptr&lt; AbstractItem &gt; const &amp;item)</div></div>
+<div class="ttc" id="aclassVRHeadset_html_ad1fc57b765dc8295bd64dcdfcb4bf896"><div class="ttname"><a href="classVRHeadset.html#ad1fc57b765dc8295bd64dcdfcb4bf896">VRHeadset::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition</b> vrheadset.h:75</div></div>
+<div class="ttc" id="aclassVRHeadset_html_ae9ae381f6bd0ac4a7814dd623b20a6f5"><div class="ttname"><a href="classVRHeadset.html#ae9ae381f6bd0ac4a7814dd623b20a6f5">VRHeadset::position</a></div><div class="ttdeci">Vector3 position</div><div class="ttdef"><b>Definition</b> vrheadset.h:78</div></div>
+<div class="ttc" id="aclassVRHeadset_html_aea76f52a4a70a156455e56ea0ded19e0"><div class="ttname"><a href="classVRHeadset.html#aea76f52a4a70a156455e56ea0ded19e0">VRHeadset::refreshRate</a></div><div class="ttdeci">float refreshRate</div><div class="ttdef"><b>Definition</b> vrheadset.h:76</div></div>
+<div class="ttc" id="aclassVRHeadset_html_aeb95c5ac95b64691de09016d76c98839"><div class="ttname"><a href="classVRHeadset.html#aeb95c5ac95b64691de09016d76c98839">VRHeadset::angles</a></div><div class="ttdeci">Vector3 angles</div><div class="ttdef"><b>Definition</b> vrheadset.h:78</div></div>
+<div class="ttc" id="aclassVRHeadset_html_af4ba52fcede5c554be266129216b62b8"><div class="ttname"><a href="classVRHeadset.html#af4ba52fcede5c554be266129216b62b8">VRHeadset::connect</a></div><div class="ttdeci">void connect()</div><div class="ttdef"><b>Definition</b> vrheadset.cpp:58</div></div>
+<div class="ttc" id="aclassVRHeadset_html_af8b2552c2020c0bad8b09e4d7511a971"><div class="ttname"><a href="classVRHeadset.html#af8b2552c2020c0bad8b09e4d7511a971">VRHeadset::setHeight</a></div><div class="ttdeci">void setHeight(int value)</div><div class="ttdef"><b>Definition</b> vrheadset.cpp:79</div></div>
+<div class="ttc" id="aclassVRHeadset_html_afa6b2202cf07214f756b18cc396ea47d"><div class="ttname"><a href="classVRHeadset.html#afa6b2202cf07214f756b18cc396ea47d">VRHeadset::VRHeadset</a></div><div class="ttdeci">VRHeadset(int width, int height, float refreshRate, float angle_x, float angle_y, float angle_z, float x, float y, float z, std::string modelName)</div></div>
+<div class="ttc" id="aclassVRHeadset_html_aff4386bf05727a8aebbc6b59b5ed4e4b"><div class="ttname"><a href="classVRHeadset.html#aff4386bf05727a8aebbc6b59b5ed4e4b">VRHeadset::VRHeadset</a></div><div class="ttdeci">VRHeadset(int width, int height, float refreshRate, Vector3 angles, Vector3 position, std::string modelName)</div></div>
+<div class="ttc" id="aclassVRHeadset_html_affce5dfe05df664456ec311c8e03bc10"><div class="ttname"><a href="classVRHeadset.html#affce5dfe05df664456ec311c8e03bc10">VRHeadset::modelName</a></div><div class="ttdeci">std::string modelName</div><div class="ttdef"><b>Definition</b> vrheadset.h:79</div></div>
+<div class="ttc" id="aclassVector3_html"><div class="ttname"><a href="classVector3.html">Vector3</a></div><div class="ttdef"><b>Definition</b> vector3.h:5</div></div>
+<div class="ttc" id="avector3_8h_html"><div class="ttname"><a href="vector3_8h.html">vector3.h</a></div></div>
+<div class="ttc" id="avrheadset_8h_html_ad9f4cdaa8bd50e58900e85467335c200"><div class="ttname"><a href="vrheadset_8h.html#ad9f4cdaa8bd50e58900e85467335c200">HeadsetType</a></div><div class="ttdeci">HeadsetType</div><div class="ttdef"><b>Definition</b> vrheadset.h:10</div></div>
+<div class="ttc" id="avrheadset_8h_html_ad9f4cdaa8bd50e58900e85467335c200a101963797ecc6ee5ddbd313e2dc48836"><div class="ttname"><a href="vrheadset_8h.html#ad9f4cdaa8bd50e58900e85467335c200a101963797ecc6ee5ddbd313e2dc48836">Portable</a></div><div class="ttdeci">@ Portable</div><div class="ttdef"><b>Definition</b> vrheadset.h:11</div></div>
+<div class="ttc" id="avrheadset_8h_html_ad9f4cdaa8bd50e58900e85467335c200a8b7c5cd8bd8eb51ee6d3fd0eac584679"><div class="ttname"><a href="vrheadset_8h.html#ad9f4cdaa8bd50e58900e85467335c200a8b7c5cd8bd8eb51ee6d3fd0eac584679">Full</a></div><div class="ttdeci">@ Full</div><div class="ttdef"><b>Definition</b> vrheadset.h:12</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_5c340568f50c435f5ad20df6b52069f2.html">items</a></li><li class="navelem"><a class="el" href="vrheadset_8h.html">vrheadset.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

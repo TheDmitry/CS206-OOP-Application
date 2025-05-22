@@ -1,0 +1,972 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CS-206-OOP-Application: Класс ConstructionCrane</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">CS-206-OOP-Application
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classConstructionCrane.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="classConstructionCrane-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс ConstructionCrane</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="constructioncrane_8h_source.html">constructioncrane.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:ConstructionCrane:</div>
+<div class="dyncontent">
+<div class="center"><img src="classConstructionCrane__inherit__graph.png" border="0" usemap="#aConstructionCrane_inherit__map" alt="Inheritance graph"/></div>
+<map name="aConstructionCrane_inherit__map" id="aConstructionCrane_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,79,148,104"/>
+<area shape="rect" href="classAbstractItem.html" title=" " alt="" coords="23,5,130,31"/>
+<area shape="poly" title=" " alt="" coords="79,44,79,79,74,79,74,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса ConstructionCrane:</div>
+<div class="dyncontent">
+<div class="center"><img src="classConstructionCrane__coll__graph.png" border="0" usemap="#aConstructionCrane_coll__map" alt="Collaboration graph"/></div>
+<map name="aConstructionCrane_coll__map" id="aConstructionCrane_coll__map">
+<area shape="rect" title=" " alt="" coords="43,108,186,133"/>
+<area shape="rect" href="classAbstractItem.html" title=" " alt="" coords="5,5,112,31"/>
+<area shape="poly" title=" " alt="" coords="74,42,111,107,106,109,70,44"/>
+<area shape="rect" href="classVector3.html" title=" " alt="" coords="137,5,207,31"/>
+<area shape="poly" title=" " alt="" coords="161,44,123,109,119,107,156,42"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a1f97f4d9ad4c7940e06587738dc6cc9b" id="r_a1f97f4d9ad4c7940e06587738dc6cc9b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#a1f97f4d9ad4c7940e06587738dc6cc9b">ConstructionCrane</a> (float <a class="el" href="classConstructionCrane.html#acef72df9d2dd486a0bf5254e82d0819c">weight</a>, float <a class="el" href="classConstructionCrane.html#a3f6117ee0d1aa5adbdf5c0ee0e234386">height</a>, <a class="el" href="classVector3.html">Vector3</a> <a class="el" href="classConstructionCrane.html#a804b65096e76fe6e60c9fdd1266fde88">position</a>, <a class="el" href="classVector3.html">Vector3</a> <a class="el" href="classConstructionCrane.html#a73e061b4e45972de3dff16ea5fbb1034">angles</a>, std::string name, std::string <a class="el" href="classConstructionCrane.html#a2e1b91ed0a60dee55f4e9132da2543c0">serial</a>)</td></tr>
+<tr class="separator:a1f97f4d9ad4c7940e06587738dc6cc9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a914b97bacd3402354bcb3ce93ba323d8" id="r_a914b97bacd3402354bcb3ce93ba323d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#a914b97bacd3402354bcb3ce93ba323d8">ConstructionCrane</a> (float <a class="el" href="classConstructionCrane.html#acef72df9d2dd486a0bf5254e82d0819c">weight</a>, float <a class="el" href="classConstructionCrane.html#a3f6117ee0d1aa5adbdf5c0ee0e234386">height</a>, float ang_x, float ang_y, float ang_z, float pos_x, float pos_y, float pos_z, std::string name, std::string <a class="el" href="classConstructionCrane.html#a2e1b91ed0a60dee55f4e9132da2543c0">serial</a>)</td></tr>
+<tr class="separator:a914b97bacd3402354bcb3ce93ba323d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9855585054a658935e11fd73d2f37391" id="r_a9855585054a658935e11fd73d2f37391"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#a9855585054a658935e11fd73d2f37391">ConstructionCrane</a> ()</td></tr>
+<tr class="separator:a9855585054a658935e11fd73d2f37391"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a692d47778754ecfa2d7bbb7116e7e926" id="r_a692d47778754ecfa2d7bbb7116e7e926"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#a692d47778754ecfa2d7bbb7116e7e926">~ConstructionCrane</a> ()=default</td></tr>
+<tr class="separator:a692d47778754ecfa2d7bbb7116e7e926"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a173408c4162f5b325c11bcaf7b3d50fd" id="r_a173408c4162f5b325c11bcaf7b3d50fd"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#a173408c4162f5b325c11bcaf7b3d50fd">clone</a> () const override</td></tr>
+<tr class="separator:a173408c4162f5b325c11bcaf7b3d50fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42ebc48f235edaf8a1424da4510c15e2" id="r_a42ebc48f235edaf8a1424da4510c15e2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#a42ebc48f235edaf8a1424da4510c15e2">print</a> () const override</td></tr>
+<tr class="separator:a42ebc48f235edaf8a1424da4510c15e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61d0581abf3516831a895a38dd19a48a" id="r_a61d0581abf3516831a895a38dd19a48a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#a61d0581abf3516831a895a38dd19a48a">print</a> (std::ostream &amp;os) const override</td></tr>
+<tr class="separator:a61d0581abf3516831a895a38dd19a48a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa02f66528c3d6040c707275affdaa189" id="r_aa02f66528c3d6040c707275affdaa189"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#aa02f66528c3d6040c707275affdaa189">operator==</a> (std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; const &amp;item) const override</td></tr>
+<tr class="separator:aa02f66528c3d6040c707275affdaa189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8db4ed951abbbad45a0b3671028f7b3" id="r_ae8db4ed951abbbad45a0b3671028f7b3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#ae8db4ed951abbbad45a0b3671028f7b3">operator!=</a> (std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; const &amp;item) const override</td></tr>
+<tr class="separator:ae8db4ed951abbbad45a0b3671028f7b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad60910362d7247d789fab36be65a64d5" id="r_ad60910362d7247d789fab36be65a64d5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#ad60910362d7247d789fab36be65a64d5">operator==</a> (<a class="el" href="classConstructionCrane.html">ConstructionCrane</a> const &amp;vr) const</td></tr>
+<tr class="separator:ad60910362d7247d789fab36be65a64d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af21ecc5ae85e7eaa87b5159a04cc716f" id="r_af21ecc5ae85e7eaa87b5159a04cc716f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#af21ecc5ae85e7eaa87b5159a04cc716f">operator!=</a> (<a class="el" href="classConstructionCrane.html">ConstructionCrane</a> const &amp;vr) const</td></tr>
+<tr class="separator:af21ecc5ae85e7eaa87b5159a04cc716f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b4b26dd8e408bdd7dbb5f23f34432b8" id="r_a9b4b26dd8e408bdd7dbb5f23f34432b8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#a9b4b26dd8e408bdd7dbb5f23f34432b8">getHeight</a> () const</td></tr>
+<tr class="separator:a9b4b26dd8e408bdd7dbb5f23f34432b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21293af076358c6d8b0bbe83e91f1349" id="r_a21293af076358c6d8b0bbe83e91f1349"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#a21293af076358c6d8b0bbe83e91f1349">getWeight</a> () const</td></tr>
+<tr class="separator:a21293af076358c6d8b0bbe83e91f1349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b7f2ca536d4a1b9cb8361a92e4cbb53" id="r_a7b7f2ca536d4a1b9cb8361a92e4cbb53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#a7b7f2ca536d4a1b9cb8361a92e4cbb53">getAngles</a> () const</td></tr>
+<tr class="separator:a7b7f2ca536d4a1b9cb8361a92e4cbb53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b74ac3d8397ed9c8e5cf2fdb6893a61" id="r_a6b74ac3d8397ed9c8e5cf2fdb6893a61"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#a6b74ac3d8397ed9c8e5cf2fdb6893a61">getPosition</a> () const</td></tr>
+<tr class="separator:a6b74ac3d8397ed9c8e5cf2fdb6893a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b7f05629634a79157d7ae491e0e8712" id="r_a3b7f05629634a79157d7ae491e0e8712"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#a3b7f05629634a79157d7ae491e0e8712">getModelName</a> () const</td></tr>
+<tr class="separator:a3b7f05629634a79157d7ae491e0e8712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa32bd15e8370c2d0cb0b888345d523f" id="r_aaa32bd15e8370c2d0cb0b888345d523f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#aaa32bd15e8370c2d0cb0b888345d523f">getSerial</a> () const</td></tr>
+<tr class="separator:aaa32bd15e8370c2d0cb0b888345d523f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c0783f817ec62be0373d295f4a876a6" id="r_a8c0783f817ec62be0373d295f4a876a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#a8c0783f817ec62be0373d295f4a876a6">setHeight</a> (float value)</td></tr>
+<tr class="separator:a8c0783f817ec62be0373d295f4a876a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e94c22171b3844af7590ec5e706a911" id="r_a5e94c22171b3844af7590ec5e706a911"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#a5e94c22171b3844af7590ec5e706a911">setWeight</a> (float value)</td></tr>
+<tr class="separator:a5e94c22171b3844af7590ec5e706a911"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6a3442a697c3705dba6f6af4057dcb0" id="r_ad6a3442a697c3705dba6f6af4057dcb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#ad6a3442a697c3705dba6f6af4057dcb0">setPosition</a> (<a class="el" href="classVector3.html">Vector3</a> value)</td></tr>
+<tr class="separator:ad6a3442a697c3705dba6f6af4057dcb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9218c68ba0cbfbfea25c47ac27ecad86" id="r_a9218c68ba0cbfbfea25c47ac27ecad86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#a9218c68ba0cbfbfea25c47ac27ecad86">setPosition</a> (float x, float y, float z)</td></tr>
+<tr class="separator:a9218c68ba0cbfbfea25c47ac27ecad86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32ee5bf1eadebd2ac548a818d1d16547" id="r_a32ee5bf1eadebd2ac548a818d1d16547"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#a32ee5bf1eadebd2ac548a818d1d16547">setAngles</a> (<a class="el" href="classVector3.html">Vector3</a> value)</td></tr>
+<tr class="separator:a32ee5bf1eadebd2ac548a818d1d16547"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a676b36f67f6160c3eb4228c4b6f4d036" id="r_a676b36f67f6160c3eb4228c4b6f4d036"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#a676b36f67f6160c3eb4228c4b6f4d036">setAngles</a> (float x, float y, float z)</td></tr>
+<tr class="separator:a676b36f67f6160c3eb4228c4b6f4d036"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb3f3fcb8de6efd9fee19b45c468e5f4" id="r_afb3f3fcb8de6efd9fee19b45c468e5f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#afb3f3fcb8de6efd9fee19b45c468e5f4">setModelName</a> (std::string value)</td></tr>
+<tr class="separator:afb3f3fcb8de6efd9fee19b45c468e5f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a562103b32bf096ef06ae179a761ac2bb" id="r_a562103b32bf096ef06ae179a761ac2bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#a562103b32bf096ef06ae179a761ac2bb">setSerial</a> (std::string value)</td></tr>
+<tr class="separator:a562103b32bf096ef06ae179a761ac2bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classAbstractItem"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAbstractItem')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="classAbstractItem.html">AbstractItem</a></td></tr>
+<tr class="memitem:abe272a6003eea88261f5bba8e08478e8 inherit pub_methods_classAbstractItem" id="r_abe272a6003eea88261f5bba8e08478e8"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractItem.html#abe272a6003eea88261f5bba8e08478e8">~AbstractItem</a> ()=default</td></tr>
+<tr class="separator:abe272a6003eea88261f5bba8e08478e8 inherit pub_methods_classAbstractItem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:acef72df9d2dd486a0bf5254e82d0819c" id="r_acef72df9d2dd486a0bf5254e82d0819c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#acef72df9d2dd486a0bf5254e82d0819c">weight</a></td></tr>
+<tr class="separator:acef72df9d2dd486a0bf5254e82d0819c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f6117ee0d1aa5adbdf5c0ee0e234386" id="r_a3f6117ee0d1aa5adbdf5c0ee0e234386"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#a3f6117ee0d1aa5adbdf5c0ee0e234386">height</a></td></tr>
+<tr class="separator:a3f6117ee0d1aa5adbdf5c0ee0e234386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73e061b4e45972de3dff16ea5fbb1034" id="r_a73e061b4e45972de3dff16ea5fbb1034"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#a73e061b4e45972de3dff16ea5fbb1034">angles</a></td></tr>
+<tr class="separator:a73e061b4e45972de3dff16ea5fbb1034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a804b65096e76fe6e60c9fdd1266fde88" id="r_a804b65096e76fe6e60c9fdd1266fde88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#a804b65096e76fe6e60c9fdd1266fde88">position</a></td></tr>
+<tr class="separator:a804b65096e76fe6e60c9fdd1266fde88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96620cef8974cc414c7f190b18bd1489" id="r_a96620cef8974cc414c7f190b18bd1489"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#a96620cef8974cc414c7f190b18bd1489">modelName</a></td></tr>
+<tr class="separator:a96620cef8974cc414c7f190b18bd1489"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e1b91ed0a60dee55f4e9132da2543c0" id="r_a2e1b91ed0a60dee55f4e9132da2543c0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCrane.html#a2e1b91ed0a60dee55f4e9132da2543c0">serial</a></td></tr>
+<tr class="separator:a2e1b91ed0a60dee55f4e9132da2543c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a1f97f4d9ad4c7940e06587738dc6cc9b" name="a1f97f4d9ad4c7940e06587738dc6cc9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f97f4d9ad4c7940e06587738dc6cc9b">&#9670;&#160;</a></span>ConstructionCrane() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ConstructionCrane::ConstructionCrane </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>weight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>angles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>serial</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a914b97bacd3402354bcb3ce93ba323d8" name="a914b97bacd3402354bcb3ce93ba323d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a914b97bacd3402354bcb3ce93ba323d8">&#9670;&#160;</a></span>ConstructionCrane() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ConstructionCrane::ConstructionCrane </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>weight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ang_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ang_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ang_z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pos_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pos_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pos_z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>serial</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9855585054a658935e11fd73d2f37391" name="a9855585054a658935e11fd73d2f37391"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9855585054a658935e11fd73d2f37391">&#9670;&#160;</a></span>ConstructionCrane() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ConstructionCrane::ConstructionCrane </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a692d47778754ecfa2d7bbb7116e7e926" name="a692d47778754ecfa2d7bbb7116e7e926"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a692d47778754ecfa2d7bbb7116e7e926">&#9670;&#160;</a></span>~ConstructionCrane()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ConstructionCrane::~ConstructionCrane </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a173408c4162f5b325c11bcaf7b3d50fd" name="a173408c4162f5b325c11bcaf7b3d50fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a173408c4162f5b325c11bcaf7b3d50fd">&#9670;&#160;</a></span>clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; ConstructionCrane::clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractItem.html#aae44528b7bce164087390e7bc4812074">AbstractItem</a>.</p>
+
+</div>
+</div>
+<a id="a7b7f2ca536d4a1b9cb8361a92e4cbb53" name="a7b7f2ca536d4a1b9cb8361a92e4cbb53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b7f2ca536d4a1b9cb8361a92e4cbb53">&#9670;&#160;</a></span>getAngles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector3.html">Vector3</a> ConstructionCrane::getAngles </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b4b26dd8e408bdd7dbb5f23f34432b8" name="a9b4b26dd8e408bdd7dbb5f23f34432b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b4b26dd8e408bdd7dbb5f23f34432b8">&#9670;&#160;</a></span>getHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ConstructionCrane::getHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b7f05629634a79157d7ae491e0e8712" name="a3b7f05629634a79157d7ae491e0e8712"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b7f05629634a79157d7ae491e0e8712">&#9670;&#160;</a></span>getModelName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ConstructionCrane::getModelName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b74ac3d8397ed9c8e5cf2fdb6893a61" name="a6b74ac3d8397ed9c8e5cf2fdb6893a61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b74ac3d8397ed9c8e5cf2fdb6893a61">&#9670;&#160;</a></span>getPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector3.html">Vector3</a> ConstructionCrane::getPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa32bd15e8370c2d0cb0b888345d523f" name="aaa32bd15e8370c2d0cb0b888345d523f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa32bd15e8370c2d0cb0b888345d523f">&#9670;&#160;</a></span>getSerial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ConstructionCrane::getSerial </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a21293af076358c6d8b0bbe83e91f1349" name="a21293af076358c6d8b0bbe83e91f1349"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21293af076358c6d8b0bbe83e91f1349">&#9670;&#160;</a></span>getWeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ConstructionCrane::getWeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af21ecc5ae85e7eaa87b5159a04cc716f" name="af21ecc5ae85e7eaa87b5159a04cc716f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af21ecc5ae85e7eaa87b5159a04cc716f">&#9670;&#160;</a></span>operator!=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ConstructionCrane::operator!= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classConstructionCrane.html">ConstructionCrane</a> const &amp;&#160;</td>
+          <td class="paramname"><em>vr</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae8db4ed951abbbad45a0b3671028f7b3" name="ae8db4ed951abbbad45a0b3671028f7b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8db4ed951abbbad45a0b3671028f7b3">&#9670;&#160;</a></span>operator!=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ConstructionCrane::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractItem.html#a15508998dd77e9e1cbb20f5307db3f37">AbstractItem</a>.</p>
+
+</div>
+</div>
+<a id="ad60910362d7247d789fab36be65a64d5" name="ad60910362d7247d789fab36be65a64d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad60910362d7247d789fab36be65a64d5">&#9670;&#160;</a></span>operator==() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ConstructionCrane::operator== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classConstructionCrane.html">ConstructionCrane</a> const &amp;&#160;</td>
+          <td class="paramname"><em>vr</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa02f66528c3d6040c707275affdaa189" name="aa02f66528c3d6040c707275affdaa189"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa02f66528c3d6040c707275affdaa189">&#9670;&#160;</a></span>operator==() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ConstructionCrane::operator== </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractItem.html#a77b0d3ab5119c129c36c20f13177e812">AbstractItem</a>.</p>
+
+</div>
+</div>
+<a id="a42ebc48f235edaf8a1424da4510c15e2" name="a42ebc48f235edaf8a1424da4510c15e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42ebc48f235edaf8a1424da4510c15e2">&#9670;&#160;</a></span>print() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ConstructionCrane::print </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractItem.html#aa788dd9269c533505ec441178070e7b4">AbstractItem</a>.</p>
+
+</div>
+</div>
+<a id="a61d0581abf3516831a895a38dd19a48a" name="a61d0581abf3516831a895a38dd19a48a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61d0581abf3516831a895a38dd19a48a">&#9670;&#160;</a></span>print() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConstructionCrane::print </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractItem.html#af847bb1a5dc9f74084326655f731e9d7">AbstractItem</a>.</p>
+
+</div>
+</div>
+<a id="a676b36f67f6160c3eb4228c4b6f4d036" name="a676b36f67f6160c3eb4228c4b6f4d036"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a676b36f67f6160c3eb4228c4b6f4d036">&#9670;&#160;</a></span>setAngles() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConstructionCrane::setAngles </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a32ee5bf1eadebd2ac548a818d1d16547" name="a32ee5bf1eadebd2ac548a818d1d16547"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32ee5bf1eadebd2ac548a818d1d16547">&#9670;&#160;</a></span>setAngles() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConstructionCrane::setAngles </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c0783f817ec62be0373d295f4a876a6" name="a8c0783f817ec62be0373d295f4a876a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c0783f817ec62be0373d295f4a876a6">&#9670;&#160;</a></span>setHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConstructionCrane::setHeight </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb3f3fcb8de6efd9fee19b45c468e5f4" name="afb3f3fcb8de6efd9fee19b45c468e5f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb3f3fcb8de6efd9fee19b45c468e5f4">&#9670;&#160;</a></span>setModelName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConstructionCrane::setModelName </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9218c68ba0cbfbfea25c47ac27ecad86" name="a9218c68ba0cbfbfea25c47ac27ecad86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9218c68ba0cbfbfea25c47ac27ecad86">&#9670;&#160;</a></span>setPosition() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConstructionCrane::setPosition </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6a3442a697c3705dba6f6af4057dcb0" name="ad6a3442a697c3705dba6f6af4057dcb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6a3442a697c3705dba6f6af4057dcb0">&#9670;&#160;</a></span>setPosition() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConstructionCrane::setPosition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a562103b32bf096ef06ae179a761ac2bb" name="a562103b32bf096ef06ae179a761ac2bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a562103b32bf096ef06ae179a761ac2bb">&#9670;&#160;</a></span>setSerial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConstructionCrane::setSerial </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e94c22171b3844af7590ec5e706a911" name="a5e94c22171b3844af7590ec5e706a911"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e94c22171b3844af7590ec5e706a911">&#9670;&#160;</a></span>setWeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConstructionCrane::setWeight </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a73e061b4e45972de3dff16ea5fbb1034" name="a73e061b4e45972de3dff16ea5fbb1034"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73e061b4e45972de3dff16ea5fbb1034">&#9670;&#160;</a></span>angles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector3.html">Vector3</a> ConstructionCrane::angles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f6117ee0d1aa5adbdf5c0ee0e234386" name="a3f6117ee0d1aa5adbdf5c0ee0e234386"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f6117ee0d1aa5adbdf5c0ee0e234386">&#9670;&#160;</a></span>height</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ConstructionCrane::height</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96620cef8974cc414c7f190b18bd1489" name="a96620cef8974cc414c7f190b18bd1489"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96620cef8974cc414c7f190b18bd1489">&#9670;&#160;</a></span>modelName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ConstructionCrane::modelName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a804b65096e76fe6e60c9fdd1266fde88" name="a804b65096e76fe6e60c9fdd1266fde88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a804b65096e76fe6e60c9fdd1266fde88">&#9670;&#160;</a></span>position</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector3.html">Vector3</a> ConstructionCrane::position</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e1b91ed0a60dee55f4e9132da2543c0" name="a2e1b91ed0a60dee55f4e9132da2543c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e1b91ed0a60dee55f4e9132da2543c0">&#9670;&#160;</a></span>serial</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ConstructionCrane::serial</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acef72df9d2dd486a0bf5254e82d0819c" name="acef72df9d2dd486a0bf5254e82d0819c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acef72df9d2dd486a0bf5254e82d0819c">&#9670;&#160;</a></span>weight</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ConstructionCrane::weight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>items/<a class="el" href="constructioncrane_8h_source.html">constructioncrane.h</a></li>
+<li>items/<a class="el" href="constructioncrane_8cpp.html">constructioncrane.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classConstructionCrane.html">ConstructionCrane</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

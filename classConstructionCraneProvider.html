@@ -1,0 +1,663 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CS-206-OOP-Application: Класс ConstructionCraneProvider</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">CS-206-OOP-Application
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classConstructionCraneProvider.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="classConstructionCraneProvider-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс ConstructionCraneProvider</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="constructioncraneprovider_8h_source.html">constructioncraneprovider.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:ConstructionCraneProvider:</div>
+<div class="dyncontent">
+<div class="center"><img src="classConstructionCraneProvider__inherit__graph.png" border="0" usemap="#aConstructionCraneProvider_inherit__map" alt="Inheritance graph"/></div>
+<map name="aConstructionCraneProvider_inherit__map" id="aConstructionCraneProvider_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,79,201,104"/>
+<area shape="rect" href="classAbstractProvider.html" title=" " alt="" coords="38,5,169,31"/>
+<area shape="poly" title=" " alt="" coords="106,44,106,79,101,79,101,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса ConstructionCraneProvider:</div>
+<div class="dyncontent">
+<div class="center"><img src="classConstructionCraneProvider__coll__graph.png" border="0" usemap="#aConstructionCraneProvider_coll__map" alt="Collaboration graph"/></div>
+<map name="aConstructionCraneProvider_coll__map" id="aConstructionCraneProvider_coll__map">
+<area shape="rect" title=" " alt="" coords="5,79,201,104"/>
+<area shape="rect" href="classAbstractProvider.html" title=" " alt="" coords="38,5,169,31"/>
+<area shape="poly" title=" " alt="" coords="106,44,106,79,101,79,101,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:abc5d3a90c50959d371ef80468c0af419" id="r_abc5d3a90c50959d371ef80468c0af419"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCraneProvider.html#abc5d3a90c50959d371ef80468c0af419">ConstructionCraneProvider</a> ()</td></tr>
+<tr class="separator:abc5d3a90c50959d371ef80468c0af419"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7139c6b2ee79b48cb08d2295c4a124c4" id="r_a7139c6b2ee79b48cb08d2295c4a124c4"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCraneProvider.html#a7139c6b2ee79b48cb08d2295c4a124c4">getName</a> () const override</td></tr>
+<tr class="separator:a7139c6b2ee79b48cb08d2295c4a124c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a130d10a7273e595b62629d9865f39b09" id="r_a130d10a7273e595b62629d9865f39b09"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCraneProvider.html#a130d10a7273e595b62629d9865f39b09">getItemName</a> () const override</td></tr>
+<tr class="separator:a130d10a7273e595b62629d9865f39b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d53630bbfc41791e5b032cfd24e9dfd" id="r_a8d53630bbfc41791e5b032cfd24e9dfd"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCraneProvider.html#a8d53630bbfc41791e5b032cfd24e9dfd">getTrItemName</a> () const override</td></tr>
+<tr class="separator:a8d53630bbfc41791e5b032cfd24e9dfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f7b411c5cdf9fc9eae70a275d052915" id="r_a2f7b411c5cdf9fc9eae70a275d052915"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCraneProvider.html#a2f7b411c5cdf9fc9eae70a275d052915">getSupportedSchemeArgs</a> () const override</td></tr>
+<tr class="separator:a2f7b411c5cdf9fc9eae70a275d052915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73eda18a51665682bdf5ca2f552d2b02" id="r_a73eda18a51665682bdf5ca2f552d2b02"><td class="memItemLeft" align="right" valign="top">const std::map&lt; std::string, size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCraneProvider.html#a73eda18a51665682bdf5ca2f552d2b02">getScheme</a> () const override</td></tr>
+<tr class="separator:a73eda18a51665682bdf5ca2f552d2b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade5841db04af40cfcc5c9e336e051e8f" id="r_ade5841db04af40cfcc5c9e336e051e8f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCraneProvider.html#ade5841db04af40cfcc5c9e336e051e8f">get</a> (std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; const &amp;target, std::string const &amp;fieldName) const override</td></tr>
+<tr class="separator:ade5841db04af40cfcc5c9e336e051e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6b3aa9b8839c0129886c1d25c3f8c0a" id="r_ae6b3aa9b8839c0129886c1d25c3f8c0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCraneProvider.html#ae6b3aa9b8839c0129886c1d25c3f8c0a">set</a> (std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; &amp;target, std::string const &amp;fieldName, std::string const &amp;value) override</td></tr>
+<tr class="separator:ae6b3aa9b8839c0129886c1d25c3f8c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51da49810da7a181c3fa52c15dd4d3fc" id="r_a51da49810da7a181c3fa52c15dd4d3fc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCraneProvider.html#a51da49810da7a181c3fa52c15dd4d3fc">compare</a> (std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; const &amp;a, std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; const &amp;b, std::string const &amp;fieldName) const override</td></tr>
+<tr class="separator:a51da49810da7a181c3fa52c15dd4d3fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a184786b4386bf0c2ac64a4df074c31ca" id="r_a184786b4386bf0c2ac64a4df074c31ca"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCraneProvider.html#a184786b4386bf0c2ac64a4df074c31ca">create</a> () override</td></tr>
+<tr class="separator:a184786b4386bf0c2ac64a4df074c31ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a920ea602b8fc59a17e84dc8d680016ed" id="r_a920ea602b8fc59a17e84dc8d680016ed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCraneProvider.html#a920ea602b8fc59a17e84dc8d680016ed">isChartSupported</a> () const override</td></tr>
+<tr class="separator:a920ea602b8fc59a17e84dc8d680016ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa20063a8d88aef5c91a93cceef1514ef" id="r_aa20063a8d88aef5c91a93cceef1514ef"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCraneProvider.html#aa20063a8d88aef5c91a93cceef1514ef">getChartHeaderField</a> () const override</td></tr>
+<tr class="separator:aa20063a8d88aef5c91a93cceef1514ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee8fee081fe6c5d06f1e44999b61162b" id="r_aee8fee081fe6c5d06f1e44999b61162b"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCraneProvider.html#aee8fee081fe6c5d06f1e44999b61162b">getChartFields</a> () const override</td></tr>
+<tr class="separator:aee8fee081fe6c5d06f1e44999b61162b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classAbstractProvider"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAbstractProvider')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="classAbstractProvider.html">AbstractProvider</a></td></tr>
+<tr class="memitem:a1a133967722fa07cc648d067ad68ddaa inherit pub_methods_classAbstractProvider" id="r_a1a133967722fa07cc648d067ad68ddaa"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractProvider.html#a1a133967722fa07cc648d067ad68ddaa">~AbstractProvider</a> ()=default</td></tr>
+<tr class="separator:a1a133967722fa07cc648d067ad68ddaa inherit pub_methods_classAbstractProvider"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff530bfd99f0f18473430defcba6d0d2 inherit pub_methods_classAbstractProvider" id="r_aff530bfd99f0f18473430defcba6d0d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractProvider.html#aff530bfd99f0f18473430defcba6d0d2">AbstractProvider</a> ()=default</td></tr>
+<tr class="separator:aff530bfd99f0f18473430defcba6d0d2 inherit pub_methods_classAbstractProvider"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:af064a972497d090e4be7b4ed764eef47" id="r_af064a972497d090e4be7b4ed764eef47"><td class="memItemLeft" align="right" valign="top">const std::map&lt; std::string, std::function&lt; std::string(<a class="el" href="classConstructionCrane.html">ConstructionCrane</a> const &amp;)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCraneProvider.html#af064a972497d090e4be7b4ed764eef47">getters</a></td></tr>
+<tr class="separator:af064a972497d090e4be7b4ed764eef47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a92185cbfa5674e71dab07aae9dcaf9" id="r_a6a92185cbfa5674e71dab07aae9dcaf9"><td class="memItemLeft" align="right" valign="top">const std::map&lt; std::string, std::function&lt; void(<a class="el" href="classConstructionCrane.html">ConstructionCrane</a> &amp;, const std::string &amp;)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstructionCraneProvider.html#a6a92185cbfa5674e71dab07aae9dcaf9">setters</a></td></tr>
+<tr class="separator:a6a92185cbfa5674e71dab07aae9dcaf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="abc5d3a90c50959d371ef80468c0af419" name="abc5d3a90c50959d371ef80468c0af419"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc5d3a90c50959d371ef80468c0af419">&#9670;&#160;</a></span>ConstructionCraneProvider()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ConstructionCraneProvider::ConstructionCraneProvider </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a51da49810da7a181c3fa52c15dd4d3fc" name="a51da49810da7a181c3fa52c15dd4d3fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51da49810da7a181c3fa52c15dd4d3fc">&#9670;&#160;</a></span>compare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ConstructionCraneProvider::compare </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>fieldName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractProvider.html#a4e093e02661701f1ef0d6219531292fd">AbstractProvider</a>.</p>
+
+</div>
+</div>
+<a id="a184786b4386bf0c2ac64a4df074c31ca" name="a184786b4386bf0c2ac64a4df074c31ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a184786b4386bf0c2ac64a4df074c31ca">&#9670;&#160;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; ConstructionCraneProvider::create </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractProvider.html#ac356a9436e620e32279feba8943f2184">AbstractProvider</a>.</p>
+
+</div>
+</div>
+<a id="ade5841db04af40cfcc5c9e336e051e8f" name="ade5841db04af40cfcc5c9e336e051e8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade5841db04af40cfcc5c9e336e051e8f">&#9670;&#160;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ConstructionCraneProvider::get </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>fieldName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractProvider.html#a05126531fdb0dcb2207485133dd5cdf4">AbstractProvider</a>.</p>
+
+</div>
+</div>
+<a id="aee8fee081fe6c5d06f1e44999b61162b" name="aee8fee081fe6c5d06f1e44999b61162b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee8fee081fe6c5d06f1e44999b61162b">&#9670;&#160;</a></span>getChartFields()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const vector&lt; string &gt; ConstructionCraneProvider::getChartFields </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractProvider.html#af099bd3bef509fe6ec1c66b859028917">AbstractProvider</a>.</p>
+
+</div>
+</div>
+<a id="aa20063a8d88aef5c91a93cceef1514ef" name="aa20063a8d88aef5c91a93cceef1514ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa20063a8d88aef5c91a93cceef1514ef">&#9670;&#160;</a></span>getChartHeaderField()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string ConstructionCraneProvider::getChartHeaderField </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractProvider.html#aa73ca2a8d135520ae4379f30bf7a744e">AbstractProvider</a>.</p>
+
+</div>
+</div>
+<a id="a130d10a7273e595b62629d9865f39b09" name="a130d10a7273e595b62629d9865f39b09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a130d10a7273e595b62629d9865f39b09">&#9670;&#160;</a></span>getItemName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string ConstructionCraneProvider::getItemName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractProvider.html#af5e9da76afaf65269b37bcc5c19a65e1">AbstractProvider</a>.</p>
+
+</div>
+</div>
+<a id="a7139c6b2ee79b48cb08d2295c4a124c4" name="a7139c6b2ee79b48cb08d2295c4a124c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7139c6b2ee79b48cb08d2295c4a124c4">&#9670;&#160;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string ConstructionCraneProvider::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractProvider.html#a54b0a254912dc0d205cfe11588f5ac54">AbstractProvider</a>.</p>
+
+</div>
+</div>
+<a id="a73eda18a51665682bdf5ca2f552d2b02" name="a73eda18a51665682bdf5ca2f552d2b02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73eda18a51665682bdf5ca2f552d2b02">&#9670;&#160;</a></span>getScheme()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt; std::string, size_t &gt; ConstructionCraneProvider::getScheme </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractProvider.html#a17f640e22a8d7853bb796bb6fc146a66">AbstractProvider</a>.</p>
+
+</div>
+</div>
+<a id="a2f7b411c5cdf9fc9eae70a275d052915" name="a2f7b411c5cdf9fc9eae70a275d052915"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f7b411c5cdf9fc9eae70a275d052915">&#9670;&#160;</a></span>getSupportedSchemeArgs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; std::string &gt; ConstructionCraneProvider::getSupportedSchemeArgs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractProvider.html#a453ec315d1f20a442fe191452a091d2d">AbstractProvider</a>.</p>
+
+</div>
+</div>
+<a id="a8d53630bbfc41791e5b032cfd24e9dfd" name="a8d53630bbfc41791e5b032cfd24e9dfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d53630bbfc41791e5b032cfd24e9dfd">&#9670;&#160;</a></span>getTrItemName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string ConstructionCraneProvider::getTrItemName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractProvider.html#a00d94fb2625b46fadaf2edaaaaecd4bd">AbstractProvider</a>.</p>
+
+</div>
+</div>
+<a id="a920ea602b8fc59a17e84dc8d680016ed" name="a920ea602b8fc59a17e84dc8d680016ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a920ea602b8fc59a17e84dc8d680016ed">&#9670;&#160;</a></span>isChartSupported()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ConstructionCraneProvider::isChartSupported </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractProvider.html#afd4b6f7acfe8aff872a7ed0996c30bcc">AbstractProvider</a>.</p>
+
+</div>
+</div>
+<a id="ae6b3aa9b8839c0129886c1d25c3f8c0a" name="ae6b3aa9b8839c0129886c1d25c3f8c0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6b3aa9b8839c0129886c1d25c3f8c0a">&#9670;&#160;</a></span>set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConstructionCraneProvider::set </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>fieldName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractProvider.html#ae4bf9afebdc0ef2ea491486d5d4022de">AbstractProvider</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="af064a972497d090e4be7b4ed764eef47" name="af064a972497d090e4be7b4ed764eef47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af064a972497d090e4be7b4ed764eef47">&#9670;&#160;</a></span>getters</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt;std::string, std::function&lt;std::string(<a class="el" href="classConstructionCrane.html">ConstructionCrane</a> const &amp;)&gt; &gt; ConstructionCraneProvider::getters</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    {<span class="stringliteral">&quot;weight&quot;</span>,</div>
+<div class="line">     [](<a class="code hl_class" href="classConstructionCrane.html">ConstructionCrane</a> <span class="keyword">const</span> &amp;target) -&gt; std::string {</div>
+<div class="line">       <span class="keywordflow">return</span> std::to_string(target.getWeight());</div>
+<div class="line">     }},</div>
+<div class="line">    {<span class="stringliteral">&quot;height&quot;</span>,</div>
+<div class="line">     [](<a class="code hl_class" href="classConstructionCrane.html">ConstructionCrane</a> <span class="keyword">const</span> &amp;target) -&gt; std::string {</div>
+<div class="line">       <span class="keywordflow">return</span> std::to_string(target.getHeight());</div>
+<div class="line">     }},</div>
+<div class="line">    {<span class="stringliteral">&quot;angles&quot;</span>,</div>
+<div class="line">     [](<a class="code hl_class" href="classConstructionCrane.html">ConstructionCrane</a> <span class="keyword">const</span> &amp;target) -&gt; std::string {</div>
+<div class="line">       <span class="keywordflow">return</span> <a class="code hl_function" href="classVector3.html#a42c1faa706991376a67ca4f7f008577e">Vector3::vectorToString</a>(target.getAngles());</div>
+<div class="line">     }},</div>
+<div class="line">    {<span class="stringliteral">&quot;position&quot;</span>,</div>
+<div class="line">     [](<a class="code hl_class" href="classConstructionCrane.html">ConstructionCrane</a> <span class="keyword">const</span> &amp;target) -&gt; std::string {</div>
+<div class="line">       <span class="keywordflow">return</span> <a class="code hl_function" href="classVector3.html#a42c1faa706991376a67ca4f7f008577e">Vector3::vectorToString</a>(target.getPosition());</div>
+<div class="line">     }},</div>
+<div class="line">    {<span class="stringliteral">&quot;serial&quot;</span>, [](<a class="code hl_class" href="classConstructionCrane.html">ConstructionCrane</a> <span class="keyword">const</span> &amp;target) -&gt; std::string { <span class="keywordflow">return</span> target.getSerial(); }},</div>
+<div class="line">    {<span class="stringliteral">&quot;modelName&quot;</span>,</div>
+<div class="line">     [](<a class="code hl_class" href="classConstructionCrane.html">ConstructionCrane</a> <span class="keyword">const</span> &amp;target) -&gt; std::string { <span class="keywordflow">return</span> target.getModelName(); }},</div>
+<div class="line">  }</div>
+<div class="ttc" id="aclassConstructionCrane_html"><div class="ttname"><a href="classConstructionCrane.html">ConstructionCrane</a></div><div class="ttdef"><b>Definition</b> constructioncrane.h:8</div></div>
+<div class="ttc" id="aclassVector3_html_a42c1faa706991376a67ca4f7f008577e"><div class="ttname"><a href="classVector3.html#a42c1faa706991376a67ca4f7f008577e">Vector3::vectorToString</a></div><div class="ttdeci">static std::string vectorToString(Vector3 const &amp;vec)</div><div class="ttdef"><b>Definition</b> vector3.cpp:60</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6a92185cbfa5674e71dab07aae9dcaf9" name="a6a92185cbfa5674e71dab07aae9dcaf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a92185cbfa5674e71dab07aae9dcaf9">&#9670;&#160;</a></span>setters</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt;std::string, std::function&lt;void(<a class="el" href="classConstructionCrane.html">ConstructionCrane</a> &amp;, const std::string &amp;)&gt; &gt; ConstructionCraneProvider::setters</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {</div>
+<div class="line">      {<span class="stringliteral">&quot;weight&quot;</span>,</div>
+<div class="line">       [](<a class="code hl_class" href="classConstructionCrane.html">ConstructionCrane</a> &amp;target, <span class="keyword">const</span> std::string &amp;val) { target.<a class="code hl_function" href="classConstructionCrane.html#a5e94c22171b3844af7590ec5e706a911">setWeight</a>(stof(val)); }},</div>
+<div class="line">      {<span class="stringliteral">&quot;height&quot;</span>,</div>
+<div class="line">       [](<a class="code hl_class" href="classConstructionCrane.html">ConstructionCrane</a> &amp;target, <span class="keyword">const</span> std::string &amp;val) { target.<a class="code hl_function" href="classConstructionCrane.html#a8c0783f817ec62be0373d295f4a876a6">setHeight</a>(stof(val)); }},</div>
+<div class="line">      {<span class="stringliteral">&quot;angles&quot;</span>,</div>
+<div class="line">       [](<a class="code hl_class" href="classConstructionCrane.html">ConstructionCrane</a> &amp;target, <span class="keyword">const</span> std::string &amp;val) {</div>
+<div class="line">         target.<a class="code hl_function" href="classConstructionCrane.html#a32ee5bf1eadebd2ac548a818d1d16547">setAngles</a>(<a class="code hl_function" href="classVector3.html#afac260711cdf0637d1e64ceb2638264b">Vector3::vectorFromString</a>(val));</div>
+<div class="line">       }},</div>
+<div class="line">      {<span class="stringliteral">&quot;position&quot;</span>,</div>
+<div class="line">       [](<a class="code hl_class" href="classConstructionCrane.html">ConstructionCrane</a> &amp;target, <span class="keyword">const</span> std::string &amp;val) {</div>
+<div class="line">         target.<a class="code hl_function" href="classConstructionCrane.html#ad6a3442a697c3705dba6f6af4057dcb0">setPosition</a>(<a class="code hl_function" href="classVector3.html#afac260711cdf0637d1e64ceb2638264b">Vector3::vectorFromString</a>(val));</div>
+<div class="line">       }},</div>
+<div class="line">      {<span class="stringliteral">&quot;serial&quot;</span>, [](<a class="code hl_class" href="classConstructionCrane.html">ConstructionCrane</a> &amp;target, <span class="keyword">const</span> std::string &amp;val) { target.<a class="code hl_function" href="classConstructionCrane.html#a562103b32bf096ef06ae179a761ac2bb">setSerial</a>(val); }},</div>
+<div class="line">      {<span class="stringliteral">&quot;modelName&quot;</span>,</div>
+<div class="line">       [](<a class="code hl_class" href="classConstructionCrane.html">ConstructionCrane</a> &amp;target, <span class="keyword">const</span> std::string &amp;val) { target.<a class="code hl_function" href="classConstructionCrane.html#afb3f3fcb8de6efd9fee19b45c468e5f4">setModelName</a>(val); }},</div>
+<div class="line">    }</div>
+<div class="ttc" id="aclassConstructionCrane_html_a32ee5bf1eadebd2ac548a818d1d16547"><div class="ttname"><a href="classConstructionCrane.html#a32ee5bf1eadebd2ac548a818d1d16547">ConstructionCrane::setAngles</a></div><div class="ttdeci">void setAngles(Vector3 value)</div><div class="ttdef"><b>Definition</b> constructioncrane.cpp:119</div></div>
+<div class="ttc" id="aclassConstructionCrane_html_a562103b32bf096ef06ae179a761ac2bb"><div class="ttname"><a href="classConstructionCrane.html#a562103b32bf096ef06ae179a761ac2bb">ConstructionCrane::setSerial</a></div><div class="ttdeci">void setSerial(std::string value)</div><div class="ttdef"><b>Definition</b> constructioncrane.cpp:129</div></div>
+<div class="ttc" id="aclassConstructionCrane_html_a5e94c22171b3844af7590ec5e706a911"><div class="ttname"><a href="classConstructionCrane.html#a5e94c22171b3844af7590ec5e706a911">ConstructionCrane::setWeight</a></div><div class="ttdeci">void setWeight(float value)</div><div class="ttdef"><b>Definition</b> constructioncrane.cpp:107</div></div>
+<div class="ttc" id="aclassConstructionCrane_html_a8c0783f817ec62be0373d295f4a876a6"><div class="ttname"><a href="classConstructionCrane.html#a8c0783f817ec62be0373d295f4a876a6">ConstructionCrane::setHeight</a></div><div class="ttdeci">void setHeight(float value)</div><div class="ttdef"><b>Definition</b> constructioncrane.cpp:103</div></div>
+<div class="ttc" id="aclassConstructionCrane_html_ad6a3442a697c3705dba6f6af4057dcb0"><div class="ttname"><a href="classConstructionCrane.html#ad6a3442a697c3705dba6f6af4057dcb0">ConstructionCrane::setPosition</a></div><div class="ttdeci">void setPosition(Vector3 value)</div><div class="ttdef"><b>Definition</b> constructioncrane.cpp:111</div></div>
+<div class="ttc" id="aclassConstructionCrane_html_afb3f3fcb8de6efd9fee19b45c468e5f4"><div class="ttname"><a href="classConstructionCrane.html#afb3f3fcb8de6efd9fee19b45c468e5f4">ConstructionCrane::setModelName</a></div><div class="ttdeci">void setModelName(std::string value)</div><div class="ttdef"><b>Definition</b> constructioncrane.cpp:126</div></div>
+<div class="ttc" id="aclassVector3_html_afac260711cdf0637d1e64ceb2638264b"><div class="ttname"><a href="classVector3.html#afac260711cdf0637d1e64ceb2638264b">Vector3::vectorFromString</a></div><div class="ttdeci">static Vector3 vectorFromString(std::string const &amp;stringified)</div><div class="ttdef"><b>Definition</b> vector3.cpp:21</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>providers/<a class="el" href="constructioncraneprovider_8h_source.html">constructioncraneprovider.h</a></li>
+<li>providers/<a class="el" href="constructioncraneprovider_8cpp.html">constructioncraneprovider.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classConstructionCraneProvider.html">ConstructionCraneProvider</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CS-206-OOP-Application: Файл controllers/simpchart.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">CS-206-OOP-Application
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('simpchart_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a>  </div>
+  <div class="headertitle"><div class="title">Файл simpchart.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="abstractitem_8h_source.html">items/abstractitem.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="abstractprovider_8h_source.html">providers/abstractprovider.h</a>&quot;</code><br />
+<code>#include &lt;QChart&gt;</code><br />
+<code>#include &lt;QWidget&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для simpchart.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="simpchart_8h__incl.png" border="0" usemap="#acontrollers_2simpchart_8h" alt=""/></div>
+<map name="acontrollers_2simpchart_8h" id="acontrollers_2simpchart_8h">
+<area shape="rect" title=" " alt="" coords="325,5,497,31"/>
+<area shape="rect" href="abstractitem_8h.html" title=" " alt="" coords="5,152,164,177"/>
+<area shape="poly" title=" " alt="" coords="333,33,259,51,221,65,185,81,141,111,106,143,103,139,138,107,182,76,219,60,258,46,332,28"/>
+<area shape="rect" title=" " alt="" coords="163,225,241,251"/>
+<area shape="poly" title=" " alt="" coords="326,30,273,48,250,62,229,80,211,111,202,147,200,182,201,211,196,212,195,181,197,146,206,109,225,77,246,58,271,43,324,25"/>
+<area shape="rect" href="abstractprovider_8h.html" title=" " alt="" coords="239,79,445,104"/>
+<area shape="poly" title=" " alt="" coords="402,33,365,71,361,67,398,29"/>
+<area shape="rect" title=" " alt="" coords="451,152,513,177"/>
+<area shape="poly" title=" " alt="" coords="424,29,442,51,459,77,472,108,480,138,474,139,466,110,454,80,438,54,420,32"/>
+<area shape="rect" title=" " alt="" coords="519,79,586,104"/>
+<area shape="poly" title=" " alt="" coords="435,28,519,70,516,75,433,33"/>
+<area shape="rect" title=" " alt="" coords="611,79,689,104"/>
+<area shape="poly" title=" " alt="" coords="450,28,599,72,597,77,449,33"/>
+<area shape="rect" title=" " alt="" coords="47,225,122,251"/>
+<area shape="poly" title=" " alt="" coords="87,178,87,212,82,212,82,178"/>
+<area shape="poly" title=" " alt="" coords="105,175,172,216,170,220,102,180"/>
+<area shape="poly" title=" " alt="" coords="301,107,140,151,139,146,300,101"/>
+<area shape="poly" title=" " alt="" coords="331,106,283,154,224,217,220,213,279,150,328,102"/>
+<area shape="rect" title=" " alt="" coords="293,152,343,177"/>
+<area shape="poly" title=" " alt="" coords="341,105,329,140,324,138,336,103"/>
+<area shape="rect" title=" " alt="" coords="367,152,426,177"/>
+<area shape="poly" title=" " alt="" coords="353,103,382,140,377,143,349,106"/>
+<area shape="poly" title=" " alt="" coords="366,102,448,143,446,148,363,106"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="simpchart_8h__dep__incl.png" border="0" usemap="#acontrollers_2simpchart_8hdep" alt=""/></div>
+<map name="acontrollers_2simpchart_8hdep" id="acontrollers_2simpchart_8hdep">
+<area shape="rect" title=" " alt="" coords="118,5,290,31"/>
+<area shape="rect" href="simpchart_8cpp.html" title=" " alt="" coords="5,79,192,104"/>
+<area shape="poly" title=" " alt="" coords="177,41,117,81,114,76,174,36"/>
+<area shape="rect" href="tableview_8cpp.html" title=" " alt="" coords="217,79,402,104"/>
+<area shape="poly" title=" " alt="" coords="234,36,294,76,291,81,231,41"/>
+</map>
+</div>
+</div>
+<p><a href="simpchart_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSimpChart.html">SimpChart</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceUi" id="r_namespaceUi"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceUi.html">Ui</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_87b6ed4386158a4d6cd0ecd5fb5bd5c2.html">controllers</a></li><li class="navelem"><a class="el" href="simpchart_8h.html">simpchart.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

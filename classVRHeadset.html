@@ -1,0 +1,1115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CS-206-OOP-Application: Класс VRHeadset</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">CS-206-OOP-Application
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classVRHeadset.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="classVRHeadset-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс VRHeadset</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="vrheadset_8h_source.html">vrheadset.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:VRHeadset:</div>
+<div class="dyncontent">
+<div class="center"><img src="classVRHeadset__inherit__graph.png" border="0" usemap="#aVRHeadset_inherit__map" alt="Inheritance graph"/></div>
+<map name="aVRHeadset_inherit__map" id="aVRHeadset_inherit__map">
+<area shape="rect" title=" " alt="" coords="11,79,106,104"/>
+<area shape="rect" href="classAbstractItem.html" title=" " alt="" coords="5,5,112,31"/>
+<area shape="poly" title=" " alt="" coords="61,44,61,79,56,79,56,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса VRHeadset:</div>
+<div class="dyncontent">
+<div class="center"><img src="classVRHeadset__coll__graph.png" border="0" usemap="#aVRHeadset_coll__map" alt="Collaboration graph"/></div>
+<map name="aVRHeadset_coll__map" id="aVRHeadset_coll__map">
+<area shape="rect" title=" " alt="" coords="67,108,162,133"/>
+<area shape="rect" href="classAbstractItem.html" title=" " alt="" coords="5,5,112,31"/>
+<area shape="poly" title=" " alt="" coords="74,42,111,107,106,109,70,44"/>
+<area shape="rect" href="classVector3.html" title=" " alt="" coords="137,5,207,31"/>
+<area shape="poly" title=" " alt="" coords="161,44,123,109,119,107,156,42"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aff4386bf05727a8aebbc6b59b5ed4e4b" id="r_aff4386bf05727a8aebbc6b59b5ed4e4b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#aff4386bf05727a8aebbc6b59b5ed4e4b">VRHeadset</a> (int <a class="el" href="classVRHeadset.html#aca1b5c4012be3686335693abdf195306">width</a>, int <a class="el" href="classVRHeadset.html#ad1fc57b765dc8295bd64dcdfcb4bf896">height</a>, float <a class="el" href="classVRHeadset.html#aea76f52a4a70a156455e56ea0ded19e0">refreshRate</a>, <a class="el" href="classVector3.html">Vector3</a> <a class="el" href="classVRHeadset.html#aeb95c5ac95b64691de09016d76c98839">angles</a>, <a class="el" href="classVector3.html">Vector3</a> <a class="el" href="classVRHeadset.html#ae9ae381f6bd0ac4a7814dd623b20a6f5">position</a>, std::string <a class="el" href="classVRHeadset.html#affce5dfe05df664456ec311c8e03bc10">modelName</a>)</td></tr>
+<tr class="separator:aff4386bf05727a8aebbc6b59b5ed4e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa6b2202cf07214f756b18cc396ea47d" id="r_afa6b2202cf07214f756b18cc396ea47d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#afa6b2202cf07214f756b18cc396ea47d">VRHeadset</a> (int <a class="el" href="classVRHeadset.html#aca1b5c4012be3686335693abdf195306">width</a>, int <a class="el" href="classVRHeadset.html#ad1fc57b765dc8295bd64dcdfcb4bf896">height</a>, float <a class="el" href="classVRHeadset.html#aea76f52a4a70a156455e56ea0ded19e0">refreshRate</a>, float angle_x, float angle_y, float angle_z, float x, float y, float z, std::string <a class="el" href="classVRHeadset.html#affce5dfe05df664456ec311c8e03bc10">modelName</a>)</td></tr>
+<tr class="separator:afa6b2202cf07214f756b18cc396ea47d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb5339cf0c88260024180a9172d0fdd0" id="r_acb5339cf0c88260024180a9172d0fdd0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#acb5339cf0c88260024180a9172d0fdd0">VRHeadset</a> ()</td></tr>
+<tr class="separator:acb5339cf0c88260024180a9172d0fdd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14ff99ad9a891ae44c5b50e2e8709e7f" id="r_a14ff99ad9a891ae44c5b50e2e8709e7f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#a14ff99ad9a891ae44c5b50e2e8709e7f">~VRHeadset</a> ()=default</td></tr>
+<tr class="separator:a14ff99ad9a891ae44c5b50e2e8709e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc975d501ae28ab9752de78bb589d0f4" id="r_abc975d501ae28ab9752de78bb589d0f4"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#abc975d501ae28ab9752de78bb589d0f4">clone</a> () const override</td></tr>
+<tr class="separator:abc975d501ae28ab9752de78bb589d0f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa36bcc831f36a8ed060ad524ec806c0e" id="r_aa36bcc831f36a8ed060ad524ec806c0e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#aa36bcc831f36a8ed060ad524ec806c0e">getWidth</a> () const</td></tr>
+<tr class="separator:aa36bcc831f36a8ed060ad524ec806c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ab56e86d04013c7cfc32c6a3559dd3f" id="r_a2ab56e86d04013c7cfc32c6a3559dd3f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#a2ab56e86d04013c7cfc32c6a3559dd3f">getHeight</a> () const</td></tr>
+<tr class="separator:a2ab56e86d04013c7cfc32c6a3559dd3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ecc81bf3c90605f81e261e3152ba514" id="r_a0ecc81bf3c90605f81e261e3152ba514"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#a0ecc81bf3c90605f81e261e3152ba514">getRefreshRate</a> () const</td></tr>
+<tr class="separator:a0ecc81bf3c90605f81e261e3152ba514"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e3837fc87a56fdbf9215728b458ca12" id="r_a7e3837fc87a56fdbf9215728b458ca12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#a7e3837fc87a56fdbf9215728b458ca12">getAngles</a> () const</td></tr>
+<tr class="separator:a7e3837fc87a56fdbf9215728b458ca12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2945c1c63c1874186097bec93dc26fc4" id="r_a2945c1c63c1874186097bec93dc26fc4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#a2945c1c63c1874186097bec93dc26fc4">getPosition</a> () const</td></tr>
+<tr class="separator:a2945c1c63c1874186097bec93dc26fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78561dfe61248c650d04a6b70d9e075e" id="r_a78561dfe61248c650d04a6b70d9e075e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#a78561dfe61248c650d04a6b70d9e075e">getModelName</a> () const</td></tr>
+<tr class="separator:a78561dfe61248c650d04a6b70d9e075e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96ce808a531ddbc5511464f5ab2dc892" id="r_a96ce808a531ddbc5511464f5ab2dc892"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#a96ce808a531ddbc5511464f5ab2dc892">isConnected</a> () const</td></tr>
+<tr class="separator:a96ce808a531ddbc5511464f5ab2dc892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad8a791ca0422addd9480a8cd19f6f51" id="r_aad8a791ca0422addd9480a8cd19f6f51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="vrheadset_8h.html#ad9f4cdaa8bd50e58900e85467335c200">HeadsetType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#aad8a791ca0422addd9480a8cd19f6f51">getType</a> () const</td></tr>
+<tr class="separator:aad8a791ca0422addd9480a8cd19f6f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a984a15e5deec99046b99d0d78edff519" id="r_a984a15e5deec99046b99d0d78edff519"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#a984a15e5deec99046b99d0d78edff519">setRefreshRate</a> (float refR)</td></tr>
+<tr class="separator:a984a15e5deec99046b99d0d78edff519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4ba52fcede5c554be266129216b62b8" id="r_af4ba52fcede5c554be266129216b62b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#af4ba52fcede5c554be266129216b62b8">connect</a> ()</td></tr>
+<tr class="separator:af4ba52fcede5c554be266129216b62b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a100bb3091a915ff197a241f00eb2e9b7" id="r_a100bb3091a915ff197a241f00eb2e9b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#a100bb3091a915ff197a241f00eb2e9b7">disconnect</a> ()</td></tr>
+<tr class="separator:a100bb3091a915ff197a241f00eb2e9b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0115384643935ea1ee4b82877c4c2844" id="r_a0115384643935ea1ee4b82877c4c2844"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#a0115384643935ea1ee4b82877c4c2844">setAngles</a> (float x, float y, float z)</td></tr>
+<tr class="separator:a0115384643935ea1ee4b82877c4c2844"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b3339baecee5771203a33580890bd7c" id="r_a0b3339baecee5771203a33580890bd7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#a0b3339baecee5771203a33580890bd7c">setAngles</a> (<a class="el" href="classVector3.html">Vector3</a> <a class="el" href="classVRHeadset.html#aeb95c5ac95b64691de09016d76c98839">angles</a>)</td></tr>
+<tr class="separator:a0b3339baecee5771203a33580890bd7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b9e8102d15bb2e0ef7cd306fd5bab58" id="r_a5b9e8102d15bb2e0ef7cd306fd5bab58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#a5b9e8102d15bb2e0ef7cd306fd5bab58">setPosition</a> (float x, float y, float z)</td></tr>
+<tr class="separator:a5b9e8102d15bb2e0ef7cd306fd5bab58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a739b3436c0d1151d3d99c7de6fa63bac" id="r_a739b3436c0d1151d3d99c7de6fa63bac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#a739b3436c0d1151d3d99c7de6fa63bac">setPosition</a> (<a class="el" href="classVector3.html">Vector3</a> <a class="el" href="classVRHeadset.html#ae9ae381f6bd0ac4a7814dd623b20a6f5">position</a>)</td></tr>
+<tr class="separator:a739b3436c0d1151d3d99c7de6fa63bac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22e75156139bcf8e681175410deb8c16" id="r_a22e75156139bcf8e681175410deb8c16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#a22e75156139bcf8e681175410deb8c16">setWidth</a> (int value)</td></tr>
+<tr class="separator:a22e75156139bcf8e681175410deb8c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8b2552c2020c0bad8b09e4d7511a971" id="r_af8b2552c2020c0bad8b09e4d7511a971"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#af8b2552c2020c0bad8b09e4d7511a971">setHeight</a> (int value)</td></tr>
+<tr class="separator:af8b2552c2020c0bad8b09e4d7511a971"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abadf17650637454fbc762129d95d0267" id="r_abadf17650637454fbc762129d95d0267"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#abadf17650637454fbc762129d95d0267">setModelName</a> (std::string name)</td></tr>
+<tr class="separator:abadf17650637454fbc762129d95d0267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fcb8067660baedb5b2c0513b1a7762d" id="r_a1fcb8067660baedb5b2c0513b1a7762d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#a1fcb8067660baedb5b2c0513b1a7762d">print</a> () const override</td></tr>
+<tr class="separator:a1fcb8067660baedb5b2c0513b1a7762d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cc199dcaeab1db69a101bdc8fb9f97b" id="r_a7cc199dcaeab1db69a101bdc8fb9f97b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#a7cc199dcaeab1db69a101bdc8fb9f97b">print</a> (std::ostream &amp;os) const override</td></tr>
+<tr class="separator:a7cc199dcaeab1db69a101bdc8fb9f97b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60aeecd93f1354a01425ab276e5ca4f8" id="r_a60aeecd93f1354a01425ab276e5ca4f8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#a60aeecd93f1354a01425ab276e5ca4f8">operator==</a> (std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; const &amp;item) const override</td></tr>
+<tr class="separator:a60aeecd93f1354a01425ab276e5ca4f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc131088fa03e2de728e22979deb7f03" id="r_abc131088fa03e2de728e22979deb7f03"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#abc131088fa03e2de728e22979deb7f03">operator!=</a> (std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; const &amp;item) const override</td></tr>
+<tr class="separator:abc131088fa03e2de728e22979deb7f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6764acbb8579ccc7a47a8d15e68e47eb" id="r_a6764acbb8579ccc7a47a8d15e68e47eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#a6764acbb8579ccc7a47a8d15e68e47eb">operator==</a> (<a class="el" href="classVRHeadset.html">VRHeadset</a> const &amp;vr) const</td></tr>
+<tr class="separator:a6764acbb8579ccc7a47a8d15e68e47eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f2cc440e9d4a9bad435a8a362d49ad5" id="r_a3f2cc440e9d4a9bad435a8a362d49ad5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#a3f2cc440e9d4a9bad435a8a362d49ad5">operator!=</a> (<a class="el" href="classVRHeadset.html">VRHeadset</a> const &amp;vr) const</td></tr>
+<tr class="separator:a3f2cc440e9d4a9bad435a8a362d49ad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classAbstractItem"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAbstractItem')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="classAbstractItem.html">AbstractItem</a></td></tr>
+<tr class="memitem:abe272a6003eea88261f5bba8e08478e8 inherit pub_methods_classAbstractItem" id="r_abe272a6003eea88261f5bba8e08478e8"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractItem.html#abe272a6003eea88261f5bba8e08478e8">~AbstractItem</a> ()=default</td></tr>
+<tr class="separator:abe272a6003eea88261f5bba8e08478e8 inherit pub_methods_classAbstractItem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:aca1b5c4012be3686335693abdf195306" id="r_aca1b5c4012be3686335693abdf195306"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#aca1b5c4012be3686335693abdf195306">width</a></td></tr>
+<tr class="separator:aca1b5c4012be3686335693abdf195306"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1fc57b765dc8295bd64dcdfcb4bf896" id="r_ad1fc57b765dc8295bd64dcdfcb4bf896"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#ad1fc57b765dc8295bd64dcdfcb4bf896">height</a></td></tr>
+<tr class="separator:ad1fc57b765dc8295bd64dcdfcb4bf896"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea76f52a4a70a156455e56ea0ded19e0" id="r_aea76f52a4a70a156455e56ea0ded19e0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#aea76f52a4a70a156455e56ea0ded19e0">refreshRate</a></td></tr>
+<tr class="separator:aea76f52a4a70a156455e56ea0ded19e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb6b4869e05b11359f76e829582dfbe3" id="r_abb6b4869e05b11359f76e829582dfbe3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#abb6b4869e05b11359f76e829582dfbe3">connected</a></td></tr>
+<tr class="separator:abb6b4869e05b11359f76e829582dfbe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb95c5ac95b64691de09016d76c98839" id="r_aeb95c5ac95b64691de09016d76c98839"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#aeb95c5ac95b64691de09016d76c98839">angles</a></td></tr>
+<tr class="separator:aeb95c5ac95b64691de09016d76c98839"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9ae381f6bd0ac4a7814dd623b20a6f5" id="r_ae9ae381f6bd0ac4a7814dd623b20a6f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#ae9ae381f6bd0ac4a7814dd623b20a6f5">position</a></td></tr>
+<tr class="separator:ae9ae381f6bd0ac4a7814dd623b20a6f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affce5dfe05df664456ec311c8e03bc10" id="r_affce5dfe05df664456ec311c8e03bc10"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#affce5dfe05df664456ec311c8e03bc10">modelName</a></td></tr>
+<tr class="separator:affce5dfe05df664456ec311c8e03bc10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:acbf3f6935942d4ee6ee328226f93ae74" id="r_acbf3f6935942d4ee6ee328226f93ae74"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadset.html#acbf3f6935942d4ee6ee328226f93ae74">operator&lt;&lt;</a> (std::ostream &amp;os, std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; const &amp;item)</td></tr>
+<tr class="separator:acbf3f6935942d4ee6ee328226f93ae74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="aff4386bf05727a8aebbc6b59b5ed4e4b" name="aff4386bf05727a8aebbc6b59b5ed4e4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff4386bf05727a8aebbc6b59b5ed4e4b">&#9670;&#160;</a></span>VRHeadset() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VRHeadset::VRHeadset </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>refreshRate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>angles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>modelName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa6b2202cf07214f756b18cc396ea47d" name="afa6b2202cf07214f756b18cc396ea47d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa6b2202cf07214f756b18cc396ea47d">&#9670;&#160;</a></span>VRHeadset() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VRHeadset::VRHeadset </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>refreshRate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle_z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>modelName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb5339cf0c88260024180a9172d0fdd0" name="acb5339cf0c88260024180a9172d0fdd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb5339cf0c88260024180a9172d0fdd0">&#9670;&#160;</a></span>VRHeadset() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VRHeadset::VRHeadset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a14ff99ad9a891ae44c5b50e2e8709e7f" name="a14ff99ad9a891ae44c5b50e2e8709e7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14ff99ad9a891ae44c5b50e2e8709e7f">&#9670;&#160;</a></span>~VRHeadset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VRHeadset::~VRHeadset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="abc975d501ae28ab9752de78bb589d0f4" name="abc975d501ae28ab9752de78bb589d0f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc975d501ae28ab9752de78bb589d0f4">&#9670;&#160;</a></span>clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; VRHeadset::clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractItem.html#aae44528b7bce164087390e7bc4812074">AbstractItem</a>.</p>
+
+</div>
+</div>
+<a id="af4ba52fcede5c554be266129216b62b8" name="af4ba52fcede5c554be266129216b62b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4ba52fcede5c554be266129216b62b8">&#9670;&#160;</a></span>connect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VRHeadset::connect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a100bb3091a915ff197a241f00eb2e9b7" name="a100bb3091a915ff197a241f00eb2e9b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a100bb3091a915ff197a241f00eb2e9b7">&#9670;&#160;</a></span>disconnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VRHeadset::disconnect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e3837fc87a56fdbf9215728b458ca12" name="a7e3837fc87a56fdbf9215728b458ca12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e3837fc87a56fdbf9215728b458ca12">&#9670;&#160;</a></span>getAngles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector3.html">Vector3</a> VRHeadset::getAngles </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2ab56e86d04013c7cfc32c6a3559dd3f" name="a2ab56e86d04013c7cfc32c6a3559dd3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ab56e86d04013c7cfc32c6a3559dd3f">&#9670;&#160;</a></span>getHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int VRHeadset::getHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a78561dfe61248c650d04a6b70d9e075e" name="a78561dfe61248c650d04a6b70d9e075e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78561dfe61248c650d04a6b70d9e075e">&#9670;&#160;</a></span>getModelName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string VRHeadset::getModelName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2945c1c63c1874186097bec93dc26fc4" name="a2945c1c63c1874186097bec93dc26fc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2945c1c63c1874186097bec93dc26fc4">&#9670;&#160;</a></span>getPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector3.html">Vector3</a> VRHeadset::getPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ecc81bf3c90605f81e261e3152ba514" name="a0ecc81bf3c90605f81e261e3152ba514"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ecc81bf3c90605f81e261e3152ba514">&#9670;&#160;</a></span>getRefreshRate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float VRHeadset::getRefreshRate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad8a791ca0422addd9480a8cd19f6f51" name="aad8a791ca0422addd9480a8cd19f6f51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad8a791ca0422addd9480a8cd19f6f51">&#9670;&#160;</a></span>getType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="vrheadset_8h.html#ad9f4cdaa8bd50e58900e85467335c200">HeadsetType</a> VRHeadset::getType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa36bcc831f36a8ed060ad524ec806c0e" name="aa36bcc831f36a8ed060ad524ec806c0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa36bcc831f36a8ed060ad524ec806c0e">&#9670;&#160;</a></span>getWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int VRHeadset::getWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96ce808a531ddbc5511464f5ab2dc892" name="a96ce808a531ddbc5511464f5ab2dc892"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96ce808a531ddbc5511464f5ab2dc892">&#9670;&#160;</a></span>isConnected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool VRHeadset::isConnected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc131088fa03e2de728e22979deb7f03" name="abc131088fa03e2de728e22979deb7f03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc131088fa03e2de728e22979deb7f03">&#9670;&#160;</a></span>operator!=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool VRHeadset::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractItem.html#a15508998dd77e9e1cbb20f5307db3f37">AbstractItem</a>.</p>
+
+</div>
+</div>
+<a id="a3f2cc440e9d4a9bad435a8a362d49ad5" name="a3f2cc440e9d4a9bad435a8a362d49ad5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f2cc440e9d4a9bad435a8a362d49ad5">&#9670;&#160;</a></span>operator!=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool VRHeadset::operator!= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVRHeadset.html">VRHeadset</a> const &amp;&#160;</td>
+          <td class="paramname"><em>vr</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60aeecd93f1354a01425ab276e5ca4f8" name="a60aeecd93f1354a01425ab276e5ca4f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60aeecd93f1354a01425ab276e5ca4f8">&#9670;&#160;</a></span>operator==() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool VRHeadset::operator== </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractItem.html#a77b0d3ab5119c129c36c20f13177e812">AbstractItem</a>.</p>
+
+</div>
+</div>
+<a id="a6764acbb8579ccc7a47a8d15e68e47eb" name="a6764acbb8579ccc7a47a8d15e68e47eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6764acbb8579ccc7a47a8d15e68e47eb">&#9670;&#160;</a></span>operator==() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool VRHeadset::operator== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVRHeadset.html">VRHeadset</a> const &amp;&#160;</td>
+          <td class="paramname"><em>vr</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1fcb8067660baedb5b2c0513b1a7762d" name="a1fcb8067660baedb5b2c0513b1a7762d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fcb8067660baedb5b2c0513b1a7762d">&#9670;&#160;</a></span>print() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string VRHeadset::print </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractItem.html#aa788dd9269c533505ec441178070e7b4">AbstractItem</a>.</p>
+
+</div>
+</div>
+<a id="a7cc199dcaeab1db69a101bdc8fb9f97b" name="a7cc199dcaeab1db69a101bdc8fb9f97b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cc199dcaeab1db69a101bdc8fb9f97b">&#9670;&#160;</a></span>print() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VRHeadset::print </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractItem.html#af847bb1a5dc9f74084326655f731e9d7">AbstractItem</a>.</p>
+
+</div>
+</div>
+<a id="a0115384643935ea1ee4b82877c4c2844" name="a0115384643935ea1ee4b82877c4c2844"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0115384643935ea1ee4b82877c4c2844">&#9670;&#160;</a></span>setAngles() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VRHeadset::setAngles </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b3339baecee5771203a33580890bd7c" name="a0b3339baecee5771203a33580890bd7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b3339baecee5771203a33580890bd7c">&#9670;&#160;</a></span>setAngles() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VRHeadset::setAngles </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>angles</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af8b2552c2020c0bad8b09e4d7511a971" name="af8b2552c2020c0bad8b09e4d7511a971"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8b2552c2020c0bad8b09e4d7511a971">&#9670;&#160;</a></span>setHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VRHeadset::setHeight </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abadf17650637454fbc762129d95d0267" name="abadf17650637454fbc762129d95d0267"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abadf17650637454fbc762129d95d0267">&#9670;&#160;</a></span>setModelName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VRHeadset::setModelName </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5b9e8102d15bb2e0ef7cd306fd5bab58" name="a5b9e8102d15bb2e0ef7cd306fd5bab58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b9e8102d15bb2e0ef7cd306fd5bab58">&#9670;&#160;</a></span>setPosition() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VRHeadset::setPosition </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a739b3436c0d1151d3d99c7de6fa63bac" name="a739b3436c0d1151d3d99c7de6fa63bac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a739b3436c0d1151d3d99c7de6fa63bac">&#9670;&#160;</a></span>setPosition() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VRHeadset::setPosition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a984a15e5deec99046b99d0d78edff519" name="a984a15e5deec99046b99d0d78edff519"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a984a15e5deec99046b99d0d78edff519">&#9670;&#160;</a></span>setRefreshRate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VRHeadset::setRefreshRate </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>refR</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a22e75156139bcf8e681175410deb8c16" name="a22e75156139bcf8e681175410deb8c16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22e75156139bcf8e681175410deb8c16">&#9670;&#160;</a></span>setWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VRHeadset::setWidth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="acbf3f6935942d4ee6ee328226f93ae74" name="acbf3f6935942d4ee6ee328226f93ae74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbf3f6935942d4ee6ee328226f93ae74">&#9670;&#160;</a></span>operator&lt;&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>item</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="aeb95c5ac95b64691de09016d76c98839" name="aeb95c5ac95b64691de09016d76c98839"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb95c5ac95b64691de09016d76c98839">&#9670;&#160;</a></span>angles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector3.html">Vector3</a> VRHeadset::angles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb6b4869e05b11359f76e829582dfbe3" name="abb6b4869e05b11359f76e829582dfbe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb6b4869e05b11359f76e829582dfbe3">&#9670;&#160;</a></span>connected</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool VRHeadset::connected</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad1fc57b765dc8295bd64dcdfcb4bf896" name="ad1fc57b765dc8295bd64dcdfcb4bf896"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1fc57b765dc8295bd64dcdfcb4bf896">&#9670;&#160;</a></span>height</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int VRHeadset::height</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="affce5dfe05df664456ec311c8e03bc10" name="affce5dfe05df664456ec311c8e03bc10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affce5dfe05df664456ec311c8e03bc10">&#9670;&#160;</a></span>modelName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string VRHeadset::modelName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae9ae381f6bd0ac4a7814dd623b20a6f5" name="ae9ae381f6bd0ac4a7814dd623b20a6f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9ae381f6bd0ac4a7814dd623b20a6f5">&#9670;&#160;</a></span>position</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector3.html">Vector3</a> VRHeadset::position</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea76f52a4a70a156455e56ea0ded19e0" name="aea76f52a4a70a156455e56ea0ded19e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea76f52a4a70a156455e56ea0ded19e0">&#9670;&#160;</a></span>refreshRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float VRHeadset::refreshRate</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca1b5c4012be3686335693abdf195306" name="aca1b5c4012be3686335693abdf195306"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca1b5c4012be3686335693abdf195306">&#9670;&#160;</a></span>width</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int VRHeadset::width</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>items/<a class="el" href="vrheadset_8h_source.html">vrheadset.h</a></li>
+<li>items/<a class="el" href="vrheadset_8cpp.html">vrheadset.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classVRHeadset.html">VRHeadset</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>
