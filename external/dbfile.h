@@ -10,10 +10,11 @@
 
 class DbFile {
 public:
-  DbFile(std::string const &path)
-    : currentPath(path) {}
-  DbFile()
-    : currentPath("") {}
+  using ProviderType = std::shared_ptr<AbstractProvider>;
+  using ProviderStorage = std::map<std::string, ProviderType>;
+
+  DbFile(std::string const &path) : currentPath(path) {}
+  DbFile() : currentPath("") {}
 
   ~DbFile();
 
@@ -27,6 +28,9 @@ public:
   void read(const std::string &path);
 
   void write();
+  void write(std::string const &path);
+
+  void create(std::string const &path, std::string const &providerName);
 
   void clear();
 
@@ -40,8 +44,7 @@ public:
   bool isFileEmpty();
   bool isFileModified();
 
-  template<typename T>
-  void parse(T &items) {
+  template <typename T> void parse(T &items) {
     for (auto &i : dataBuffer) {
       std::stringstream sstream{i};
       std::string part;
@@ -61,7 +64,7 @@ public:
     }
   }
 
-  template<typename T>
+  template <typename T>
     requires requires(typename T::value_type v) {
       { v.get() } -> std::convertible_to<AbstractItem *>;
     }
@@ -77,7 +80,7 @@ public:
 
       std::string data;
       for (auto &i : values)
-        data += format("{};", i);
+        data += std::format("{};", i);
 
       dataBuffer.push_back(data);
     }
@@ -90,11 +93,23 @@ public:
   std::string const &getSchemeField(size_t key) const;
 
   // Allows to get access to current provider. Provider cannot be modified.
-  std::shared_ptr<AbstractProvider> const &getProvider() const;
+  ProviderType const &getProvider() const;
 
-  // Makes by name(X) association to appropriate provider for [provider name=X] operator
-  static void registerProvider(std::string const &name, std::shared_ptr<AbstractProvider> provider);
+  // allows to set current used provider for DbFile
+  void setProvider(std::string const &providerName);
+
+  // curent disposition of fields
   std::map<std::string, size_t> currentScheme;
+
+  void setScheme(std::map<std::string, size_t> const &scheme);
+
+  // Makes by name(X) association to appropriate provider for [provider name=X]
+  // operator
+  static void registerProvider(std::string const &name, ProviderType provider);
+
+  // Returns every registered provider (whole ProviderStorage)
+  static ProviderStorage const &getProviders();
+  static constexpr std::string SUPPORTED_VERSION = "2";
 
 private:
   std::string currentPath;
@@ -103,8 +118,7 @@ private:
   std::vector<std::string> dataBuffer;
   std::vector<std::string> infoBuffer;
 
-  static constexpr std::string SUPPORTED_VERSION = "2";
-  static std::map<std::string, std::shared_ptr<AbstractProvider>> providers;
+  static ProviderStorage providers;
 
   /* Provider/Scheme */
   std::shared_ptr<AbstractProvider> provider = nullptr;

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QAbstractTableModel>
+#include <QMimeData>
 #include <vector>
 
 #include "external/dbfile.h"
@@ -19,27 +20,42 @@ public:
   explicit CustomTableModel(QObject *parent = nullptr);
   ~CustomTableModel();
 
-  // Header:
-  QVariant headerData(int section,
-                      Qt::Orientation orientation,
+  // Header
+  QVariant headerData(int section, Qt::Orientation orientation,
                       int role = Qt::DisplayRole) const override;
 
-  bool setHeaderData(int section,
-                     Qt::Orientation orientation,
-                     const QVariant &value,
-                     int role = Qt::EditRole) override;
+  bool setHeaderData(int section, Qt::Orientation orientation,
+                     const QVariant &value, int role = Qt::EditRole) override;
 
-  // Basic functionality:
+  // Drag&Drop
+  QStringList mimeTypes() const override;
+
+  QMimeData *mimeData(QModelIndexList const &indexes) const override;
+
+  bool dropMimeData(QMimeData const *data, Qt::DropAction action, int row,
+                    int column, QModelIndex const &parent) override;
+
+  Qt::DropActions supportedDropActions() const override;
+
+  // Rows
   int rowCount(QModelIndex const &parent = QModelIndex()) const override;
+
   int columnCount(QModelIndex const &parent = QModelIndex()) const override;
 
-  QVariant data(QModelIndex const &index, int role = Qt::DisplayRole) const override;
+  QVariant data(QModelIndex const &index,
+                int role = Qt::DisplayRole) const override;
 
-  // Editable:
-  bool setData(QModelIndex const &index, QVariant const &value, int role = Qt::EditRole) override;
+  bool setData(QModelIndex const &index, QVariant const &value,
+               int role = Qt::EditRole) override;
 
   Qt::ItemFlags flags(QModelIndex const &index) const override;
 
+  bool insertRows(int row, int count, QModelIndex const &parent) override;
+  bool removeRows(int row, int count, const QModelIndex &parent) override;
+  bool insertRow(int row, QModelIndex const &parent);
+  bool removeRow(int row, QModelIndex const &parent);
+
+  // DbFile realted
   void reset();
   void clear();
 
@@ -51,8 +67,6 @@ public:
   void writeToFile(std::string const &fileName);
   void writeToFile();
 
-  void addEmptyRow();
-  void removeRow(size_t row);
   ItemType &getItem(size_t row);
   ContainerType &getItems();
   bool isEmpty();

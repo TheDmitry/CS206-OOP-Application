@@ -13,6 +13,12 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="windowIcon">
+   <iconset theme="QIcon::ThemeIcon::UserAvailable"/>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <property name="sizePolicy">
     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -88,14 +94,24 @@
      <x>0</x>
      <y>0</y>
      <width>1042</width>
-     <height>23</height>
+     <height>26</height>
     </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LayoutDirection::LeftToRight</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>true</bool>
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
      <string>File</string>
     </property>
     <addaction name="actionFileOpen"/>
+    <addaction name="actionFileNew"/>
     <addaction name="actionFileUpdate"/>
     <addaction name="actionFileWrite"/>
     <addaction name="actionFileClose"/>
@@ -206,6 +222,11 @@
    </property>
    <property name="text">
     <string>Print</string>
+   </property>
+  </action>
+  <action name="actionFileNew">
+   <property name="text">
+    <string>New</string>
    </property>
   </action>
  </widget>

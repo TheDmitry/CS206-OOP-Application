@@ -7,14 +7,18 @@
 using namespace std;
 
 DbError::DbError(string const &message, string const &fileName) noexcept
-  : runtime_error(message.c_str())
-  , throwMessage(message)
-  , fileName(fileName) {};
+    : runtime_error(message.c_str()), throwMessage(message),
+      fileName(fileName) {};
 
 char const *DbError::what() const noexcept {
-  static const string message = format("DbError {} {} -> {}",
-                                       QObject::tr("in").toStdString(),
-                                       fileName,
-                                       throwMessage);
+  static string message = "";
+
+  if (fileName != "") {
+    message = format("DbError {} {} -> {}", QObject::tr("in").toStdString(),
+                     fileName, throwMessage);
+  } else {
+    message = format("DbError -> {}", throwMessage);
+  }
+
   return message.c_str();
 }

@@ -1,4 +1,8 @@
 #include <QApplication>
+#include "external/dbfile.h"
+#include "providers/abstractprovider.h"
+#include "providers/vrheadsetprovider.h"
+#include "providers/constructioncraneprovider.h"
 #include "controllers/mainwindow.h"
 #include "providers/constructioncraneprovider.h"
 #include "providers/vrheadsetprovider.h"

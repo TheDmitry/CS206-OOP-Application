@@ -82,6 +82,8 @@ private slots:
    */
   void on_actionFilePrint_triggered();
 
+  void on_actionFileNew_triggered();
+
 private:
   /*!
    * \brief Dialog which is shown whenever user clicks Program -> Author

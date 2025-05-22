@@ -1,16 +1,15 @@
 #include "tableview.h"
 #include "controllers/simpchart.h"
+#include "qnamespace.h"
 #include "ui_tableview.h"
 
 using namespace std;
 
 TableView::TableView(QWidget *parent)
-  : QWidget(parent)
-  , model(new CustomTableModel(this))
-  , proxyModel(new CustomSortFilterProxyModel(this))
-  , shortcut{}
-  , highlightDelegate(new HighlightColumnDelegate(this))
-  , ui(new Ui::TableView) {
+    : QWidget(parent), model(new CustomTableModel(this)),
+      proxyModel(new CustomSortFilterProxyModel(this)), shortcut{},
+      highlightDelegate(new HighlightColumnDelegate(this)),
+      ui(new Ui::TableView) {
   ui->setupUi(this);
 
   proxyModel->setSourceModel(model);
@@ -20,6 +19,14 @@ TableView::TableView(QWidget *parent)
 
   ui->tableView->setItemDelegate(highlightDelegate);
   ui->tableView->setModel(proxyModel);
+
+  // Drag&Drop
+  ui->tableView->setDragEnabled(true);
+  ui->tableView->setAcceptDrops(true);
+  ui->tableView->setDropIndicatorShown(true);
+  ui->tableView->setSelectionMode(QAbstractItemView::ExtendedSelection);
+  ui->tableView->setDragDropMode(QAbstractItemView::DragDrop);
+  ui->tableView->setDefaultDropAction(Qt::CopyAction);
 
   ui->widget->setHidden(true);
 
@@ -39,8 +46,7 @@ TableView::~TableView() {
 
 void TableView::connectSignals() {
   connect(ui->tableView->selectionModel(),
-          &QItemSelectionModel::currentColumnChanged,
-          this,
+          &QItemSelectionModel::currentColumnChanged, this,
           [this](QModelIndex const &current) {
             int column = current.column();
 
@@ -52,43 +58,40 @@ void TableView::connectSignals() {
 
   connect(model, &CustomTableModel::fileLoaded, this, [this]() {
     ui->widget->setHidden(false);
-    ui->pushButton_graph->setEnabled(model->getDb().getProvider()->isChartSupported());
+    ui->pushButton_graph->setEnabled(
+        model->getDb().getProvider()->isChartSupported());
   });
 
-  connect(model, &CustomTableModel::dbClear, this, [this]() { ui->widget->setHidden(true); });
-  connect(model, &CustomTableModel::dbReset, this, [this]() { ui->widget->setHidden(true); });
+  connect(model, &CustomTableModel::dbClear, this,
+          [this]() { ui->widget->setHidden(true); });
+  connect(model, &CustomTableModel::dbReset, this,
+          [this]() { ui->widget->setHidden(true); });
 }
 void TableView::initShortcuts() {
   shortcut["clear"] = new QShortcut(QKeyCombination(Qt::ALT, Qt::Key_R), this);
   shortcut["clear"]->setContext(Qt::WindowShortcut);
-  connect(shortcut["clear"], &QShortcut::activated, this, &TableView::on_pushButton_clear_clicked);
+  connect(shortcut["clear"], &QShortcut::activated, this,
+          &TableView::on_pushButton_clear_clicked);
 
   shortcut["removeRow"] = new QShortcut(Qt::Key_Delete, this);
   shortcut["removeRow"]->setContext(Qt::WindowShortcut);
-  connect(shortcut["removeRow"],
-          &QShortcut::activated,
-          this,
+  connect(shortcut["removeRow"], &QShortcut::activated, this,
           &TableView::on_pushButton_remove_clicked);
 
   shortcut["undo"] = new QShortcut(QKeyCombination(Qt::CTRL, Qt::Key_Z), this);
   shortcut["undo"]->setContext(Qt::WindowShortcut);
-  connect(shortcut["undo"], &QShortcut::activated, this, &TableView::on_pushButton_undo_clicked);
+  connect(shortcut["undo"], &QShortcut::activated, this,
+          &TableView::on_pushButton_undo_clicked);
 }
 
-void TableView::on_pushButton_clear_clicked() {
-  model->reset();
-}
+void TableView::on_pushButton_clear_clicked() { model->reset(); }
 
-QTableView *TableView::getTable() {
-  return ui->tableView;
-}
+QTableView *TableView::getTable() { return ui->tableView; }
 
-CustomTableModel *TableView::getTableModel() {
-  return model;
-}
+CustomTableModel *TableView::getTableModel() { return model; }
 
 void TableView::on_pushButton_new_clicked() {
-  model->addEmptyRow();
+  model->insertRow(model->rowCount(), QModelIndex());
 }
 
 void TableView::on_pushButton_remove_clicked() {
@@ -102,12 +105,10 @@ void TableView::on_pushButton_remove_clicked() {
   QModelIndex proxyIndex = selected;
   QModelIndex sourceIndex = proxyModel->mapToSource(proxyIndex);
 
-  model->removeRow(sourceIndex.row());
+  model->removeRow(sourceIndex.row(), QModelIndex());
 }
 
-void TableView::on_pushButton_undo_clicked() {
-  model->rewind();
-}
+void TableView::on_pushButton_undo_clicked() { model->rewind(); }
 
 void TableView::on_searchLine_textChanged(const QString &arg1) {
   if (model->isEmpty())

@@ -1,15 +1,14 @@
 QT += \
 core \
+widgets \
+charts \
 gui \
 printsupport \
-charts \
-
-
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++20
 CONFIG += lrelease
 CONFIG += embed_translations
+CONFIG += debug
 
 FORM_DIR = views
 DIALOG_DIR = $$FORM_DIR/dialogs
@@ -23,6 +22,7 @@ ITEM_DIR = items
 MODEL_DIR = models
 CONTROLLER_DIR = controllers
 DELEGATE_DIR = delegates
+WIDGET_DIR = widgets
 EXTERNAL_DIR = external
 
 
@@ -84,6 +84,16 @@ DELEGATE_HEADERS = \
 $$DELEGATE_DIR/highlightdelegate.h \ # HighlightColumnDelegate
 
 
+#Widgets
+WIDGET_SOURCES = \
+$$WIDGET_DIR/createadapteredfiledialog.cpp \ # CreateAdapteredFileDialog
+$$WIDGET_DIR/guidedtable.cpp \ # GuidedTable
+
+WIDGET_HEADERS  = \
+$$WIDGET_DIR/createadapteredfiledialog.h \ # CreateAdapteredFileDialog
+$$WIDGET_DIR/guidedtable.h \ # GuidedTable
+
+
 # Externals (Might be some utility, throwables, special types, external libs)
 EXTERNAL_SOURCES += \
 $$EXTERNAL_DIR/vector3.cpp \ # Vector3
@@ -104,6 +114,7 @@ $$ITEM_SOURCES \
 $$MODEL_SOURCES \
 $$CONTROLLER_SOURCES \
 $$DELEGATE_SOURCES \
+$$WIDGET_SOURCES \
 $$EXTERNAL_SOURCES \
 $$PROVIDER_SOURCES \
 
@@ -112,6 +123,7 @@ $$ITEM_HEADERS \
 $$MODEL_HEADERS \
 $$CONTROLLER_HEADERS \
 $$DELEGATE_HEADERS \
+$$WIDGET_HEADERS \
 $$EXTERNAL_HEADERS \
 $$PROVIDER_HEADERS \
 

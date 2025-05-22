@@ -1,5 +1,6 @@
 #include <QActionGroup>
 #include <QFileDialog>
+#include <QKeyCombination>
 #include <QLibraryInfo>
 #include <QMessageBox>
 #include <QPrintDialog>
@@ -7,19 +8,16 @@
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <widgets/createadapteredfiledialog.h>
 
 using namespace std;
 
 MainWindow::MainWindow(QWidget *parent)
-  : QMainWindow(parent)
-  , authorDialog(new AuthorDialog(this))
-  , errorDialog(new ErrorDialog(this))
-  , workspace(new Workspace(this))
-  , workspaceInitialized{false}
-  , settings{"TermPaperMGSU", "OOP-Term-Paper-Application"}
-  , shortcut{}
-  , ui(new Ui::MainWindow)
-  , languageActionGroup(nullptr) {
+    : QMainWindow(parent), authorDialog(new AuthorDialog(this)),
+      errorDialog(new ErrorDialog(this)), workspace(new Workspace(this)),
+      workspaceInitialized{false},
+      settings{"TermPaperMGSU", "OOP-Term-Paper-Application"}, shortcut{},
+      ui(new Ui::MainWindow), languageActionGroup(nullptr) {
   ui->setupUi(this);
   workspace->setHidden(true);
 
@@ -36,9 +34,6 @@ MainWindow::~MainWindow() {
   for (auto &i : shortcut)
     delete i.second;
 
-  delete authorDialog;
-  delete errorDialog;
-  delete workspace;
   delete ui;
 }
 
@@ -84,7 +79,8 @@ void MainWindow::initTranslations() {
 void MainWindow::createLanguageMenu() {
   languageActionGroup = new QActionGroup(this);
 
-  connect(languageActionGroup, &QActionGroup::triggered, this, &MainWindow::switchLanguage);
+  connect(languageActionGroup, &QActionGroup::triggered, this,
+          &MainWindow::switchLanguage);
 
   QDir dir(qmPath);
 
@@ -97,15 +93,15 @@ void MainWindow::createLanguageMenu() {
 
     QTranslator translator;
     if (!translator.load(fileNames[i], qmPath)) {
-      QMessageBox::critical(this,
-                            tr("Application"),
+      QMessageBox::critical(this, tr("Application"),
                             tr("The translation file could not be loaded!"),
                             QMessageBox::Ok);
       return;
     }
 
     QString language = translator.translate("MainWindow", "English");
-    QAction *action = new QAction(tr("&%1 %2").arg(QString::number(i + 1), language), this);
+    QAction *action =
+        new QAction(tr("&%1 %2").arg(QString::number(i + 1), language), this);
 
     action->setCheckable(true);
     action->setData(locale);
@@ -122,8 +118,7 @@ void MainWindow::switchLanguage(QAction *action) {
   QString locale = action->data().toString();
 
   if (!appTranslator.load("project_" + locale, qmPath)) {
-    QMessageBox::critical(this,
-                          tr("Application"),
+    QMessageBox::critical(this, tr("Application"),
                           tr("The translation file could not be loaded!"),
                           QMessageBox::Ok);
     return;
@@ -133,17 +128,16 @@ void MainWindow::switchLanguage(QAction *action) {
 #if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
   if (!qtTranslator.load("qt_" + locale + ".qm",
                          QLibraryInfo::path(QLibraryInfo::TranslationsPath))) {
-    QMessageBox::critical(this,
-                          tr("Application"),
+    QMessageBox::critical(this, tr("Application"),
                           tr("The translation file could not be loaded!"),
                           QMessageBox::Ok);
     return;
   }
 #else
-  if (!qtTranslator.load("qt_" + locale + ".qm",
-                         QLibraryInfo::location(QLibraryInfo::TranslationsPath))) {
-    QMessageBox::critical(this,
-                          tr("Application"),
+  if (!qtTranslator.load(
+          "qt_" + locale + ".qm",
+          QLibraryInfo::location(QLibraryInfo::TranslationsPath))) {
+    QMessageBox::critical(this, tr("Application"),
                           tr("The translation file could not be loaded!"),
                           QMessageBox::Ok);
     return;
@@ -164,7 +158,8 @@ QString MainWindow::getLanguage() {
 
 void MainWindow::connectSignals() {
   connect(workspace, &Workspace::tabChanged, this, &MainWindow::checkFileTabs);
-  connect(workspace, &Workspace::tabCreated, this, &MainWindow::checkWorkspaceTabs);
+  connect(workspace, &Workspace::tabCreated, this,
+          &MainWindow::checkWorkspaceTabs);
   connect(workspace, &Workspace::tabClosed, this, [this]() {
     checkFileTabs();
     checkWorkspaceTabs();
@@ -172,29 +167,28 @@ void MainWindow::connectSignals() {
 }
 
 void MainWindow::initShortcuts() {
-  shortcut["newTab"] = new QShortcut(QKeyCombination(Qt::CTRL, Qt::Key_W), this);
+  shortcut["newTab"] =
+      new QShortcut(QKeyCombination(Qt::CTRL, Qt::Key_W), this);
   shortcut["newTab"]->setContext(Qt::ApplicationShortcut);
-  connect(shortcut["newTab"], &QShortcut::activated, this, &MainWindow::on_actionNew_Tab_triggered);
+  connect(shortcut["newTab"], &QShortcut::activated, this,
+          &MainWindow::on_actionNew_Tab_triggered);
 
-  shortcut["closeTab"] = new QShortcut(QKeyCombination(Qt::CTRL, Qt::Key_D), this);
+  shortcut["closeTab"] =
+      new QShortcut(QKeyCombination(Qt::CTRL, Qt::Key_D), this);
   shortcut["closeTab"]->setContext(Qt::ApplicationShortcut);
-  connect(shortcut["closeTab"],
-          &QShortcut::activated,
-          this,
+  connect(shortcut["closeTab"], &QShortcut::activated, this,
           &MainWindow::on_actionClose_Tab_triggered);
 
-  shortcut["openFile"] = new QShortcut(QKeyCombination(Qt::ALT, Qt::Key_F), this);
+  shortcut["openFile"] =
+      new QShortcut(QKeyCombination(Qt::ALT, Qt::Key_F), this);
   shortcut["openFile"]->setContext(Qt::ApplicationShortcut);
-  connect(shortcut["openFile"],
-          &QShortcut::activated,
-          this,
+  connect(shortcut["openFile"], &QShortcut::activated, this,
           &MainWindow::on_actionFileOpen_triggered);
 
-  shortcut["closeFile"] = new QShortcut(QKeyCombination(Qt::ALT, Qt::Key_D), this);
+  shortcut["closeFile"] =
+      new QShortcut(QKeyCombination(Qt::ALT, Qt::Key_D), this);
   shortcut["closeFile"]->setContext(Qt::ApplicationShortcut);
-  connect(shortcut["closeFile"],
-          &QShortcut::activated,
-          this,
+  connect(shortcut["closeFile"], &QShortcut::activated, this,
           &MainWindow::on_actionFileClose_triggered);
 }
 
@@ -218,16 +212,13 @@ void MainWindow::checkWorkspaceTabs() {
   ui->actionClose_All_Tabs->setEnabled(hasTabs);
 }
 
-void MainWindow::on_actionProgramAuthor_triggered() {
-  authorDialog->exec();
-}
+void MainWindow::on_actionProgramAuthor_triggered() { authorDialog->exec(); }
 
 void MainWindow::on_actionFileOpen_triggered() {
-  string fileName = QFileDialog::getOpenFileName(this,
-                                                 tr("Read file"),
-                                                 QDir::currentPath(),
-                                                 "Db Files (*.db)")
-                      .toStdString();
+  string fileName =
+      QFileDialog::getOpenFileName(this, tr("Read file"), QDir::currentPath(),
+                                   "Db Files (*.db)")
+          .toStdString();
   if (!fileName.empty()) {
     if (!workspaceInitialized || workspace->getTabWidget()->count() == 0)
       on_actionNew_Tab_triggered();
@@ -247,8 +238,8 @@ void MainWindow::on_actionFileOpen_triggered() {
 }
 
 void MainWindow::on_actionFileWrite_triggered() {
-  if (!workspaceInitialized || workspace->getTabWidget()->count() == 0
-      || workspace->getCurrentModel()->isEmpty())
+  if (!workspaceInitialized || workspace->getTabWidget()->count() == 0 ||
+      workspace->getCurrentModel()->isEmpty())
     return;
 
   try {
@@ -263,8 +254,8 @@ void MainWindow::on_actionFileWrite_triggered() {
 }
 
 void MainWindow::on_actionFileUpdate_triggered() {
-  if (!workspaceInitialized || workspace->getTabWidget()->count() == 0
-      || workspace->getCurrentModel()->isEmpty())
+  if (!workspaceInitialized || workspace->getTabWidget()->count() == 0 ||
+      workspace->getCurrentModel()->isEmpty())
     return;
 
   try {
@@ -278,8 +269,8 @@ void MainWindow::on_actionFileUpdate_triggered() {
   }
 }
 void MainWindow::on_actionFileClose_triggered() {
-  if (!workspaceInitialized || workspace->getTabWidget()->count() == 0
-      || workspace->getCurrentModel()->isEmpty())
+  if (!workspaceInitialized || workspace->getTabWidget()->count() == 0 ||
+      workspace->getCurrentModel()->isEmpty())
     return;
 
   try {
@@ -335,4 +326,16 @@ void MainWindow::on_actionFilePrint_triggered() {
   if (dialog->exec() == QDialog::Accepted) {
     workspace->getCurrentTableView()->render(&printer);
   }
+}
+
+void MainWindow::on_actionFileNew_triggered() {
+  vector<string> providerNames = {};
+
+  for (auto const &i : DbFile::getProviders()) {
+    providerNames.push_back(i.first);
+  }
+
+  CreateAdapteredFileDialog *dialog =
+      new CreateAdapteredFileDialog(nullptr, providerNames);
+  dialog->exec();
 }
