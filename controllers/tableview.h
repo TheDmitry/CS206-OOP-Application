@@ -25,6 +25,9 @@ public:
 
   CustomTableModel *getTableModel();
 
+signals:
+  void dropHappened(bool success);
+
 private slots:
   void on_pushButton_clear_clicked();
 

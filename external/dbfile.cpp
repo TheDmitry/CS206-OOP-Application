@@ -212,12 +212,6 @@ void DbFile::read(const string &path) {
 }
 
 void DbFile::write() {
-  if (!isFileExists())
-    throw DbError(
-        QObject::tr("Error #4. It's ambitious to write to non existent file")
-            .toStdString(),
-        currentPath);
-
   ofstream file{currentPath};
 
   if (!file)

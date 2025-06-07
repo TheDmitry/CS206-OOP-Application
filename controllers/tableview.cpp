@@ -62,6 +62,15 @@ void TableView::connectSignals() {
         model->getDb().getProvider()->isChartSupported());
   });
 
+  connect(model, &CustomTableModel::emptyAssigned, this, [this]() {
+    ui->widget->setHidden(false);
+    ui->pushButton_graph->setEnabled(
+        model->getDb().getProvider()->isChartSupported());
+  });
+
+  connect(model, &CustomTableModel::dropHappened, this,
+          &TableView::dropHappened);
+
   connect(model, &CustomTableModel::dbClear, this,
           [this]() { ui->widget->setHidden(true); });
   connect(model, &CustomTableModel::dbReset, this,

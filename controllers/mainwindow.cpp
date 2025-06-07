@@ -1,5 +1,6 @@
 #include <QActionGroup>
 #include <QFileDialog>
+#include <QInputDialog>
 #include <QKeyCombination>
 #include <QLibraryInfo>
 #include <QMessageBox>
@@ -8,7 +9,6 @@
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <widgets/createadapteredfiledialog.h>
 
 using namespace std;
 
@@ -164,6 +164,12 @@ void MainWindow::connectSignals() {
     checkFileTabs();
     checkWorkspaceTabs();
   });
+
+  connect(workspace, &Workspace::dropHappened, this, [this]() {
+    ui->actionFileNew->setEnabled(true);
+    ui->actionFilePrint->setEnabled(true);
+    ui->actionFileSave->setEnabled(true);
+  });
 }
 
 void MainWindow::initShortcuts() {
@@ -199,10 +205,12 @@ void MainWindow::checkFileTabs() {
     hasData = !workspace->getCurrentModel()->isEmpty();
 
   ui->actionFileOpen->setEnabled(!hasData);
+  ui->actionFileNew->setEnabled(!hasData);
   ui->actionFileClose->setEnabled(hasData);
   ui->actionFileUpdate->setEnabled(hasData);
   ui->actionFileWrite->setEnabled(hasData);
   ui->actionFilePrint->setEnabled(hasData);
+  ui->actionFileSave->setEnabled(hasData);
 }
 
 void MainWindow::checkWorkspaceTabs() {
@@ -329,13 +337,48 @@ void MainWindow::on_actionFilePrint_triggered() {
 }
 
 void MainWindow::on_actionFileNew_triggered() {
-  vector<string> providerNames = {};
+  if (!workspaceInitialized || workspace->getTabWidget()->count() == 0)
+    on_actionNew_Tab_triggered();
+
+  QStringList providerNames = {};
 
   for (auto const &i : DbFile::getProviders()) {
-    providerNames.push_back(i.first);
+    providerNames.push_back(QString::fromStdString(i.second->getName()));
   }
 
-  CreateAdapteredFileDialog *dialog =
-      new CreateAdapteredFileDialog(nullptr, providerNames);
-  dialog->exec();
+  bool ok;
+  QString selectedProvider = QInputDialog::getItem(
+      this, tr("Choose provider"), tr("Providers list") + ": ", providerNames,
+      0, false, &ok);
+
+  if (ok && !selectedProvider.isEmpty()) {
+    workspace->getCurrentModel()->makeEmpty(selectedProvider.toStdString());
+  }
+
+  ui->actionFileNew->setEnabled(true);
+  ui->actionFilePrint->setEnabled(true);
+  ui->actionFileSave->setEnabled(true);
+}
+
+void MainWindow::on_actionFileSave_triggered() {
+  if (!workspaceInitialized || workspace->getTabWidget()->count() == 0 ||
+      workspace->getCurrentModel()->isEmpty())
+    return;
+
+  string fileName =
+      QFileDialog::getSaveFileName(this, tr("Save file"), QDir::currentPath(),
+                                   "Db Files (*.db)")
+          .toStdString();
+
+  try {
+    workspace->getCurrentModel()->writeToFile(fileName);
+    workspace->getCurrentModel()->readFromFile(fileName);
+  } catch (ParseError const &e) {
+    errorDialog->callWithParseError(e);
+    return;
+  } catch (DbError const &e) {
+    errorDialog->callWithDbError(e);
+    return;
+  }
+  checkFileTabs();
 }

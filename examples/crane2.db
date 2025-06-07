@@ -1,0 +1,9 @@
+[db version=2]
+[provider name=ConstructionCraneProvider]
+[scheme angles=4 height=3 modelName=0 position=5 serial=1 weight=2]
+[info]
+[end]
+[data]
+23;23;23.000000;23.000000;v3(0,0,0);v3(0,0,0);
+[end]
+[close]

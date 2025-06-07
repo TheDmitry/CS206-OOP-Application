@@ -18,8 +18,7 @@ QT_END_NAMESPACE
 /*!
  * \brief The MainWindow class
  */
-class MainWindow : public QMainWindow
-{
+class MainWindow : public QMainWindow {
   Q_OBJECT
 
 public:
@@ -82,7 +81,12 @@ private slots:
    */
   void on_actionFilePrint_triggered();
 
+  /*!
+   * \brief File -> New
+   */
   void on_actionFileNew_triggered();
+
+  void on_actionFileSave_triggered();
 
 private:
   /*!
@@ -91,17 +95,19 @@ private:
   AuthorDialog *authorDialog;
 
   /*!
-   * \brief Dialog which is shown whenever any handled error happens in application
+   * \brief Dialog which is shown whenever any handled error happens in
+   * application
    */
   ErrorDialog *errorDialog;
 
   /*!
-   * \brief Workspace is main part of this program. It's used to manipulate, read and write any data
+   * \brief Workspace is main part of this program. It's used to manipulate,
+   * read and write any data
    */
   Workspace *workspace;
 
   /*!
-   * \brief Represents current state of workspace 
+   * \brief Represents current state of workspace
    */
   bool workspaceInitialized;
 
@@ -111,7 +117,8 @@ private:
   QSettings settings;
 
   /*!
-   * \brief shortcutName -> QShortcut association which is used in initShortcuts()
+   * \brief shortcutName -> QShortcut association which is used in
+   * initShortcuts()
    */
   std::map<std::string, QShortcut *> shortcut;
 
@@ -141,12 +148,12 @@ private:
   QString qmPath;
 
   /*!
-   * \brief Redraw available file options depending on state of workspace 
+   * \brief Redraw available file options depending on state of workspace
    */
   void checkFileTabs();
 
   /*!
-   * \brief Redraw available tab options depending on state of workspace 
+   * \brief Redraw available tab options depending on state of workspace
    */
   void checkWorkspaceTabs();
 
@@ -162,7 +169,8 @@ private:
   QString getLanguage();
 
   /*!
-   * \brief Initialize and connect signals related to checkFileTabs() and checkWorkspaceTabs()
+   * \brief Initialize and connect signals related to checkFileTabs() and
+   * checkWorkspaceTabs()
    */
   void connectSignals();
 
@@ -172,14 +180,15 @@ private:
   void initShortcuts();
 
   /*!
-   * \brief Setup translations depending on state of ./translation directory 
+   * \brief Setup translations depending on state of ./translation directory
    */
   void initTranslations();
 
   /*!
    * \brief Initialize workspace UI
-   * 
-   * Important: Should be called when you need to setup workspace for the first time
+   *
+   * Important: Should be called when you need to setup workspace for the first
+   * time
    */
   void initWorkspace();
 
@@ -190,7 +199,7 @@ private:
 
   /*!
    * \brief Write all setting-dependent stuff
-   * 
+   *
    * Important: Should be called in destructor of MainWindow
    */
   void writeSettings();

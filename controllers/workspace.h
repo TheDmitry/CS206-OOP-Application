@@ -34,6 +34,7 @@ signals:
   void tabChanged(int index);
   void tabCreated(int index);
   void tabClosed();
+  void dropHappened(bool success);
 
 private slots:
   void on_tabWidget_currentChanged(int index);

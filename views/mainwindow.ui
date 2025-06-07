@@ -116,6 +116,7 @@
     <addaction name="actionFileWrite"/>
     <addaction name="actionFileClose"/>
     <addaction name="actionFilePrint"/>
+    <addaction name="actionFileSave"/>
    </widget>
    <widget class="QMenu" name="menuProgram">
     <property name="title">
@@ -227,6 +228,14 @@
   <action name="actionFileNew">
    <property name="text">
     <string>New</string>
+   </property>
+  </action>
+  <action name="actionFileSave">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Save as</string>
    </property>
   </action>
  </widget>

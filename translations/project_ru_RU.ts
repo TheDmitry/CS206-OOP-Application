@@ -75,104 +75,129 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation></translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="76"/>
+        <location filename="../views/mainwindow.ui" line="82"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;h1 align=&quot;center&quot; style=&quot; margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:xx-large; font-weight:700;&quot;&gt;Welcome!&lt;/span&gt;&lt;/h1&gt;&lt;p align=&quot;center&quot;&gt;There&apos;s still one step to start using this program&lt;/p&gt;&lt;hr/&gt;&lt;p align=&quot;center&quot;&gt;Press &lt;span style=&quot; font-weight:700; text-decoration: underline; color:#beb99e;&quot;&gt;CTRL + W&lt;/span&gt; or go to &lt;span style=&quot; font-weight:700; text-decoration: underline; color:#beb99e;&quot;&gt;Workspace -&amp;gt; New Tab&lt;/span&gt; to create new workspace&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;h1 align=&quot;center&quot; style=&quot; margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:xx-large; font-weight:700;&quot;&gt;Привет!&lt;/span&gt;&lt;/h1&gt;&lt;p align=&quot;center&quot;&gt;Остался один шаг для начала работы с этой программой&lt;/p&gt;&lt;hr/&gt;&lt;p align=&quot;center&quot;&gt;Нажми &lt;span style=&quot; font-weight:700; text-decoration: underline; color:#beb99e;&quot;&gt;CTRL + W&lt;/span&gt; или &lt;span style=&quot; font-weight:700; text-decoration: underline; color:#beb99e;&quot;&gt;Рабочее пространство -&amp;gt; Новая вкладка&lt;/span&gt; для создания нового рабочего пространства&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="96"/>
+        <location filename="../views/mainwindow.ui" line="111"/>
         <source>File</source>
         <translation>Файл</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="106"/>
+        <location filename="../views/mainwindow.ui" line="123"/>
         <source>Program</source>
         <translation>Программа</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="113"/>
+        <location filename="../views/mainwindow.ui" line="130"/>
         <source>Workspace</source>
         <translation>Рабочее пространство</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="125"/>
+        <location filename="../views/mainwindow.ui" line="142"/>
         <source>Language</source>
         <translation>Язык</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="136"/>
-        <location filename="../views/mainwindow.ui" line="176"/>
+        <location filename="../views/mainwindow.ui" line="153"/>
+        <location filename="../views/mainwindow.ui" line="193"/>
         <source>Close</source>
         <translation>Закрыть</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="141"/>
+        <location filename="../views/mainwindow.ui" line="158"/>
         <source>Author</source>
         <translation>Автор</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="146"/>
+        <location filename="../views/mainwindow.ui" line="163"/>
         <source>Open</source>
         <translation>Открыть</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="154"/>
+        <location filename="../views/mainwindow.ui" line="171"/>
         <source>Update</source>
         <translation>Обновить</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="165"/>
+        <location filename="../views/mainwindow.ui" line="182"/>
         <source>Write</source>
         <translation>Записать</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="184"/>
+        <location filename="../views/mainwindow.ui" line="201"/>
         <source>New Tab</source>
         <translation>Новая вкладка</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="192"/>
+        <location filename="../views/mainwindow.ui" line="209"/>
         <source>Close Tab</source>
         <translation>Закрыть вкладку</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="200"/>
+        <location filename="../views/mainwindow.ui" line="217"/>
         <source>Close All</source>
         <translation>Закрыть все</translation>
     </message>
     <message>
-        <location filename="../views/mainwindow.ui" line="208"/>
+        <location filename="../views/mainwindow.ui" line="225"/>
         <source>Print</source>
         <translation>Печать</translation>
     </message>
     <message>
-        <location filename="../controllers/mainwindow.cpp" line="102"/>
-        <location filename="../controllers/mainwindow.cpp" line="127"/>
-        <location filename="../controllers/mainwindow.cpp" line="138"/>
-        <location filename="../controllers/mainwindow.cpp" line="147"/>
+        <location filename="../views/mainwindow.ui" line="230"/>
+        <source>New</source>
+        <translation>Новый файл</translation>
+    </message>
+    <message>
+        <location filename="../views/mainwindow.ui" line="238"/>
+        <source>Save as</source>
+        <translation>Сохранить как</translation>
+    </message>
+    <message>
+        <location filename="../controllers/mainwindow.cpp" line="96"/>
+        <location filename="../controllers/mainwindow.cpp" line="121"/>
+        <location filename="../controllers/mainwindow.cpp" line="131"/>
+        <location filename="../controllers/mainwindow.cpp" line="140"/>
         <source>Application</source>
         <translation>Приложение</translation>
     </message>
     <message>
-        <location filename="../controllers/mainwindow.cpp" line="108"/>
+        <location filename="../controllers/mainwindow.cpp" line="102"/>
         <source>English</source>
         <translation>Русский</translation>
     </message>
     <message>
-        <location filename="../controllers/mainwindow.cpp" line="109"/>
+        <location filename="../controllers/mainwindow.cpp" line="104"/>
         <source>&amp;%1 %2</source>
         <translation>&amp;%1 %2</translation>
     </message>
     <message>
-        <location filename="../controllers/mainwindow.cpp" line="103"/>
-        <location filename="../controllers/mainwindow.cpp" line="128"/>
-        <location filename="../controllers/mainwindow.cpp" line="139"/>
-        <location filename="../controllers/mainwindow.cpp" line="148"/>
+        <location filename="../controllers/mainwindow.cpp" line="351"/>
+        <source>Choose provider</source>
+        <translation>Выбери провайдера</translation>
+    </message>
+    <message>
+        <location filename="../controllers/mainwindow.cpp" line="351"/>
+        <source>Providers list</source>
+        <translation>Список провайдеров</translation>
+    </message>
+    <message>
+        <location filename="../controllers/mainwindow.cpp" line="369"/>
+        <source>Save file</source>
+        <translation>Сохранить файл</translation>
+    </message>
+    <message>
+        <location filename="../controllers/mainwindow.cpp" line="97"/>
+        <location filename="../controllers/mainwindow.cpp" line="122"/>
+        <location filename="../controllers/mainwindow.cpp" line="132"/>
+        <location filename="../controllers/mainwindow.cpp" line="141"/>
         <source>The translation file could not be loaded!</source>
         <translation>Невозможно загрузить файл перевода!</translation>
     </message>
     <message>
-        <location filename="../controllers/mainwindow.cpp" line="228"/>
+        <location filename="../controllers/mainwindow.cpp" line="227"/>
         <source>Read file</source>
         <translation>Прочитать файл</translation>
     </message>
@@ -180,7 +205,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../external/dberror.cpp" line="16"/>
+        <location filename="../external/dberror.cpp" line="17"/>
         <source>in</source>
         <translation>в</translation>
     </message>
@@ -190,73 +215,73 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>Ошибка №1. Слишком амбициозно читать не существующий файл</translation>
     </message>
     <message>
-        <location filename="../external/dbfile.cpp" line="29"/>
+        <location filename="../external/dbfile.cpp" line="30"/>
         <source>Error #2. File is empty</source>
         <translation>Ошибка №2. Файл пуст</translation>
     </message>
     <message>
-        <location filename="../external/dbfile.cpp" line="39"/>
-        <location filename="../external/dbfile.cpp" line="226"/>
+        <location filename="../external/dbfile.cpp" line="41"/>
+        <location filename="../external/dbfile.cpp" line="218"/>
         <source>Error #3. Unable to open file</source>
         <translation>Ошибка №3. Невозможно открыть файл</translation>
     </message>
     <message>
-        <location filename="../external/dbfile.cpp" line="65"/>
+        <location filename="../external/dbfile.cpp" line="69"/>
         <source>Error #2. Unsuppported db file</source>
         <translation>Ошибка №2. Неподдерживаемый формат файла</translation>
     </message>
     <message>
-        <location filename="../external/dbfile.cpp" line="73"/>
+        <location filename="../external/dbfile.cpp" line="74"/>
         <source>Error #3. [db version=X] should appear only once in very first line of the file</source>
         <translation>Ошибка №3. [db version=X] должен быть только1 и быть в начале файла</translation>
     </message>
     <message>
-        <location filename="../external/dbfile.cpp" line="88"/>
+        <location filename="../external/dbfile.cpp" line="87"/>
         <source>Error #4. Data-block already opened</source>
         <translation>Ошибка №4. Дата-блок уже открыт</translation>
     </message>
     <message>
-        <location filename="../external/dbfile.cpp" line="93"/>
+        <location filename="../external/dbfile.cpp" line="92"/>
         <source>Error #5. It&apos;s not allowed to open data-block in info-block</source>
         <translation>Ошибка №5. Нельзя иметь более одного дата-блока</translation>
     </message>
     <message>
-        <location filename="../external/dbfile.cpp" line="105"/>
+        <location filename="../external/dbfile.cpp" line="103"/>
         <source>Error #6. Info-block already opened. It&apos;s not allowed to have two or more info-blocks in one file</source>
         <translation>Ошибка №6. Инфо-блок уже открыт. Нельзя иметь более двух инфо-блоков в одной файле</translation>
     </message>
     <message>
-        <location filename="../external/dbfile.cpp" line="113"/>
+        <location filename="../external/dbfile.cpp" line="111"/>
         <source>Error #7. Info-block cannot be opened inside Data-block</source>
         <translation>Ошибка №7. Инфо-блок не может быть открыт внутри дата-блока</translation>
     </message>
     <message>
-        <location filename="../external/dbfile.cpp" line="124"/>
+        <location filename="../external/dbfile.cpp" line="122"/>
         <source>Error #8. No blocks were opened</source>
         <translation>Ошибка №8. Блоки не были открыты</translation>
     </message>
     <message>
-        <location filename="../external/dbfile.cpp" line="139"/>
+        <location filename="../external/dbfile.cpp" line="136"/>
         <source>Error #9. Invalid scheme: invalid amount of args</source>
         <translation>Ошибка №9. Неверная схема: неверное количество аргументов</translation>
     </message>
     <message>
-        <location filename="../external/dbfile.cpp" line="150"/>
+        <location filename="../external/dbfile.cpp" line="147"/>
         <source>Error #10. Invalid scheme: index out of bounds</source>
         <translation>Ошибка №10. Неверная схема: индекс вышел за пределы</translation>
     </message>
     <message>
-        <location filename="../external/dbfile.cpp" line="156"/>
+        <location filename="../external/dbfile.cpp" line="153"/>
         <source>Error #11. Invalid scheme: negative index</source>
         <translation>Ошибка №11. Неверная схема: отрицательный индекс</translation>
     </message>
     <message>
-        <location filename="../external/dbfile.cpp" line="165"/>
+        <location filename="../external/dbfile.cpp" line="163"/>
         <source>Error #12. Invalid scheme: Duplicated keys</source>
         <translation>Ошибка №12. Неверная схема: Повторяющиеся ключи</translation>
     </message>
     <message>
-        <location filename="../external/dbfile.cpp" line="172"/>
+        <location filename="../external/dbfile.cpp" line="171"/>
         <source>Error #13. Operator provider should have only 2 arguments</source>
         <translation>Ошибка №13. Оператор provider не может иметь больше 2 аргументов</translation>
     </message>
@@ -266,17 +291,16 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>Ошибка №14. Нет такого провайдера</translation>
     </message>
     <message>
-        <location filename="../external/dbfile.cpp" line="201"/>
+        <location filename="../external/dbfile.cpp" line="199"/>
         <source>Error #15. Unsupported operator</source>
         <translation>Ошибка №15. Неподдерживаемый оператор</translation>
     </message>
     <message>
-        <location filename="../external/dbfile.cpp" line="220"/>
         <source>Error #4. It&apos;s ambitious to write to non existent file</source>
-        <translation>Ошибка №4. Слишком амбициозно записывать в не существующий файл</translation>
+        <translation type="vanished">Ошибка №4. Слишком амбициозно записывать в не существующий файл</translation>
     </message>
     <message>
-        <location filename="../external/dbfile.cpp" line="338"/>
+        <location filename="../external/dbfile.cpp" line="346"/>
         <source>Error #1. Invalid operator provided</source>
         <translation>Ошибка №1. Неверный оператор</translation>
     </message>
@@ -347,7 +371,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>Форма</translation>
     </message>
     <message>
-        <location filename="../controllers/simpchart.h" line="20"/>
+        <location filename="../controllers/simpchart.h" line="21"/>
         <source>Simple Chart</source>
         <translation>Простой график</translation>
     </message>
@@ -385,7 +409,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>График</translation>
     </message>
     <message>
-        <location filename="../controllers/tableview.cpp" line="124"/>
+        <location filename="../controllers/tableview.cpp" line="140"/>
         <source>chart</source>
         <translation>график</translation>
     </message>
@@ -398,27 +422,27 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation></translation>
     </message>
     <message>
-        <location filename="../controllers/workspace.cpp" line="10"/>
+        <location filename="../controllers/workspace.cpp" line="9"/>
         <source>Workspace menu</source>
         <translation>Меню рабочего пространства</translation>
     </message>
     <message>
-        <location filename="../controllers/workspace.cpp" line="30"/>
+        <location filename="../controllers/workspace.cpp" line="29"/>
         <source>Open File</source>
         <translation>Открыть файл</translation>
     </message>
     <message>
-        <location filename="../controllers/workspace.cpp" line="35"/>
+        <location filename="../controllers/workspace.cpp" line="33"/>
         <source>Close Tab</source>
         <translation>Закрыть вкладку</translation>
     </message>
     <message>
-        <location filename="../controllers/workspace.cpp" line="38"/>
+        <location filename="../controllers/workspace.cpp" line="37"/>
         <source>Close File</source>
         <translation>Закрыть файл</translation>
     </message>
     <message>
-        <location filename="../controllers/workspace.cpp" line="43"/>
+        <location filename="../controllers/workspace.cpp" line="41"/>
         <source>Write to File</source>
         <translation>Записать в файл</translation>
     </message>

@@ -67,6 +67,8 @@ public:
   void writeToFile(std::string const &fileName);
   void writeToFile();
 
+  void makeEmpty(std::string const &providerName);
+
   ItemType &getItem(size_t row);
   ContainerType &getItems();
   bool isEmpty();
@@ -80,6 +82,8 @@ signals:
   void fileLoaded(std::string const &fileName);
   void dbClear();
   void dbReset();
+  void emptyAssigned(std::string const &providerName);
+  void dropHappened(bool result);
 
 private:
   ContainerType items;

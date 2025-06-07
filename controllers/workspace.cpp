@@ -6,9 +6,8 @@
 using namespace std;
 
 Workspace::Workspace(QWidget *parent)
-  : QWidget(parent)
-  , contextMenu(new QMenu(tr("Workspace menu"), this))
-  , ui(new Ui::Workspace) {
+    : QWidget(parent), contextMenu(new QMenu(tr("Workspace menu"), this)),
+      ui(new Ui::Workspace) {
   ui->setupUi(this);
 
   ui->tabWidget->setContextMenuPolicy(Qt::CustomContextMenu);
@@ -28,22 +27,20 @@ void Workspace::initContextActions() {
   auto *prt = static_cast<MainWindow *>(parent());
 
   contextActions["OpenFile"] = new QAction(tr("Open File"), this);
-  connect(contextActions["OpenFile"], &QAction::triggered, prt, [prt]() {
-    prt->on_actionFileOpen_triggered();
-  });
+  connect(contextActions["OpenFile"], &QAction::triggered, prt,
+          [prt]() { prt->on_actionFileOpen_triggered(); });
 
   contextActions["CloseTab"] = new QAction(tr("Close Tab"), this);
-  connect(contextActions["CloseTab"], &QAction::triggered, this, &Workspace::closeTab);
+  connect(contextActions["CloseTab"], &QAction::triggered, this,
+          &Workspace::closeTab);
 
   contextActions["CloseFile"] = new QAction(tr("Close File"), this);
-  connect(contextActions["CloseFile"], &QAction::triggered, prt, [prt]() {
-    prt->on_actionFileClose_triggered();
-  });
+  connect(contextActions["CloseFile"], &QAction::triggered, prt,
+          [prt]() { prt->on_actionFileClose_triggered(); });
 
   contextActions["WriteFile"] = new QAction(tr("Write to File"), this);
-  connect(contextActions["WriteFile"], &QAction::triggered, prt, [prt]() {
-    prt->on_actionFileWrite_triggered();
-  });
+  connect(contextActions["WriteFile"], &QAction::triggered, prt,
+          [prt]() { prt->on_actionFileWrite_triggered(); });
 
   contextActionsOrder = {"OpenFile", "WriteFile", "CloseFile", "CloseTab"};
 }
@@ -53,19 +50,20 @@ void Workspace::initContextMenu() {
     contextMenu->addAction(contextActions[i]);
   }
 
-  connect(ui->tabWidget, &QTabWidget::customContextMenuRequested, this, [this]() {
-    for (auto &i : contextActions)
-      i.second->setEnabled(true);
+  connect(ui->tabWidget, &QTabWidget::customContextMenuRequested, this,
+          [this]() {
+            for (auto &i : contextActions)
+              i.second->setEnabled(true);
 
-    if (!getCurrentModel()->isEmpty())
-      contextActions["OpenFile"]->setEnabled(false);
-    else {
-      contextActions["WriteFile"]->setEnabled(false);
-      contextActions["CloseFile"]->setEnabled(false);
-    }
+            if (!getCurrentModel()->isEmpty())
+              contextActions["OpenFile"]->setEnabled(false);
+            else {
+              contextActions["WriteFile"]->setEnabled(false);
+              contextActions["CloseFile"]->setEnabled(false);
+            }
 
-    contextMenu->popup(QCursor::pos());
-  });
+            contextMenu->popup(QCursor::pos());
+          });
 }
 
 void Workspace::retranslateContextActions() {
@@ -75,8 +73,11 @@ void Workspace::retranslateContextActions() {
 }
 
 void Workspace::addTab() {
-  ui->tabWidget->addTab(new TableView,
-                        QString::fromStdString("Tab " + to_string(ui->tabWidget->count())));
+  int widget = ui->tabWidget->addTab(
+      new TableView,
+      QString::fromStdString("Tab " + to_string(ui->tabWidget->count())));
+  connect(static_cast<TableView *>(ui->tabWidget->widget(widget)),
+          &TableView::dropHappened, this, &Workspace::dropHappened);
 
   emit tabCreated(ui->tabWidget->count() - 1);
 }
@@ -94,9 +95,7 @@ void Workspace::closeAllTabs() {
   emit tabClosed();
 }
 
-QTabWidget *Workspace::getTabWidget() {
-  return ui->tabWidget;
-};
+QTabWidget *Workspace::getTabWidget() { return ui->tabWidget; };
 
 TableView *Workspace::getCurrentWidget() {
   return static_cast<TableView *>(getTabWidget()->currentWidget());

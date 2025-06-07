@@ -1,8 +1,8 @@
 #include "models/customtablemodel.h"
 #include "qcoreapplication.h"
+#include "qcoreevent.h"
 #include "qnamespace.h"
 #include <QIODevice>
-#include <array>
 
 using namespace std;
 
@@ -210,6 +210,16 @@ void CustomTableModel::writeToFile() {
   db.write();
 }
 
+void CustomTableModel::makeEmpty(std::string const &providerName) {
+  if (rowCount() != 0)
+    removeRows(0, columnCount(), QModelIndex());
+
+  db.setProvider(providerName);
+  insertRow(0, QModelIndex());
+
+  emit emptyAssigned(providerName);
+}
+
 CustomTableModel::ItemType &CustomTableModel::getItem(size_t row) {
   if (items.size() < row)
     throw runtime_error("Out of bounds on getItem(size_t) -> " +
@@ -308,11 +318,15 @@ bool CustomTableModel::dropMimeData(const QMimeData *data,
   (void)column;
   (void)row;
 
-  if (!data->hasFormat("application/vnd.customtablemodel.data"))
+  if (!data->hasFormat("application/vnd.customtablemodel.data")) {
+    emit dropHappened(false);
     return false;
+  }
 
-  if (action == Qt::IgnoreAction)
-    return true;
+  if (action == Qt::IgnoreAction) {
+    emit dropHappened(false);
+    return false;
+  }
 
   QByteArray encodedData = data->data("application/vnd.customtablemodel.data");
   QDataStream stream(&encodedData, QIODevice::ReadOnly);
@@ -320,33 +334,43 @@ bool CustomTableModel::dropMimeData(const QMimeData *data,
   // pid check
   qint64 applicationPid;
   stream >> applicationPid;
-  if (applicationPid == QCoreApplication::applicationPid())
+  if (applicationPid == QCoreApplication::applicationPid()) {
+    emit dropHappened(false);
     return false;
+  }
 
   // Supported DbFile version check
   QString SUPPORTED_VERSION;
   stream >> SUPPORTED_VERSION;
-  if (DbFile::SUPPORTED_VERSION != SUPPORTED_VERSION)
+  if (DbFile::SUPPORTED_VERSION != SUPPORTED_VERSION) {
+    emit dropHappened(false);
     return false;
+  }
 
   // Provider name check&set
   QString providerName;
   stream >> providerName;
-  if (!db.getProviders().contains(providerName.toStdString()))
+  if (!db.getProviders().contains(providerName.toStdString())) {
+    emit dropHappened(false);
     return false;
+  }
   db.setProvider(providerName.toStdString());
 
   // num of rows check&set
   int numRows = 0;
   stream >> numRows;
-  if (numRows <= 0)
+  if (numRows <= 0) {
+    emit dropHappened(false);
     return false;
+  }
 
   // num of scheme fields check&set
   int numSchemeFields = 0;
   stream >> numSchemeFields;
-  if (numSchemeFields <= 0)
+  if (numSchemeFields <= 0) {
+    emit dropHappened(false);
     return false;
+  }
 
   map<string, size_t> scheme;
   vector<string> order;
@@ -376,6 +400,7 @@ bool CustomTableModel::dropMimeData(const QMimeData *data,
     items.push_back(item);
   }
   endResetModel();
+  emit dropHappened(false);
   return true;
 }
 

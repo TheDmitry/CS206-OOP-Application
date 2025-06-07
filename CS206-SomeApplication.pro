@@ -86,11 +86,9 @@ $$DELEGATE_DIR/highlightdelegate.h \ # HighlightColumnDelegate
 
 #Widgets
 WIDGET_SOURCES = \
-$$WIDGET_DIR/createadapteredfiledialog.cpp \ # CreateAdapteredFileDialog
 $$WIDGET_DIR/guidedtable.cpp \ # GuidedTable
 
 WIDGET_HEADERS  = \
-$$WIDGET_DIR/createadapteredfiledialog.h \ # CreateAdapteredFileDialog
 $$WIDGET_DIR/guidedtable.h \ # GuidedTable
 
 
