@@ -3,4 +3,8 @@ CS206-SomeApplication.pro.user
 *.qm
 /docs
 /latex
+/build
+compile_commands.json
+.cache*
+.ccls*
 
