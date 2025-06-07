@@ -139,6 +139,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 TRANSLATIONS += translations/project_ru_RU.ts
 TRANSLATIONS += translations/project_en_US.ts
-# TRANSLATIONS += translations/project_kk_KZ.ts
+TRANSLATIONS += translations/project_kk_KZ.ts
 
 DISTFILES +=
