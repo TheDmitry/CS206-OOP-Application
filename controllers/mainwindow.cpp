@@ -129,7 +129,7 @@ void MainWindow::switchLanguage(QAction *action) {
   if (!qtTranslator.load("qt_" + locale + ".qm",
                          QLibraryInfo::path(QLibraryInfo::TranslationsPath))) {
     QMessageBox::critical(this, tr("Application"),
-                          tr("The translation file could not be loaded!"),
+                          tr("The translation file could not be loaded (QT)!"),
                           QMessageBox::Ok);
     return;
   }
