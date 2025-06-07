@@ -1,0 +1,657 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CS-206-OOP-Application: Класс VRHeadsetProvider</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">CS-206-OOP-Application
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classVRHeadsetProvider.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="classVRHeadsetProvider-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс VRHeadsetProvider</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="vrheadsetprovider_8h_source.html">vrheadsetprovider.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:VRHeadsetProvider:</div>
+<div class="dyncontent">
+<div class="center"><img src="classVRHeadsetProvider__inherit__graph.png" border="0" usemap="#aVRHeadsetProvider_inherit__map" alt="Inheritance graph"/></div>
+<map name="aVRHeadsetProvider_inherit__map" id="aVRHeadsetProvider_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,79,153,104"/>
+<area shape="rect" href="classAbstractProvider.html" title=" " alt="" coords="14,5,145,31"/>
+<area shape="poly" title=" " alt="" coords="82,44,82,79,77,79,77,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса VRHeadsetProvider:</div>
+<div class="dyncontent">
+<div class="center"><img src="classVRHeadsetProvider__coll__graph.png" border="0" usemap="#aVRHeadsetProvider_coll__map" alt="Collaboration graph"/></div>
+<map name="aVRHeadsetProvider_coll__map" id="aVRHeadsetProvider_coll__map">
+<area shape="rect" title=" " alt="" coords="5,79,153,104"/>
+<area shape="rect" href="classAbstractProvider.html" title=" " alt="" coords="14,5,145,31"/>
+<area shape="poly" title=" " alt="" coords="82,44,82,79,77,79,77,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ac673192d7643e8bddff8a24b1c27cbb1" id="r_ac673192d7643e8bddff8a24b1c27cbb1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadsetProvider.html#ac673192d7643e8bddff8a24b1c27cbb1">VRHeadsetProvider</a> ()</td></tr>
+<tr class="separator:ac673192d7643e8bddff8a24b1c27cbb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab93d981cdea012531d076db0ab109b5a" id="r_ab93d981cdea012531d076db0ab109b5a"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadsetProvider.html#ab93d981cdea012531d076db0ab109b5a">getName</a> () const override</td></tr>
+<tr class="separator:ab93d981cdea012531d076db0ab109b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8785b8dfec1b31a2e0d3b74a474654a" id="r_ae8785b8dfec1b31a2e0d3b74a474654a"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadsetProvider.html#ae8785b8dfec1b31a2e0d3b74a474654a">getItemName</a> () const override</td></tr>
+<tr class="separator:ae8785b8dfec1b31a2e0d3b74a474654a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab08940569493978e809280cd7653d701" id="r_ab08940569493978e809280cd7653d701"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadsetProvider.html#ab08940569493978e809280cd7653d701">getTrItemName</a> () const override</td></tr>
+<tr class="separator:ab08940569493978e809280cd7653d701"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17652c73a9a3dfe0a91d4c1c6cca7d74" id="r_a17652c73a9a3dfe0a91d4c1c6cca7d74"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadsetProvider.html#a17652c73a9a3dfe0a91d4c1c6cca7d74">getSupportedSchemeArgs</a> () const override</td></tr>
+<tr class="separator:a17652c73a9a3dfe0a91d4c1c6cca7d74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64a8c4dd462295d31dc0ab1f168bc7d8" id="r_a64a8c4dd462295d31dc0ab1f168bc7d8"><td class="memItemLeft" align="right" valign="top">const std::map&lt; std::string, size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadsetProvider.html#a64a8c4dd462295d31dc0ab1f168bc7d8">getScheme</a> () const override</td></tr>
+<tr class="separator:a64a8c4dd462295d31dc0ab1f168bc7d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0814b092b49284cea7a31beba9206940" id="r_a0814b092b49284cea7a31beba9206940"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadsetProvider.html#a0814b092b49284cea7a31beba9206940">get</a> (std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; const &amp;target, std::string const &amp;fieldName) const override</td></tr>
+<tr class="separator:a0814b092b49284cea7a31beba9206940"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaf23245a9c15374ad10a9593d1c81df" id="r_afaf23245a9c15374ad10a9593d1c81df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadsetProvider.html#afaf23245a9c15374ad10a9593d1c81df">set</a> (std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; &amp;target, std::string const &amp;fieldName, std::string const &amp;value) override</td></tr>
+<tr class="separator:afaf23245a9c15374ad10a9593d1c81df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a877ca0d6456468cf64bd68bce6259725" id="r_a877ca0d6456468cf64bd68bce6259725"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadsetProvider.html#a877ca0d6456468cf64bd68bce6259725">compare</a> (std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; const &amp;a, std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; const &amp;b, std::string const &amp;fieldName) const override</td></tr>
+<tr class="separator:a877ca0d6456468cf64bd68bce6259725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84d605f3ede4bb0e4dd6e962733f8451" id="r_a84d605f3ede4bb0e4dd6e962733f8451"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadsetProvider.html#a84d605f3ede4bb0e4dd6e962733f8451">create</a> () override</td></tr>
+<tr class="separator:a84d605f3ede4bb0e4dd6e962733f8451"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6356925c4167ba08d5c23e87b1fcfa4d" id="r_a6356925c4167ba08d5c23e87b1fcfa4d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadsetProvider.html#a6356925c4167ba08d5c23e87b1fcfa4d">isChartSupported</a> () const override</td></tr>
+<tr class="separator:a6356925c4167ba08d5c23e87b1fcfa4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a000d59407adc2eea4218cd1495954012" id="r_a000d59407adc2eea4218cd1495954012"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadsetProvider.html#a000d59407adc2eea4218cd1495954012">getChartHeaderField</a> () const override</td></tr>
+<tr class="separator:a000d59407adc2eea4218cd1495954012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30067c5df472ddd72aca5d440e540785" id="r_a30067c5df472ddd72aca5d440e540785"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadsetProvider.html#a30067c5df472ddd72aca5d440e540785">getChartFields</a> () const override</td></tr>
+<tr class="separator:a30067c5df472ddd72aca5d440e540785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classAbstractProvider"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAbstractProvider')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="classAbstractProvider.html">AbstractProvider</a></td></tr>
+<tr class="memitem:a1a133967722fa07cc648d067ad68ddaa inherit pub_methods_classAbstractProvider" id="r_a1a133967722fa07cc648d067ad68ddaa"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractProvider.html#a1a133967722fa07cc648d067ad68ddaa">~AbstractProvider</a> ()=default</td></tr>
+<tr class="separator:a1a133967722fa07cc648d067ad68ddaa inherit pub_methods_classAbstractProvider"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff530bfd99f0f18473430defcba6d0d2 inherit pub_methods_classAbstractProvider" id="r_aff530bfd99f0f18473430defcba6d0d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractProvider.html#aff530bfd99f0f18473430defcba6d0d2">AbstractProvider</a> ()=default</td></tr>
+<tr class="separator:aff530bfd99f0f18473430defcba6d0d2 inherit pub_methods_classAbstractProvider"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a9865acadc8cee08b71db196462c19077" id="r_a9865acadc8cee08b71db196462c19077"><td class="memItemLeft" align="right" valign="top">const std::map&lt; std::string, std::function&lt; std::string(<a class="el" href="classVRHeadset.html">VRHeadset</a> const &amp;)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadsetProvider.html#a9865acadc8cee08b71db196462c19077">getters</a></td></tr>
+<tr class="separator:a9865acadc8cee08b71db196462c19077"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af826b1850257cf1e9cad798331c93a8f" id="r_af826b1850257cf1e9cad798331c93a8f"><td class="memItemLeft" align="right" valign="top">const std::map&lt; std::string, std::function&lt; void(<a class="el" href="classVRHeadset.html">VRHeadset</a> &amp;, const std::string &amp;)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVRHeadsetProvider.html#af826b1850257cf1e9cad798331c93a8f">setters</a></td></tr>
+<tr class="separator:af826b1850257cf1e9cad798331c93a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ac673192d7643e8bddff8a24b1c27cbb1" name="ac673192d7643e8bddff8a24b1c27cbb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac673192d7643e8bddff8a24b1c27cbb1">&#9670;&#160;</a></span>VRHeadsetProvider()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VRHeadsetProvider::VRHeadsetProvider </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a877ca0d6456468cf64bd68bce6259725" name="a877ca0d6456468cf64bd68bce6259725"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a877ca0d6456468cf64bd68bce6259725">&#9670;&#160;</a></span>compare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int VRHeadsetProvider::compare </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>fieldName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractProvider.html#a4e093e02661701f1ef0d6219531292fd">AbstractProvider</a>.</p>
+
+</div>
+</div>
+<a id="a84d605f3ede4bb0e4dd6e962733f8451" name="a84d605f3ede4bb0e4dd6e962733f8451"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84d605f3ede4bb0e4dd6e962733f8451">&#9670;&#160;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; VRHeadsetProvider::create </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractProvider.html#ac356a9436e620e32279feba8943f2184">AbstractProvider</a>.</p>
+
+</div>
+</div>
+<a id="a0814b092b49284cea7a31beba9206940" name="a0814b092b49284cea7a31beba9206940"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0814b092b49284cea7a31beba9206940">&#9670;&#160;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string VRHeadsetProvider::get </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>fieldName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractProvider.html#a05126531fdb0dcb2207485133dd5cdf4">AbstractProvider</a>.</p>
+
+</div>
+</div>
+<a id="a30067c5df472ddd72aca5d440e540785" name="a30067c5df472ddd72aca5d440e540785"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30067c5df472ddd72aca5d440e540785">&#9670;&#160;</a></span>getChartFields()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const vector&lt; string &gt; VRHeadsetProvider::getChartFields </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractProvider.html#af099bd3bef509fe6ec1c66b859028917">AbstractProvider</a>.</p>
+
+</div>
+</div>
+<a id="a000d59407adc2eea4218cd1495954012" name="a000d59407adc2eea4218cd1495954012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a000d59407adc2eea4218cd1495954012">&#9670;&#160;</a></span>getChartHeaderField()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string VRHeadsetProvider::getChartHeaderField </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractProvider.html#aa73ca2a8d135520ae4379f30bf7a744e">AbstractProvider</a>.</p>
+
+</div>
+</div>
+<a id="ae8785b8dfec1b31a2e0d3b74a474654a" name="ae8785b8dfec1b31a2e0d3b74a474654a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8785b8dfec1b31a2e0d3b74a474654a">&#9670;&#160;</a></span>getItemName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string VRHeadsetProvider::getItemName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractProvider.html#af5e9da76afaf65269b37bcc5c19a65e1">AbstractProvider</a>.</p>
+
+</div>
+</div>
+<a id="ab93d981cdea012531d076db0ab109b5a" name="ab93d981cdea012531d076db0ab109b5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab93d981cdea012531d076db0ab109b5a">&#9670;&#160;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string VRHeadsetProvider::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractProvider.html#a54b0a254912dc0d205cfe11588f5ac54">AbstractProvider</a>.</p>
+
+</div>
+</div>
+<a id="a64a8c4dd462295d31dc0ab1f168bc7d8" name="a64a8c4dd462295d31dc0ab1f168bc7d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64a8c4dd462295d31dc0ab1f168bc7d8">&#9670;&#160;</a></span>getScheme()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const map&lt; string, size_t &gt; VRHeadsetProvider::getScheme </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractProvider.html#a17f640e22a8d7853bb796bb6fc146a66">AbstractProvider</a>.</p>
+
+</div>
+</div>
+<a id="a17652c73a9a3dfe0a91d4c1c6cca7d74" name="a17652c73a9a3dfe0a91d4c1c6cca7d74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17652c73a9a3dfe0a91d4c1c6cca7d74">&#9670;&#160;</a></span>getSupportedSchemeArgs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const vector&lt; string &gt; VRHeadsetProvider::getSupportedSchemeArgs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractProvider.html#a453ec315d1f20a442fe191452a091d2d">AbstractProvider</a>.</p>
+
+</div>
+</div>
+<a id="ab08940569493978e809280cd7653d701" name="ab08940569493978e809280cd7653d701"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab08940569493978e809280cd7653d701">&#9670;&#160;</a></span>getTrItemName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string VRHeadsetProvider::getTrItemName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractProvider.html#a00d94fb2625b46fadaf2edaaaaecd4bd">AbstractProvider</a>.</p>
+
+</div>
+</div>
+<a id="a6356925c4167ba08d5c23e87b1fcfa4d" name="a6356925c4167ba08d5c23e87b1fcfa4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6356925c4167ba08d5c23e87b1fcfa4d">&#9670;&#160;</a></span>isChartSupported()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool VRHeadsetProvider::isChartSupported </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractProvider.html#afd4b6f7acfe8aff872a7ed0996c30bcc">AbstractProvider</a>.</p>
+
+</div>
+</div>
+<a id="afaf23245a9c15374ad10a9593d1c81df" name="afaf23245a9c15374ad10a9593d1c81df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaf23245a9c15374ad10a9593d1c81df">&#9670;&#160;</a></span>set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VRHeadsetProvider::set </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classAbstractItem.html">AbstractItem</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>fieldName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="classAbstractProvider.html#ae4bf9afebdc0ef2ea491486d5d4022de">AbstractProvider</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a9865acadc8cee08b71db196462c19077" name="a9865acadc8cee08b71db196462c19077"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9865acadc8cee08b71db196462c19077">&#9670;&#160;</a></span>getters</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt;std::string, std::function&lt;std::string(<a class="el" href="classVRHeadset.html">VRHeadset</a> const &amp;)&gt; &gt; VRHeadsetProvider::getters</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    {<span class="stringliteral">&quot;width&quot;</span>,</div>
+<div class="line">     [](<a class="code hl_class" href="classVRHeadset.html">VRHeadset</a> <span class="keyword">const</span> &amp;target) -&gt; std::string { <span class="keywordflow">return</span> std::to_string(target.getWidth()); }},</div>
+<div class="line">    {<span class="stringliteral">&quot;height&quot;</span>,</div>
+<div class="line">     [](<a class="code hl_class" href="classVRHeadset.html">VRHeadset</a> <span class="keyword">const</span> &amp;target) -&gt; std::string { <span class="keywordflow">return</span> std::to_string(target.getHeight()); }},</div>
+<div class="line">    {<span class="stringliteral">&quot;refreshRate&quot;</span>,</div>
+<div class="line">     [](<a class="code hl_class" href="classVRHeadset.html">VRHeadset</a> <span class="keyword">const</span> &amp;target) -&gt; std::string { <span class="keywordflow">return</span> std::to_string(target.getRefreshRate()); }},</div>
+<div class="line">    {<span class="stringliteral">&quot;angles&quot;</span>,</div>
+<div class="line">     [](<a class="code hl_class" href="classVRHeadset.html">VRHeadset</a> <span class="keyword">const</span> &amp;target) -&gt; std::string {</div>
+<div class="line">       <span class="keywordflow">return</span> <a class="code hl_function" href="classVector3.html#a42c1faa706991376a67ca4f7f008577e">Vector3::vectorToString</a>(target.getAngles());</div>
+<div class="line">     }},</div>
+<div class="line">    {<span class="stringliteral">&quot;position&quot;</span>,</div>
+<div class="line">     [](<a class="code hl_class" href="classVRHeadset.html">VRHeadset</a> <span class="keyword">const</span> &amp;target) -&gt; std::string {</div>
+<div class="line">       <span class="keywordflow">return</span> <a class="code hl_function" href="classVector3.html#a42c1faa706991376a67ca4f7f008577e">Vector3::vectorToString</a>(target.getPosition());</div>
+<div class="line">     }},</div>
+<div class="line">    {<span class="stringliteral">&quot;modelName&quot;</span>, [](<a class="code hl_class" href="classVRHeadset.html">VRHeadset</a> <span class="keyword">const</span> &amp;target) -&gt; std::string { <span class="keywordflow">return</span> target.getModelName(); }},</div>
+<div class="line">  }</div>
+<div class="ttc" id="aclassVRHeadset_html"><div class="ttname"><a href="classVRHeadset.html">VRHeadset</a></div><div class="ttdef"><b>Definition</b> vrheadset.h:15</div></div>
+<div class="ttc" id="aclassVector3_html_a42c1faa706991376a67ca4f7f008577e"><div class="ttname"><a href="classVector3.html#a42c1faa706991376a67ca4f7f008577e">Vector3::vectorToString</a></div><div class="ttdeci">static std::string vectorToString(Vector3 const &amp;vec)</div><div class="ttdef"><b>Definition</b> vector3.cpp:60</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af826b1850257cf1e9cad798331c93a8f" name="af826b1850257cf1e9cad798331c93a8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af826b1850257cf1e9cad798331c93a8f">&#9670;&#160;</a></span>setters</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt;std::string, std::function&lt;void(<a class="el" href="classVRHeadset.html">VRHeadset</a> &amp;, const std::string &amp;)&gt; &gt; VRHeadsetProvider::setters</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    {<span class="stringliteral">&quot;width&quot;</span>, [](<a class="code hl_class" href="classVRHeadset.html">VRHeadset</a> &amp;target, <span class="keyword">const</span> std::string &amp;val) { target.<a class="code hl_function" href="classVRHeadset.html#a22e75156139bcf8e681175410deb8c16">setWidth</a>(stoi(val)); }},</div>
+<div class="line">    {<span class="stringliteral">&quot;height&quot;</span>, [](<a class="code hl_class" href="classVRHeadset.html">VRHeadset</a> &amp;target, <span class="keyword">const</span> std::string &amp;val) { target.<a class="code hl_function" href="classVRHeadset.html#af8b2552c2020c0bad8b09e4d7511a971">setHeight</a>(stoi(val)); }},</div>
+<div class="line">    {<span class="stringliteral">&quot;refreshRate&quot;</span>,</div>
+<div class="line">     [](<a class="code hl_class" href="classVRHeadset.html">VRHeadset</a> &amp;target, <span class="keyword">const</span> std::string &amp;val) { target.<a class="code hl_function" href="classVRHeadset.html#a984a15e5deec99046b99d0d78edff519">setRefreshRate</a>(stof(val)); }},</div>
+<div class="line">    {<span class="stringliteral">&quot;angles&quot;</span>,</div>
+<div class="line">     [](<a class="code hl_class" href="classVRHeadset.html">VRHeadset</a> &amp;target, <span class="keyword">const</span> std::string &amp;val) {</div>
+<div class="line">       target.<a class="code hl_function" href="classVRHeadset.html#a0115384643935ea1ee4b82877c4c2844">setAngles</a>(<a class="code hl_function" href="classVector3.html#afac260711cdf0637d1e64ceb2638264b">Vector3::vectorFromString</a>(val));</div>
+<div class="line">     }},</div>
+<div class="line">    {<span class="stringliteral">&quot;position&quot;</span>,</div>
+<div class="line">     [](<a class="code hl_class" href="classVRHeadset.html">VRHeadset</a> &amp;target, <span class="keyword">const</span> std::string &amp;val) {</div>
+<div class="line">       target.<a class="code hl_function" href="classVRHeadset.html#a5b9e8102d15bb2e0ef7cd306fd5bab58">setPosition</a>(<a class="code hl_function" href="classVector3.html#afac260711cdf0637d1e64ceb2638264b">Vector3::vectorFromString</a>(val));</div>
+<div class="line">     }},</div>
+<div class="line">    {<span class="stringliteral">&quot;modelName&quot;</span>, [](<a class="code hl_class" href="classVRHeadset.html">VRHeadset</a> &amp;target, <span class="keyword">const</span> std::string &amp;val) { target.<a class="code hl_function" href="classVRHeadset.html#abadf17650637454fbc762129d95d0267">setModelName</a>(val); }},</div>
+<div class="line">  }</div>
+<div class="ttc" id="aclassVRHeadset_html_a0115384643935ea1ee4b82877c4c2844"><div class="ttname"><a href="classVRHeadset.html#a0115384643935ea1ee4b82877c4c2844">VRHeadset::setAngles</a></div><div class="ttdeci">void setAngles(float x, float y, float z)</div><div class="ttdef"><b>Definition</b> vrheadset.cpp:61</div></div>
+<div class="ttc" id="aclassVRHeadset_html_a22e75156139bcf8e681175410deb8c16"><div class="ttname"><a href="classVRHeadset.html#a22e75156139bcf8e681175410deb8c16">VRHeadset::setWidth</a></div><div class="ttdeci">void setWidth(int value)</div><div class="ttdef"><b>Definition</b> vrheadset.cpp:75</div></div>
+<div class="ttc" id="aclassVRHeadset_html_a5b9e8102d15bb2e0ef7cd306fd5bab58"><div class="ttname"><a href="classVRHeadset.html#a5b9e8102d15bb2e0ef7cd306fd5bab58">VRHeadset::setPosition</a></div><div class="ttdeci">void setPosition(float x, float y, float z)</div><div class="ttdef"><b>Definition</b> vrheadset.cpp:68</div></div>
+<div class="ttc" id="aclassVRHeadset_html_a984a15e5deec99046b99d0d78edff519"><div class="ttname"><a href="classVRHeadset.html#a984a15e5deec99046b99d0d78edff519">VRHeadset::setRefreshRate</a></div><div class="ttdeci">void setRefreshRate(float refR)</div><div class="ttdef"><b>Definition</b> vrheadset.cpp:56</div></div>
+<div class="ttc" id="aclassVRHeadset_html_abadf17650637454fbc762129d95d0267"><div class="ttname"><a href="classVRHeadset.html#abadf17650637454fbc762129d95d0267">VRHeadset::setModelName</a></div><div class="ttdeci">void setModelName(std::string name)</div><div class="ttdef"><b>Definition</b> vrheadset.cpp:83</div></div>
+<div class="ttc" id="aclassVRHeadset_html_af8b2552c2020c0bad8b09e4d7511a971"><div class="ttname"><a href="classVRHeadset.html#af8b2552c2020c0bad8b09e4d7511a971">VRHeadset::setHeight</a></div><div class="ttdeci">void setHeight(int value)</div><div class="ttdef"><b>Definition</b> vrheadset.cpp:79</div></div>
+<div class="ttc" id="aclassVector3_html_afac260711cdf0637d1e64ceb2638264b"><div class="ttname"><a href="classVector3.html#afac260711cdf0637d1e64ceb2638264b">Vector3::vectorFromString</a></div><div class="ttdeci">static Vector3 vectorFromString(std::string const &amp;stringified)</div><div class="ttdef"><b>Definition</b> vector3.cpp:21</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>providers/<a class="el" href="vrheadsetprovider_8h_source.html">vrheadsetprovider.h</a></li>
+<li>providers/<a class="el" href="vrheadsetprovider_8cpp.html">vrheadsetprovider.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classVRHeadsetProvider.html">VRHeadsetProvider</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

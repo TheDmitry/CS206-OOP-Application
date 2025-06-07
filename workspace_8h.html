@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CS-206-OOP-Application: Файл controllers/workspace.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">CS-206-OOP-Application
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('workspace_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a>  </div>
+  <div class="headertitle"><div class="title">Файл workspace.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;QMenu&gt;</code><br />
+<code>#include &lt;QTabWidget&gt;</code><br />
+<code>#include &lt;QTableView&gt;</code><br />
+<code>#include &lt;QWidget&gt;</code><br />
+<code>#include &quot;<a class="el" href="tableview_8h_source.html">controllers/tableview.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="customtablemodel_8h_source.html">models/customtablemodel.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для workspace.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="workspace_8h__incl.png" border="0" usemap="#acontrollers_2workspace_8h" alt=""/></div>
+<map name="acontrollers_2workspace_8h" id="acontrollers_2workspace_8h">
+<area shape="rect" title=" " alt="" coords="245,5,423,31"/>
+<area shape="rect" title=" " alt="" coords="5,152,73,177"/>
+<area shape="poly" title=" " alt="" coords="312,33,76,148,73,144,309,28"/>
+<area shape="rect" title=" " alt="" coords="580,79,680,104"/>
+<area shape="poly" title=" " alt="" coords="382,28,569,73,568,78,381,33"/>
+<area shape="rect" title=" " alt="" coords="98,152,197,177"/>
+<area shape="poly" title=" " alt="" coords="320,33,174,146,171,142,317,29"/>
+<area shape="rect" title=" " alt="" coords="221,152,300,177"/>
+<area shape="poly" title=" " alt="" coords="330,32,275,141,270,138,326,30"/>
+<area shape="rect" href="tableview_8h.html" title=" " alt="" coords="334,79,505,104"/>
+<area shape="poly" title=" " alt="" coords="349,29,397,68,393,72,346,33"/>
+<area shape="rect" href="customtablemodel_8h.html" title=" " alt="" coords="1066,152,1274,177"/>
+<area shape="poly" title=" " alt="" coords="375,28,442,49,518,76,543,90,569,101,1053,149,1052,154,568,107,541,95,516,81,441,54,374,33"/>
+<area shape="poly" title=" " alt="" coords="349,107,87,155,86,149,348,101"/>
+<area shape="poly" title=" " alt="" coords="376,107,205,151,204,146,375,101"/>
+<area shape="poly" title=" " alt="" coords="395,106,300,149,298,144,393,102"/>
+<area shape="rect" title=" " alt="" coords="968,152,1041,177"/>
+<area shape="poly" title=" " alt="" coords="505,99,955,150,954,155,505,105"/>
+<area shape="rect" title=" " alt="" coords="565,152,652,177"/>
+<area shape="poly" title=" " alt="" coords="451,102,566,144,564,149,449,107"/>
+<area shape="rect" href="customsortfilterproxymodel_8h.html" title=" " alt="" coords="677,152,943,177"/>
+<area shape="poly" title=" " alt="" coords="483,101,734,147,733,152,482,107"/>
+<area shape="poly" title=" " alt="" coords="505,99,524,101,1052,149,1052,154,523,107,505,105"/>
+<area shape="rect" href="highlightdelegate_8h.html" title=" " alt="" coords="325,152,541,177"/>
+<area shape="poly" title=" " alt="" coords="424,104,431,138,425,139,419,105"/>
+<area shape="rect" title=" " alt="" coords="655,225,823,251"/>
+<area shape="poly" title=" " alt="" coords="800,180,762,218,758,214,796,176"/>
+<area shape="rect" title=" " alt="" coords="847,225,1007,251"/>
+<area shape="poly" title=" " alt="" coords="1132,180,980,224,979,219,1130,175"/>
+<area shape="rect" title=" " alt="" coords="1032,225,1132,251"/>
+<area shape="poly" title=" " alt="" coords="1158,179,1109,219,1105,214,1154,175"/>
+<area shape="rect" title=" " alt="" coords="1520,372,1583,397"/>
+<area shape="poly" title=" " alt="" coords="1275,170,1413,183,1567,207,1639,223,1702,244,1752,268,1770,282,1784,297,1793,321,1786,341,1766,356,1737,367,1666,380,1596,385,1596,380,1665,375,1736,362,1764,352,1782,338,1788,321,1780,300,1767,286,1749,273,1700,249,1637,228,1566,212,1412,188,1274,175"/>
+<area shape="rect" href="dbfile_8h.html" title=" " alt="" coords="1437,225,1565,251"/>
+<area shape="poly" title=" " alt="" coords="1224,175,1435,220,1433,225,1223,180"/>
+<area shape="rect" href="abstractitem_8h.html" title=" " alt="" coords="1091,372,1249,397"/>
+<area shape="poly" title=" " alt="" coords="1173,178,1173,358,1167,358,1167,178"/>
+<area shape="rect" href="undoer_8h.html" title=" " alt="" coords="2063,225,2199,251"/>
+<area shape="poly" title=" " alt="" coords="1274,171,2049,228,2049,233,1274,176"/>
+<area shape="poly" title=" " alt="" coords="1507,250,1545,358,1540,360,1502,252"/>
+<area shape="rect" title=" " alt="" coords="1589,299,1679,324"/>
+<area shape="poly" title=" " alt="" coords="1523,248,1601,290,1599,294,1521,253"/>
+<area shape="rect" title=" " alt="" coords="1703,299,1770,324"/>
+<area shape="poly" title=" " alt="" coords="1539,248,1691,293,1689,299,1538,253"/>
+<area shape="rect" title=" " alt="" coords="1426,372,1477,397"/>
+<area shape="poly" title=" " alt="" coords="1500,252,1478,325,1464,360,1459,358,1473,323,1495,250"/>
+<area shape="rect" title=" " alt="" coords="1274,372,1333,397"/>
+<area shape="poly" title=" " alt="" coords="1437,248,1325,266,1277,281,1260,290,1248,300,1243,315,1248,331,1261,347,1277,362,1273,366,1257,351,1244,334,1238,315,1244,297,1257,286,1275,277,1324,261,1436,243"/>
+<area shape="rect" href="abstractprovider_8h.html" title=" " alt="" coords="1258,299,1463,324"/>
+<area shape="poly" title=" " alt="" coords="1479,253,1397,295,1394,290,1477,248"/>
+<area shape="poly" title=" " alt="" coords="1392,322,1508,364,1506,369,1390,327"/>
+<area shape="poly" title=" " alt="" coords="1377,322,1427,361,1424,365,1374,326"/>
+<area shape="poly" title=" " alt="" coords="1353,326,1323,363,1319,359,1349,323"/>
+<area shape="poly" title=" " alt="" coords="1331,327,1215,369,1213,364,1329,322"/>
+<area shape="rect" title=" " alt="" coords="1281,445,1358,471"/>
+<area shape="poly" title=" " alt="" coords="1362,325,1347,398,1333,434,1328,432,1342,397,1357,324"/>
+<area shape="rect" title=" " alt="" coords="1133,445,1207,471"/>
+<area shape="poly" title=" " alt="" coords="1173,398,1173,432,1167,432,1167,398"/>
+<area shape="poly" title=" " alt="" coords="1195,395,1284,437,1281,442,1193,400"/>
+<area shape="rect" title=" " alt="" coords="2393,299,2475,324"/>
+<area shape="poly" title=" " alt="" coords="2181,248,2380,295,2379,300,2179,253"/>
+<area shape="rect" title=" " alt="" coords="2499,299,2590,324"/>
+<area shape="poly" title=" " alt="" coords="2200,247,2486,296,2485,301,2199,253"/>
+<area shape="rect" title=" " alt="" coords="1845,299,1930,324"/>
+<area shape="poly" title=" " alt="" coords="2093,253,1941,297,1939,292,2091,248"/>
+<area shape="rect" title=" " alt="" coords="1955,299,2041,324"/>
+<area shape="poly" title=" " alt="" coords="2111,253,2033,294,2031,290,2109,248"/>
+<area shape="rect" title=" " alt="" coords="2066,299,2109,324"/>
+<area shape="poly" title=" " alt="" coords="2126,252,2104,288,2099,286,2122,250"/>
+<area shape="rect" title=" " alt="" coords="2133,299,2220,324"/>
+<area shape="poly" title=" " alt="" coords="2141,250,2164,286,2160,289,2137,252"/>
+<area shape="rect" title=" " alt="" coords="2244,299,2368,324"/>
+<area shape="poly" title=" " alt="" coords="2160,248,2266,291,2264,296,2158,253"/>
+<area shape="rect" title=" " alt="" coords="410,225,573,251"/>
+<area shape="poly" title=" " alt="" coords="444,176,475,213,471,217,440,179"/>
+<area shape="rect" title=" " alt="" coords="317,225,386,251"/>
+<area shape="poly" title=" " alt="" coords="421,179,377,218,373,214,418,175"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="workspace_8h__dep__incl.png" border="0" usemap="#acontrollers_2workspace_8hdep" alt=""/></div>
+<map name="acontrollers_2workspace_8hdep" id="acontrollers_2workspace_8hdep">
+<area shape="rect" title=" " alt="" coords="267,5,444,31"/>
+<area shape="rect" href="mainwindow_8h.html" title=" " alt="" coords="195,79,385,104"/>
+<area shape="poly" title=" " alt="" coords="337,43,303,80,299,77,333,39"/>
+<area shape="rect" href="workspace_8cpp.html" title=" " alt="" coords="341,152,533,177"/>
+<area shape="poly" title=" " alt="" coords="375,40,399,77,434,150,429,153,394,80,370,43"/>
+<area shape="rect" href="mainwindow_8cpp.html" title=" " alt="" coords="5,152,209,177"/>
+<area shape="poly" title=" " alt="" coords="249,111,138,154,136,149,247,106"/>
+<area shape="poly" title=" " alt="" coords="327,107,414,149,412,154,324,112"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="234,152,317,177"/>
+<area shape="poly" title=" " alt="" coords="287,118,280,152,275,151,282,117"/>
+</map>
+</div>
+</div>
+<p><a href="workspace_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorkspace.html">Workspace</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceUi" id="r_namespaceUi"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceUi.html">Ui</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_87b6ed4386158a4d6cd0ecd5fb5bd5c2.html">controllers</a></li><li class="navelem"><a class="el" href="workspace_8h.html">workspace.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

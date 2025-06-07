@@ -1,0 +1,1104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CS-206-OOP-Application: Класс DbFile</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">CS-206-OOP-Application
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classDbFile.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="#pub-static-attribs">Статические открытые данные</a> &#124;
+<a href="#pri-types">Закрытые типы</a> &#124;
+<a href="#pri-methods">Закрытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="#pri-static-attribs">Закрытые статические данные</a> &#124;
+<a href="classDbFile-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс DbFile</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="dbfile_8h_source.html">dbfile.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDbFile_1_1OperatorResult.html">OperatorResult</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a7ed01c4c5dd123a5e4d0359dcdbcdf4f" id="r_a7ed01c4c5dd123a5e4d0359dcdbcdf4f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#a7ed01c4c5dd123a5e4d0359dcdbcdf4f">ProviderType</a> = std::shared_ptr&lt; <a class="el" href="classAbstractProvider.html">AbstractProvider</a> &gt;</td></tr>
+<tr class="separator:a7ed01c4c5dd123a5e4d0359dcdbcdf4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbaec3e0af4bf859c4e61b4c6bbd45f5" id="r_abbaec3e0af4bf859c4e61b4c6bbd45f5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#abbaec3e0af4bf859c4e61b4c6bbd45f5">ProviderStorage</a> = std::map&lt; std::string, <a class="el" href="classDbFile.html#a7ed01c4c5dd123a5e4d0359dcdbcdf4f">ProviderType</a> &gt;</td></tr>
+<tr class="separator:abbaec3e0af4bf859c4e61b4c6bbd45f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ac0356ae41b986bbe5cd3740f37539f92" id="r_ac0356ae41b986bbe5cd3740f37539f92"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#ac0356ae41b986bbe5cd3740f37539f92">DbFile</a> (std::string const &amp;path)</td></tr>
+<tr class="separator:ac0356ae41b986bbe5cd3740f37539f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9b086e04cc668e6fca829181742962d" id="r_ae9b086e04cc668e6fca829181742962d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#ae9b086e04cc668e6fca829181742962d">DbFile</a> ()</td></tr>
+<tr class="separator:ae9b086e04cc668e6fca829181742962d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74c4e1b0190f83d7948e76885359d4bc" id="r_a74c4e1b0190f83d7948e76885359d4bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#a74c4e1b0190f83d7948e76885359d4bc">~DbFile</a> ()</td></tr>
+<tr class="separator:a74c4e1b0190f83d7948e76885359d4bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13dae803974ad1f8f343f8c33d269d57" id="r_a13dae803974ad1f8f343f8c33d269d57"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#a13dae803974ad1f8f343f8c33d269d57">getCurrentPath</a> () const</td></tr>
+<tr class="separator:a13dae803974ad1f8f343f8c33d269d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26f9e4ab9f43c6b571685b4e7d53c4ec" id="r_a26f9e4ab9f43c6b571685b4e7d53c4ec"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#a26f9e4ab9f43c6b571685b4e7d53c4ec">getDataBuffer</a> ()</td></tr>
+<tr class="separator:a26f9e4ab9f43c6b571685b4e7d53c4ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15798cd87d6052b6d7d2bde275196378" id="r_a15798cd87d6052b6d7d2bde275196378"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#a15798cd87d6052b6d7d2bde275196378">getInfoBuffer</a> ()</td></tr>
+<tr class="separator:a15798cd87d6052b6d7d2bde275196378"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d5110428b280859b9aed86dfda28f80" id="r_a3d5110428b280859b9aed86dfda28f80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#a3d5110428b280859b9aed86dfda28f80">setCurrentPath</a> (const std::string path)</td></tr>
+<tr class="separator:a3d5110428b280859b9aed86dfda28f80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7cd4fd027281141b406119b8622c184" id="r_ac7cd4fd027281141b406119b8622c184"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#ac7cd4fd027281141b406119b8622c184">read</a> ()</td></tr>
+<tr class="separator:ac7cd4fd027281141b406119b8622c184"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af754bfea554dfb9066c1ec56b8d7110c" id="r_af754bfea554dfb9066c1ec56b8d7110c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#af754bfea554dfb9066c1ec56b8d7110c">read</a> (const std::string &amp;path)</td></tr>
+<tr class="separator:af754bfea554dfb9066c1ec56b8d7110c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a985f1c2eca6162905e09f86e95bff848" id="r_a985f1c2eca6162905e09f86e95bff848"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#a985f1c2eca6162905e09f86e95bff848">write</a> ()</td></tr>
+<tr class="separator:a985f1c2eca6162905e09f86e95bff848"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfdfa0112725249d40b08f6ce7804a0d" id="r_abfdfa0112725249d40b08f6ce7804a0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#abfdfa0112725249d40b08f6ce7804a0d">write</a> (std::string const &amp;path)</td></tr>
+<tr class="separator:abfdfa0112725249d40b08f6ce7804a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56a4933b5a7f1e4b59f7abe1be59f35b" id="r_a56a4933b5a7f1e4b59f7abe1be59f35b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#a56a4933b5a7f1e4b59f7abe1be59f35b">create</a> (std::string const &amp;path, std::string const &amp;providerName)</td></tr>
+<tr class="separator:a56a4933b5a7f1e4b59f7abe1be59f35b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac53b4a87ff472ddb0967e8bf4d1c3ed1" id="r_ac53b4a87ff472ddb0967e8bf4d1c3ed1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#ac53b4a87ff472ddb0967e8bf4d1c3ed1">clear</a> ()</td></tr>
+<tr class="separator:ac53b4a87ff472ddb0967e8bf4d1c3ed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a686d3cfd6fec34a9cce8f2265b7eeba1" id="r_a686d3cfd6fec34a9cce8f2265b7eeba1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#a686d3cfd6fec34a9cce8f2265b7eeba1">reset</a> ()</td></tr>
+<tr class="separator:a686d3cfd6fec34a9cce8f2265b7eeba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bdc7dbdae3e4888d404df8389d2b3b5" id="r_a1bdc7dbdae3e4888d404df8389d2b3b5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#a1bdc7dbdae3e4888d404df8389d2b3b5">isDataEmpty</a> ()</td></tr>
+<tr class="separator:a1bdc7dbdae3e4888d404df8389d2b3b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe0f0c2196ceff9b04377c7254564012" id="r_afe0f0c2196ceff9b04377c7254564012"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#afe0f0c2196ceff9b04377c7254564012">isInfoEmpty</a> ()</td></tr>
+<tr class="separator:afe0f0c2196ceff9b04377c7254564012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d74d9fcf44f77075d6815fa5dbcb8ed" id="r_a8d74d9fcf44f77075d6815fa5dbcb8ed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#a8d74d9fcf44f77075d6815fa5dbcb8ed">isBuffersEmpty</a> ()</td></tr>
+<tr class="separator:a8d74d9fcf44f77075d6815fa5dbcb8ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7688986d286cefed45e206481227e8fa" id="r_a7688986d286cefed45e206481227e8fa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#a7688986d286cefed45e206481227e8fa">isFileExists</a> ()</td></tr>
+<tr class="separator:a7688986d286cefed45e206481227e8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c4ce6fdfa4bcb54f118e718e6e662f7" id="r_a9c4ce6fdfa4bcb54f118e718e6e662f7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#a9c4ce6fdfa4bcb54f118e718e6e662f7">isFileEmpty</a> ()</td></tr>
+<tr class="separator:a9c4ce6fdfa4bcb54f118e718e6e662f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8913793f7adce99bac9cb023451ca5e" id="r_ab8913793f7adce99bac9cb023451ca5e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#ab8913793f7adce99bac9cb023451ca5e">isFileModified</a> ()</td></tr>
+<tr class="separator:ab8913793f7adce99bac9cb023451ca5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27978ac3720bbea26b97022ccd6479e3" id="r_a27978ac3720bbea26b97022ccd6479e3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a27978ac3720bbea26b97022ccd6479e3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classDbFile.html#a27978ac3720bbea26b97022ccd6479e3">parse</a> (T &amp;items)</td></tr>
+<tr class="separator:a27978ac3720bbea26b97022ccd6479e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4949405e4adf6bb74accd67429948ca5" id="r_a4949405e4adf6bb74accd67429948ca5"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires requires(typename T::value_type v) { { v.get() } -&gt; std::convertible_to&lt;<a class="el" href="classAbstractItem.html">AbstractItem</a> *&gt;; }</td></tr>
+<tr class="memitem:a4949405e4adf6bb74accd67429948ca5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classDbFile.html#a4949405e4adf6bb74accd67429948ca5">update</a> (T &amp;items)</td></tr>
+<tr class="separator:a4949405e4adf6bb74accd67429948ca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cb81dc1b9c66596a00b05a3d2f7d7a0" id="r_a5cb81dc1b9c66596a00b05a3d2f7d7a0"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, size_t &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#a5cb81dc1b9c66596a00b05a3d2f7d7a0">getScheme</a> () const</td></tr>
+<tr class="separator:a5cb81dc1b9c66596a00b05a3d2f7d7a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38dcee225a9e1a0bb403d0e6cb017b78" id="r_a38dcee225a9e1a0bb403d0e6cb017b78"><td class="memItemLeft" align="right" valign="top">std::string const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#a38dcee225a9e1a0bb403d0e6cb017b78">getSchemeField</a> (size_t key) const</td></tr>
+<tr class="separator:a38dcee225a9e1a0bb403d0e6cb017b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49db029e84f5f63e9b230f9638985cd4" id="r_a49db029e84f5f63e9b230f9638985cd4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDbFile.html#a7ed01c4c5dd123a5e4d0359dcdbcdf4f">ProviderType</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#a49db029e84f5f63e9b230f9638985cd4">getProvider</a> () const</td></tr>
+<tr class="separator:a49db029e84f5f63e9b230f9638985cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70c5b58080dcd7242b2515f40d0344c3" id="r_a70c5b58080dcd7242b2515f40d0344c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#a70c5b58080dcd7242b2515f40d0344c3">setProvider</a> (std::string const &amp;providerName)</td></tr>
+<tr class="separator:a70c5b58080dcd7242b2515f40d0344c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad77d484e6fab97ccb9f712e8afdd13f7" id="r_ad77d484e6fab97ccb9f712e8afdd13f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#ad77d484e6fab97ccb9f712e8afdd13f7">setScheme</a> (std::map&lt; std::string, size_t &gt; const &amp;scheme)</td></tr>
+<tr class="separator:ad77d484e6fab97ccb9f712e8afdd13f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:aaf935fb1f6eb012d6a56e950ccecc6e8" id="r_aaf935fb1f6eb012d6a56e950ccecc6e8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#aaf935fb1f6eb012d6a56e950ccecc6e8">registerProvider</a> (std::string const &amp;name, <a class="el" href="classDbFile.html#a7ed01c4c5dd123a5e4d0359dcdbcdf4f">ProviderType</a> <a class="el" href="classDbFile.html#a42bf783b0d28515f318607928c718a0a">provider</a>)</td></tr>
+<tr class="separator:aaf935fb1f6eb012d6a56e950ccecc6e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e416651d01a71bf0b5fd335ff8327a0" id="r_a5e416651d01a71bf0b5fd335ff8327a0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classDbFile.html#abbaec3e0af4bf859c4e61b4c6bbd45f5">ProviderStorage</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#a5e416651d01a71bf0b5fd335ff8327a0">getProviders</a> ()</td></tr>
+<tr class="separator:a5e416651d01a71bf0b5fd335ff8327a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a0942f3b0188a54b44521cbe199d3cf06" id="r_a0942f3b0188a54b44521cbe199d3cf06"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#a0942f3b0188a54b44521cbe199d3cf06">currentScheme</a></td></tr>
+<tr class="separator:a0942f3b0188a54b44521cbe199d3cf06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Статические открытые данные</h2></td></tr>
+<tr class="memitem:a12351714c43a8f448d2fc3c041f153ed" id="r_a12351714c43a8f448d2fc3c041f153ed"><td class="memItemLeft" align="right" valign="top">static constexpr std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#a12351714c43a8f448d2fc3c041f153ed">SUPPORTED_VERSION</a> = &quot;2&quot;</td></tr>
+<tr class="separator:a12351714c43a8f448d2fc3c041f153ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
+Закрытые типы</h2></td></tr>
+<tr class="memitem:aa9e9add6d3f9f62220b633d6f8b858bf" id="r_aa9e9add6d3f9f62220b633d6f8b858bf"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#aa9e9add6d3f9f62220b633d6f8b858bf">OPS</a> { <br />
+&#160;&#160;<a class="el" href="classDbFile.html#aa9e9add6d3f9f62220b633d6f8b858bfa0a5a4d7386065c6c6ac19c303768c7e1">DB</a>
+, <a class="el" href="classDbFile.html#aa9e9add6d3f9f62220b633d6f8b858bfa551b723eafd6a31d444fcb2f5920fbd3">INFO</a>
+, <a class="el" href="classDbFile.html#aa9e9add6d3f9f62220b633d6f8b858bfae44f9e348e41cb272efa87387728571b">DATA</a>
+, <a class="el" href="classDbFile.html#aa9e9add6d3f9f62220b633d6f8b858bfab1a326c06d88bf042f73d70f50197905">END</a>
+, <br />
+&#160;&#160;<a class="el" href="classDbFile.html#aa9e9add6d3f9f62220b633d6f8b858bfa7286293c9125ac7d7bace94c190bc16d">CLOSE</a>
+, <a class="el" href="classDbFile.html#aa9e9add6d3f9f62220b633d6f8b858bfa3a70b5d6e416eeccda948d3ccc246f25">SCHEME</a>
+, <a class="el" href="classDbFile.html#aa9e9add6d3f9f62220b633d6f8b858bfaf4b198097f417682e6c0bd868c6cdafa">PROVIDER</a>
+, <a class="el" href="classDbFile.html#aa9e9add6d3f9f62220b633d6f8b858bfa61a96ffcb251bb9bf0abf8fec19d0ea8">TEXT</a>
+<br />
+ }</td></tr>
+<tr class="separator:aa9e9add6d3f9f62220b633d6f8b858bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:a51151f6df1883b256e2fd23151d4d621" id="r_a51151f6df1883b256e2fd23151d4d621"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDbFile_1_1OperatorResult.html">OperatorResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#a51151f6df1883b256e2fd23151d4d621">parseOperator</a> (const std::string &amp;line, int lineNumber)</td></tr>
+<tr class="separator:a51151f6df1883b256e2fd23151d4d621"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a276af7bf532fb90bfb4ebe89dfcb0efe" id="r_a276af7bf532fb90bfb4ebe89dfcb0efe"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#a276af7bf532fb90bfb4ebe89dfcb0efe">currentPath</a></td></tr>
+<tr class="separator:a276af7bf532fb90bfb4ebe89dfcb0efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4274f7bf50f8bab8189401b1cbdf5a2" id="r_aa4274f7bf50f8bab8189401b1cbdf5a2"><td class="memItemLeft" align="right" valign="top">std::filesystem::file_time_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#aa4274f7bf50f8bab8189401b1cbdf5a2">modified</a></td></tr>
+<tr class="separator:aa4274f7bf50f8bab8189401b1cbdf5a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ebf7755e9792cff52927509d7ff78e7" id="r_a5ebf7755e9792cff52927509d7ff78e7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#a5ebf7755e9792cff52927509d7ff78e7">dataBuffer</a></td></tr>
+<tr class="separator:a5ebf7755e9792cff52927509d7ff78e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7fb89179ad09e3438a463cc265c6d5e" id="r_ab7fb89179ad09e3438a463cc265c6d5e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#ab7fb89179ad09e3438a463cc265c6d5e">infoBuffer</a></td></tr>
+<tr class="separator:ab7fb89179ad09e3438a463cc265c6d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42bf783b0d28515f318607928c718a0a" id="r_a42bf783b0d28515f318607928c718a0a"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classAbstractProvider.html">AbstractProvider</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#a42bf783b0d28515f318607928c718a0a">provider</a> = nullptr</td></tr>
+<tr class="separator:a42bf783b0d28515f318607928c718a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Закрытые статические данные</h2></td></tr>
+<tr class="memitem:aab66455c1ff94f36cec49f7c9ffcad39" id="r_aab66455c1ff94f36cec49f7c9ffcad39"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classDbFile.html#abbaec3e0af4bf859c4e61b4c6bbd45f5">ProviderStorage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDbFile.html#aab66455c1ff94f36cec49f7c9ffcad39">providers</a> = {}</td></tr>
+<tr class="separator:aab66455c1ff94f36cec49f7c9ffcad39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Определения типов</h2>
+<a id="abbaec3e0af4bf859c4e61b4c6bbd45f5" name="abbaec3e0af4bf859c4e61b4c6bbd45f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbaec3e0af4bf859c4e61b4c6bbd45f5">&#9670;&#160;</a></span>ProviderStorage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classDbFile.html#abbaec3e0af4bf859c4e61b4c6bbd45f5">DbFile::ProviderStorage</a> =  std::map&lt;std::string, <a class="el" href="classDbFile.html#a7ed01c4c5dd123a5e4d0359dcdbcdf4f">ProviderType</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ed01c4c5dd123a5e4d0359dcdbcdf4f" name="a7ed01c4c5dd123a5e4d0359dcdbcdf4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ed01c4c5dd123a5e4d0359dcdbcdf4f">&#9670;&#160;</a></span>ProviderType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classDbFile.html#a7ed01c4c5dd123a5e4d0359dcdbcdf4f">DbFile::ProviderType</a> =  std::shared_ptr&lt;<a class="el" href="classAbstractProvider.html">AbstractProvider</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Перечисления</h2>
+<a id="aa9e9add6d3f9f62220b633d6f8b858bf" name="aa9e9add6d3f9f62220b633d6f8b858bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9e9add6d3f9f62220b633d6f8b858bf">&#9670;&#160;</a></span>OPS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="classDbFile.html#aa9e9add6d3f9f62220b633d6f8b858bf">DbFile::OPS</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="aa9e9add6d3f9f62220b633d6f8b858bfa0a5a4d7386065c6c6ac19c303768c7e1" name="aa9e9add6d3f9f62220b633d6f8b858bfa0a5a4d7386065c6c6ac19c303768c7e1"></a>DB&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa9e9add6d3f9f62220b633d6f8b858bfa551b723eafd6a31d444fcb2f5920fbd3" name="aa9e9add6d3f9f62220b633d6f8b858bfa551b723eafd6a31d444fcb2f5920fbd3"></a>INFO&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa9e9add6d3f9f62220b633d6f8b858bfae44f9e348e41cb272efa87387728571b" name="aa9e9add6d3f9f62220b633d6f8b858bfae44f9e348e41cb272efa87387728571b"></a>DATA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa9e9add6d3f9f62220b633d6f8b858bfab1a326c06d88bf042f73d70f50197905" name="aa9e9add6d3f9f62220b633d6f8b858bfab1a326c06d88bf042f73d70f50197905"></a>END&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa9e9add6d3f9f62220b633d6f8b858bfa7286293c9125ac7d7bace94c190bc16d" name="aa9e9add6d3f9f62220b633d6f8b858bfa7286293c9125ac7d7bace94c190bc16d"></a>CLOSE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa9e9add6d3f9f62220b633d6f8b858bfa3a70b5d6e416eeccda948d3ccc246f25" name="aa9e9add6d3f9f62220b633d6f8b858bfa3a70b5d6e416eeccda948d3ccc246f25"></a>SCHEME&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa9e9add6d3f9f62220b633d6f8b858bfaf4b198097f417682e6c0bd868c6cdafa" name="aa9e9add6d3f9f62220b633d6f8b858bfaf4b198097f417682e6c0bd868c6cdafa"></a>PROVIDER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa9e9add6d3f9f62220b633d6f8b858bfa61a96ffcb251bb9bf0abf8fec19d0ea8" name="aa9e9add6d3f9f62220b633d6f8b858bfa61a96ffcb251bb9bf0abf8fec19d0ea8"></a>TEXT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ac0356ae41b986bbe5cd3740f37539f92" name="ac0356ae41b986bbe5cd3740f37539f92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0356ae41b986bbe5cd3740f37539f92">&#9670;&#160;</a></span>DbFile() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DbFile::DbFile </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae9b086e04cc668e6fca829181742962d" name="ae9b086e04cc668e6fca829181742962d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9b086e04cc668e6fca829181742962d">&#9670;&#160;</a></span>DbFile() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DbFile::DbFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74c4e1b0190f83d7948e76885359d4bc" name="a74c4e1b0190f83d7948e76885359d4bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74c4e1b0190f83d7948e76885359d4bc">&#9670;&#160;</a></span>~DbFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DbFile::~DbFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ac53b4a87ff472ddb0967e8bf4d1c3ed1" name="ac53b4a87ff472ddb0967e8bf4d1c3ed1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac53b4a87ff472ddb0967e8bf4d1c3ed1">&#9670;&#160;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DbFile::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a56a4933b5a7f1e4b59f7abe1be59f35b" name="a56a4933b5a7f1e4b59f7abe1be59f35b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56a4933b5a7f1e4b59f7abe1be59f35b">&#9670;&#160;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DbFile::create </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>providerName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13dae803974ad1f8f343f8c33d269d57" name="a13dae803974ad1f8f343f8c33d269d57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13dae803974ad1f8f343f8c33d269d57">&#9670;&#160;</a></span>getCurrentPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string DbFile::getCurrentPath </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a26f9e4ab9f43c6b571685b4e7d53c4ec" name="a26f9e4ab9f43c6b571685b4e7d53c4ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26f9e4ab9f43c6b571685b4e7d53c4ec">&#9670;&#160;</a></span>getDataBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; string &gt; &amp; DbFile::getDataBuffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a15798cd87d6052b6d7d2bde275196378" name="a15798cd87d6052b6d7d2bde275196378"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15798cd87d6052b6d7d2bde275196378">&#9670;&#160;</a></span>getInfoBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; string &gt; &amp; DbFile::getInfoBuffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49db029e84f5f63e9b230f9638985cd4" name="a49db029e84f5f63e9b230f9638985cd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49db029e84f5f63e9b230f9638985cd4">&#9670;&#160;</a></span>getProvider()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDbFile.html#a7ed01c4c5dd123a5e4d0359dcdbcdf4f">DbFile::ProviderType</a> const  &amp; DbFile::getProvider </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e416651d01a71bf0b5fd335ff8327a0" name="a5e416651d01a71bf0b5fd335ff8327a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e416651d01a71bf0b5fd335ff8327a0">&#9670;&#160;</a></span>getProviders()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDbFile.html#abbaec3e0af4bf859c4e61b4c6bbd45f5">DbFile::ProviderStorage</a> const  &amp; DbFile::getProviders </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5cb81dc1b9c66596a00b05a3d2f7d7a0" name="a5cb81dc1b9c66596a00b05a3d2f7d7a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cb81dc1b9c66596a00b05a3d2f7d7a0">&#9670;&#160;</a></span>getScheme()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">map&lt; string, size_t &gt; const  &amp; DbFile::getScheme </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38dcee225a9e1a0bb403d0e6cb017b78" name="a38dcee225a9e1a0bb403d0e6cb017b78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38dcee225a9e1a0bb403d0e6cb017b78">&#9670;&#160;</a></span>getSchemeField()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string const  &amp; DbFile::getSchemeField </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d74d9fcf44f77075d6815fa5dbcb8ed" name="a8d74d9fcf44f77075d6815fa5dbcb8ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d74d9fcf44f77075d6815fa5dbcb8ed">&#9670;&#160;</a></span>isBuffersEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DbFile::isBuffersEmpty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1bdc7dbdae3e4888d404df8389d2b3b5" name="a1bdc7dbdae3e4888d404df8389d2b3b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bdc7dbdae3e4888d404df8389d2b3b5">&#9670;&#160;</a></span>isDataEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DbFile::isDataEmpty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c4ce6fdfa4bcb54f118e718e6e662f7" name="a9c4ce6fdfa4bcb54f118e718e6e662f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c4ce6fdfa4bcb54f118e718e6e662f7">&#9670;&#160;</a></span>isFileEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DbFile::isFileEmpty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7688986d286cefed45e206481227e8fa" name="a7688986d286cefed45e206481227e8fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7688986d286cefed45e206481227e8fa">&#9670;&#160;</a></span>isFileExists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DbFile::isFileExists </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab8913793f7adce99bac9cb023451ca5e" name="ab8913793f7adce99bac9cb023451ca5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8913793f7adce99bac9cb023451ca5e">&#9670;&#160;</a></span>isFileModified()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DbFile::isFileModified </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe0f0c2196ceff9b04377c7254564012" name="afe0f0c2196ceff9b04377c7254564012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe0f0c2196ceff9b04377c7254564012">&#9670;&#160;</a></span>isInfoEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DbFile::isInfoEmpty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a27978ac3720bbea26b97022ccd6479e3" name="a27978ac3720bbea26b97022ccd6479e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27978ac3720bbea26b97022ccd6479e3">&#9670;&#160;</a></span>parse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DbFile::parse </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>items</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a51151f6df1883b256e2fd23151d4d621" name="a51151f6df1883b256e2fd23151d4d621"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51151f6df1883b256e2fd23151d4d621">&#9670;&#160;</a></span>parseOperator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structDbFile_1_1OperatorResult.html">DbFile::OperatorResult</a> DbFile::parseOperator </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lineNumber</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7cd4fd027281141b406119b8622c184" name="ac7cd4fd027281141b406119b8622c184"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7cd4fd027281141b406119b8622c184">&#9670;&#160;</a></span>read() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DbFile::read </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af754bfea554dfb9066c1ec56b8d7110c" name="af754bfea554dfb9066c1ec56b8d7110c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af754bfea554dfb9066c1ec56b8d7110c">&#9670;&#160;</a></span>read() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DbFile::read </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf935fb1f6eb012d6a56e950ccecc6e8" name="aaf935fb1f6eb012d6a56e950ccecc6e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf935fb1f6eb012d6a56e950ccecc6e8">&#9670;&#160;</a></span>registerProvider()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DbFile::registerProvider </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classDbFile.html#a7ed01c4c5dd123a5e4d0359dcdbcdf4f">ProviderType</a>&#160;</td>
+          <td class="paramname"><em>provider</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a686d3cfd6fec34a9cce8f2265b7eeba1" name="a686d3cfd6fec34a9cce8f2265b7eeba1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a686d3cfd6fec34a9cce8f2265b7eeba1">&#9670;&#160;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DbFile::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d5110428b280859b9aed86dfda28f80" name="a3d5110428b280859b9aed86dfda28f80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d5110428b280859b9aed86dfda28f80">&#9670;&#160;</a></span>setCurrentPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DbFile::setCurrentPath </td>
+          <td>(</td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a70c5b58080dcd7242b2515f40d0344c3" name="a70c5b58080dcd7242b2515f40d0344c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70c5b58080dcd7242b2515f40d0344c3">&#9670;&#160;</a></span>setProvider()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DbFile::setProvider </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>providerName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad77d484e6fab97ccb9f712e8afdd13f7" name="ad77d484e6fab97ccb9f712e8afdd13f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad77d484e6fab97ccb9f712e8afdd13f7">&#9670;&#160;</a></span>setScheme()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DbFile::setScheme </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; std::string, size_t &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>scheme</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4949405e4adf6bb74accd67429948ca5" name="a4949405e4adf6bb74accd67429948ca5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4949405e4adf6bb74accd67429948ca5">&#9670;&#160;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; <br />
+requires requires(typename T::value_type v) { { v.get() } -&gt; std::convertible_to&lt;<a class="el" href="classAbstractItem.html">AbstractItem</a> *&gt;; }</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DbFile::update </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>items</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a985f1c2eca6162905e09f86e95bff848" name="a985f1c2eca6162905e09f86e95bff848"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a985f1c2eca6162905e09f86e95bff848">&#9670;&#160;</a></span>write() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DbFile::write </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abfdfa0112725249d40b08f6ce7804a0d" name="abfdfa0112725249d40b08f6ce7804a0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfdfa0112725249d40b08f6ce7804a0d">&#9670;&#160;</a></span>write() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DbFile::write </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a276af7bf532fb90bfb4ebe89dfcb0efe" name="a276af7bf532fb90bfb4ebe89dfcb0efe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a276af7bf532fb90bfb4ebe89dfcb0efe">&#9670;&#160;</a></span>currentPath</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string DbFile::currentPath</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0942f3b0188a54b44521cbe199d3cf06" name="a0942f3b0188a54b44521cbe199d3cf06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0942f3b0188a54b44521cbe199d3cf06">&#9670;&#160;</a></span>currentScheme</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string, size_t&gt; DbFile::currentScheme</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ebf7755e9792cff52927509d7ff78e7" name="a5ebf7755e9792cff52927509d7ff78e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ebf7755e9792cff52927509d7ff78e7">&#9670;&#160;</a></span>dataBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; DbFile::dataBuffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab7fb89179ad09e3438a463cc265c6d5e" name="ab7fb89179ad09e3438a463cc265c6d5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7fb89179ad09e3438a463cc265c6d5e">&#9670;&#160;</a></span>infoBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; DbFile::infoBuffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4274f7bf50f8bab8189401b1cbdf5a2" name="aa4274f7bf50f8bab8189401b1cbdf5a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4274f7bf50f8bab8189401b1cbdf5a2">&#9670;&#160;</a></span>modified</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::filesystem::file_time_type DbFile::modified</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42bf783b0d28515f318607928c718a0a" name="a42bf783b0d28515f318607928c718a0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42bf783b0d28515f318607928c718a0a">&#9670;&#160;</a></span>provider</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classAbstractProvider.html">AbstractProvider</a>&gt; DbFile::provider = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab66455c1ff94f36cec49f7c9ffcad39" name="aab66455c1ff94f36cec49f7c9ffcad39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab66455c1ff94f36cec49f7c9ffcad39">&#9670;&#160;</a></span>providers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">map&lt; string, <a class="el" href="classDbFile.html#a7ed01c4c5dd123a5e4d0359dcdbcdf4f">DbFile::ProviderType</a> &gt; DbFile::providers = {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12351714c43a8f448d2fc3c041f153ed" name="a12351714c43a8f448d2fc3c041f153ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12351714c43a8f448d2fc3c041f153ed">&#9670;&#160;</a></span>SUPPORTED_VERSION</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::string DbFile::SUPPORTED_VERSION = &quot;2&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>external/<a class="el" href="dbfile_8h_source.html">dbfile.h</a></li>
+<li>external/<a class="el" href="dbfile_8cpp.html">dbfile.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classDbFile.html">DbFile</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

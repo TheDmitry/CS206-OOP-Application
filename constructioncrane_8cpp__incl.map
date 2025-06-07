@@ -1,0 +1,17 @@
+<map id="items/constructioncrane.cpp" name="items/constructioncrane.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="199,5,406,31"/>
+<area shape="rect" id="Node000002" href="$constructioncrane_8h.html" title=" " alt="" coords="171,79,322,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="296,33,266,69,262,66,291,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="289,225,364,251"/>
+<area shape="poly" id="edge8_Node000001_Node000003" title=" " alt="" coords="313,29,327,51,337,78,343,114,343,151,335,212,330,211,338,150,337,115,332,79,322,54,309,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="262,102,282,123,302,151,316,182,324,211,319,213,311,183,298,153,278,127,258,106"/>
+<area shape="rect" id="Node000004" href="$abstractitem_8h.html" title=" " alt="" coords="171,152,288,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="246,105,238,140,233,138,241,104"/>
+<area shape="rect" id="Node000006" href="$vector3_8h.html" title=" " alt="" coords="5,152,147,177"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="220,106,117,149,115,144,218,102"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="247,175,301,215,298,219,243,180"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="188,225,265,251"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="232,178,230,212,225,212,226,178"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="47,225,105,251"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="79,178,79,212,73,212,73,178"/>
+</map>
