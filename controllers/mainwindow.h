@@ -22,7 +22,14 @@ class MainWindow : public QMainWindow {
   Q_OBJECT
 
 public:
+  /*!
+   * \brief MainWindow initializer
+   */
   MainWindow(QWidget *parent = nullptr);
+
+  /*!
+   * \brief MainWindow destructor
+   */
   ~MainWindow();
 
 public slots:
@@ -86,6 +93,9 @@ private slots:
    */
   void on_actionFileNew_triggered();
 
+  /*!
+   * \brief File -> Save
+   */
   void on_actionFileSave_triggered();
 
 private:

@@ -17,17 +17,31 @@ public:
   using ItemType = std::shared_ptr<AbstractItem>;
   using ContainerType = std::vector<ItemType>;
 
+  /*!
+   * \brief CustomTableModel constructor
+   */
   explicit CustomTableModel(QObject *parent = nullptr);
+
+  /*!
+   * \brief CustomTableModel destructor
+   */
   ~CustomTableModel();
 
-  // Header
+  /*!
+   * \brief Returns header data from exact provider
+   */
   QVariant headerData(int section, Qt::Orientation orientation,
                       int role = Qt::DisplayRole) const override;
 
+  /*!
+   * \brief Sets header data by exact provider
+   */
   bool setHeaderData(int section, Qt::Orientation orientation,
                      const QVariant &value, int role = Qt::EditRole) override;
 
-  // Drag&Drop
+  /*!
+   * \brief Mime types specifications for Drag&Drop functionality
+   */
   QStringList mimeTypes() const override;
 
   QMimeData *mimeData(QModelIndexList const &indexes) const override;
