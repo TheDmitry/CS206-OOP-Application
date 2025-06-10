@@ -1,0 +1,21 @@
+<map id="controllers/errordialog.cpp" name="controllers/errordialog.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="192,5,385,31"/>
+<area shape="rect" id="Node000002" href="$errordialog_8h.html" title=" " alt="" coords="137,79,315,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="280,33,247,70,243,66,276,29"/>
+<area shape="rect" id="Node000004" href="$dberror_8h.html" title=" " alt="" coords="287,152,426,177"/>
+<area shape="poly" id="edge9_Node000001_Node000004" title=" " alt="" coords="300,30,330,77,352,138,347,140,325,80,295,33"/>
+<area shape="rect" id="Node000007" href="$parseerror_8h.html" title=" " alt="" coords="5,152,164,177"/>
+<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="224,33,173,51,148,64,127,81,106,109,93,139,88,137,101,106,123,77,145,60,171,46,222,28"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="391,79,515,104"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="316,28,415,71,412,76,314,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="189,152,263,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="229,104,229,138,223,138,223,104"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="248,102,325,143,322,148,246,106"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="204,106,121,148,119,143,202,102"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="128,225,215,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="328,180,215,223,213,218,326,175"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="283,225,342,251"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="352,179,329,215,325,212,347,176"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="100,175,148,214,145,219,97,179"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="122,175,271,221,269,226,121,180"/>
+</map>

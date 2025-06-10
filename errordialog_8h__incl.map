@@ -1,0 +1,15 @@
+<map id="controllers/errordialog.h" name="controllers/errordialog.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="95,5,273,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,80,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,33,79,75,77,70,160,28"/>
+<area shape="rect" id="Node000003" href="$dberror_8h.html" title=" " alt="" coords="288,79,427,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="213,28,317,71,315,76,211,33"/>
+<area shape="rect" id="Node000006" href="$parseerror_8h.html" title=" " alt="" coords="105,79,263,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="187,31,187,65,181,65,181,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="178,152,265,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="337,106,257,148,254,143,334,102"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="308,152,367,177"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="357,105,347,140,342,138,351,104"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="193,103,211,139,207,141,188,106"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="210,102,301,144,299,149,208,106"/>
+</map>

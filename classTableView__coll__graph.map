@@ -1,0 +1,21 @@
+<map id="TableView" name="TableView">
+<area shape="rect" id="Node000001" title="TableView class is used as controoler for TableView UI Component." alt="" coords="672,129,760,155"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="359,55,438,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="452,68,545,80,597,91,649,105,696,127,693,132,647,110,596,96,544,85,452,74"/>
+<area shape="rect" id="Node000003" href="$classCustomTableModel.html" title=" " alt="" coords="325,104,472,129"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="486,121,672,136,672,141,485,126"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="21,5,181,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="171,32,198,39,236,50,272,66,284,78,296,89,326,101,324,106,293,94,281,82,269,71,234,55,197,45,170,37"/>
+<area shape="rect" id="Node000005" href="$classUndoer.html" title=" " alt="" coords="5,55,197,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="193,80,326,102,325,107,192,85"/>
+<area shape="rect" id="Node000006" href="$classDbFile.html" title=" " alt="" coords="70,104,133,129"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="147,114,325,114,325,119,147,119"/>
+<area shape="rect" id="Node000007" href="$classCustomSortFilterProxyModel.html" title=" " alt="" coords="295,153,503,179"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="516,168,582,166,648,159,678,152,679,157,648,165,582,171,517,173"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="17,153,185,179"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="199,163,295,163,295,169,199,169"/>
+<area shape="rect" id="Node000009" href="$classHighlightColumnDelegate.html" title=" " alt="" coords="303,203,494,228"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="508,215,578,207,647,189,676,172,700,153,703,157,680,177,649,194,579,212,508,220"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="20,203,183,228"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="196,213,303,213,303,218,196,218"/>
+</map>

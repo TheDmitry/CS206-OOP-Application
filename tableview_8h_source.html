@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CS-206-OOP-Application: Исходный файл controllers/tableview.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">CS-206-OOP-Application
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('tableview_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">tableview.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="tableview_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;QAction&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QMenu&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QShortcut&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;QTableView&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="customsortfilterproxymodel_8h.html">models/customsortfilterproxymodel.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="customtablemodel_8h.html">models/customtablemodel.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="highlightdelegate_8h.html">delegates/highlightdelegate.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceUi.html">Ui</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">class </span><a class="code hl_class" href="classTableView.html">TableView</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>}</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classTableView.html">   21</a></span><span class="keyword">class </span><a class="code hl_class" href="classTableView.html">TableView</a> : <span class="keyword">public</span> QWidget {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  Q_OBJECT</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="keyword">explicit</span> <a class="code hl_class" href="classTableView.html">TableView</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <a class="code hl_function" href="classTableView.html#af8ce226b68febf945ee38531c5bd4c47">~TableView</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  QTableView *<a class="code hl_function" href="classTableView.html#ae7d1d91e0d457fcb8df8cb142ad92250">getTable</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <a class="code hl_class" href="classCustomTableModel.html">CustomTableModel</a> *<a class="code hl_function" href="classTableView.html#a543aa161d685a80e70f48f93080d167e">getTableModel</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>signals:</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classTableView.html#aab3f21aa64dcda34cd2743001ddba616">   52</a></span>  <span class="keywordtype">void</span> <a class="code hl_signal" href="classTableView.html#aab3f21aa64dcda34cd2743001ddba616">dropHappened</a>(<span class="keywordtype">bool</span> success);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword">private</span> slots:</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keywordtype">void</span> <a class="code hl_slot" href="classTableView.html#af322042eb58d33b4690dd779521adb18">on_pushButton_clear_clicked</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <span class="keywordtype">void</span> <a class="code hl_slot" href="classTableView.html#a8a2d34a4c8fe0cabdc5457ba6f6cc5b7">on_pushButton_new_clicked</a>();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="keywordtype">void</span> <a class="code hl_slot" href="classTableView.html#a11003355f83d16913820925ff5462aa7">on_pushButton_remove_clicked</a>();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keywordtype">void</span> <a class="code hl_slot" href="classTableView.html#a7c435c31877de275df6b3ce8525f1879">on_pushButton_undo_clicked</a>();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="keywordtype">void</span> <a class="code hl_slot" href="classTableView.html#a4608af04ba41ac65cd722558e8f4eedc">on_searchLine_textChanged</a>(<span class="keyword">const</span> QString &amp;arg1);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="keywordtype">void</span> <a class="code hl_slot" href="classTableView.html#a44e665580868c9505fe272ac17a99c7a">on_pushButton_graph_clicked</a>();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="classTableView.html#aa8ff9c338da967b09b6e78de5899d3c8">  102</a></span>  <a class="code hl_class" href="classCustomTableModel.html">CustomTableModel</a> *<a class="code hl_variable" href="classTableView.html#aa8ff9c338da967b09b6e78de5899d3c8">model</a>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="classTableView.html#a590340532f2c44cbd948fb4347e49da8">  107</a></span>  <a class="code hl_class" href="classCustomSortFilterProxyModel.html">CustomSortFilterProxyModel</a> *<a class="code hl_variable" href="classTableView.html#a590340532f2c44cbd948fb4347e49da8">proxyModel</a>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="classTableView.html#a59fe29728487963832a575cb1df8ab35">  112</a></span>  std::map&lt;std::string, QShortcut *&gt; <a class="code hl_variable" href="classTableView.html#a59fe29728487963832a575cb1df8ab35">shortcut</a>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="classTableView.html#a66342a03578cc73c2a58f184c3699130">  117</a></span>  <a class="code hl_class" href="classHighlightColumnDelegate.html">HighlightColumnDelegate</a> *<a class="code hl_variable" href="classTableView.html#a66342a03578cc73c2a58f184c3699130">highlightDelegate</a>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="classTableView.html#a136a26abb368e7c4232f2f874d386ec2">  119</a></span>  Ui::TableView *<a class="code hl_variable" href="classTableView.html#a136a26abb368e7c4232f2f874d386ec2">ui</a>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classTableView.html#ad20d6a0eabe7db88b2933c41ee229113">initShortcuts</a>();</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classTableView.html#a584dcb355fb1ca496be985136d6c531e">connectSignals</a>();</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classTableView.html#a075bb31a8a068031c1ac034e8c909cc4">changeEvent</a>(QEvent *e) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>};</div>
+</div>
+<div class="ttc" id="aclassCustomSortFilterProxyModel_html"><div class="ttname"><a href="classCustomSortFilterProxyModel.html">CustomSortFilterProxyModel</a></div><div class="ttdef"><b>Definition</b> customsortfilterproxymodel.h:5</div></div>
+<div class="ttc" id="aclassCustomTableModel_html"><div class="ttname"><a href="classCustomTableModel.html">CustomTableModel</a></div><div class="ttdef"><b>Definition</b> customtablemodel.h:13</div></div>
+<div class="ttc" id="aclassHighlightColumnDelegate_html"><div class="ttname"><a href="classHighlightColumnDelegate.html">HighlightColumnDelegate</a></div><div class="ttdef"><b>Definition</b> highlightdelegate.h:7</div></div>
+<div class="ttc" id="aclassTableView_html"><div class="ttname"><a href="classTableView.html">TableView</a></div><div class="ttdoc">TableView class is used as controoler for TableView UI Component.</div><div class="ttdef"><b>Definition</b> tableview.h:21</div></div>
+<div class="ttc" id="aclassTableView_html_a075bb31a8a068031c1ac034e8c909cc4"><div class="ttname"><a href="classTableView.html#a075bb31a8a068031c1ac034e8c909cc4">TableView::changeEvent</a></div><div class="ttdeci">void changeEvent(QEvent *e) override</div><div class="ttdoc">Here used solely for ui retranslation.</div><div class="ttdef"><b>Definition</b> tableview.cpp:131</div></div>
+<div class="ttc" id="aclassTableView_html_a11003355f83d16913820925ff5462aa7"><div class="ttname"><a href="classTableView.html#a11003355f83d16913820925ff5462aa7">TableView::on_pushButton_remove_clicked</a></div><div class="ttdeci">void on_pushButton_remove_clicked()</div><div class="ttdoc">TableView buttons, &quot;Remove&quot;.</div><div class="ttdef"><b>Definition</b> tableview.cpp:106</div></div>
+<div class="ttc" id="aclassTableView_html_a136a26abb368e7c4232f2f874d386ec2"><div class="ttname"><a href="classTableView.html#a136a26abb368e7c4232f2f874d386ec2">TableView::ui</a></div><div class="ttdeci">Ui::TableView * ui</div><div class="ttdef"><b>Definition</b> tableview.h:119</div></div>
+<div class="ttc" id="aclassTableView_html_a44e665580868c9505fe272ac17a99c7a"><div class="ttname"><a href="classTableView.html#a44e665580868c9505fe272ac17a99c7a">TableView::on_pushButton_graph_clicked</a></div><div class="ttdeci">void on_pushButton_graph_clicked()</div><div class="ttdoc">TableView buttons, &quot;Graph&quot;.</div><div class="ttdef"><b>Definition</b> tableview.cpp:138</div></div>
+<div class="ttc" id="aclassTableView_html_a4608af04ba41ac65cd722558e8f4eedc"><div class="ttname"><a href="classTableView.html#a4608af04ba41ac65cd722558e8f4eedc">TableView::on_searchLine_textChanged</a></div><div class="ttdeci">void on_searchLine_textChanged(const QString &amp;arg1)</div><div class="ttdoc">TableView searchline.</div><div class="ttdef"><b>Definition</b> tableview.cpp:122</div></div>
+<div class="ttc" id="aclassTableView_html_a543aa161d685a80e70f48f93080d167e"><div class="ttname"><a href="classTableView.html#a543aa161d685a80e70f48f93080d167e">TableView::getTableModel</a></div><div class="ttdeci">CustomTableModel * getTableModel()</div><div class="ttdoc">Returns CustomTableModel which is model for QTableView used in this component.</div><div class="ttdef"><b>Definition</b> tableview.cpp:100</div></div>
+<div class="ttc" id="aclassTableView_html_a584dcb355fb1ca496be985136d6c531e"><div class="ttname"><a href="classTableView.html#a584dcb355fb1ca496be985136d6c531e">TableView::connectSignals</a></div><div class="ttdeci">void connectSignals()</div><div class="ttdoc">Signals initialization.</div><div class="ttdef"><b>Definition</b> tableview.cpp:47</div></div>
+<div class="ttc" id="aclassTableView_html_a590340532f2c44cbd948fb4347e49da8"><div class="ttname"><a href="classTableView.html#a590340532f2c44cbd948fb4347e49da8">TableView::proxyModel</a></div><div class="ttdeci">CustomSortFilterProxyModel * proxyModel</div><div class="ttdoc">CustomSortFilterProxyModel for CustomTableModel.</div><div class="ttdef"><b>Definition</b> tableview.h:107</div></div>
+<div class="ttc" id="aclassTableView_html_a59fe29728487963832a575cb1df8ab35"><div class="ttname"><a href="classTableView.html#a59fe29728487963832a575cb1df8ab35">TableView::shortcut</a></div><div class="ttdeci">std::map&lt; std::string, QShortcut * &gt; shortcut</div><div class="ttdoc">Hotkeys storage.</div><div class="ttdef"><b>Definition</b> tableview.h:112</div></div>
+<div class="ttc" id="aclassTableView_html_a66342a03578cc73c2a58f184c3699130"><div class="ttname"><a href="classTableView.html#a66342a03578cc73c2a58f184c3699130">TableView::highlightDelegate</a></div><div class="ttdeci">HighlightColumnDelegate * highlightDelegate</div><div class="ttdoc">Delegate for selected field highlighting.</div><div class="ttdef"><b>Definition</b> tableview.h:117</div></div>
+<div class="ttc" id="aclassTableView_html_a7c435c31877de275df6b3ce8525f1879"><div class="ttname"><a href="classTableView.html#a7c435c31877de275df6b3ce8525f1879">TableView::on_pushButton_undo_clicked</a></div><div class="ttdeci">void on_pushButton_undo_clicked()</div><div class="ttdoc">TableView buttons, &quot;Undo&quot;.</div><div class="ttdef"><b>Definition</b> tableview.cpp:120</div></div>
+<div class="ttc" id="aclassTableView_html_a8a2d34a4c8fe0cabdc5457ba6f6cc5b7"><div class="ttname"><a href="classTableView.html#a8a2d34a4c8fe0cabdc5457ba6f6cc5b7">TableView::on_pushButton_new_clicked</a></div><div class="ttdeci">void on_pushButton_new_clicked()</div><div class="ttdoc">TableView buttons, &quot;New&quot;.</div><div class="ttdef"><b>Definition</b> tableview.cpp:102</div></div>
+<div class="ttc" id="aclassTableView_html_aa8ff9c338da967b09b6e78de5899d3c8"><div class="ttname"><a href="classTableView.html#aa8ff9c338da967b09b6e78de5899d3c8">TableView::model</a></div><div class="ttdeci">CustomTableModel * model</div><div class="ttdoc">CustomTableModel for QTableView.</div><div class="ttdef"><b>Definition</b> tableview.h:102</div></div>
+<div class="ttc" id="aclassTableView_html_aab3f21aa64dcda34cd2743001ddba616"><div class="ttname"><a href="classTableView.html#aab3f21aa64dcda34cd2743001ddba616">TableView::dropHappened</a></div><div class="ttdeci">void dropHappened(bool success)</div><div class="ttdoc">Called whenever drop from Drag&amp;Drop functionality happened.</div></div>
+<div class="ttc" id="aclassTableView_html_ad20d6a0eabe7db88b2933c41ee229113"><div class="ttname"><a href="classTableView.html#ad20d6a0eabe7db88b2933c41ee229113">TableView::initShortcuts</a></div><div class="ttdeci">void initShortcuts()</div><div class="ttdoc">Hotkeys initialization.</div><div class="ttdef"><b>Definition</b> tableview.cpp:79</div></div>
+<div class="ttc" id="aclassTableView_html_ae7d1d91e0d457fcb8df8cb142ad92250"><div class="ttname"><a href="classTableView.html#ae7d1d91e0d457fcb8df8cb142ad92250">TableView::getTable</a></div><div class="ttdeci">QTableView * getTable()</div><div class="ttdoc">Returns QTableView which is part of this component.</div><div class="ttdef"><b>Definition</b> tableview.cpp:98</div></div>
+<div class="ttc" id="aclassTableView_html_af322042eb58d33b4690dd779521adb18"><div class="ttname"><a href="classTableView.html#af322042eb58d33b4690dd779521adb18">TableView::on_pushButton_clear_clicked</a></div><div class="ttdeci">void on_pushButton_clear_clicked()</div><div class="ttdoc">TableView buttons, &quot;Clear&quot;.</div><div class="ttdef"><b>Definition</b> tableview.cpp:96</div></div>
+<div class="ttc" id="aclassTableView_html_af8ce226b68febf945ee38531c5bd4c47"><div class="ttname"><a href="classTableView.html#af8ce226b68febf945ee38531c5bd4c47">TableView::~TableView</a></div><div class="ttdeci">~TableView()</div><div class="ttdoc">TableView destructor.</div><div class="ttdef"><b>Definition</b> tableview.cpp:37</div></div>
+<div class="ttc" id="acustomsortfilterproxymodel_8h_html"><div class="ttname"><a href="customsortfilterproxymodel_8h.html">customsortfilterproxymodel.h</a></div></div>
+<div class="ttc" id="acustomtablemodel_8h_html"><div class="ttname"><a href="customtablemodel_8h.html">customtablemodel.h</a></div></div>
+<div class="ttc" id="ahighlightdelegate_8h_html"><div class="ttname"><a href="highlightdelegate_8h.html">highlightdelegate.h</a></div></div>
+<div class="ttc" id="anamespaceUi_html"><div class="ttname"><a href="namespaceUi.html">Ui</a></div><div class="ttdef"><b>Definition</b> authordialog.h:5</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_87b6ed4386158a4d6cd0ecd5fb5bd5c2.html">controllers</a></li><li class="navelem"><a class="el" href="tableview_8h.html">tableview.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

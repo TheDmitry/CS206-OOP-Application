@@ -1,0 +1,1191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CS-206-OOP-Application: Класс MainWindow</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">CS-206-OOP-Application
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classMainWindow.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-slots">Открытые слоты</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-slots">Закрытые слоты</a> &#124;
+<a href="#pri-methods">Закрытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="classMainWindow-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс MainWindow</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>The <a class="el" href="classMainWindow.html" title="The MainWindow class.">MainWindow</a> class.  
+ <a href="classMainWindow.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:MainWindow:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMainWindow__inherit__graph.png" border="0" usemap="#aMainWindow_inherit__map" alt="Inheritance graph"/></div>
+<map name="aMainWindow_inherit__map" id="aMainWindow_inherit__map">
+<area shape="rect" title="The MainWindow class." alt="" coords="10,79,117,104"/>
+<area shape="rect" title=" " alt="" coords="5,5,121,31"/>
+<area shape="poly" title=" " alt="" coords="66,44,66,79,61,79,61,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса MainWindow:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMainWindow__coll__graph.png" border="0" usemap="#aMainWindow_coll__map" alt="Collaboration graph"/></div>
+<map name="aMainWindow_coll__map" id="aMainWindow_coll__map">
+<area shape="rect" title="The MainWindow class." alt="" coords="209,168,315,193"/>
+<area shape="rect" title=" " alt="" coords="5,80,121,105"/>
+<area shape="poly" title=" " alt="" coords="104,108,236,165,234,170,102,113"/>
+<area shape="rect" href="classAuthorDialog.html" title=" " alt="" coords="146,80,253,105"/>
+<area shape="poly" title=" " alt="" coords="200,119,207,143,219,156,234,166,231,170,216,160,202,145,195,120"/>
+<area shape="rect" title=" " alt="" coords="214,5,289,31"/>
+<area shape="poly" title=" " alt="" coords="237,44,210,81,206,78,233,41"/>
+<area shape="rect" href="classErrorDialog.html" title=" " alt="" coords="277,80,372,105"/>
+<area shape="poly" title=" " alt="" coords="275,39,315,78,311,82,271,43"/>
+<area shape="poly" title=" " alt="" coords="314,119,296,146,276,169,272,166,292,142,309,116"/>
+<area shape="rect" href="classWorkspace.html" title=" " alt="" coords="397,80,490,105"/>
+<area shape="poly" title=" " alt="" coords="425,118,389,146,353,162,317,172,315,167,351,157,386,142,422,113"/>
+<area shape="rect" title=" " alt="" coords="404,5,483,31"/>
+<area shape="poly" title=" " alt="" coords="446,45,446,80,441,80,441,45"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-slots" name="pub-slots"></a>
+Открытые слоты</h2></td></tr>
+<tr class="memitem:a65d17db79929c30bea68945cd1ca3bce" id="r_a65d17db79929c30bea68945cd1ca3bce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a65d17db79929c30bea68945cd1ca3bce">on_actionFileOpen_triggered</a> ()</td></tr>
+<tr class="memdesc:a65d17db79929c30bea68945cd1ca3bce"><td class="mdescLeft">&#160;</td><td class="mdescRight">File -&gt; Open.  <br /></td></tr>
+<tr class="separator:a65d17db79929c30bea68945cd1ca3bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd1dfcd0dde616169b50f8370456c49f" id="r_afd1dfcd0dde616169b50f8370456c49f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#afd1dfcd0dde616169b50f8370456c49f">on_actionFileWrite_triggered</a> ()</td></tr>
+<tr class="memdesc:afd1dfcd0dde616169b50f8370456c49f"><td class="mdescLeft">&#160;</td><td class="mdescRight">File -&gt; Write.  <br /></td></tr>
+<tr class="separator:afd1dfcd0dde616169b50f8370456c49f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13478bffc1ebdd5f2e12e4d39bb92252" id="r_a13478bffc1ebdd5f2e12e4d39bb92252"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a13478bffc1ebdd5f2e12e4d39bb92252">on_actionFileUpdate_triggered</a> ()</td></tr>
+<tr class="memdesc:a13478bffc1ebdd5f2e12e4d39bb92252"><td class="mdescLeft">&#160;</td><td class="mdescRight">File -&gt; Update.  <br /></td></tr>
+<tr class="separator:a13478bffc1ebdd5f2e12e4d39bb92252"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fa4aad1fa51079a797b25694af13f61" id="r_a3fa4aad1fa51079a797b25694af13f61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a3fa4aad1fa51079a797b25694af13f61">on_actionFileClose_triggered</a> ()</td></tr>
+<tr class="memdesc:a3fa4aad1fa51079a797b25694af13f61"><td class="mdescLeft">&#160;</td><td class="mdescRight">File -&gt; Close.  <br /></td></tr>
+<tr class="separator:a3fa4aad1fa51079a797b25694af13f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e435580fa84bbdcd8d7a44f3b323ee6" id="r_a8e435580fa84bbdcd8d7a44f3b323ee6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a8e435580fa84bbdcd8d7a44f3b323ee6">on_actionClose_Tab_triggered</a> ()</td></tr>
+<tr class="memdesc:a8e435580fa84bbdcd8d7a44f3b323ee6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWorkspace.html">Workspace</a> -&gt; Close Tab.  <br /></td></tr>
+<tr class="separator:a8e435580fa84bbdcd8d7a44f3b323ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a996c5a2b6f77944776856f08ec30858d" id="r_a996c5a2b6f77944776856f08ec30858d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a996c5a2b6f77944776856f08ec30858d">MainWindow</a> (QWidget *parent=nullptr)</td></tr>
+<tr class="memdesc:a996c5a2b6f77944776856f08ec30858d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMainWindow.html" title="The MainWindow class.">MainWindow</a> initializer.  <br /></td></tr>
+<tr class="separator:a996c5a2b6f77944776856f08ec30858d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae98d00a93bc118200eeef9f9bba1dba7" id="r_ae98d00a93bc118200eeef9f9bba1dba7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#ae98d00a93bc118200eeef9f9bba1dba7">~MainWindow</a> ()</td></tr>
+<tr class="memdesc:ae98d00a93bc118200eeef9f9bba1dba7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMainWindow.html" title="The MainWindow class.">MainWindow</a> destructor.  <br /></td></tr>
+<tr class="separator:ae98d00a93bc118200eeef9f9bba1dba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-slots" name="pri-slots"></a>
+Закрытые слоты</h2></td></tr>
+<tr class="memitem:aeb7367b08a3ea5373e2036c534a4c98c" id="r_aeb7367b08a3ea5373e2036c534a4c98c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#aeb7367b08a3ea5373e2036c534a4c98c">on_actionProgramAuthor_triggered</a> ()</td></tr>
+<tr class="memdesc:aeb7367b08a3ea5373e2036c534a4c98c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Program -&gt; Author.  <br /></td></tr>
+<tr class="separator:aeb7367b08a3ea5373e2036c534a4c98c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3504fee6cb61eda81989f4553e165a3" id="r_af3504fee6cb61eda81989f4553e165a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#af3504fee6cb61eda81989f4553e165a3">switchLanguage</a> (QAction *action)</td></tr>
+<tr class="memdesc:af3504fee6cb61eda81989f4553e165a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">switchLanguage  <br /></td></tr>
+<tr class="separator:af3504fee6cb61eda81989f4553e165a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a402b7b1de172b785837ef64fd0417397" id="r_a402b7b1de172b785837ef64fd0417397"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a402b7b1de172b785837ef64fd0417397">on_actionClose_All_Tabs_triggered</a> ()</td></tr>
+<tr class="memdesc:a402b7b1de172b785837ef64fd0417397"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWorkspace.html">Workspace</a> -&gt; Close all.  <br /></td></tr>
+<tr class="separator:a402b7b1de172b785837ef64fd0417397"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0c6ad161e302516fb9883ce3a5f87fa" id="r_ae0c6ad161e302516fb9883ce3a5f87fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#ae0c6ad161e302516fb9883ce3a5f87fa">on_actionNew_Tab_triggered</a> ()</td></tr>
+<tr class="memdesc:ae0c6ad161e302516fb9883ce3a5f87fa"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWorkspace.html">Workspace</a> -&gt; New tab.  <br /></td></tr>
+<tr class="separator:ae0c6ad161e302516fb9883ce3a5f87fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0185097ff3ab3e2fcdf7032e6ba9d817" id="r_a0185097ff3ab3e2fcdf7032e6ba9d817"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a0185097ff3ab3e2fcdf7032e6ba9d817">on_actionFilePrint_triggered</a> ()</td></tr>
+<tr class="memdesc:a0185097ff3ab3e2fcdf7032e6ba9d817"><td class="mdescLeft">&#160;</td><td class="mdescRight">File -&gt; Print.  <br /></td></tr>
+<tr class="separator:a0185097ff3ab3e2fcdf7032e6ba9d817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5477b3953921a33f2cc08e68005c6ba7" id="r_a5477b3953921a33f2cc08e68005c6ba7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a5477b3953921a33f2cc08e68005c6ba7">on_actionFileNew_triggered</a> ()</td></tr>
+<tr class="memdesc:a5477b3953921a33f2cc08e68005c6ba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">File -&gt; New.  <br /></td></tr>
+<tr class="separator:a5477b3953921a33f2cc08e68005c6ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85e8b512c269106a2f2e152cf949b5ee" id="r_a85e8b512c269106a2f2e152cf949b5ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a85e8b512c269106a2f2e152cf949b5ee">on_actionFileSave_triggered</a> ()</td></tr>
+<tr class="memdesc:a85e8b512c269106a2f2e152cf949b5ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">File -&gt; Save.  <br /></td></tr>
+<tr class="separator:a85e8b512c269106a2f2e152cf949b5ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:a3a61181f6a91215fb4750c085c58e68d" id="r_a3a61181f6a91215fb4750c085c58e68d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a3a61181f6a91215fb4750c085c58e68d">checkFileTabs</a> ()</td></tr>
+<tr class="memdesc:a3a61181f6a91215fb4750c085c58e68d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redraw available file options depending on state of workspace.  <br /></td></tr>
+<tr class="separator:a3a61181f6a91215fb4750c085c58e68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a496dfaced965c16eedea2783bb583a70" id="r_a496dfaced965c16eedea2783bb583a70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a496dfaced965c16eedea2783bb583a70">checkWorkspaceTabs</a> ()</td></tr>
+<tr class="memdesc:a496dfaced965c16eedea2783bb583a70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redraw available tab options depending on state of workspace.  <br /></td></tr>
+<tr class="separator:a496dfaced965c16eedea2783bb583a70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49a5781153e25130f934e8e615dd396c" id="r_a49a5781153e25130f934e8e615dd396c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a49a5781153e25130f934e8e615dd396c">createLanguageMenu</a> ()</td></tr>
+<tr class="memdesc:a49a5781153e25130f934e8e615dd396c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create language menu depending on state of ./translation directory.  <br /></td></tr>
+<tr class="separator:a49a5781153e25130f934e8e615dd396c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2df82b90a3deb523f5e8aa2f8ac7bec" id="r_af2df82b90a3deb523f5e8aa2f8ac7bec"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#af2df82b90a3deb523f5e8aa2f8ac7bec">getLanguage</a> ()</td></tr>
+<tr class="memdesc:af2df82b90a3deb523f5e8aa2f8ac7bec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Can be used to get currently selected language.  <br /></td></tr>
+<tr class="separator:af2df82b90a3deb523f5e8aa2f8ac7bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfa32feecffce3959c99d145fc8b4854" id="r_adfa32feecffce3959c99d145fc8b4854"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#adfa32feecffce3959c99d145fc8b4854">connectSignals</a> ()</td></tr>
+<tr class="memdesc:adfa32feecffce3959c99d145fc8b4854"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize and connect signals related to <a class="el" href="classMainWindow.html#a3a61181f6a91215fb4750c085c58e68d" title="Redraw available file options depending on state of workspace.">checkFileTabs()</a> and <a class="el" href="classMainWindow.html#a496dfaced965c16eedea2783bb583a70" title="Redraw available tab options depending on state of workspace.">checkWorkspaceTabs()</a>  <br /></td></tr>
+<tr class="separator:adfa32feecffce3959c99d145fc8b4854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad94656db58495e2195132555b7642592" id="r_ad94656db58495e2195132555b7642592"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#ad94656db58495e2195132555b7642592">initShortcuts</a> ()</td></tr>
+<tr class="memdesc:ad94656db58495e2195132555b7642592"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize and connect application-based shortcuts.  <br /></td></tr>
+<tr class="separator:ad94656db58495e2195132555b7642592"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9943da8fb67ac6936583ebe9dfbb9e31" id="r_a9943da8fb67ac6936583ebe9dfbb9e31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a9943da8fb67ac6936583ebe9dfbb9e31">initTranslations</a> ()</td></tr>
+<tr class="memdesc:a9943da8fb67ac6936583ebe9dfbb9e31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup translations depending on state of ./translation directory.  <br /></td></tr>
+<tr class="separator:a9943da8fb67ac6936583ebe9dfbb9e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a466cae70574d6a755a6f6cfa5bb2a298" id="r_a466cae70574d6a755a6f6cfa5bb2a298"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a466cae70574d6a755a6f6cfa5bb2a298">initWorkspace</a> ()</td></tr>
+<tr class="memdesc:a466cae70574d6a755a6f6cfa5bb2a298"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize workspace UI.  <br /></td></tr>
+<tr class="separator:a466cae70574d6a755a6f6cfa5bb2a298"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06476208b8466211f3bb0fcae787052b" id="r_a06476208b8466211f3bb0fcae787052b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a06476208b8466211f3bb0fcae787052b">readSettings</a> ()</td></tr>
+<tr class="memdesc:a06476208b8466211f3bb0fcae787052b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load all settings and change whatever is needed depending on them.  <br /></td></tr>
+<tr class="separator:a06476208b8466211f3bb0fcae787052b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49be45fc9b993fdc3afe55d4b6fa0650" id="r_a49be45fc9b993fdc3afe55d4b6fa0650"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a49be45fc9b993fdc3afe55d4b6fa0650">writeSettings</a> ()</td></tr>
+<tr class="memdesc:a49be45fc9b993fdc3afe55d4b6fa0650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write all setting-dependent stuff.  <br /></td></tr>
+<tr class="separator:a49be45fc9b993fdc3afe55d4b6fa0650"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a47ab2ccf4e1af4f90defd99c045ab260" id="r_a47ab2ccf4e1af4f90defd99c045ab260"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAuthorDialog.html">AuthorDialog</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a47ab2ccf4e1af4f90defd99c045ab260">authorDialog</a></td></tr>
+<tr class="memdesc:a47ab2ccf4e1af4f90defd99c045ab260"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dialog which is shown whenever user clicks Program -&gt; Author.  <br /></td></tr>
+<tr class="separator:a47ab2ccf4e1af4f90defd99c045ab260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12e16f1fe48c05330c6da9cb62e57556" id="r_a12e16f1fe48c05330c6da9cb62e57556"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classErrorDialog.html">ErrorDialog</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a12e16f1fe48c05330c6da9cb62e57556">errorDialog</a></td></tr>
+<tr class="memdesc:a12e16f1fe48c05330c6da9cb62e57556"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dialog which is shown whenever any handled error happens in application.  <br /></td></tr>
+<tr class="separator:a12e16f1fe48c05330c6da9cb62e57556"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dc798cfb219363254fa157fa818200c" id="r_a8dc798cfb219363254fa157fa818200c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWorkspace.html">Workspace</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a8dc798cfb219363254fa157fa818200c">workspace</a></td></tr>
+<tr class="memdesc:a8dc798cfb219363254fa157fa818200c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWorkspace.html">Workspace</a> is main part of this program. It's used to manipulate, read and write any data.  <br /></td></tr>
+<tr class="separator:a8dc798cfb219363254fa157fa818200c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3742a8b8fca1489e6148352f8025bc13" id="r_a3742a8b8fca1489e6148352f8025bc13"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a3742a8b8fca1489e6148352f8025bc13">workspaceInitialized</a></td></tr>
+<tr class="memdesc:a3742a8b8fca1489e6148352f8025bc13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents current state of workspace.  <br /></td></tr>
+<tr class="separator:a3742a8b8fca1489e6148352f8025bc13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87b5b9562fe91ee19249f5a0d7617ce0" id="r_a87b5b9562fe91ee19249f5a0d7617ce0"><td class="memItemLeft" align="right" valign="top">QSettings&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a87b5b9562fe91ee19249f5a0d7617ce0">settings</a></td></tr>
+<tr class="memdesc:a87b5b9562fe91ee19249f5a0d7617ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Settings related to stuff in <a class="el" href="classMainWindow.html" title="The MainWindow class.">MainWindow</a>.  <br /></td></tr>
+<tr class="separator:a87b5b9562fe91ee19249f5a0d7617ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8a8bd735b1f7929f707b6b50a61f570" id="r_ae8a8bd735b1f7929f707b6b50a61f570"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, QShortcut * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#ae8a8bd735b1f7929f707b6b50a61f570">shortcut</a></td></tr>
+<tr class="memdesc:ae8a8bd735b1f7929f707b6b50a61f570"><td class="mdescLeft">&#160;</td><td class="mdescRight">shortcutName -&gt; QShortcut association which is used in <a class="el" href="classMainWindow.html#ad94656db58495e2195132555b7642592" title="Initialize and connect application-based shortcuts.">initShortcuts()</a>  <br /></td></tr>
+<tr class="separator:ae8a8bd735b1f7929f707b6b50a61f570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35466a70ed47252a0191168126a352a5" id="r_a35466a70ed47252a0191168126a352a5"><td class="memItemLeft" align="right" valign="top">Ui::MainWindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a35466a70ed47252a0191168126a352a5">ui</a></td></tr>
+<tr class="memdesc:a35466a70ed47252a0191168126a352a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Qt related UI pointer.  <br /></td></tr>
+<tr class="separator:a35466a70ed47252a0191168126a352a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ddb1bafdf72a8d08f05a02f9512c5bb" id="r_a7ddb1bafdf72a8d08f05a02f9512c5bb"><td class="memItemLeft" align="right" valign="top">QTranslator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a7ddb1bafdf72a8d08f05a02f9512c5bb">appTranslator</a></td></tr>
+<tr class="memdesc:a7ddb1bafdf72a8d08f05a02f9512c5bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Related to translation.  <br /></td></tr>
+<tr class="separator:a7ddb1bafdf72a8d08f05a02f9512c5bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b8ba596d329fc305ecaa321b198edc2" id="r_a2b8ba596d329fc305ecaa321b198edc2"><td class="memItemLeft" align="right" valign="top">QTranslator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a2b8ba596d329fc305ecaa321b198edc2">qtTranslator</a></td></tr>
+<tr class="memdesc:a2b8ba596d329fc305ecaa321b198edc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Related to translation.  <br /></td></tr>
+<tr class="separator:a2b8ba596d329fc305ecaa321b198edc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4886aff76340d909839d566a8ed4b8ca" id="r_a4886aff76340d909839d566a8ed4b8ca"><td class="memItemLeft" align="right" valign="top">QActionGroup *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a4886aff76340d909839d566a8ed4b8ca">languageActionGroup</a></td></tr>
+<tr class="memdesc:a4886aff76340d909839d566a8ed4b8ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">ActionGroup which stores any checkable object for language switching.  <br /></td></tr>
+<tr class="separator:a4886aff76340d909839d566a8ed4b8ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfa81f4b3d8dd5a47859b93329aa0695" id="r_abfa81f4b3d8dd5a47859b93329aa0695"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#abfa81f4b3d8dd5a47859b93329aa0695">qmPath</a></td></tr>
+<tr class="memdesc:abfa81f4b3d8dd5a47859b93329aa0695"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path to translation directory, which is cwd/translations by default.  <br /></td></tr>
+<tr class="separator:abfa81f4b3d8dd5a47859b93329aa0695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>The <a class="el" href="classMainWindow.html" title="The MainWindow class.">MainWindow</a> class. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a996c5a2b6f77944776856f08ec30858d" name="a996c5a2b6f77944776856f08ec30858d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a996c5a2b6f77944776856f08ec30858d">&#9670;&#160;</a></span>MainWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MainWindow::MainWindow </td>
+          <td>(</td>
+          <td class="paramtype">QWidget *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classMainWindow.html" title="The MainWindow class.">MainWindow</a> initializer. </p>
+
+</div>
+</div>
+<a id="ae98d00a93bc118200eeef9f9bba1dba7" name="ae98d00a93bc118200eeef9f9bba1dba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae98d00a93bc118200eeef9f9bba1dba7">&#9670;&#160;</a></span>~MainWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MainWindow::~MainWindow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classMainWindow.html" title="The MainWindow class.">MainWindow</a> destructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a3a61181f6a91215fb4750c085c58e68d" name="a3a61181f6a91215fb4750c085c58e68d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a61181f6a91215fb4750c085c58e68d">&#9670;&#160;</a></span>checkFileTabs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::checkFileTabs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Redraw available file options depending on state of workspace. </p>
+
+</div>
+</div>
+<a id="a496dfaced965c16eedea2783bb583a70" name="a496dfaced965c16eedea2783bb583a70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a496dfaced965c16eedea2783bb583a70">&#9670;&#160;</a></span>checkWorkspaceTabs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::checkWorkspaceTabs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Redraw available tab options depending on state of workspace. </p>
+
+</div>
+</div>
+<a id="adfa32feecffce3959c99d145fc8b4854" name="adfa32feecffce3959c99d145fc8b4854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfa32feecffce3959c99d145fc8b4854">&#9670;&#160;</a></span>connectSignals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::connectSignals </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize and connect signals related to <a class="el" href="classMainWindow.html#a3a61181f6a91215fb4750c085c58e68d" title="Redraw available file options depending on state of workspace.">checkFileTabs()</a> and <a class="el" href="classMainWindow.html#a496dfaced965c16eedea2783bb583a70" title="Redraw available tab options depending on state of workspace.">checkWorkspaceTabs()</a> </p>
+
+</div>
+</div>
+<a id="a49a5781153e25130f934e8e615dd396c" name="a49a5781153e25130f934e8e615dd396c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49a5781153e25130f934e8e615dd396c">&#9670;&#160;</a></span>createLanguageMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::createLanguageMenu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create language menu depending on state of ./translation directory. </p>
+
+</div>
+</div>
+<a id="af2df82b90a3deb523f5e8aa2f8ac7bec" name="af2df82b90a3deb523f5e8aa2f8ac7bec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2df82b90a3deb523f5e8aa2f8ac7bec">&#9670;&#160;</a></span>getLanguage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString MainWindow::getLanguage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Can be used to get currently selected language. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>QString </dd></dl>
+
+</div>
+</div>
+<a id="ad94656db58495e2195132555b7642592" name="ad94656db58495e2195132555b7642592"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad94656db58495e2195132555b7642592">&#9670;&#160;</a></span>initShortcuts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::initShortcuts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize and connect application-based shortcuts. </p>
+
+</div>
+</div>
+<a id="a9943da8fb67ac6936583ebe9dfbb9e31" name="a9943da8fb67ac6936583ebe9dfbb9e31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9943da8fb67ac6936583ebe9dfbb9e31">&#9670;&#160;</a></span>initTranslations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::initTranslations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Setup translations depending on state of ./translation directory. </p>
+
+</div>
+</div>
+<a id="a466cae70574d6a755a6f6cfa5bb2a298" name="a466cae70574d6a755a6f6cfa5bb2a298"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a466cae70574d6a755a6f6cfa5bb2a298">&#9670;&#160;</a></span>initWorkspace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::initWorkspace </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize workspace UI. </p>
+<p>Important: Should be called when you need to setup workspace for the first time </p>
+
+</div>
+</div>
+<a id="a402b7b1de172b785837ef64fd0417397" name="a402b7b1de172b785837ef64fd0417397"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a402b7b1de172b785837ef64fd0417397">&#9670;&#160;</a></span>on_actionClose_All_Tabs_triggered</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::on_actionClose_All_Tabs_triggered </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWorkspace.html">Workspace</a> -&gt; Close all. </p>
+
+</div>
+</div>
+<a id="a8e435580fa84bbdcd8d7a44f3b323ee6" name="a8e435580fa84bbdcd8d7a44f3b323ee6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e435580fa84bbdcd8d7a44f3b323ee6">&#9670;&#160;</a></span>on_actionClose_Tab_triggered</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::on_actionClose_Tab_triggered </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWorkspace.html">Workspace</a> -&gt; Close Tab. </p>
+
+</div>
+</div>
+<a id="a3fa4aad1fa51079a797b25694af13f61" name="a3fa4aad1fa51079a797b25694af13f61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fa4aad1fa51079a797b25694af13f61">&#9670;&#160;</a></span>on_actionFileClose_triggered</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::on_actionFileClose_triggered </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>File -&gt; Close. </p>
+
+</div>
+</div>
+<a id="a5477b3953921a33f2cc08e68005c6ba7" name="a5477b3953921a33f2cc08e68005c6ba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5477b3953921a33f2cc08e68005c6ba7">&#9670;&#160;</a></span>on_actionFileNew_triggered</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::on_actionFileNew_triggered </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>File -&gt; New. </p>
+
+</div>
+</div>
+<a id="a65d17db79929c30bea68945cd1ca3bce" name="a65d17db79929c30bea68945cd1ca3bce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65d17db79929c30bea68945cd1ca3bce">&#9670;&#160;</a></span>on_actionFileOpen_triggered</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::on_actionFileOpen_triggered </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>File -&gt; Open. </p>
+
+</div>
+</div>
+<a id="a0185097ff3ab3e2fcdf7032e6ba9d817" name="a0185097ff3ab3e2fcdf7032e6ba9d817"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0185097ff3ab3e2fcdf7032e6ba9d817">&#9670;&#160;</a></span>on_actionFilePrint_triggered</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::on_actionFilePrint_triggered </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>File -&gt; Print. </p>
+
+</div>
+</div>
+<a id="a85e8b512c269106a2f2e152cf949b5ee" name="a85e8b512c269106a2f2e152cf949b5ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85e8b512c269106a2f2e152cf949b5ee">&#9670;&#160;</a></span>on_actionFileSave_triggered</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::on_actionFileSave_triggered </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>File -&gt; Save. </p>
+
+</div>
+</div>
+<a id="a13478bffc1ebdd5f2e12e4d39bb92252" name="a13478bffc1ebdd5f2e12e4d39bb92252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13478bffc1ebdd5f2e12e4d39bb92252">&#9670;&#160;</a></span>on_actionFileUpdate_triggered</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::on_actionFileUpdate_triggered </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>File -&gt; Update. </p>
+
+</div>
+</div>
+<a id="afd1dfcd0dde616169b50f8370456c49f" name="afd1dfcd0dde616169b50f8370456c49f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd1dfcd0dde616169b50f8370456c49f">&#9670;&#160;</a></span>on_actionFileWrite_triggered</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::on_actionFileWrite_triggered </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>File -&gt; Write. </p>
+
+</div>
+</div>
+<a id="ae0c6ad161e302516fb9883ce3a5f87fa" name="ae0c6ad161e302516fb9883ce3a5f87fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0c6ad161e302516fb9883ce3a5f87fa">&#9670;&#160;</a></span>on_actionNew_Tab_triggered</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::on_actionNew_Tab_triggered </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWorkspace.html">Workspace</a> -&gt; New tab. </p>
+
+</div>
+</div>
+<a id="aeb7367b08a3ea5373e2036c534a4c98c" name="aeb7367b08a3ea5373e2036c534a4c98c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb7367b08a3ea5373e2036c534a4c98c">&#9670;&#160;</a></span>on_actionProgramAuthor_triggered</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::on_actionProgramAuthor_triggered </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Program -&gt; Author. </p>
+
+</div>
+</div>
+<a id="a06476208b8466211f3bb0fcae787052b" name="a06476208b8466211f3bb0fcae787052b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06476208b8466211f3bb0fcae787052b">&#9670;&#160;</a></span>readSettings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::readSettings </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load all settings and change whatever is needed depending on them. </p>
+
+</div>
+</div>
+<a id="af3504fee6cb61eda81989f4553e165a3" name="af3504fee6cb61eda81989f4553e165a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3504fee6cb61eda81989f4553e165a3">&#9670;&#160;</a></span>switchLanguage</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::switchLanguage </td>
+          <td>(</td>
+          <td class="paramtype">QAction *&#160;</td>
+          <td class="paramname"><em>action</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>switchLanguage </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">QAction*</td><td>action Slot, fired when changing of current language is performed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a49be45fc9b993fdc3afe55d4b6fa0650" name="a49be45fc9b993fdc3afe55d4b6fa0650"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49be45fc9b993fdc3afe55d4b6fa0650">&#9670;&#160;</a></span>writeSettings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::writeSettings </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write all setting-dependent stuff. </p>
+<p>Important: Should be called in destructor of <a class="el" href="classMainWindow.html" title="The MainWindow class.">MainWindow</a> </p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a7ddb1bafdf72a8d08f05a02f9512c5bb" name="a7ddb1bafdf72a8d08f05a02f9512c5bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ddb1bafdf72a8d08f05a02f9512c5bb">&#9670;&#160;</a></span>appTranslator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QTranslator MainWindow::appTranslator</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Related to translation. </p>
+
+</div>
+</div>
+<a id="a47ab2ccf4e1af4f90defd99c045ab260" name="a47ab2ccf4e1af4f90defd99c045ab260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47ab2ccf4e1af4f90defd99c045ab260">&#9670;&#160;</a></span>authorDialog</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAuthorDialog.html">AuthorDialog</a>* MainWindow::authorDialog</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dialog which is shown whenever user clicks Program -&gt; Author. </p>
+
+</div>
+</div>
+<a id="a12e16f1fe48c05330c6da9cb62e57556" name="a12e16f1fe48c05330c6da9cb62e57556"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12e16f1fe48c05330c6da9cb62e57556">&#9670;&#160;</a></span>errorDialog</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classErrorDialog.html">ErrorDialog</a>* MainWindow::errorDialog</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dialog which is shown whenever any handled error happens in application. </p>
+
+</div>
+</div>
+<a id="a4886aff76340d909839d566a8ed4b8ca" name="a4886aff76340d909839d566a8ed4b8ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4886aff76340d909839d566a8ed4b8ca">&#9670;&#160;</a></span>languageActionGroup</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QActionGroup* MainWindow::languageActionGroup</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ActionGroup which stores any checkable object for language switching. </p>
+
+</div>
+</div>
+<a id="abfa81f4b3d8dd5a47859b93329aa0695" name="abfa81f4b3d8dd5a47859b93329aa0695"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfa81f4b3d8dd5a47859b93329aa0695">&#9670;&#160;</a></span>qmPath</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString MainWindow::qmPath</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Path to translation directory, which is cwd/translations by default. </p>
+
+</div>
+</div>
+<a id="a2b8ba596d329fc305ecaa321b198edc2" name="a2b8ba596d329fc305ecaa321b198edc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b8ba596d329fc305ecaa321b198edc2">&#9670;&#160;</a></span>qtTranslator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QTranslator MainWindow::qtTranslator</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Related to translation. </p>
+
+</div>
+</div>
+<a id="a87b5b9562fe91ee19249f5a0d7617ce0" name="a87b5b9562fe91ee19249f5a0d7617ce0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87b5b9562fe91ee19249f5a0d7617ce0">&#9670;&#160;</a></span>settings</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QSettings MainWindow::settings</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Settings related to stuff in <a class="el" href="classMainWindow.html" title="The MainWindow class.">MainWindow</a>. </p>
+
+</div>
+</div>
+<a id="ae8a8bd735b1f7929f707b6b50a61f570" name="ae8a8bd735b1f7929f707b6b50a61f570"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8a8bd735b1f7929f707b6b50a61f570">&#9670;&#160;</a></span>shortcut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string, QShortcut *&gt; MainWindow::shortcut</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>shortcutName -&gt; QShortcut association which is used in <a class="el" href="classMainWindow.html#ad94656db58495e2195132555b7642592" title="Initialize and connect application-based shortcuts.">initShortcuts()</a> </p>
+
+</div>
+</div>
+<a id="a35466a70ed47252a0191168126a352a5" name="a35466a70ed47252a0191168126a352a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35466a70ed47252a0191168126a352a5">&#9670;&#160;</a></span>ui</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ui::MainWindow* MainWindow::ui</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Qt related UI pointer. </p>
+
+</div>
+</div>
+<a id="a8dc798cfb219363254fa157fa818200c" name="a8dc798cfb219363254fa157fa818200c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dc798cfb219363254fa157fa818200c">&#9670;&#160;</a></span>workspace</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classWorkspace.html">Workspace</a>* MainWindow::workspace</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWorkspace.html">Workspace</a> is main part of this program. It's used to manipulate, read and write any data. </p>
+
+</div>
+</div>
+<a id="a3742a8b8fca1489e6148352f8025bc13" name="a3742a8b8fca1489e6148352f8025bc13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3742a8b8fca1489e6148352f8025bc13">&#9670;&#160;</a></span>workspaceInitialized</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MainWindow::workspaceInitialized</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Represents current state of workspace. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>controllers/<a class="el" href="mainwindow_8h_source.html">mainwindow.h</a></li>
+<li>controllers/<a class="el" href="mainwindow_8cpp.html">mainwindow.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classMainWindow.html">MainWindow</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

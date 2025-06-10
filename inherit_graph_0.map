@@ -1,0 +1,7 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="Node000000" href="$classAbstractItem.html" title=" " alt="" coords="5,31,112,56"/>
+<area shape="rect" id="Node000001" href="$classConstructionCrane.html" title=" " alt="" coords="160,5,303,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="125,31,160,26,160,31,126,36"/>
+<area shape="rect" id="Node000002" href="$classVRHeadset.html" title=" " alt="" coords="184,55,279,80"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="127,50,184,58,183,63,126,55"/>
+</map>

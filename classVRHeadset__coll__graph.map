@@ -1,0 +1,7 @@
+<map id="VRHeadset" name="VRHeadset">
+<area shape="rect" id="Node000001" title=" " alt="" coords="67,108,162,133"/>
+<area shape="rect" id="Node000002" href="$classAbstractItem.html" title=" " alt="" coords="5,5,112,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,42,111,107,106,109,70,44"/>
+<area shape="rect" id="Node000003" href="$classVector3.html" title=" " alt="" coords="137,5,207,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="161,44,123,109,119,107,156,42"/>
+</map>

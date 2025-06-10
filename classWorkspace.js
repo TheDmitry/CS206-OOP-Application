@@ -1,0 +1,25 @@
+var classWorkspace =
+[
+    [ "Workspace", "classWorkspace.html#a922ee3f0bbf3490fc78ae92bbd2f13c3", null ],
+    [ "~Workspace", "classWorkspace.html#a10c751ef894a1ce02ca401a0a60b3333", null ],
+    [ "addTab", "classWorkspace.html#a0d75c1dd2727d8464522b239768f756e", null ],
+    [ "changeEvent", "classWorkspace.html#aff14c8b406efb4f913642cf6b9bc493c", null ],
+    [ "closeAllTabs", "classWorkspace.html#a2110cac32639362a3f2ea48731f48882", null ],
+    [ "closeTab", "classWorkspace.html#af6c43d7847171de191eeeee1a5b2a7be", null ],
+    [ "dropHappened", "classWorkspace.html#a85e5c5a4022caf6fe501f12d5e036ad2", null ],
+    [ "getCurrentModel", "classWorkspace.html#a817e4efc0c4ace5ee74e13ef947366be", null ],
+    [ "getCurrentTableView", "classWorkspace.html#a8aaf4a527804803566bb3821d1aadc06", null ],
+    [ "getCurrentWidget", "classWorkspace.html#aee5100b117af55164f4a11b2215be922", null ],
+    [ "getTabWidget", "classWorkspace.html#aaa9c6ca215afde2fa48b252f5556feb3", null ],
+    [ "initContextActions", "classWorkspace.html#a959230e0f19877b18efd3675fbade004", null ],
+    [ "initContextMenu", "classWorkspace.html#accd9d0d598043d1d21d632967389a094", null ],
+    [ "on_tabWidget_currentChanged", "classWorkspace.html#a4681305ada83df77165fd28f28ef9e29", null ],
+    [ "retranslateContextActions", "classWorkspace.html#a899409e98ab87f4a07b6334a526406be", null ],
+    [ "tabChanged", "classWorkspace.html#a59fb97e48853c524d40dec169fd4fc8e", null ],
+    [ "tabClosed", "classWorkspace.html#a0a3f9610a7f24216929ac3d619f5e211", null ],
+    [ "tabCreated", "classWorkspace.html#a304aaf95ecd8d61e4d3dbe4c747c2422", null ],
+    [ "contextActions", "classWorkspace.html#a0e266d2a71ba9d88afb6a86ad5be2138", null ],
+    [ "contextActionsOrder", "classWorkspace.html#a4740bb65fe7578b7e62a341531ca39b4", null ],
+    [ "contextMenu", "classWorkspace.html#aa26da748186ae97eb9bf37e3b99165e1", null ],
+    [ "ui", "classWorkspace.html#afb4d744e72e8ab9498fd94e5b250f178", null ]
+];

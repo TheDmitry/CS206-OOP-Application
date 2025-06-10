@@ -1,0 +1,26 @@
+<map id="external/vector3.h" name="external/vector3.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="494,5,635,31"/>
+<area shape="rect" id="Node000002" href="$vector3_8cpp.html" title=" " alt="" coords="108,79,264,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="491,36,248,81,247,76,490,31"/>
+<area shape="rect" id="Node000003" href="$constructioncrane_8h.html" title=" " alt="" coords="288,79,479,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="524,38,414,81,412,76,522,33"/>
+<area shape="rect" id="Node000008" href="$vrheadset_8cpp.html" title=" " alt="" coords="529,152,683,177"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="574,44,605,151,600,153,569,45"/>
+<area shape="rect" id="Node000009" href="$vrheadset_8h.html" title=" " alt="" coords="603,79,743,104"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="595,36,656,76,654,81,592,40"/>
+<area shape="rect" id="Node000010" href="$vrheadsetprovider_8h.html" title=" " alt="" coords="708,152,925,177"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="650,31,705,48,757,76,776,94,792,114,814,150,809,153,788,117,772,98,754,81,703,53,648,36"/>
+<area shape="rect" id="Node000004" href="$constructioncrane_8cpp.html" title=" " alt="" coords="5,152,212,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="327,110,154,154,152,149,325,105"/>
+<area shape="rect" id="Node000005" href="$constructioncraneprovider_8h.html" title=" " alt="" coords="236,152,504,177"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="381,118,375,152,370,151,376,117"/>
+<area shape="rect" id="Node000006" href="$main_8cpp.html" title=" " alt="" coords="565,225,647,251"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="422,179,569,223,567,228,420,184"/>
+<area shape="rect" id="Node000007" href="$constructioncraneprovider_8cpp.html" title=" " alt="" coords="229,225,511,251"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="373,191,373,225,367,225,367,191"/>
+<area shape="poly" id="edge9_Node000009_Node000008" title=" " alt="" coords="654,116,619,154,615,150,650,113"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="709,108,794,149,792,154,707,112"/>
+<area shape="poly" id="edge11_Node000010_Node000006" title=" " alt="" coords="771,184,641,228,639,223,769,179"/>
+<area shape="rect" id="Node000011" href="$vrheadsetprovider_8cpp.html" title=" " alt="" coords="701,225,933,251"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="819,191,819,225,814,225,814,191"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="items/constructioncrane.h" name="items/constructioncrane.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="43,5,234,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,152,80,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,33,95,53,70,80,56,109,49,139,44,138,51,108,66,77,91,49,118,29"/>
+<area shape="rect" id="Node000003" href="$abstractitem_8h.html" title=" " alt="" coords="80,79,197,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="141,31,141,65,136,65,136,31"/>
+<area shape="rect" id="Node000005" href="$vector3_8h.html" title=" " alt="" coords="221,79,363,104"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="164,28,256,70,254,75,162,33"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="125,106,71,146,68,141,122,102"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="104,152,181,177"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="142,104,144,138,139,139,137,104"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="263,152,321,177"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="295,104,295,138,289,138,289,104"/>
+</map>

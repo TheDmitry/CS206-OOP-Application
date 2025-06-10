@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CS-206-OOP-Application: Исходный файл controllers/workspace.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">CS-206-OOP-Application
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('workspace_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">workspace.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="workspace_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;QMenu&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QTabWidget&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QTableView&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="tableview_8h.html">controllers/tableview.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="customtablemodel_8h.html">models/customtablemodel.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceUi.html">Ui</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">class </span><a class="code hl_class" href="classWorkspace.html">Workspace</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>}</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classWorkspace.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="classWorkspace.html">Workspace</a> : <span class="keyword">public</span> QWidget {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  Q_OBJECT</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="keyword">explicit</span> <a class="code hl_class" href="classWorkspace.html">Workspace</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <a class="code hl_function" href="classWorkspace.html#a10c751ef894a1ce02ca401a0a60b3333">~Workspace</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  QTabWidget *<a class="code hl_function" href="classWorkspace.html#aaa9c6ca215afde2fa48b252f5556feb3">getTabWidget</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <a class="code hl_class" href="classTableView.html">TableView</a> *<a class="code hl_function" href="classWorkspace.html#aee5100b117af55164f4a11b2215be922">getCurrentWidget</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  QTableView *<a class="code hl_function" href="classWorkspace.html#a8aaf4a527804803566bb3821d1aadc06">getCurrentTableView</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <a class="code hl_class" href="classCustomTableModel.html">CustomTableModel</a> *<a class="code hl_function" href="classWorkspace.html#a817e4efc0c4ace5ee74e13ef947366be">getCurrentModel</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classWorkspace.html#a0d75c1dd2727d8464522b239768f756e">addTab</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classWorkspace.html#af6c43d7847171de191eeeee1a5b2a7be">closeTab</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classWorkspace.html#a2110cac32639362a3f2ea48731f48882">closeAllTabs</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>signals:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classWorkspace.html#a59fb97e48853c524d40dec169fd4fc8e">   34</a></span>  <span class="keywordtype">void</span> <a class="code hl_signal" href="classWorkspace.html#a59fb97e48853c524d40dec169fd4fc8e">tabChanged</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classWorkspace.html#a304aaf95ecd8d61e4d3dbe4c747c2422">   35</a></span>  <span class="keywordtype">void</span> <a class="code hl_signal" href="classWorkspace.html#a304aaf95ecd8d61e4d3dbe4c747c2422">tabCreated</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classWorkspace.html#a0a3f9610a7f24216929ac3d619f5e211">   36</a></span>  <span class="keywordtype">void</span> <a class="code hl_signal" href="classWorkspace.html#a0a3f9610a7f24216929ac3d619f5e211">tabClosed</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classWorkspace.html#a85e5c5a4022caf6fe501f12d5e036ad2">   37</a></span>  <span class="keywordtype">void</span> <a class="code hl_signal" href="classWorkspace.html#a85e5c5a4022caf6fe501f12d5e036ad2">dropHappened</a>(<span class="keywordtype">bool</span> success);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">private</span> slots:</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keywordtype">void</span> <a class="code hl_slot" href="classWorkspace.html#a4681305ada83df77165fd28f28ef9e29">on_tabWidget_currentChanged</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classWorkspace.html#aa26da748186ae97eb9bf37e3b99165e1">   43</a></span>  QMenu *<a class="code hl_variable" href="classWorkspace.html#aa26da748186ae97eb9bf37e3b99165e1">contextMenu</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classWorkspace.html#a0e266d2a71ba9d88afb6a86ad5be2138">   44</a></span>  std::map&lt;std::string, QAction *&gt; <a class="code hl_variable" href="classWorkspace.html#a0e266d2a71ba9d88afb6a86ad5be2138">contextActions</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classWorkspace.html#a4740bb65fe7578b7e62a341531ca39b4">   45</a></span>  std::vector&lt;std::string&gt; <a class="code hl_variable" href="classWorkspace.html#a4740bb65fe7578b7e62a341531ca39b4">contextActionsOrder</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classWorkspace.html#afb4d744e72e8ab9498fd94e5b250f178">   47</a></span>  Ui::Workspace *<a class="code hl_variable" href="classWorkspace.html#afb4d744e72e8ab9498fd94e5b250f178">ui</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classWorkspace.html#a959230e0f19877b18efd3675fbade004">initContextActions</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classWorkspace.html#accd9d0d598043d1d21d632967389a094">initContextMenu</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classWorkspace.html#a899409e98ab87f4a07b6334a526406be">retranslateContextActions</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classWorkspace.html#aff14c8b406efb4f913642cf6b9bc493c">changeEvent</a>(QEvent *e) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>};</div>
+</div>
+<div class="ttc" id="aclassCustomTableModel_html"><div class="ttname"><a href="classCustomTableModel.html">CustomTableModel</a></div><div class="ttdef"><b>Definition</b> customtablemodel.h:13</div></div>
+<div class="ttc" id="aclassTableView_html"><div class="ttname"><a href="classTableView.html">TableView</a></div><div class="ttdoc">TableView class is used as controoler for TableView UI Component.</div><div class="ttdef"><b>Definition</b> tableview.h:21</div></div>
+<div class="ttc" id="aclassWorkspace_html"><div class="ttname"><a href="classWorkspace.html">Workspace</a></div><div class="ttdef"><b>Definition</b> workspace.h:16</div></div>
+<div class="ttc" id="aclassWorkspace_html_a0a3f9610a7f24216929ac3d619f5e211"><div class="ttname"><a href="classWorkspace.html#a0a3f9610a7f24216929ac3d619f5e211">Workspace::tabClosed</a></div><div class="ttdeci">void tabClosed()</div></div>
+<div class="ttc" id="aclassWorkspace_html_a0d75c1dd2727d8464522b239768f756e"><div class="ttname"><a href="classWorkspace.html#a0d75c1dd2727d8464522b239768f756e">Workspace::addTab</a></div><div class="ttdeci">void addTab()</div><div class="ttdef"><b>Definition</b> workspace.cpp:75</div></div>
+<div class="ttc" id="aclassWorkspace_html_a0e266d2a71ba9d88afb6a86ad5be2138"><div class="ttname"><a href="classWorkspace.html#a0e266d2a71ba9d88afb6a86ad5be2138">Workspace::contextActions</a></div><div class="ttdeci">std::map&lt; std::string, QAction * &gt; contextActions</div><div class="ttdef"><b>Definition</b> workspace.h:44</div></div>
+<div class="ttc" id="aclassWorkspace_html_a10c751ef894a1ce02ca401a0a60b3333"><div class="ttname"><a href="classWorkspace.html#a10c751ef894a1ce02ca401a0a60b3333">Workspace::~Workspace</a></div><div class="ttdeci">~Workspace()</div><div class="ttdef"><b>Definition</b> workspace.cpp:19</div></div>
+<div class="ttc" id="aclassWorkspace_html_a2110cac32639362a3f2ea48731f48882"><div class="ttname"><a href="classWorkspace.html#a2110cac32639362a3f2ea48731f48882">Workspace::closeAllTabs</a></div><div class="ttdeci">void closeAllTabs()</div><div class="ttdef"><b>Definition</b> workspace.cpp:91</div></div>
+<div class="ttc" id="aclassWorkspace_html_a304aaf95ecd8d61e4d3dbe4c747c2422"><div class="ttname"><a href="classWorkspace.html#a304aaf95ecd8d61e4d3dbe4c747c2422">Workspace::tabCreated</a></div><div class="ttdeci">void tabCreated(int index)</div></div>
+<div class="ttc" id="aclassWorkspace_html_a4681305ada83df77165fd28f28ef9e29"><div class="ttname"><a href="classWorkspace.html#a4681305ada83df77165fd28f28ef9e29">Workspace::on_tabWidget_currentChanged</a></div><div class="ttdeci">void on_tabWidget_currentChanged(int index)</div><div class="ttdef"><b>Definition</b> workspace.cpp:112</div></div>
+<div class="ttc" id="aclassWorkspace_html_a4740bb65fe7578b7e62a341531ca39b4"><div class="ttname"><a href="classWorkspace.html#a4740bb65fe7578b7e62a341531ca39b4">Workspace::contextActionsOrder</a></div><div class="ttdeci">std::vector&lt; std::string &gt; contextActionsOrder</div><div class="ttdef"><b>Definition</b> workspace.h:45</div></div>
+<div class="ttc" id="aclassWorkspace_html_a59fb97e48853c524d40dec169fd4fc8e"><div class="ttname"><a href="classWorkspace.html#a59fb97e48853c524d40dec169fd4fc8e">Workspace::tabChanged</a></div><div class="ttdeci">void tabChanged(int index)</div></div>
+<div class="ttc" id="aclassWorkspace_html_a817e4efc0c4ace5ee74e13ef947366be"><div class="ttname"><a href="classWorkspace.html#a817e4efc0c4ace5ee74e13ef947366be">Workspace::getCurrentModel</a></div><div class="ttdeci">CustomTableModel * getCurrentModel()</div><div class="ttdef"><b>Definition</b> workspace.cpp:108</div></div>
+<div class="ttc" id="aclassWorkspace_html_a85e5c5a4022caf6fe501f12d5e036ad2"><div class="ttname"><a href="classWorkspace.html#a85e5c5a4022caf6fe501f12d5e036ad2">Workspace::dropHappened</a></div><div class="ttdeci">void dropHappened(bool success)</div></div>
+<div class="ttc" id="aclassWorkspace_html_a899409e98ab87f4a07b6334a526406be"><div class="ttname"><a href="classWorkspace.html#a899409e98ab87f4a07b6334a526406be">Workspace::retranslateContextActions</a></div><div class="ttdeci">void retranslateContextActions()</div><div class="ttdef"><b>Definition</b> workspace.cpp:69</div></div>
+<div class="ttc" id="aclassWorkspace_html_a8aaf4a527804803566bb3821d1aadc06"><div class="ttname"><a href="classWorkspace.html#a8aaf4a527804803566bb3821d1aadc06">Workspace::getCurrentTableView</a></div><div class="ttdeci">QTableView * getCurrentTableView()</div><div class="ttdef"><b>Definition</b> workspace.cpp:104</div></div>
+<div class="ttc" id="aclassWorkspace_html_a959230e0f19877b18efd3675fbade004"><div class="ttname"><a href="classWorkspace.html#a959230e0f19877b18efd3675fbade004">Workspace::initContextActions</a></div><div class="ttdeci">void initContextActions()</div><div class="ttdef"><b>Definition</b> workspace.cpp:26</div></div>
+<div class="ttc" id="aclassWorkspace_html_aa26da748186ae97eb9bf37e3b99165e1"><div class="ttname"><a href="classWorkspace.html#aa26da748186ae97eb9bf37e3b99165e1">Workspace::contextMenu</a></div><div class="ttdeci">QMenu * contextMenu</div><div class="ttdef"><b>Definition</b> workspace.h:43</div></div>
+<div class="ttc" id="aclassWorkspace_html_aaa9c6ca215afde2fa48b252f5556feb3"><div class="ttname"><a href="classWorkspace.html#aaa9c6ca215afde2fa48b252f5556feb3">Workspace::getTabWidget</a></div><div class="ttdeci">QTabWidget * getTabWidget()</div><div class="ttdef"><b>Definition</b> workspace.cpp:98</div></div>
+<div class="ttc" id="aclassWorkspace_html_accd9d0d598043d1d21d632967389a094"><div class="ttname"><a href="classWorkspace.html#accd9d0d598043d1d21d632967389a094">Workspace::initContextMenu</a></div><div class="ttdeci">void initContextMenu()</div><div class="ttdef"><b>Definition</b> workspace.cpp:48</div></div>
+<div class="ttc" id="aclassWorkspace_html_aee5100b117af55164f4a11b2215be922"><div class="ttname"><a href="classWorkspace.html#aee5100b117af55164f4a11b2215be922">Workspace::getCurrentWidget</a></div><div class="ttdeci">TableView * getCurrentWidget()</div><div class="ttdef"><b>Definition</b> workspace.cpp:100</div></div>
+<div class="ttc" id="aclassWorkspace_html_af6c43d7847171de191eeeee1a5b2a7be"><div class="ttname"><a href="classWorkspace.html#af6c43d7847171de191eeeee1a5b2a7be">Workspace::closeTab</a></div><div class="ttdeci">void closeTab()</div><div class="ttdef"><b>Definition</b> workspace.cpp:85</div></div>
+<div class="ttc" id="aclassWorkspace_html_afb4d744e72e8ab9498fd94e5b250f178"><div class="ttname"><a href="classWorkspace.html#afb4d744e72e8ab9498fd94e5b250f178">Workspace::ui</a></div><div class="ttdeci">Ui::Workspace * ui</div><div class="ttdef"><b>Definition</b> workspace.h:47</div></div>
+<div class="ttc" id="aclassWorkspace_html_aff14c8b406efb4f913642cf6b9bc493c"><div class="ttname"><a href="classWorkspace.html#aff14c8b406efb4f913642cf6b9bc493c">Workspace::changeEvent</a></div><div class="ttdeci">void changeEvent(QEvent *e) override</div><div class="ttdef"><b>Definition</b> workspace.cpp:116</div></div>
+<div class="ttc" id="acustomtablemodel_8h_html"><div class="ttname"><a href="customtablemodel_8h.html">customtablemodel.h</a></div></div>
+<div class="ttc" id="anamespaceUi_html"><div class="ttname"><a href="namespaceUi.html">Ui</a></div><div class="ttdef"><b>Definition</b> authordialog.h:5</div></div>
+<div class="ttc" id="atableview_8h_html"><div class="ttname"><a href="tableview_8h.html">tableview.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_87b6ed4386158a4d6cd0ecd5fb5bd5c2.html">controllers</a></li><li class="navelem"><a class="el" href="workspace_8h.html">workspace.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>
